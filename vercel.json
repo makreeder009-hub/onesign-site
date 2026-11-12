@@ -1,0 +1,132 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/#types",
+      "permanent": true
+    },
+    {
+      "source": "/sectors",
+      "destination": "/#sectors",
+      "permanent": true
+    },
+    {
+      "source": "/service/exterior",
+      "destination": "/signs/building-signs",
+      "permanent": true
+    },
+    {
+      "source": "/service/neon",
+      "destination": "/signs/neon-led-neon",
+      "permanent": true
+    },
+    {
+      "source": "/service/totems",
+      "destination": "/signs/totems-monoliths",
+      "permanent": true
+    },
+    {
+      "source": "/service/wayfinding",
+      "destination": "/signs/wayfinding",
+      "permanent": true
+    },
+    {
+      "source": "/service/vehicle-graphics-decals",
+      "destination": "/signs/vehicle-graphics",
+      "permanent": true
+    },
+    {
+      "source": "/service/large-format-digital-print",
+      "destination": "/signs/digital-large-format-print",
+      "permanent": true
+    },
+    {
+      "source": "/service/hoarding",
+      "destination": "/signs/digital-large-format-print",
+      "permanent": true
+    },
+    {
+      "source": "/service/promotional",
+      "destination": "/signs/digital-large-format-print",
+      "permanent": true
+    },
+    {
+      "source": "/service/graphics",
+      "destination": "/signs/vinyl-wall-graphics",
+      "permanent": true
+    },
+    {
+      "source": "/service/interior",
+      "destination": "/signs/3d-letters",
+      "permanent": true
+    },
+    {
+      "source": "/service/informative",
+      "destination": "/signs/wayfinding",
+      "permanent": true
+    },
+    {
+      "source": "/service/health-saftey-signs",
+      "destination": "/sectors/health-safety",
+      "permanent": true
+    },
+    {
+      "source": "/health-saftey-signs",
+      "destination": "/sectors/health-safety",
+      "permanent": true
+    },
+    {
+      "source": "/healthcare",
+      "destination": "/sectors/healthcare",
+      "permanent": true
+    },
+    {
+      "source": "/educational",
+      "destination": "/sectors/education",
+      "permanent": true
+    },
+    {
+      "source": "/construction",
+      "destination": "/sectors/construction",
+      "permanent": true
+    },
+    {
+      "source": "/commercial",
+      "destination": "/sectors/commercial",
+      "permanent": true
+    },
+    {
+      "source": "/retail",
+      "destination": "/sectors/retail",
+      "permanent": true
+    },
+    {
+      "source": "/leisure",
+      "destination": "/sectors/hospitality-leisure",
+      "permanent": true
+    },
+    {
+      "source": "/hair-and-beauty",
+      "destination": "/sectors/hair-beauty",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

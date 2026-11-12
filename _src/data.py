@@ -423,3 +423,125 @@ PROJECTS = [
 ]
 REEL_A = ["seventy3","works","vertu","neonB","dog","bowmer","arv","woodham","tesco","vault","ncl"]
 REEL_B = ["glow","harbro","cork","nhs","vanPark","rolls","sunclub","kloset","alwinton","catalyst","w_red_g"]
+
+# ===================== Revisions from Mak, 12 Nov =====================
+def _new(n, c, p="50% 50%"): return ("new:"+n, c, p)
+IMG.update({
+ "n_jet2": _new("jet2-halo","Jet2: halo-lit fabricated 3D letters"),
+ "n_jet2glow": _new("jet2-halo-glow","Jet2 letters: the halo glow up close"),
+ "n_thatype": _new("thatype","Thatype: halo-lit script letters"),
+ "n_court": _new("the-court","The Court, Durham: gold 3D letters"),
+ "n_byre": _new("byre","BYRE: illuminated 3D letters"),
+ "n_tribeca": _new("tribeca","Tribeca: 3D letters on a fascia"),
+ "n_fitt": _new("fitt","Fitt: 3D letters"),
+ "n_superpower": _new("superpower","Superpower: illuminated 3D letters"),
+ "n_superpower_wide": _new("superpower-wide","Superpower shopfront"),
+ "n_renew_close": _new("renewable-close","Renewable Energy: 3D letters on timber cladding"),
+ "n_renew_bld": _new("renewable-building","Renewable Energy building sign"),
+ "n_grainger": _new("grainger-market","Grainger Market: gold 3D letters"),
+ "n_murphys": _new("dirty-murphys","Dirty Murphys: 3D letters"),
+ "n_aqua": _new("aqua-tcg","Aqua TCG: illuminated letters"),
+ "n_kosmic": _new("kosmic-kingdom","Kosmic Kingdom: high level sign"),
+ "n_kosmic_close": _new("kosmic-kingdom-close","Kosmic Kingdom sign detail"),
+ "n_griffin": _new("griffin-court","Griffin Court: high level letters"),
+ "n_griffin_up": _new("griffin-court-up","Griffin Court letters from below"),
+ "n_fitt_int": _new("fitt-interior","Fitt interior"),
+ "n_jet2_ceiling": _new("jet2-ceiling","Jet2: printed LED ceiling panels"),
+ "fence2": ("b37986290e6c491181d6f5316116596c~mv2.jpg","Printed mesh fence banner","50% 50%"),
+})
+def _cap(k, c):
+    i, _, p = IMG[k]; IMG[k] = (i, c, p)
+_cap("fira","Fika: flat-cut letters")
+_cap("ig_pantera","Pantera Advisory Group: flat-cut foamex logo and letters")
+_cap("ig_wrgroup","WR Group: fabricated 3D letters on brick")
+_cap("bankhouse","Bank House: wall vinyl")
+_cap("urban","eat @ urban: wayfinding wall graphic")
+_cap("ig_durham","Durham University and Microsoft: flat-cut letters")
+_cap("ig_workwear","Workwear Express: flat-cut letters")
+_cap("ig_kier","Kier feather flag")
+_cap("nhs_bld","NHS Community Diagnostic Centre: 3D letters on a panel")
+_cap("ig_nhs_night","NHS Community Diagnostic Centre: 3D letters lit at night")
+_cap("ig_dubliner","The Dubliner: LED neon")
+_cap("st_welcome","Bar Seventy Three: backlit panel")
+
+T = {t["slug"]: t for t in TYPES}
+
+t = T["3d-letters"]
+t["photos"] = ["n_jet2","vault","rds","dog","cell","n_court","n_thatype","nhs_bld","ig_nhs_night","ig_wrgroup","n_byre","n_tribeca",
+               "n_fitt","n_superpower","n_renew_close","n_grainger","n_murphys","n_aqua","n_jet2glow","ig_maple","ig_zen","ig_atom",
+               "catalyst_l","ig_goldscript","ig_mango","ig_stephenson"]
+t["spec"][0] = ["Types","Fabricated (aluminium, stainless, copper or brass), Komacel, acrylic"]
+t["spec"].insert(2, ["Metals","Copper and brass, including aged finishes"])
+t["variants"][0]["p"] = "Built from a metal face and folded returns in aluminium, stainless steel, copper or brass, including aged finishes. The most versatile option, and the one to choose for large or high-level letters."
+t["variants"][0]["tags"] = ["face-lit (rim & return)","halo-lit","non-lit","copper & brass"]
+t["notes"] = ["Every letter can go straight onto the wall on stand-off locators, or onto a panel when the wall isn't suitable or you want a backdrop.",
+              "The Vault: fabricated, halo-lit letters on a panel. The Cell: halo-lit stainless steel. Jet2: halo-lit fabricated letters straight onto the wall.",
+              "Fabricated letters also come in copper and brass, including aged finishes.",
+              "Not sure which suits your budget? We'll mock up the options on a photo of your building."]
+t["desc"] = "Letters with real depth that stand proud of the wall. We make three kinds: fabricated metal letters (aluminium, stainless, copper or brass), Komacel letters and acrylic letters, fixed straight to the wall on stand-off locators or mounted on a panel."
+
+t = T["backlit-panels"]
+t["photos"] = ["st_welcome","ig_codcrust"]; t["hero"] = "st_welcome"
+
+t = T["flat-cut-letters"]
+t["photos"] = ["ig_durham","fira","ig_pantera","ig_workwear"]; t["hero"] = "ig_durham"
+t["spec"][0] = ["Materials","Acrylic, foamex, aluminium composite, stainless steel"]
+t["notes"] = ["Flat-cut letters cost less than 3D letters and suit interiors especially well.",
+              "Pantera Advisory Group is cut from foamex, a light, rigid PVC board."]
+
+t = T["building-signs"]
+t.update(slug="high-level-signs", name="High level signs", label="high level signs", code="OS-HL",
+  seo_title="High Level Signs: Large Building Signage",
+  meta="Large, high-level building signs surveyed, fabricated and installed by Onesign's own IPAF and PASMA trained crews: fabricated letters, panels, printed Dibond and vinyl-wrapped panels.",
+  hero="rolls",
+  photos=["rolls","n_kosmic","vertu_night","n_griffin","woodham","aldi_bld","n_renew_bld","ig_urgent","ig_tms","ig_companyshop","ig_nhs_cumbria","n_griffin_up","glow"],
+  desc="Large signs high on the side of buildings: big fabricated letters, letters on panels, digitally printed Dibond and vinyl-wrapped fabricated panels. Surveyed, engineered and fitted from powered access by our own crews.",
+  notes=["Rolls-Royce: large high-level letters on cladding.",
+         "Woodham Academy: a large building sign in digitally printed Dibond.",
+         "Aldi: a large digitally printed vinyl applied to a fabricated panel."])
+
+T["neon-led-neon"]["photos"] = ["neonB","ig_dubliner","ig_leancuisine","welcome_neon","ig_pudes","ig_neon_red","rascals_neon","ig_neon_yellow","neonA","neonC","neonD"]
+
+t = T["vinyl-wall-graphics"]
+t["photos"] = ["bankhouse","ig_lineart_install","nhs_skyline","ig_lineart","arv","univinyl","w_truetest","ig_jaymac_wall","ig_craicn"]
+t["hero"] = "bankhouse"; t["variants"][0]["img"] = "bankhouse"
+
+t = T["digital-large-format-print"]
+t["photos"] = ["n_jet2_ceiling","bowmer","ig_ocado","lfPosters","lfPrint"]; t["hero"] = "n_jet2_ceiling"
+t["desc"] = "Big, bold, colour-matched print from our own wide-format printers: hoardings, printed LED ceiling panels, posters, window graphics and display boards, printed and finished in-house so turnaround stays fast."
+
+T["wayfinding"]["photos"].insert(4, "urban")
+
+t = T["vehicle-graphics"]
+t["photos"] = ["ig_park2","vanYellow"]; t["hero"] = "ig_park2"
+
+FLAGS = dict(slug="flags-banners", name="Flags & banners", label="flags & banners", code="OS-FL",
+  seo_title="Feather Flags, Mesh Banners & Pop-Up Banners",
+  meta="Printed feather flags, mesh fence banners, PVC banners and pop-up banners from Onesign's in-house print room in Gateshead.",
+  hero="ig_kier", photos=["ig_kier","fence_banner","fence2"],
+  desc="Printed flags and banners for events, sites and shopfronts: feather and teardrop flags, mesh fence banners, PVC banners and pop-up banners, printed in-house and supplied with the hardware to put them up.",
+  ideal=["events","construction sites","sports clubs","promotions"],
+  spec=[["Flags","Feather and teardrop flags with poles and bases"],["Mesh banners","Wind-permeable mesh for fences and scaffolding"],
+        ["PVC banners","Hemmed and eyeleted for walls and railings"],["Pop-ups","Pull-up and pop-up display banners"],["Print","Full colour, in-house"]],
+  variants=[], notes=["Mesh banners let wind pass through, so they suit site fences and scaffolding."],
+  faq=[("Do flags come with bases?","Yes. We supply poles and a choice of ground spike, cross base or weighted base."),
+       ("Which banner suits a building site fence?","Mesh. It lets the wind through, so it stays put and doesn't strain the fence.")])
+TYPES = [t for t in TYPES]
+TYPES.insert([x["slug"] for x in TYPES].index("digital-large-format-print")+1, FLAGS)
+
+S = {s["slug"]: s for s in SECTORS}
+for s in SECTORS:
+    s["types"] = ["high-level-signs" if x=="building-signs" else x for x in s["types"]]
+    s["gallery"] = ["st_welcome" if x=="seventy3" else x for x in s["gallery"]
+                    if x not in ("lfBm","hoarding","ig_salto","ig_pamper_trailer","vanFabio","vanPark","ig_park")]
+S["hospitality-leisure"]["gallery"] = ["st_welcome","ig_codcrust","n_thatype","ig_dubliner","dog","n_murphys","n_grainger","ig_court","vault","ig_gavroche","ig_leancuisine","vertu_night","sunclub","n_fitt_int"]
+S["retail"]["gallery"] = ["n_superpower_wide","n_kosmic","ig_companyshop","harbro","works","ig_smartvape","tesco","totW","aldi_bld"]
+S["transport"]["gallery"] = ["ig_park2","vanYellow"]
+S["construction"]["types"] = ["digital-large-format-print","flags-banners","high-level-signs","totems-monoliths"]
+
+for p in PROJECTS:
+    if p["k"] == "seventy3": p["k"] = "st_welcome"; p["label"] = "Backlit panel"
+    if p["k"] == "nhs": p["label"] = "3D letters on a panel"
+REEL_A = ["st_welcome" if k=="seventy3" else k for k in REEL_A]
+REEL_A = ["n_jet2" if k=="vertu" else k for k in REEL_A]
+REEL_B = ["n_thatype" if k=="vanPark" else k for k in REEL_B]

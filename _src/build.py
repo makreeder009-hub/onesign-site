@@ -9,6 +9,8 @@ E = H.escape
 
 def wix(key_or_id, w, h, mode="fill", name=None):
     wid = IMG[key_or_id][0] if key_or_id in IMG else key_or_id
+    if wid.startswith("new:"):
+        return "{{R}}img/new/" + wid[4:] + ("-sm" if max(w,h) <= 760 else "") + ".jpg"
     if wid.startswith("local:"):
         return "{{R}}img/ig/" + wid[6:] + ("-sm" if max(w,h) <= 760 else "") + ".jpg"
     name = name or (key_or_id if key_or_id in IMG else "image")
@@ -549,7 +551,7 @@ def extras(pages):
     open(os.path.join(OUT,"robots.txt"),"w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
     # old Wix URLs -> new pages (for launch)
     R = {"/about-us":"/about","/services":"/#types","/sectors":"/#sectors",
-         "/service/exterior":"/signs/building-signs","/service/neon":"/signs/neon-led-neon","/service/totems":"/signs/totems-monoliths",
+         "/service/exterior":"/signs/high-level-signs","/signs/building-signs":"/signs/high-level-signs","/service/neon":"/signs/neon-led-neon","/service/totems":"/signs/totems-monoliths",
          "/service/wayfinding":"/signs/wayfinding","/service/vehicle-graphics-decals":"/signs/vehicle-graphics",
          "/service/large-format-digital-print":"/signs/digital-large-format-print","/service/hoarding":"/signs/digital-large-format-print",
          "/service/promotional":"/signs/digital-large-format-print","/service/graphics":"/signs/vinyl-wall-graphics",

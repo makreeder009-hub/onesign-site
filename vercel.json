@@ -19,7 +19,12 @@
     },
     {
       "source": "/service/exterior",
-      "destination": "/signs/building-signs",
+      "destination": "/signs/high-level-signs",
+      "permanent": true
+    },
+    {
+      "source": "/signs/building-signs",
+      "destination": "/signs/high-level-signs",
       "permanent": true
     },
     {

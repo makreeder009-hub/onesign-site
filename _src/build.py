@@ -559,7 +559,8 @@ def extras(pages):
          "/leisure":"/sectors/hospitality-leisure","/hair-and-beauty":"/sectors/hair-beauty"}
     vercel = {"cleanUrls":True,"trailingSlash":False,
               "redirects":[{"source":a,"destination":b,"permanent":True} for a,b in R.items()],
-              "headers":[{"source":"/assets/(.*)","headers":[{"key":"Cache-Control","value":"public, max-age=31536000, immutable"}]}]}
+              "headers":[{"source":"/assets/(.*)","headers":[{"key":"Cache-Control","value":"public, max-age=31536000, immutable"}]},
+                         {"source":"/(.*)","has":[{"type":"host","value":"(?<sub>.*)\\.vercel\\.app"}],"headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow"}]}]}
     open(os.path.join(OUT,"vercel.json"),"w").write(json.dumps(vercel,indent=2))
     fav = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#111415"/><circle cx="32" cy="32" r="20" fill="none" stroke="#fff" stroke-width="7"/><path d="M28 22h8v22h-8z" fill="#517d90"/></svg>'
     open(os.path.join(OUT,"assets","favicon.svg"),"w").write(fav)

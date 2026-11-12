@@ -80,7 +80,7 @@ if(list&&TYPES.length){
   }
   function swapIn(L){
     $$(".layer",stage).forEach(o=>{if(o!==L){o.classList.remove("on");setTimeout(()=>o.remove(),400)}});
-    stage.insertBefore(L,stage.firstChild);
+    stage.prepend(L);
     requestAnimationFrame(()=>L.classList.add("on"));
   }
   function setPhoto(t,i){

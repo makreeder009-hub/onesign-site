@@ -29,6 +29,7 @@ def nav(r):
         (f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><img loading="lazy" alt="" src="{wix(t["hero"],300,225)}" style="object-position:{pos(t["hero"])}"><span>{E(t["label"])}</span></a>' if t["hero"] else f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><span class="mc-ph">photos soon</span><span>{E(t["label"])}</span></a>')
         for t in TYPES)
     chips = "".join(f'<a href="{r}signs/{t["slug"]}.html">{E(t["label"])}</a>' for t in TYPES)
+    mega_cards += f'<a class="mega-card all" href="#contact">not sure?<br>ask us →</a>'
     return f'''<div class="progress" id="progress"></div>
 <header class="nav" id="nav">
   <div class="wrap nav-in">
@@ -177,7 +178,7 @@ def page(path, *, title, desc, canonical, body, ogimg, r, ld=(), bodyattrs=""):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://static.wixstatic.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="{r}assets/site.css">
+<link rel="stylesheet" href="{r}assets/site.css?v={ASSET_V}">
 {lds}
 </head>
 <body{bodyattrs}>
@@ -189,7 +190,7 @@ def page(path, *, title, desc, canonical, body, ogimg, r, ld=(), bodyattrs=""):
 {footer(r)}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="{r}assets/site.js" defer></script>
+<script src="{r}assets/site.js?v={ASSET_V}" defer></script>
 </body>
 </html>
 '''
@@ -580,8 +581,10 @@ def build_css():
     open(os.path.join(OUT,"assets","site.css"),"w").write(css)
 
 if __name__ == "__main__":
+    import hashlib
     os.makedirs(os.path.join(OUT,"assets"), exist_ok=True)
     build_css()
+    ASSET_V = hashlib.md5(open(os.path.join(OUT,"assets","site.css"),"rb").read()+open(os.path.join(OUT,"assets","site.js"),"rb").read()).hexdigest()[:10]
     pages = [home_page(), about_page(), contact_page()]
     pages += [type_page(t) for t in TYPES]
     pages += [sector_page(s) for s in SECTORS]

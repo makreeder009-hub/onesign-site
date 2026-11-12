@@ -521,3 +521,11 @@ form.mock label.drop{font:400 14px/1.5 var(--f-body);letter-spacing:0;text-trans
   .type-stage.has-thumbs .thumbs::-webkit-scrollbar{display:none}
   .thumbs button{width:52px;height:40px;flex:none}
 }
+
+/* explorer: caption on its own line; thumbnail strip scrolls sideways and can hold any number */
+.stage-cap{margin:-8px 0 0;font:500 12.5px/1.45 var(--f-mono);letter-spacing:.02em;color:var(--fg-2)}
+.stage-cap:empty{display:none}
+.type-stage.has-thumbs .thumbs,.type-stage .thumbs{left:12px;right:12px;bottom:9px;top:auto;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.35) transparent;padding-bottom:2px}
+.type-stage .thumbs:not(:empty){display:flex}
+.thumbs button{flex:none}
+.type-stage:not(.has-thumbs) .thumbs{display:none}

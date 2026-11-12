@@ -397,7 +397,7 @@ def home_page():
     for t in TYPES:
         data.append(dict(name=t["name"], label=t["label"], code=t["code"], desc=t["desc"], ideal=t["ideal"], spec=t["spec"],
             url=f"signs/{t['slug']}.html",
-            photos=[dict(full=wix(k,1600,1100,"fit"), bg=wix(k,80,60), thumb=wix(k,140,100), cap=cap(k)) for k in t["photos"][:6]]))
+            photos=[dict(full=wix(k,1600,1100,"fit"), bg=wix(k,80,60), thumb=wix(k,140,100), cap=cap(k)) for k in t["photos"][:14]]))
     tabs = "".join(f'<li><button role="tab" id="tab-{t["slug"]}" aria-selected="{"true" if i==0 else "false"}" aria-controls="typePanel" tabindex="{0 if i==0 else -1}"><span class="n">{i+1:02d}</span><span class="t">{E(t["label"])}</span><span class="arr">→</span></button></li>' for i,t in enumerate(TYPES))
     t0 = TYPES[0]
     spec0 = "".join(f"<dt>{E(a)}</dt><dd>{E(b)}</dd>" for a,b in t0["spec"])
@@ -474,9 +474,9 @@ def home_page():
       <div class="type-panel" id="typePanel" role="tabpanel" aria-labelledby="tab-{t0["slug"]}">
         <div class="type-stage" id="typeStage">
           <div class="layer frame on"><img class="b" alt="" src="{wix(t0["photos"][0],80,60)}"><img class="f" alt="{E(cap(t0["photos"][0]))}" src="{wix(t0["photos"][0],1600,1100,"fit")}"></div>
-          <span class="cap" id="typeCap">{E(cap(t0["photos"][0]))}</span>
           <div class="thumbs" id="typeThumbs"></div>
         </div>
+        <p class="stage-cap" id="typeCap">{E(cap(t0["photos"][0]))}</p>
         <div class="type-body" id="typeBody">
           <div>
             <h3 id="typeTitle">{E(t0["label"])}</h3>

@@ -80,7 +80,7 @@ if(list&&TYPES.length){
   }
   function swapIn(L){
     $$(".layer",stage).forEach(o=>{if(o!==L){o.classList.remove("on");setTimeout(()=>o.remove(),400)}});
-    stage.insertBefore(L,$("#typeCap"));
+    stage.insertBefore(L,stage.firstChild);
     requestAnimationFrame(()=>L.classList.add("on"));
   }
   function setPhoto(t,i){
@@ -100,7 +100,7 @@ if(list&&TYPES.length){
     const th=$("#typeThumbs"); th.innerHTML="";
     if(t.photos.length>1) t.photos.forEach((p,i)=>{
       const b=el("button",{"aria-pressed":String(i===0),"aria-label":"Show "+p.cap},`<img alt="" src="${p.thumb}">`);
-      b.addEventListener("click",()=>{$$("button",th).forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");setPhoto(t,i)});
+      b.addEventListener("click",()=>{$$("button",th).forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");setPhoto(t,i);b.scrollIntoView({block:"nearest",inline:"nearest",behavior:reduce?"auto":"smooth"})});
       th.appendChild(b);
     });
     $("#typeTitle").textContent=t.label;
@@ -118,6 +118,8 @@ if(list&&TYPES.length){
     b.addEventListener("mouseenter",()=>TYPES[n].photos.slice(0,2).forEach(p=>{load(p.full);load(p.bg)}),{once:true});
   });
   list.addEventListener("keydown",e=>{const k=e.key;if(!["ArrowDown","ArrowUp","ArrowLeft","ArrowRight","Home","End"].includes(k))return;e.preventDefault();const n=k==="Home"?0:k==="End"?TYPES.length-1:(cur+((k==="ArrowDown"||k==="ArrowRight")?1:-1)+TYPES.length)%TYPES.length;show(n);tabs[n].focus()});
+  const thBox=$("#typeThumbs");
+  thBox.addEventListener("wheel",e=>{if(thBox.scrollWidth>thBox.clientWidth&&Math.abs(e.deltaY)>Math.abs(e.deltaX)){thBox.scrollLeft+=e.deltaY;e.preventDefault()}},{passive:false});
   show(0,true);
   $("#typeQuote").addEventListener("click",()=>{const s=$("#f-type");if(s)s.value=TYPES[cur].name});
   addEventListener("load",()=>{const all=TYPES.filter(t=>t.photos[0]).map(t=>t.photos[0]);let i=0;(function next(){if(i>=all.length)return;const p=all[i++];Promise.all([load(p.full),load(p.bg)]).then(()=>setTimeout(next,60))})()});

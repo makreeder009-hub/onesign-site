@@ -545,3 +545,40 @@ for p in PROJECTS:
 REEL_A = ["st_welcome" if k=="seventy3" else k for k in REEL_A]
 REEL_A = ["n_jet2" if k=="vertu" else k for k in REEL_A]
 REEL_B = ["n_thatype" if k=="vanPark" else k for k in REEL_B]
+
+# ===================== Revisions from Mak, 12 Nov (2) =====================
+_cap("ig_corner","Blacks Corner projecting sign")
+_cap("rascals_proj","Rascals light box")
+_cap("ig_neon_red","BYRE: 'Join the herd' LED neon")
+T = {t["slug"]: t for t in TYPES}
+t = T["3d-letters"]
+t["photos"] = ["n_jet2","vault","rds","dog","ig_zen","n_court","n_thatype","n_byre","n_grainger","nhs_bld","ig_nhs_night","ig_wrgroup",
+               "n_tribeca","n_fitt","n_superpower","n_renew_close","n_murphys","n_aqua","n_jet2glow","ig_maple","ig_atom",
+               "catalyst_l","ig_goldscript","ig_mango","ig_stephenson"]
+t["hero"] = "n_thatype"
+t["variants"][0]["img"] = "n_jet2"
+t["notes"][1] = "The Vault: fabricated, halo-lit letters on a panel. Jet2: halo-lit fabricated letters straight onto the wall. Dog & Parrot: inset brass Komacel."
+t = T["projecting-signs"]
+t["photos"] = ["ig_corner","ig_queenshead","ig_lane","works"]; t["hero"] = "ig_corner"
+t = T["lightboxes-flex-faces"]
+t["photos"] = ["ig_gavroche","n_kosmic","rascals_proj","n_kosmic_close"]
+t["variants"][1]["img"] = "n_kosmic"
+t["notes"] = ["Choose a light box for smaller, crisp signs and a flex face once the sign gets big.",
+              "Kosmic Kingdom is a large flex face: one seamless printed skin across the whole frame."]
+t = T["high-level-signs"]
+t["photos"] = [k for k in t["photos"] if not k.startswith("n_kosmic")]
+T["neon-led-neon"]["photos"] = ["neonB","ig_dubliner","ig_neon_red","ig_leancuisine","welcome_neon","ig_pudes","rascals_neon","ig_neon_yellow","neonA","neonC","neonD"]
+
+S = {s["slug"]: s for s in SECTORS}
+S["retail"]["gallery"] = [k for k in S["retail"]["gallery"] if k!="ig_smartvape"]
+S["retail"]["img"] = "n_superpower_wide"
+S["hospitality-leisure"]["img"] = "n_thatype"
+S["commercial"]["img"] = "n_jet2"
+S["commercial"]["gallery"] = ["n_jet2","rolls","n_renew_close","rolls_int","jaymac","rds","ig_wrgroup","ig_tms","catalyst_l"]
+
+for p in PROJECTS:
+    if p["k"] == "catalyst": p.update(name="Thatype", k="n_thatype", label="Halo-lit script letters", url=None)
+    if p["k"] == "cork": p.update(name="Superpower", k="n_superpower_wide", label="Illuminated 3D letters", url=None)
+    if p["k"] == "glow": p.update(name="Jet2", k="n_jet2", label="Halo-lit 3D letters", url=None)
+REEL_A = ["st_welcome","n_court","works","vertu","neonB","n_byre","dog","n_kosmic","bowmer","arv","woodham","n_griffin","tesco","vault","ncl"]
+REEL_B = ["n_jet2","glow","harbro","n_grainger","cork","nhs","n_superpower_wide","rolls","sunclub","n_thatype","kloset","n_renew_close","alwinton","catalyst","w_red_g"]

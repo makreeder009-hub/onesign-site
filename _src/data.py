@@ -697,3 +697,65 @@ t = T["vinyl-wall-graphics"]
 t["hero"] = "ig_lineart"
 t["photos"] = ["ig_lineart", "ig_lineart_install"] + [k for k in t["photos"] if k not in ("ig_lineart", "ig_lineart_install")]
 T["flags-banners"]["hero"] = "ig_kier"
+
+# ===================== Revisions from Mak, 13 Nov (4): Archive 5 =====================
+IMG.update({
+ "n_lean": _new("lean-cuisine", "Lean Cuisine: shop fascia"),
+ "n_camden": _new("camden-clinic", "The Camden Clinic: 3D letters on the fascia"),
+ "n_camden_close": _new("camden-clinic-close", "The Camden Clinic: 3D letters up close"),
+ "n_pureglow": _new("pure-glow", "Pure Glow Tanning: 3D letters and logo"),
+ "n_whiteswan": _new("white-swan", "The White Swan: 3D letters"),
+ "n_savoy_ws": _new("savoy-workshop", "Savoy letters in the workshop"),
+ "n_workwear_wall": _new("workwear-wall", "Workwear Express: printed wall graphic"),
+ "n_atom": _new("atom-close", "Atom: 3D letters up close"),
+ "n_glow_wall": _new("glow-wall", "glow.: 3D letters on a slatted wall"),
+ "n_vivana_fascia": _new("vivana-fascia", "Vivana Lounge: fascia"),
+ "n_savoy_ent": _new("savoy-entrance", "Savoy: 3D letters over the entrance"),
+ "n_recite": _new("recite", "Recite: halo-lit 3D letters"),
+ "n_betteryou": _new("better-you", "Better You: flat-cut letters"),
+ "n_vivana_ent": _new("vivana-entrance", "Vivana Lounge: entrance fascia"),
+ "n_identity": _new("identity-co", "Identity Co. Salon: line-art wall graphic"),
+ "n_skinsoul": _new("skin-soul", "Skin & Soul Medical: flat-cut letters"),
+ "n_skinsoul_feel": _new("skin-soul-feeling", "Skin & Soul: tone-on-tone flat-cut letters"),
+ "n_redletter": _new("red-letter-build", "Face-lit letters being built"),
+ "n_fora": _new("fora", "Fora Beauty & Skin Clinic: flat-cut letters"),
+ "n_codcrust_build": _new("cod-crust-build", "Cod & Crust panel in production"),
+ "n_vivana": _new("vivana-lounge", "Vivana Lounge: 3D letters and logo"),
+ "n_pureglow_build": _new("pure-glow-build", "Pure Glow panel in production"),
+ "n_jaymac_close": _new("jaymac-close", "Jaymac Solutions: flat-cut letters up close"),
+ "n_jaymac_office": _new("jaymac-office", "Jaymac Solutions: office logo"),
+ "n_jaymac_logo": _new("jaymac-logo", "Jaymac Solutions: flat-cut logo"),
+ "n_quality": _new("quality-trust", "Jaymac: 'Quality, Trust, Integrity' flat-cut letters"),
+ "n_quality_close": _new("quality-trust-close", "'Quality, Trust, Integrity' up close"),
+ "n_jaymac_door": _new("jaymac-door", "Jaymac Solutions: door vinyl"),
+ "n_builtup_build": _new("built-up-build", "Built-up letters in production"),
+ "n_savoy": _new("savoy", "Savoy: 3D letters on the building"),
+ "n_flow_build": _new("flow-build", "Flow Wellness Studio sign in the workshop"),
+ "n_act": _new("act-group", "ACT Group: 3D letters and vehicle graphics"),
+ "n_skinsoul_neon": _new("skin-soul-neon", "Skin & Soul: LED neon"),
+})
+_cap("rascals_proj", "Rascals: 3D letters")
+T = {t["slug"]: t for t in TYPES}
+def _add(slug, keys, at=None):
+    t = T[slug]; keys = [k for k in keys if k not in t["photos"]]
+    if at is None: t["photos"] += keys
+    else: t["photos"][at:at] = keys
+# Rascals is 3D letters, not a light box
+for t in TYPES:
+    if t["slug"] != "3d-letters": t["photos"] = [k for k in t["photos"] if k != "rascals_proj"]
+_add("3d-letters", ["n_savoy", "n_recite", "n_camden", "n_pureglow", "n_vivana", "n_whiteswan", "n_glow_wall", "rascals_proj", "n_act", "n_atom", "n_camden_close", "n_savoy_ent"], at=4)
+_add("flat-cut-letters", ["n_jaymac_logo", "n_quality", "n_skinsoul", "n_fora", "n_betteryou", "n_skinsoul_feel", "n_jaymac_close", "n_quality_close", "n_jaymac_office"], at=1)
+_add("vinyl-wall-graphics", ["n_identity", "n_workwear_wall", "n_jaymac_door"], at=2)
+_add("neon-led-neon", ["n_skinsoul_neon"], at=2)
+_add("backlit-panels", ["n_codcrust_build", "n_pureglow_build"])
+_add("high-level-signs", ["n_vivana_fascia"])
+S = {s["slug"]: s for s in SECTORS}
+def _sadd(slug, keys, at=None):
+    s = S[slug]; keys = [k for k in keys if k not in s["gallery"]]
+    if at is None: s["gallery"] += keys
+    else: s["gallery"][at:at] = keys
+_sadd("hair-beauty", ["n_pureglow", "n_skinsoul", "n_identity", "n_fora", "n_skinsoul_neon", "n_betteryou", "n_camden"], at=1)
+_sadd("hospitality-leisure", ["n_savoy", "n_whiteswan", "n_vivana", "n_vivana_ent"], at=1)
+_sadd("commercial", ["n_jaymac_logo", "n_quality", "n_recite", "n_act", "n_jaymac_door"], at=1)
+_sadd("retail", ["n_lean"])
+WORKSHOP = ["st_design", "ws_cnc", "ws_cut", "ws_weld", "ws_spray", "ws_assembly", "n_builtup_build", "n_redletter", "n_savoy_ws", "n_flow_build", "ws_finish", "ws_print", "n_codcrust_build", "ws_built", "ws_weld2", "ws_install"]

@@ -582,3 +582,89 @@ for p in PROJECTS:
     if p["k"] == "glow": p.update(name="Jet2", k="n_jet2", label="Halo-lit 3D letters", url=None)
 REEL_A = ["st_welcome","n_court","works","vertu","neonB","n_byre","dog","n_kosmic","bowmer","arv","woodham","n_griffin","tesco","vault","ncl"]
 REEL_B = ["n_jet2","glow","harbro","n_grainger","cork","nhs","n_superpower_wide","rolls","sunclub","n_thatype","kloset","n_renew_close","alwinton","catalyst","w_red_g"]
+
+# ===================== Revisions from Mak, 13 Nov =====================
+def _w(i, c, p="50% 50%"): return (i, c, p)
+IMG.update({
+ "st_sign": _w("8c2d2ed5093546149f53cd0ae455987c~mv2.jpg", "Bar Seventy Three: backlit panel"),
+ "st_design": _w("aa5adf7f99b5420d9f484161b5cfe58d~mv2.jpg", "Artwork set up for production"),
+ "ws_cnc": _w("1e7f8b60efbd46ce877f5f9dc46b25d7~mv2.jpg", "CNC routing"),
+ "ws_cnc2": _w("7d3ef632699642aa9a3c414f8b149e11~mv2.jpg", "CNC routing"),
+ "ws_weld": _w("52f2e897853b4b259826031f64646550~mv2.jpg", "Welding"),
+ "ws_weld2": _w("df09a6da3107457d8f32e71b5db091b2~mv2.jpg", "Welding"),
+ "ws_cut": _w("13624282660241bf96bf94b5ac232cd0~mv2.jpg", "Cutting metal"),
+ "ws_spray": _w("66ed4f69326f4cb895c77054f9f2e136~mv2.jpg", "Spray finishing"),
+ "ws_assembly": _w("dae564f29df34dae85dee34cae1a2e2c~mv2.jpg", "Assembly"),
+ "ws_finish": _w("984f85d15fcc48388b9d0ef29f04b079~mv2.jpg", "Hand finishing"),
+ "ws_built": _w("3e908f32ee0b4c2d9e77f9ba78bb6796~mv2.jpg", "A finished panel in the workshop"),
+ "ws_install": _w("4400b21f555e49f79b0b929dda95a62c~mv2.jpg", "Installation"),
+ "ws_print": _w("58fa4b8477b84722b984c5dd309b9902~mv2.jpg", "Flatbed printing"),
+ "vg_tree": _w("29362c7056c94f13acc85fcda79df655~mv2.jpg", "Tree wall graphic"),
+ "vg_birds": _w("b01038205a624f8584e800ce02b05127~mv2.jpg", "Feature wall graphics"),
+ "vg_workhard": _w("0a4696f3d7d7460d9cad83341a2eebb0~mv2.jpg", "Woodham Academy: 'Work Hard' wall vinyl"),
+ "way_g": _w("2e6fa9d91d184d57a366c65f8f9585a7~mv2.jpg", "Woodham Academy: floor identifier and directory"),
+ "way_1": _w("0a8a02bcefd74eef9e74b1b16f50c8c0~mv2.jpg", "Woodham Academy: level 1 wayfinding"),
+ "way_2": _w("3c7355517aac405996482e6b9b55a652~mv2.jpg", "Woodham Academy: level 2 wayfinding"),
+ "way_dir": _w("4a3ebc2a8360406691fcc18edeb80af9~mv2.jpg", "Woodham Academy: directory sign"),
+ "print_fruit": _w("27e10e97e37e4f57be72ae72c98a32be~mv2.jpg", "Large-format in-store graphics"),
+ "cork_dusk": _w("f6186d4a72b54968b137c4fb3a170500~mv2.jpg", "Cork & Coffee: lit fascia at dusk"),
+ "hc_cdc": _w("318f8b3f9c7d4e2f8fd1d659d9d12888~mv2.jpg", "NHS Community Diagnostic Centre: entrance signs"),
+ "hc_cdc2": _w("75d8810ff05344edb74d4e4bf4d440d2~mv2.jpg", "NHS Community Diagnostic Centre: reception signs"),
+ "glow_int": _w("ee64cba746784ca48e291695d52f781a~mv2.jpg", "glow.: 3D letters inside the salon"),
+ "glow_int2": _w("1c22fa9d23b942c89d11f4f3bef422b9~mv2.jpg", "glow. salon interior"),
+ "totem_ww": _w("e963f888b64f40cb841ecc48026c4fbd~mv2.jpg", "Workwear Express totem"),
+})
+_cap("hoarding", "Printed site hoarding")
+_cap("glow", "glow.: 3D letters on a fascia panel")
+T = {t["slug"]: t for t in TYPES}
+
+t = T["3d-letters"]
+t["photos"] = [k for k in t["photos"] if k not in ("glow",)]
+t["photos"][5:5] = ["glow", "glow_int"]
+
+t = T["high-level-signs"]
+t["photos"] = [k for k in t["photos"] if k not in ("glow", "ig_nhs_cumbria")]
+
+t = T["backlit-panels"]
+t["hero"] = "st_sign"; t["photos"] = ["st_sign", "st_welcome", "ig_codcrust", "ws_built"]
+
+t = T["vinyl-wall-graphics"]
+t["hero"] = "vg_tree"
+t["photos"] = ["vg_tree", "bankhouse", "vg_birds", "vg_workhard"] + [k for k in t["photos"] if k != "bankhouse"]
+
+t = T["digital-large-format-print"]
+t["hero"] = "hoarding"
+t["photos"] = ["hoarding", "n_jet2_ceiling", "print_fruit", "bowmer", "ig_ocado", "lfPosters", "lfPrint"]
+
+t = T["totems-monoliths"]
+t["hero"] = "totem_ww"
+t["photos"] = ["totem_ww"] + [k for k in t["photos"] if k != "totem_ww"]
+
+t = T["wayfinding"]
+t["hero"] = "way_g"
+t["photos"] = ["way_g", "way_1", "way_2", "way_dir"] + [k for k in t["photos"] if k not in ("way_g",)]
+
+S = {s["slug"]: s for s in SECTORS}
+S["hair-beauty"]["img"] = "n_thatype"
+S["hair-beauty"]["gallery"] = ["n_thatype", "glow", "glow_int", "glow_int2"] + [k for k in S["hair-beauty"]["gallery"] if k not in ("glow",)]
+S["hospitality-leisure"]["img"] = "cork_dusk"
+S["hospitality-leisure"]["gallery"] = ["cork_dusk"] + [k for k in S["hospitality-leisure"]["gallery"] if k != "n_thatype"]
+S["transport"]["img"] = "ig_park"
+S["transport"]["gallery"] = ["ig_park", "ig_park2", "vanYellow"]
+S["healthcare"]["img"] = "hc_cdc"
+S["healthcare"]["gallery"] = ["hc_cdc", "hc_cdc2"] + S["healthcare"]["gallery"]
+
+for p in PROJECTS:
+    if p["k"] == "st_welcome": p["k"] = "st_sign"
+
+MACHINES = [
+ ("Piranha CNC router", "High-precision routing for acrylic, aluminium composite, foamex and timber: letters, panels and complex shapes."),
+ ("Ermak brake press", "Precision metal bending for fabricated letters, trays, totems and structural signage."),
+ ("New laser cutter", "Our newest machine: precise, clean-edged cutting for metal and acrylic letters and intricate detail."),
+ ("Boxford precision cutter", "Fine engraving and cutting for intricate designs and small detailed parts."),
+ ("HP Latex R1000", "Large-format printing at up to 1200 x 1200 dpi, with water-based inks, straight onto board, acrylic, metal, timber and vinyl."),
+ ("Epson SureColor", "Ultra-high-quality roll printing for vinyl graphics, wall graphics and print."),
+ ("Mimaki cutting plotter", "Precision-cut vinyl lettering, shapes and application-ready graphics."),
+ ("Rollsroller flatbed applicator", "Bubble-free application of printed graphics and vinyl onto panels."),
+]
+WORKSHOP = ["st_design", "ws_cnc", "ws_cut", "ws_weld", "ws_spray", "ws_assembly", "ws_finish", "ws_print", "ws_built", "ws_weld2", "ws_cnc2", "ws_install"]

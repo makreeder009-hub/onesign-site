@@ -26,10 +26,10 @@ def tcap(s):  # sentence case for sector names in footer/meta
 # --------------------------------------------------------------- partials
 def nav(r):
     mega_cards = "".join(
-        (f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><img loading="lazy" alt="" src="{wix(t["hero"],300,225)}" style="object-position:{pos(t["hero"])}"><span>{E(t["label"])}</span></a>' if t["hero"] else f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><span class="mc-ph">photos soon</span><span>{E(t["label"])}</span></a>')
+        (f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><div class="frame mc-img"><img class="b" loading="lazy" alt="" src="{wix(t["hero"],80,60)}"><img class="f" loading="lazy" alt="" src="{wix(t["hero"],440,330,"fit")}"></div><span>{E(t["label"])}</span></a>' if t["hero"] else f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><span class="mc-ph">photos soon</span><span>{E(t["label"])}</span></a>')
         for t in TYPES)
     chips = "".join(f'<a href="{r}signs/{t["slug"]}.html">{E(t["label"])}</a>' for t in TYPES)
-    mega_cards += f'<a class="mega-card all" href="#contact">not sure?<br>ask us →</a>'
+    mega_cards += f'<a class="mega-card all" href="#contact"><b>not sure?</b><small>Send us a photo of your building and we\'ll mock up the options for free.</small><em>ask us →</em></a>'
     return f'''<div class="progress" id="progress"></div>
 <header class="nav" id="nav">
   <div class="wrap nav-in">
@@ -48,11 +48,6 @@ def nav(r):
   <div class="mega" id="mega">
     <div class="wrap mega-in">
       <div class="mega-grid">{mega_cards}</div>
-      <div class="mega-side">
-        <h4>not sure what you need?</h4>
-        <p>Send us a photo of your building. We'll mock up the options on it for free, so you can see them before you spend anything.</p>
-        <a class="pill pill-solid" href="#contact" style="align-self:flex-start">get a free mockup <span class="dot">→</span></a>
-      </div>
     </div>
   </div>
 </header>
@@ -214,13 +209,13 @@ def phero(r, crumbs, h1, lede, img=None, ctas=True, plain=False):
   </div>
 </section>'''
 
-def gallery(keys, r):
+def gallery(keys, r, captions=True):
     if not keys:
         return '<div class="gallery-empty"><b>Project photos coming soon</b>We make these regularly. Ask us and we\'ll send you examples of recent jobs.</div>'
     figs = "".join(
-        f'<figure data-full="{wix(k,1800,1800,"fit")}" data-cap="{E(cap(k))}"><img loading="lazy" alt="{E(cap(k))}" src="{wix(k,900,1200,"fit")}"><figcaption>{E(cap(k))}</figcaption></figure>'
+        f'<figure data-full="{wix(k,1800,1800,"fit")}" data-cap="{E(cap(k)) if captions else ""}"><img loading="lazy" alt="{E(cap(k))}" src="{wix(k,900,1200,"fit")}">{f"<figcaption>{E(cap(k))}</figcaption>" if captions else ""}</figure>'
         for k in keys)
-    return f'<div class="gallery">{figs}</div>'
+    return f'<div class="gallery{"" if captions else " grid"}">{figs}</div>'
 
 def link_card(href, img, title, text, icon=None):
     ico = f'<span class="ico"><img alt="" src="{WIX}{icon}~mv2.webp/v1/fit/w_120,h_120,q_90,enc_auto/icon.png" width="36" height="36"></span>' if icon else ""
@@ -328,28 +323,44 @@ def sector_page(s):
 # --------------------------------------------------------------- about
 def about_page():
     r = ""
-    body = f'''{phero(r, [("Home","index.html"),("About us",None)], "family-run sign makers since 2008.", "Founded in Newcastle and trusted nationwide. We take great pride not only in the work we do, but in how we do it.", "install2")}
-<section class="sec"><div class="wrap two">
+    machines = "".join(f'<div class="mach"><span class="mach-n">{i+1:02d}</span><h3>{E(n)}</h3><p>{E(d)}</p></div>' for i,(n,d) in enumerate(MACHINES))
+    caps = [("Design","Artwork, technical drawings and photo mockups so you see the sign on your building first."),
+            ("Cut","CNC routing, laser cutting and precision engraving for letters, panels and shapes."),
+            ("Fabricate","Folding, welding and assembling metal letters, trays, totems and frames."),
+            ("Print","Large-format print up to 1200 dpi on board, acrylic, metal, timber and vinyl."),
+            ("Finish","Spray finishing in your brand colours, LED wiring and quality checks."),
+            ("Install","Our own IPAF and PASMA trained crews fit every sign, from shopfronts to high level.")]
+    capcards = "".join(f'<div class="capc"><h3>{E(a)}</h3><p>{E(b)}</p></div>' for a,b in caps)
+    body = f'''{phero(r, [("Home","index.html"),("About us",None)], "family-run sign makers since 2008.", "Founded in the North East and trusted nationwide. Everything from design to installation happens under one roof in our Team Valley factory.", "ws_assembly")}
+<section class="sec"><div class="wrap two about-intro">
   <div class="prose">
     <span class="eyebrow" style="margin-bottom:18px;display:flex">Our story</span>
     <h2>one roof, every step.</h2>
-    <p>Onesign has been family-run since 2008 and brings 50 years of sign and print experience under one roof. From our North East roots in Team Valley, Gateshead, we now make and fit signs for businesses across the UK.</p>
-    <p>Everything is managed in-house. Our own team surveys, designs, manufactures and installs every job, so you deal with the same people from first call to final fixing, and nothing gets lost in a handover.</p>
-    <p>We use modern equipment to make durable, high-quality signs that are safe for demanding places like schools and hospitals, and we keep investing in new technology and better ways of working as our clients' needs change.</p>
+    <p>Onesign has been family-run since 2008 and brings over 40 years of sign-making experience under one roof. From our 10,000 sq ft production facility in Team Valley, Gateshead, we make and fit signs for businesses across the UK.</p>
+    <p>We manage everything in-house: design, digital print, fabrication, assembly and installation. Each department has its own expert team, so every job gets the same precision and care whatever its size, and you deal with the same people from first call to final fixing.</p>
+    <p>We keep investing in the kit to match. Our newest addition is a laser cutter, working alongside our CNC router, brake press and large-format printers.</p>
   </div>
-  <div>
+  <div class="about-side">
     <div class="figures">
       <div class="fig"><b>2008</b><span>Family-run since day one</span></div>
-      <div class="fig"><b><span data-count="50">50</span><sup>yrs</sup></b><span>Combined trade experience</span></div>
+      <div class="fig"><b>10,000</b><span>Sq ft production facility</span></div>
       <div class="fig"><b><span data-count="100">100</span><sup>%</sup></b><span>Made and fitted in-house</span></div>
-      <div class="fig"><b>5.0<sup>★</sup></b><span>From 71 Google reviews</span></div>
+      <div class="fig"><b>4.9<sup>★</sup></b><span>From 72 Google reviews</span></div>
     </div>
     <div class="accred"><small>Accredited</small><img src="{ACCRED}" alt="Acclaim, IPAF, PASMA, Constructionline, CSCS and SCHQ accreditations" width="720" height="76"></div>
   </div>
 </div></section>
 <section class="sec alt"><div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">Inside the workshop</span><h2 class="h2 rv">made in Team Valley.</h2></div><p class="lede rv">Routing, folding, welding, printing and wiring all happen in our own Gateshead workshop.</p></div>
-  {gallery(["st_cnc","st_weld","weld","st_bench","install","install2"], r)}
+  <div class="sec-head"><div><span class="eyebrow">What we do in-house</span><h2 class="h2 rv">from drawing to fixing.</h2></div><p class="lede rv">Six disciplines, one team and one factory, so nothing gets lost in a handover.</p></div>
+  <div class="caps">{capcards}</div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Inside the factory</span><h2 class="h2 rv">made in Team Valley.</h2></div><p class="lede rv">Cutting, folding, welding, printing, spraying and wiring all happen in our own Gateshead factory.</p></div>
+  {gallery(WORKSHOP, r, captions=False)}
+</div></section>
+<section class="sec alt"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Our machinery</span><h2 class="h2 rv">the kit behind the signs.</h2></div><p class="lede rv">Some of the most advanced sign-making technology in the industry, so we can cut, print, fabricate and assemble with accuracy and keep quality control in our own hands.</p></div>
+  <div class="machs">{machines}</div>
 </div></section>
 <section class="sec" id="process"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">How we work</span><h2 class="h2 rv">one team, start to finish.</h2></div></div>
@@ -363,9 +374,9 @@ def about_page():
   </div>
 </div></section>
 {cta()}'''
-    return page("about.html", title="About Onesign & Digital | Family-Run Sign Makers, Gateshead",
-                desc="Family-run since 2008, Onesign & Digital designs, manufactures and installs signage from its Team Valley workshop in Gateshead.",
-                canonical=SITE_URL+"/about", body=body, ogimg=wix("install2",1200,630), r=r,
+    return page("about.html", title="About Onesign & Digital | Sign Makers & Factory, Gateshead",
+                desc="Family-run since 2008, Onesign & Digital designs, manufactures and installs signage from a 10,000 sq ft factory in Team Valley, Gateshead, for clients across the UK.",
+                canonical=SITE_URL+"/about", body=body, ogimg=wix("ws_assembly",1200,630), r=r,
                 ld=[crumbs_ld([("Home","/"),("About us","/about")])])
 
 # --------------------------------------------------------------- contact
@@ -413,7 +424,7 @@ def home_page():
     tiles = ""
     for i,p in enumerate(PROJECTS):
         big = i==0
-        inner = f'<img loading="lazy" alt="{E(p["name"])} sign by Onesign" src="{wix(p["k"],1200 if big else 800,1200 if big else 800)}" style="object-position:{pos(p["k"])}"><div class="tile-info"><div><small>{E(p["label"])}</small><h3>{E(p["name"])}</h3></div>{"<span class=\"go\" aria-hidden=\"true\">→</span>" if p["url"] else ""}</div>'
+        inner = f'<div class="frame tile-img"><img class="b" alt="" loading="lazy" src="{wix(p["k"],80,60)}"><img class="f" loading="lazy" alt="{E(p["name"])} sign by Onesign" src="{wix(p["k"],1400 if big else 900,1400 if big else 900,"fit")}"></div><div class="tile-info"><div><small>{E(p["label"])}</small><h3>{E(p["name"])}</h3></div>{"<span class=\"go\" aria-hidden=\"true\">→</span>" if p["url"] else ""}</div>'
         tiles += (f'<a class="tile" href="{SITE_URL}/{p["url"]}" target="_blank" rel="noopener">{inner}</a>' if p["url"] else f'<div class="tile">{inner}</div>')
     sectors = "".join(link_card(f'sectors/{s["slug"]}.html', s["img"], s["name"], s["blurb"], s["icon"]) for s in SECTORS)
     body = f'''<section class="hero" id="top">

@@ -688,3 +688,12 @@ T["totems-monoliths"]["photos"] = ["sun_totem"] + _strip(T["totems-monoliths"]["
 T["flags-banners"]["hero"] = "fence_banner"
 # focal point for the small sign-type menu cards (cover crop)
 MEGA_POS = {"backlit-panels":"28% 50%", "projecting-signs":"50% 22%", "flat-cut-letters":"50% 42%"}
+
+# ===================== Revisions from Mak, 13 Nov (3) =====================
+_cap("ig_lineart", "Zen: Buddha window graphic")
+_cap("ig_lineart_install", "Zen: fitting the Buddha window graphic")
+T = {t["slug"]: t for t in TYPES}
+t = T["vinyl-wall-graphics"]
+t["hero"] = "ig_lineart"
+t["photos"] = ["ig_lineart", "ig_lineart_install"] + [k for k in t["photos"] if k not in ("ig_lineart", "ig_lineart_install")]
+T["flags-banners"]["hero"] = "ig_kier"

@@ -759,3 +759,15 @@ _sadd("hospitality-leisure", ["n_savoy", "n_whiteswan", "n_vivana", "n_vivana_en
 _sadd("commercial", ["n_jaymac_logo", "n_quality", "n_recite", "n_act", "n_jaymac_door"], at=1)
 _sadd("retail", ["n_lean"])
 WORKSHOP = ["st_design", "ws_cnc", "ws_cut", "ws_weld", "ws_spray", "ws_assembly", "n_builtup_build", "n_redletter", "n_savoy_ws", "n_flow_build", "ws_finish", "ws_print", "n_codcrust_build", "ws_built", "ws_weld2", "ws_install"]
+
+# ===================== Revisions from Mak, 13 Nov (5) =====================
+# sign-type galleries show finished products only; Pure Glow removed everywhere
+_NOT_FINISHED = {"ig_goldscript", "ig_mango", "ig_stephenson", "ws_built", "n_codcrust_build", "n_pureglow_build", "ig_lineart_install"}
+_PURE = {"n_pureglow", "n_pureglow_build"}
+for t in TYPES:
+    t["photos"] = [k for k in t["photos"] if k not in _NOT_FINISHED | _PURE]
+for s in SECTORS:
+    s["gallery"] = [k for k in s["gallery"] if k not in _PURE]
+_cap("n_lean", "Lean Cuisine: backlit panel")
+T = {t["slug"]: t for t in TYPES}
+T["backlit-panels"]["photos"] += ["n_lean"]

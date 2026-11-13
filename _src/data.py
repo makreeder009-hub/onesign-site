@@ -687,4 +687,4 @@ T["totems-monoliths"]["hero"] = "sun_totem"
 T["totems-monoliths"]["photos"] = ["sun_totem"] + _strip(T["totems-monoliths"]["photos"], {"sun_totem"})
 T["flags-banners"]["hero"] = "fence_banner"
 # focal point for the small sign-type menu cards (cover crop)
-MEGA_POS = {}
+MEGA_POS = {"backlit-panels":"28% 50%", "projecting-signs":"50% 22%", "flat-cut-letters":"50% 42%"}

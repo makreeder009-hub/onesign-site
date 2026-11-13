@@ -424,7 +424,9 @@ def home_page():
     tiles = ""
     for i,p in enumerate(PROJECTS):
         big = i==0
-        inner = f'<div class="frame tile-img"><img class="b" alt="" loading="lazy" src="{wix(p["k"],80,60)}"><img class="f" loading="lazy" alt="{E(p["name"])} sign by Onesign" src="{wix(p["k"],1400 if big else 900,1400 if big else 900,"fit")}"></div><div class="tile-info"><div><small>{E(p["label"])}</small><h3>{E(p["name"])}</h3></div>{"<span class=\"go\" aria-hidden=\"true\">→</span>" if p["url"] else ""}</div>'
+        media = (f'<div class="frame tile-img"><img class="b" alt="" loading="lazy" src="{wix(p["k"],80,60)}"><img class="f" loading="lazy" alt="{E(p["name"])} sign by Onesign" src="{wix(p["k"],1400 if big else 900,1400 if big else 900,"fit")}"></div>' if p.get("fit") else
+                 f'<img loading="lazy" alt="{E(p["name"])} sign by Onesign" src="{wix(p["k"],1200 if big else 800,1200 if big else 800)}" style="object-position:{pos(p["k"])}">')
+        inner = f'{media}<div class="tile-info"><div><small>{E(p["label"])}</small><h3>{E(p["name"])}</h3></div>{"<span class=\"go\" aria-hidden=\"true\">→</span>" if p["url"] else ""}</div>'
         tiles += (f'<a class="tile" href="{SITE_URL}/{p["url"]}" target="_blank" rel="noopener">{inner}</a>' if p["url"] else f'<div class="tile">{inner}</div>')
     sectors = "".join(link_card(f'sectors/{s["slug"]}.html', s["img"], s["name"], s["blurb"], s["icon"]) for s in SECTORS)
     body = f'''<section class="hero" id="top">

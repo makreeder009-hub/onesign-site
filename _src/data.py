@@ -655,7 +655,7 @@ S["healthcare"]["img"] = "hc_cdc"
 S["healthcare"]["gallery"] = ["hc_cdc", "hc_cdc2"] + S["healthcare"]["gallery"]
 
 for p in PROJECTS:
-    if p["k"] == "st_welcome": p["k"] = "st_sign"
+    if p["k"] == "st_welcome": p.update(k="st_sign", fit=True)
 
 MACHINES = [
  ("Piranha CNC router", "High-precision routing for acrylic, aluminium composite, foamex and timber: letters, panels and complex shapes."),

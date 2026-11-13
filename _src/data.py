@@ -841,3 +841,15 @@ for s in SECTORS:
     if "lightboxes-flex-faces" in s.get("types", []):
         j = s["types"].index("lightboxes-flex-faces"); s["types"][j:j+1] = ["light-boxes", "flex-faces"]
 MEGA_ASK = False   # 14 types fill the 7x2 menu
+
+# ===================== Revisions from Mak, 13 Nov (7): Archive 6 =====================
+IMG.update({
+ "n_annas": _new("annas", "Anna's Bar & Kitchen: backlit panel"),
+ "n_queens": _new("queens-head-fascia", "Queens Head: backlit fascia panel"),
+})
+IMG["n_lean"] = _new("lean-cuisine-front", "Lean Cuisine: backlit panel")
+T = {t["slug"]: t for t in TYPES}
+T["backlit-panels"]["photos"] = ["st_sign", "n_annas", "ig_codcrust", "n_queens", "n_lean"]
+S = {s["slug"]: s for s in SECTORS}
+for k in ("n_annas", "n_queens"):
+    if k not in S["hospitality-leisure"]["gallery"]: S["hospitality-leisure"]["gallery"].insert(2, k)

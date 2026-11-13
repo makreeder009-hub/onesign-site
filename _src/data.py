@@ -771,3 +771,73 @@ for s in SECTORS:
 _cap("n_lean", "Lean Cuisine: backlit panel")
 T = {t["slug"]: t for t in TYPES}
 T["backlit-panels"]["photos"] += ["n_lean"]
+
+# ===================== Revisions from Mak, 13 Nov (6) =====================
+_cap("rascals_proj", "Rascals: light box")
+_cap("rascals_neon", "Rascals: 3D letters")
+_cap("glow", "glow.: flat-cut letters on a fascia panel")
+_cap("n_glow_wall", "glow.: flat-cut letters on a slatted wall")
+_cap("n_betteryou", "Better You: 3D letters")
+_cap("ig_lineart_install", "Identity Co. Salon: line-art wall graphic")
+_cap("n_kosmic", "Kosmic Kingdom: flex face sign")
+_cap("n_savoy", "Savoy: high level letters on the building")
+T = {t["slug"]: t for t in TYPES}
+def _drop(slug, keys): T[slug]["photos"] = [k for k in T[slug]["photos"] if k not in keys]
+def _put(slug, keys, at=None):
+    keys = [k for k in keys if k not in T[slug]["photos"]]
+    if at is None: T[slug]["photos"] += keys
+    else: T[slug]["photos"][at:at] = keys
+# 3D letters
+_drop("3d-letters", {"rascals_proj", "glow", "glow_int", "n_glow_wall", "n_savoy", "n_savoy_ent", "n_camden_close", "n_jet2glow", "ig_nhs_night", "n_atom"})
+_put("3d-letters", ["n_betteryou", "rascals_neon"], at=6)
+# backlit: one photo per sign
+_drop("backlit-panels", {"st_welcome"})
+# flat-cut
+_drop("flat-cut-letters", {"n_betteryou", "n_jaymac_close", "n_quality_close", "n_jaymac_office", "n_skinsoul_feel"})
+_put("flat-cut-letters", ["glow", "n_glow_wall"], at=1)
+# high level
+_drop("high-level-signs", {"n_griffin_up"})
+_put("high-level-signs", ["n_savoy"], at=2)
+# neon
+_drop("neon-led-neon", {"rascals_neon"})
+# vinyl
+_drop("vinyl-wall-graphics", {"n_identity"})
+_put("vinyl-wall-graphics", ["ig_lineart_install"], at=1)
+# print takes the Company Shop banner; flags is Kier only
+_put("digital-large-format-print", ["fence_banner"], at=3)
+T["flags-banners"]["photos"] = ["ig_kier"]
+# wayfinding: Woodham keeps the yellow G, blue directory and red level sign
+_drop("wayfinding", {"way_1", "way_2", "w_green2"})
+T["wayfinding"]["photos"] = ["way_g", "way_dir", "w_red_g"] + [k for k in T["wayfinding"]["photos"] if k not in ("way_g", "way_dir", "w_red_g")]
+
+# split light boxes and flex faces into two sign types
+_lb = T["lightboxes-flex-faces"]
+_i = TYPES.index(_lb)
+LIGHTBOX = dict(slug="light-boxes", name="Light boxes", label="light boxes", code="OS-LB",
+    seo_title="Light Box Signs | Illuminated Shop Signs",
+    meta="Illuminated light box signs made in our Gateshead factory: aluminium boxes with acrylic faces lit evenly from inside, for shopfronts and projecting signs.",
+    hero="ig_gavroche", photos=["ig_gavroche", "rascals_proj"],
+    desc="A light box is an aluminium box with an acrylic face, lit evenly from inside by LEDs. Light boxes are generally smaller signs, ideal for shopfronts, projecting signs and anywhere the whole face should glow.",
+    ideal=["shopfronts", "projecting signs", "cafés and bars", "salons"],
+    spec=[["Construction", "Fabricated aluminium box, painted to any colour"], ["Face", "Acrylic, printed or vinyl-applied artwork"], ["Lighting", "LED modules, lit evenly across the face"], ["Sides", "Single or double-sided"], ["Shapes", "Rectangular, round or cut to your logo"]],
+    variants=[], notes=["Light boxes suit smaller, crisp signs. Once a sign gets large, a flex face avoids joins in the face."],
+    faq=[["How big can a light box be?", "Acrylic faces come in sheets, so light boxes suit smaller signs. For large fascias we'd recommend a flex face, which covers big areas without joins."],
+         ["Can a light box be double-sided?", "Yes. Double-sided light boxes work well as projecting signs, lit on both faces."]])
+FLEXFACE = dict(slug="flex-faces", name="Flex faces", label="flex faces", code="OS-FF",
+    seo_title="Flex Face Signs | Large Illuminated Signs",
+    meta="Large-scale flex face signs made in Gateshead: a printed flex fabric skin tensioned across an illuminated frame, seamless at any size and re-skinnable for a rebrand.",
+    hero="n_kosmic", photos=["n_kosmic"],
+    desc="A flex face is built for scale. A printed flex fabric skin is tensioned across a large illuminated frame, so even very big signs go up in one seamless face. When you rebrand, the skin can be replaced without changing the frame.",
+    ideal=["retail parks", "leisure venues", "large fascias", "forecourts"],
+    spec=[["Face", "Printed flex fabric, tensioned in the frame"], ["Frame", "Extruded aluminium tensioning system"], ["Lighting", "LED, lit evenly across the face"], ["Size", "Large-scale, with no joins in the face"], ["Rebrand", "Re-skin without replacing the frame"]],
+    variants=[], notes=["Kosmic Kingdom is a large flex face: one seamless printed skin across the whole frame."],
+    faq=[["When should I choose a flex face over a light box?", "Once a sign gets large, acrylic faces need joins. A flex face covers big areas in one seamless skin."],
+         ["Can you replace just the face?", "Yes. That's the big advantage of a flex face: a new printed skin goes into the existing frame for a rebrand."]])
+for _k in _lb:
+    for _d in (LIGHTBOX, FLEXFACE):
+        _d.setdefault(_k, _lb[_k] if not isinstance(_lb[_k], list) else [])
+TYPES[_i:_i+1] = [LIGHTBOX, FLEXFACE]
+for s in SECTORS:
+    if "lightboxes-flex-faces" in s.get("types", []):
+        j = s["types"].index("lightboxes-flex-faces"); s["types"][j:j+1] = ["light-boxes", "flex-faces"]
+MEGA_ASK = False   # 14 types fill the 7x2 menu

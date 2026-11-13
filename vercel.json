@@ -28,6 +28,11 @@
       "permanent": true
     },
     {
+      "source": "/signs/lightboxes-flex-faces",
+      "destination": "/signs/light-boxes",
+      "permanent": true
+    },
+    {
       "source": "/service/neon",
       "destination": "/signs/neon-led-neon",
       "permanent": true

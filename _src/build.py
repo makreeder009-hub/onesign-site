@@ -29,7 +29,6 @@ def nav(r):
         (f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><img class="mc" loading="lazy" alt="" src="{wix(t["hero"],600,600,"fit")}" style="object-position:{MEGA_POS.get(t["slug"], pos(t["hero"]))}"><span>{E(t["label"])}</span></a>' if t["hero"] else f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><span class="mc-ph">photos soon</span><span>{E(t["label"])}</span></a>')
         for t in TYPES)
     chips = "".join(f'<a href="{r}signs/{t["slug"]}.html">{E(t["label"])}</a>' for t in TYPES)
-    mega_cards += f'<a class="mega-card all" href="#contact"><b>not sure?</b><small>Send us a photo of your building and we\'ll mock up the options for free.</small><em>ask us →</em></a>'
     return f'''<div class="progress" id="progress"></div>
 <header class="nav" id="nav">
   <div class="wrap nav-in">
@@ -565,7 +564,7 @@ def extras(pages):
     open(os.path.join(OUT,"robots.txt"),"w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
     # old Wix URLs -> new pages (for launch)
     R = {"/about-us":"/about","/services":"/#types","/sectors":"/#sectors",
-         "/service/exterior":"/signs/high-level-signs","/signs/building-signs":"/signs/high-level-signs","/service/neon":"/signs/neon-led-neon","/service/totems":"/signs/totems-monoliths",
+         "/service/exterior":"/signs/high-level-signs","/signs/building-signs":"/signs/high-level-signs","/signs/lightboxes-flex-faces":"/signs/light-boxes","/service/neon":"/signs/neon-led-neon","/service/totems":"/signs/totems-monoliths",
          "/service/wayfinding":"/signs/wayfinding","/service/vehicle-graphics-decals":"/signs/vehicle-graphics",
          "/service/large-format-digital-print":"/signs/digital-large-format-print","/service/hoarding":"/signs/digital-large-format-print",
          "/service/promotional":"/signs/digital-large-format-print","/service/graphics":"/signs/vinyl-wall-graphics",

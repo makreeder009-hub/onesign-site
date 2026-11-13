@@ -26,7 +26,7 @@ def tcap(s):  # sentence case for sector names in footer/meta
 # --------------------------------------------------------------- partials
 def nav(r):
     mega_cards = "".join(
-        (f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><div class="frame mc-img"><img class="b" loading="lazy" alt="" src="{wix(t["hero"],80,60)}"><img class="f" loading="lazy" alt="" src="{wix(t["hero"],440,330,"fit")}"></div><span>{E(t["label"])}</span></a>' if t["hero"] else f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><span class="mc-ph">photos soon</span><span>{E(t["label"])}</span></a>')
+        (f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><img class="mc" loading="lazy" alt="" src="{wix(t["hero"],600,600,"fit")}" style="object-position:{MEGA_POS.get(t["slug"], pos(t["hero"]))}"><span>{E(t["label"])}</span></a>' if t["hero"] else f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><span class="mc-ph">photos soon</span><span>{E(t["label"])}</span></a>')
         for t in TYPES)
     chips = "".join(f'<a href="{r}signs/{t["slug"]}.html">{E(t["label"])}</a>' for t in TYPES)
     mega_cards += f'<a class="mega-card all" href="#contact"><b>not sure?</b><small>Send us a photo of your building and we\'ll mock up the options for free.</small><em>ask us →</em></a>'

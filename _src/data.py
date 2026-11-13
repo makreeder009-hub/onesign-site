@@ -670,3 +670,21 @@ MACHINES = [
 WORKSHOP = ["st_design", "ws_cnc", "ws_cut", "ws_weld", "ws_spray", "ws_assembly", "ws_finish", "ws_print", "ws_built", "ws_weld2", "ws_cnc2", "ws_install"]
 for p in PROJECTS:
     if p["k"] == "n_thatype": p["fit"] = True
+
+# ===================== Revisions from Mak, 13 Nov (2) =====================
+_WW = {"ig_workwear", "totem_ww", "totW"}
+def _strip(keys, drop): return [k for k in keys if k not in drop]
+for t in TYPES:
+    t["photos"] = _strip(t["photos"], _WW | {"vg_tree"})
+    for v in t.get("variants", []):
+        if v.get("img") in _WW | {"vg_tree"}: v["img"] = t["photos"][0] if t["photos"] else None
+for s in SECTORS:
+    s["gallery"] = _strip(s["gallery"], _WW | {"vg_tree"})
+REEL_A = _strip(REEL_A, _WW); REEL_B = _strip(REEL_B, _WW)
+T = {t["slug"]: t for t in TYPES}
+T["vinyl-wall-graphics"]["hero"] = "bankhouse"
+T["totems-monoliths"]["hero"] = "sun_totem"
+T["totems-monoliths"]["photos"] = ["sun_totem"] + _strip(T["totems-monoliths"]["photos"], {"sun_totem"})
+T["flags-banners"]["hero"] = "fence_banner"
+# focal point for the small sign-type menu cards (cover crop)
+MEGA_POS = {}

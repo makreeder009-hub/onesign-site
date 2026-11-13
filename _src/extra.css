@@ -168,9 +168,7 @@ form.mock label.drop{font:400 14px/1.5 var(--f-body);letter-spacing:0;text-trans
 /* 13 Nov: mega menu 7x2, framed images */
 .mega-in{grid-template-columns:1fr}
 .mega-grid{grid-template-columns:repeat(7,1fr);gap:12px}
-.mega-card .mc-img{aspect-ratio:4/3;width:100%}
-.mega-card .mc-img img{aspect-ratio:auto}
-.mega-card .mc-img .f{object-fit:contain}
+.mega-card img.mc{display:block;aspect-ratio:4/3;width:100%;height:auto;object-fit:cover;background:var(--surface-2)}
 .mega-card > span{display:block;padding:9px 10px 11px;font:500 13px/1.2 var(--f-display);text-transform:lowercase}
 .mega-card.all{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px;text-align:left;padding:16px}
 .mega-card.all b{font:600 18px/1.1 var(--f-display)}

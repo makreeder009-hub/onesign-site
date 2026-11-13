@@ -668,3 +668,5 @@ MACHINES = [
  ("Rollsroller flatbed applicator", "Bubble-free application of printed graphics and vinyl onto panels."),
 ]
 WORKSHOP = ["st_design", "ws_cnc", "ws_cut", "ws_weld", "ws_spray", "ws_assembly", "ws_finish", "ws_print", "ws_built", "ws_weld2", "ws_cnc2", "ws_install"]
+for p in PROJECTS:
+    if p["k"] == "n_thatype": p["fit"] = True

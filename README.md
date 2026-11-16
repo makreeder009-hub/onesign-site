@@ -1,6 +1,8 @@
 # Onesign & Digital website
 
-Static site. Every page is generated from `_src/data.py` (sign types, sectors, photos) by `_src/build.py`.
+Static site. The repo root is what Vercel serves.
 
-Rebuild after editing data: `cd _src && python3 build.py` (writes into `../onesign-site`; copy the output to the repo root).
-Deployed on Vercel; `vercel.json` handles clean URLs and redirects from the old Wix addresses.
+- `_src/` generator: `python3 pages.py` builds everything into `../site`
+  - `build.py` core templates and image helpers, `pages.py` new page families, `content.py` case studies, areas and guides, `data.json` sign types, sectors and image registry
+- `_masters/` original photos (`wix`, `ig`, `new`, `brand`). WebP sizes in `img/p` are generated from these.
+- To connect the enquiry form to HubSpot, set `HUBSPOT = dict(portal="...", form="...")` in `_src/build.py` and rebuild.

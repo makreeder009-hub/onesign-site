@@ -9,27 +9,17 @@
     },
     {
       "source": "/services",
-      "destination": "/#types",
+      "destination": "/signs",
       "permanent": true
     },
     {
-      "source": "/sectors",
-      "destination": "/#sectors",
+      "source": "/our-work",
+      "destination": "/work",
       "permanent": true
     },
     {
       "source": "/service/exterior",
       "destination": "/signs/high-level-signs",
-      "permanent": true
-    },
-    {
-      "source": "/signs/building-signs",
-      "destination": "/signs/high-level-signs",
-      "permanent": true
-    },
-    {
-      "source": "/signs/lightboxes-flex-faces",
-      "destination": "/signs/light-boxes",
       "permanent": true
     },
     {
@@ -126,6 +116,81 @@
       "source": "/hair-and-beauty",
       "destination": "/sectors/hair-beauty",
       "permanent": true
+    },
+    {
+      "source": "/signs/building-signs",
+      "destination": "/signs/high-level-signs",
+      "permanent": true
+    },
+    {
+      "source": "/signs/lightboxes-flex-faces",
+      "destination": "/signs/light-boxes",
+      "permanent": true
+    },
+    {
+      "source": "/projects/seventy-three",
+      "destination": "/work/bar-seventy-three",
+      "permanent": true
+    },
+    {
+      "source": "/projects/newcastle-university",
+      "destination": "/work/newcastle-university",
+      "permanent": true
+    },
+    {
+      "source": "/projects/nhs-community-diagnostics-centre",
+      "destination": "/work/nhs-community-diagnostic-centre",
+      "permanent": true
+    },
+    {
+      "source": "/projects/woodham-academy",
+      "destination": "/work/woodham-academy",
+      "permanent": true
+    },
+    {
+      "source": "/projects/vertu-motors",
+      "destination": "/work/vertu-motors-arena",
+      "permanent": true
+    },
+    {
+      "source": "/projects/rolls-royce",
+      "destination": "/work/rolls-royce",
+      "permanent": true
+    },
+    {
+      "source": "/projects/aldi-warehouse",
+      "destination": "/work/aldi-jaymac-warehouse",
+      "permanent": true
+    },
+    {
+      "source": "/projects/northgate-hospital",
+      "destination": "/work/northgate-hospital",
+      "permanent": true
+    },
+    {
+      "source": "/projects/cork-%26-coffee",
+      "destination": "/work/cork-and-coffee",
+      "permanent": true
+    },
+    {
+      "source": "/projects/cork-&-coffee",
+      "destination": "/work/cork-and-coffee",
+      "permanent": true
+    },
+    {
+      "source": "/projects/glow.",
+      "destination": "/work/glow-tanning",
+      "permanent": true
+    },
+    {
+      "source": "/projects/:path*",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/service/:path*",
+      "destination": "/signs",
+      "permanent": true
     }
   ],
   "headers": [
@@ -135,6 +200,15 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
         }
       ]
     },

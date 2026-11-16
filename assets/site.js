@@ -171,9 +171,53 @@ if(form){
     $("#f-name-wrap").classList.toggle("invalid",!okN);
     $("#f-email-wrap").classList.toggle("invalid",!okE);
     if(!okN){nm.focus();return} if(!okE){em.focus();return}
-    /* HubSpot hook: post to the Forms API here and subscribe the contact to "Marketing Information". */
-    $("#doneName").textContent=nm.value.trim().split(" ")[0];
-    form.classList.add("sent");
+    const v=id=>($(id)&&$(id).value||"").trim();
+    const first=nm.value.trim().split(" ")[0], nfiles=file.files?file.files.length:0;
+    const lines=["Name: "+v("#f-name"),"Business: "+v("#f-biz"),"Email: "+v("#f-email"),"Phone: "+v("#f-tel"),"Sign type: "+(v("#f-type")||"Not sure yet"),"Site postcode: "+v("#f-post"),"","What I need:",v("#f-msg"),"","Sent from "+location.href];
+    const done=(head,msg)=>{$("#doneName").parentNode.firstChild.textContent=head;$("#doneName").textContent=first;if(msg)$("#doneMsg").textContent=msg;form.classList.add("sent")};
+    const byEmail=()=>{
+      location.href="mailto:sales@onesignanddigital.com?subject="+encodeURIComponent("Sign enquiry from "+v("#f-name")+(v("#f-biz")?" ("+v("#f-biz")+")":""))+"&body="+encodeURIComponent(lines.join("\n"));
+      done("one more step, ","Your email app should now be open with your enquiry filled in. Press send"+(nfiles?" and attach your photo":"")+" and it will reach us. If nothing opened, email sales@onesignanddigital.com or call 0191 487 6767.");
+    };
+    /* When HubSpot is connected (window.OS_FORM = {portal, form}) enquiries post straight to the Forms API. Until then the visitor's email app sends it. */
+    const cfg=window.OS_FORM||{};
+    if(cfg.portal&&cfg.form){
+      const btn=form.querySelector("button[type=submit]"); btn.disabled=true;
+      fetch("https://api.hsforms.com/submissions/v3/integration/submit/"+cfg.portal+"/"+cfg.form,{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({fields:[{name:"firstname",value:v("#f-name")},{name:"email",value:v("#f-email")},{name:"phone",value:v("#f-tel")},{name:"company",value:v("#f-biz")},{name:"zip",value:v("#f-post")},{name:"message",value:lines.slice(4).join("\n")}],context:{pageUri:location.href,pageName:document.title}})})
+        .then(r=>{if(!r.ok)throw 0;done("thanks, ",nfiles?"Your enquiry is in. Reply to our email with your building photo attached and we will start your mockup.":"")})
+        .catch(()=>{btn.disabled=false;byEmail()});
+    } else byEmail();
+  });
+}
+
+/* ---------- HERO SHOWCASE ---------- */
+const hs=$$("#heroMedia .hs"), hn=$$("#heroNow .hn");
+if(hs.length>1){
+  let i=0,t;
+  const go=n=>{hs[i].classList.remove("on");hn[i].classList.remove("on");i=(n+hs.length)%hs.length;hs[i].classList.add("on");hn[i].classList.add("on")};
+  const start=()=>{clearInterval(t);if(!reduce)t=setInterval(()=>go(i+1),6500)};
+  hn.forEach((a,k)=>["mouseenter","focus"].forEach(ev=>a.addEventListener(ev,()=>{if(k!==i){go(k);start()}})));
+  document.addEventListener("visibilitychange",()=>document.hidden?clearInterval(t):start());
+  start();
+}
+/* ---------- AREAS: photo follows the hovered row ---------- */
+const stage=$("#areaStage");
+if(stage){
+  let cur=stage.querySelector("img");
+  $$("#areaList .arow").forEach(a=>["mouseenter","focus"].forEach(ev=>a.addEventListener(ev,()=>{
+    const src=a.dataset.img; if(!src||cur.getAttribute("src")===src)return;
+    const nx=el("img",{alt:"",src});nx.className="out";stage.appendChild(nx);
+    const old=cur;cur=nx;requestAnimationFrame(()=>requestAnimationFrame(()=>{nx.classList.remove("out");old.classList.add("out")}));
+    setTimeout(()=>old.remove(),700);
+  })));
+}
+/* ---------- CASE STUDY FILTERS ---------- */
+const filt=$("#filters");
+if(filt){
+  filt.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+    $$("button",filt).forEach(x=>x.classList.toggle("on",x===b));
+    $$("#caseGrid .cc-wrap").forEach(c=>{c.hidden=b.dataset.f!=="all"&&c.dataset.sector!==b.dataset.f});
   });
 }
 
@@ -190,7 +234,7 @@ if(h1){
   tl.from("#heroTitle .line > span",{yPercent:110,duration:1.1,stagger:.11,onComplete:()=>h1.classList.add("revealed")})
     .from(".hero .eyebrow,.hero-sub,.hero-cta,.hero-card",{y:24,opacity:0,duration:1,stagger:.08},"-=.75")
     .to({d:0},{d:9,duration:1.2,ease:"power3.out",onUpdate(){ex.style.textShadow=extrude(Math.round(this.targets()[0].d),"#517d90")}},"-=.5")
-    .from("#heroImg",{scale:1.18,duration:2.4,ease:"power2.out"},0);
+    .add(()=>ex.classList.add("lit"),"-=.3");
   gsap.to("#heroMedia",{yPercent:14,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
 }
 if($(".phero")){
@@ -205,6 +249,8 @@ batch(".sector",{opacity:0,duration:.8,stagger:.06,ease:"power2.out"});
 batch(".step",{y:40,opacity:0,duration:.9,stagger:.12,ease:"expo.out"});
 batch(".variant",{opacity:0,duration:.8,stagger:.08,ease:"power2.out"});
 batch(".point",{opacity:0,duration:.8,stagger:.08,ease:"power2.out"});
+batch(".ccard,.gcard,.made li",{opacity:0,y:22,duration:.8,stagger:.07,ease:"power2.out"});
+batch(".arow",{opacity:0,x:-18,duration:.7,stagger:.05,ease:"power2.out"});
 if($("#stepsBar")) gsap.to("#stepsBar",{scaleX:1,duration:1.6,ease:"power2.inOut",scrollTrigger:{trigger:"#steps",start:"top 80%",once:true}});
 $$("[data-count]").forEach(e=>{const to=+e.dataset.count,o={v:0};gsap.to(o,{v:to,duration:1.6,ease:"power3.out",scrollTrigger:{trigger:e,start:"top 92%",once:true},onUpdate(){e.textContent=Math.round(o.v)}})});
 addEventListener("load",()=>ScrollTrigger.refresh());

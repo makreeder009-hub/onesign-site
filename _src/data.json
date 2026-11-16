@@ -1,0 +1,2561 @@
+{
+ "IMG": {
+  "hero": [
+   "3d36cad1fad04584b632515b872d7218~mv2.jpg",
+   "Newcastle University illuminated building sign",
+   "60% 40%"
+  ],
+  "seventy3": [
+   "b572d89e997348428f8007021a490b3e~mv2.jpg",
+   "Bar Seventy Three backlit panel",
+   "50% 40%"
+  ],
+  "st_fit": [
+   "eef2bc46710d41cc94169ead6bb540ab~mv2.jpg",
+   "Bar Seventy Three panel being fitted",
+   "50% 50%"
+  ],
+  "st_front": [
+   "255e4ed92be54304942b80889b9fd75a~mv2.jpg",
+   "Bar Seventy Three panel above the shutter",
+   "50% 30%"
+  ],
+  "st_welcome": [
+   "431b5b9876d54047ad4e8ff5d9bd96cd~mv2.jpg",
+   "Bar Seventy Three: backlit panel",
+   "50% 50%"
+  ],
+  "st_close": [
+   "36f4b64dfaa24a7c84a229cfc6f273de~mv2.jpg",
+   "Bar Seventy Three panel detail",
+   "50% 50%"
+  ],
+  "st_cnc": [
+   "dda623ae438640d7a8868920adcbc153~mv2.jpg",
+   "Routing a backlit panel on our CNC",
+   "50% 50%"
+  ],
+  "st_weld": [
+   "b04adaf8a5364135bbb353deb5bbc63b~mv2.jpg",
+   "Welding a panel frame in the workshop",
+   "50% 50%"
+  ],
+  "st_bench": [
+   "903940587a9f4adaab9744ed08f3bf84~mv2.jpg",
+   "Backlit panel on the bench before fitting",
+   "50% 50%"
+  ],
+  "vault": [
+   "cab7a8061665494580bb85567c62faa2~mv2.png",
+   "The Vault: fabricated, halo-lit letters on a panel",
+   "50% 50%"
+  ],
+  "cell": [
+   "f1471cfd0f3d4a0d8a4083eeb2a69d60~mv2.jpg",
+   "The Cell: halo-lit stainless steel 3D letters",
+   "50% 50%"
+  ],
+  "dog": [
+   "886c1460a3e54976ac288d19edc144b5~mv2.jpg",
+   "The Dog & Parrot: inset brass Komacel letters",
+   "50% 50%"
+  ],
+  "rds": [
+   "2f2cb4faf24047a897657c9172bdfad9~mv2.jpg",
+   "RDS Engineering: halo-lit letters on a panel",
+   "50% 50%"
+  ],
+  "catalyst_l": [
+   "88c0e2cb5d2140a0afe07fb5bb4bfd36~mv2.jpg",
+   "The Catalyst: 3D letters",
+   "50% 50%"
+  ],
+  "bankhouse": [
+   "4793feb214d1420aaa3c76389bce25cd~mv2.png",
+   "Bank House: wall vinyl",
+   "50% 35%"
+  ],
+  "urban": [
+   "c5b436e7c58144b896587e9beb67b06e~mv2.jpg",
+   "eat @ urban: wayfinding wall graphic",
+   "50% 50%"
+  ],
+  "fira": [
+   "c33dce8aea724e28ba982260b0d8fc91~mv2.jpg",
+   "Fika: flat-cut letters",
+   "50% 40%"
+  ],
+  "nhs_bld": [
+   "2d5acebd5bc64333a207e239d95b4ead~mv2.jpg",
+   "NHS Community Diagnostic Centre: 3D letters on a panel",
+   "50% 50%"
+  ],
+  "nhs": [
+   "99068c4c8e76476ab9310a3b987b1575~mv2.jpg",
+   "NHS Community Diagnostic Centre building sign",
+   "50% 50%"
+  ],
+  "woodham": [
+   "87780820837d48da9380a272ba777e3f~mv2.jpg",
+   "Woodham Academy: digitally printed Dibond building sign",
+   "50% 30%"
+  ],
+  "aldi_bld": [
+   "b8aa4bed97c942a2a0259cb8d1059937~mv2.jpg",
+   "Aldi: printed vinyl on a large fabricated panel",
+   "50% 40%"
+  ],
+  "aldi": [
+   "80d78348a3694f408400a2670712b46f~mv2.jpg",
+   "Aldi & Jaymac warehouse",
+   "50% 40%"
+  ],
+  "jaymac": [
+   "1ccb8c0b9e5c44c68f34592a8ac8823f~mv2.jpg",
+   "Jaymac Solutions high-level lettering",
+   "50% 50%"
+  ],
+  "vertu": [
+   "8ddf26d4afd54ccb912a126fba8ecb65~mv2.jpg",
+   "Vertu Motors Arena",
+   "50% 50%"
+  ],
+  "vertu_night": [
+   "a1207170ace94eb59afa435026268c0e~mv2.jpg",
+   "Vertu Motors Arena lit at night",
+   "50% 50%"
+  ],
+  "rolls": [
+   "a70093b969744e8bade977704edb7883~mv2.png",
+   "Rolls-Royce building signage",
+   "50% 50%"
+  ],
+  "rolls_close": [
+   "c46b9f362cf5459e8d543edaadf790d7~mv2.jpg",
+   "Rolls-Royce high-level letters",
+   "50% 50%"
+  ],
+  "glow": [
+   "c5609ebee285428a90d432dc37239297~mv2.jpg",
+   "glow.: flat-cut letters on a fascia panel",
+   "50% 50%"
+  ],
+  "glow_ext": [
+   "dd8292fef5ae4396b5b0998359ae2d9d~mv2.jpg",
+   "glow. shopfront",
+   "50% 50%"
+  ],
+  "glow_night": [
+   "c33d3038684948909f7828e52d66d941~mv2.jpg",
+   "glow. fascia after dark",
+   "50% 50%"
+  ],
+  "ncl": [
+   "e6459c96bd424aac9e2e1b7b24f432d1~mv2.jpg",
+   "Newcastle University",
+   "60% 40%"
+  ],
+  "northgate": [
+   "8f075195ea7f4f819b96edbadaf23d09~mv2.png",
+   "Northgate Hospital",
+   "50% 50%"
+  ],
+  "catalyst": [
+   "ed0b1d174bda43efac2b66b503a37b4b~mv2.jpg",
+   "The Catalyst",
+   "50% 50%"
+  ],
+  "cork": [
+   "58b00db1e27745479e9459424809be71~mv2.png",
+   "Cork & Coffee",
+   "50% 50%"
+  ],
+  "cork_night": [
+   "d5d6eaf8a3db46b387c0ce0ed6404956~mv2.jpg",
+   "Cork & Coffee at night",
+   "50% 50%"
+  ],
+  "works": [
+   "f5c6fc1570344e8cb1ae081fc3d7733b~mv2.jpg",
+   "The Works projecting sign",
+   "50% 30%"
+  ],
+  "rascals_proj": [
+   "4a9d2f2cd0db456083da87bb07ef7bf4~mv2.jpg",
+   "Rascals: light box",
+   "50% 40%"
+  ],
+  "neonA": [
+   "29cc10994a684505a2e34d82e83ddcf3~mv2.jpg",
+   "Blue LED neon lettering",
+   "50% 50%"
+  ],
+  "neonB": [
+   "d2de257bef414c2fa5bc8cd8abe0024d~mv2.jpg",
+   "Bar LED neon",
+   "50% 50%"
+  ],
+  "neonC": [
+   "cb0c652158634e5db06bb9bbbb9d3da6~mv2.jpg",
+   "LED neon wall sign",
+   "50% 50%"
+  ],
+  "neonD": [
+   "ff2f890f6be245ac8d310c2a56167519~mv2.jpg",
+   "Green LED neon",
+   "50% 50%"
+  ],
+  "rascals_neon": [
+   "d7736c10ce6e4da7b7d39e9e68fbd94e~mv2.jpg",
+   "Rascals: 3D letters",
+   "50% 50%"
+  ],
+  "welcome_neon": [
+   "0b608b59ba174f208a0f4dec8faf27d3~mv2.jpg",
+   "Pink LED neon welcome wall",
+   "50% 50%"
+  ],
+  "w_nevergiveup": [
+   "3fff75b6ceac4e008f2c2d874c25c1c9~mv2.jpg",
+   "Woodham Academy cut vinyl lettering",
+   "50% 50%"
+  ],
+  "w_truetest": [
+   "87a572821c7c4dfebea900950847abf2~mv2.jpg",
+   "Woodham Academy cut vinyl quote",
+   "50% 50%"
+  ],
+  "univinyl": [
+   "971a39df2d6b4876a499bceaeae36480~mv2.jpg",
+   "Newcastle University window and wall graphics",
+   "50% 50%"
+  ],
+  "nhs_skyline": [
+   "c8bfcbb2380d46b3ac2d1ee9b5456eda~mv2.jpg",
+   "NHS CDC printed skyline wall graphic",
+   "50% 50%"
+  ],
+  "nhs_skyline2": [
+   "7d212dc5bd774a89b8e674a14b0be036~mv2.jpg",
+   "NHS CDC wall graphic detail",
+   "50% 50%"
+  ],
+  "arv": [
+   "e3847222e6774f25a17b838e75959094~mv2.jpg",
+   "ARV wall graphic",
+   "50% 50%"
+  ],
+  "lineart": [
+   "fb13ff53521942088ad8d9496dbc896e~mv2.png",
+   "Line-art wall graphic",
+   "50% 50%"
+  ],
+  "w_logo": [
+   "92a1f032b09f43c6a57a1d9f39245915~mv2.jpg",
+   "Woodham Academy wall graphic",
+   "50% 50%"
+  ],
+  "hoarding": [
+   "641df8f7592f423f9cfc2ecbecd48490~mv2.jpg",
+   "Printed site hoarding",
+   "50% 50%"
+  ],
+  "fence_banner": [
+   "0d2938c6cc804d26a2ca41002d07ebfb~mv2.jpg",
+   "Printed fence banner",
+   "50% 50%"
+  ],
+  "lfBm": [
+   "c96d66538f2b4450b5301eeb7472f497~mv2.jpg",
+   "Large format print for B&M",
+   "50% 50%"
+  ],
+  "lfPosters": [
+   "1756e03f531b4a549277f5ae2d425616~mv2.jpg",
+   "Printed posters",
+   "50% 50%"
+  ],
+  "lfPrint": [
+   "26720e30b371494ea8c67b53fc16fa25~mv2.jpg",
+   "Large format print detail",
+   "50% 50%"
+  ],
+  "bowmer": [
+   "bd467f1af40e4eb6bda31d438e350ffa~mv2.jpg",
+   "Bowmer + Kirkland printed hoarding",
+   "50% 50%"
+  ],
+  "hoarding2": [
+   "b8be77c9469f4d6486cb53d13207608d~mv2.jpg",
+   "Construction hoarding",
+   "50% 50%"
+  ],
+  "tesco": [
+   "b78d448959044703b43d3067030542e0~mv2.jpg",
+   "Tesco illuminated totem",
+   "50% 40%"
+  ],
+  "totW": [
+   "0554f863bdb245778f1f5b6c64b41e0e~mv2.jpg",
+   "Retail park totem",
+   "50% 40%"
+  ],
+  "sun_totem": [
+   "e4386bdd05764bf49bde0ed1aa975fc9~mv2.jpg",
+   "Drive-thru and Sun tanning totem",
+   "50% 40%"
+  ],
+  "dealer_totem": [
+   "1582ba86762e447cb5c3f45eceaf4b1a~mv2.webp",
+   "Car dealership totem",
+   "50% 40%"
+  ],
+  "w_ext_dir": [
+   "09ee92ea79b44552ac173c00d71c84e0~mv2.jpg",
+   "Woodham Academy entrance monolith",
+   "50% 50%"
+  ],
+  "uni_entry": [
+   "b714b5324f9d4ae0b0702018302ad3d3~mv2.jpg",
+   "Campus entrance monoliths",
+   "50% 50%"
+  ],
+  "w_red_g": [
+   "32094540ce384d769135c65c8721709e~mv2.jpg",
+   "Woodham Academy level identification",
+   "50% 50%"
+  ],
+  "w_green2": [
+   "cd56dfdad23f475eae3938f70e521121~mv2.jpg",
+   "Woodham Academy level 2",
+   "50% 50%"
+  ],
+  "nhs_dir": [
+   "d1b72d708ac646c883fd29de480f8199~mv2.jpg",
+   "NHS CDC directional signs",
+   "50% 50%"
+  ],
+  "nhs_proj": [
+   "314955f99abf413abee2a63e3df44e39~mv2.jpg",
+   "NHS CDC projecting directional sign",
+   "50% 50%"
+  ],
+  "uni_totem": [
+   "47884b6437b24777acc027b4d002b0ee~mv2.jpg",
+   "Newcastle University wayfinding totem",
+   "50% 50%"
+  ],
+  "ng_totem": [
+   "7acb313d063d450192050bbfc2f9dd8f~mv2.jpg",
+   "Northgate Hospital directional totem",
+   "50% 50%"
+  ],
+  "wardDir": [
+   "4aa7e0aee9244a7393f517e5a23549db~mv2.jpg",
+   "Hospital ward directory",
+   "50% 50%"
+  ],
+  "courtyard": [
+   "5354fc6f8e17493292165739f58b41a0~mv2.png",
+   "Northgate Hospital courtyard sign",
+   "50% 50%"
+  ],
+  "vanPark": [
+   "6634bdffe030450e9e9d46e77acf2614~mv2.jpg",
+   "Fleet livery",
+   "50% 50%"
+  ],
+  "vanYellow": [
+   "e0dfe23982704004829b4eb0ec5a0fa6~mv2.jpg",
+   "Full-colour van graphics",
+   "50% 50%"
+  ],
+  "vanFabio": [
+   "fef3810e24c14e8da0e4ce5698e11059~mv2.png",
+   "Restaurant van graphics",
+   "50% 50%"
+  ],
+  "alwinton": [
+   "86abe8967a2f456397289c51685c4260~mv2.jpg",
+   "Alwinton & Berwick ward entrance",
+   "50% 50%"
+  ],
+  "sycamore": [
+   "ec0a96cedb9a420ca76e93cf07471663~mv2.jpg",
+   "Sycamore ward signage",
+   "50% 50%"
+  ],
+  "harbro": [
+   "48725d483de84541ac8a85b5e1787789~mv2.jpeg",
+   "Harbro storefront",
+   "50% 40%"
+  ],
+  "sunclub": [
+   "3d12ed5180094023a176f5a9f0e35aa3~mv2.jpg",
+   "Sun Club interior signage",
+   "50% 50%"
+  ],
+  "kloset": [
+   "5a30404bc94b4c4880bd11d8dd211743~mv2.jpg",
+   "Kloset Luxury interior lettering",
+   "50% 50%"
+  ],
+  "carpark": [
+   "47c02f05a36648cc9a33da15ca1f2626~mv2.jpg",
+   "Car park safety signage",
+   "50% 50%"
+  ],
+  "fireExit": [
+   "63f7b14912d84f62b5a0c44b1f6d3d77~mv2.jpg",
+   "Fire exit floor graphics",
+   "50% 50%"
+  ],
+  "sitePlan": [
+   "ce300f663e574873bb7cecf4dbc7e211~mv2.jpeg",
+   "Design visual of a site plan",
+   "50% 50%"
+  ],
+  "weld": [
+   "519d7067bdbc453f87348f03482b4f84~mv2.jpg",
+   "Welding a sign frame in our Team Valley workshop",
+   "50% 50%"
+  ],
+  "install": [
+   "7172f17c9df5478db788c8f4d2ce0aa4~mv2.jpg",
+   "Installing a high-level Aldi sign",
+   "50% 30%"
+  ],
+  "install2": [
+   "bf47c9c3a7a04b669a8352818d39f7e3~mv2.jpg",
+   "Onesign fitter surveying an NHS site",
+   "22% 50%"
+  ],
+  "jaymac_close": [
+   "ac2d58f3ac3c4041ac4b6917c537679b~mv2.jpg",
+   "Jaymac letters close up",
+   "50% 50%"
+  ],
+  "rolls_int": [
+   "34b0ef4c689745a2b270dd8647e7b432~mv2.jpg",
+   "Rolls-Royce interior lettering",
+   "50% 50%"
+  ],
+  "ig_tribeca": [
+   "local:3d-tribeca",
+   "Tribeca: 3D letters",
+   "50% 50%"
+  ],
+  "ig_zen": [
+   "local:3d-zen",
+   "Zen: halo-lit 3D letters",
+   "50% 50%"
+  ],
+  "ig_byre": [
+   "local:3d-byre",
+   "BYRE: 3D letters",
+   "50% 50%"
+  ],
+  "ig_maple": [
+   "local:3d-maple",
+   "Maple: face-lit 3D letters",
+   "50% 50%"
+  ],
+  "ig_fitt": [
+   "local:3d-fitt",
+   "Fitt: 3D letters",
+   "50% 50%"
+  ],
+  "ig_court": [
+   "local:3d-the-court",
+   "The Court: gold 3D letters",
+   "50% 50%"
+  ],
+  "ig_dubliner": [
+   "local:3d-the-dubliner",
+   "The Dubliner: LED neon",
+   "50% 50%"
+  ],
+  "ig_mango": [
+   "local:3d-mango",
+   "MANGO letters in the workshop",
+   "50% 50%"
+  ],
+  "ig_stephenson": [
+   "local:3d-stephenson-building",
+   "Stephenson Building letters before fitting",
+   "50% 50%"
+  ],
+  "ig_goldscript": [
+   "local:3d-gold-script",
+   "Gold script letters in the workshop",
+   "50% 50%"
+  ],
+  "ig_atom": [
+   "local:3d-atom-moss-wall",
+   "atom: letters on a moss wall",
+   "50% 50%"
+  ],
+  "ig_pantera": [
+   "local:flat-pantera",
+   "Pantera Advisory Group: flat-cut foamex logo and letters",
+   "50% 50%"
+  ],
+  "ig_wrgroup": [
+   "local:flat-wr-group",
+   "WR Group: fabricated 3D letters on brick",
+   "50% 50%"
+  ],
+  "ig_nhs_night": [
+   "local:bld-nhs-cdc-night",
+   "NHS Community Diagnostic Centre: 3D letters lit at night",
+   "50% 50%"
+  ],
+  "ig_urgent": [
+   "local:bld-urgent-emergency-care",
+   "Urgent & Emergency Care building sign",
+   "50% 50%"
+  ],
+  "ig_nhs_cumbria": [
+   "local:bld-nhs-cumbria",
+   "NHS Cumbria, Northumberland, Tyne & Wear building sign",
+   "50% 50%"
+  ],
+  "ig_tms": [
+   "local:bld-tms-grid",
+   "TMS Grid building sign",
+   "50% 50%"
+  ],
+  "ig_jaymac_wall": [
+   "local:bld-jaymac",
+   "Jaymac Solutions wall graphic",
+   "50% 50%"
+  ],
+  "ig_companyshop": [
+   "local:bld-company-shop",
+   "Company Shop building signs",
+   "50% 50%"
+  ],
+  "ig_smartvape": [
+   "local:proj-smart-vape",
+   "Smart Vape round projecting sign",
+   "50% 50%"
+  ],
+  "ig_corner": [
+   "local:proj-corner",
+   "Blacks Corner projecting sign",
+   "50% 50%"
+  ],
+  "ig_queenshead": [
+   "local:proj-queens-head",
+   "Queen's Head projecting sign and fascia",
+   "50% 50%"
+  ],
+  "ig_lane": [
+   "local:proj-lane",
+   "Projecting sign in a lane",
+   "50% 50%"
+  ],
+  "ig_gavroche": [
+   "local:lb-le-gavroche",
+   "Le Gavroche light box",
+   "50% 50%"
+  ],
+  "ig_craicn": [
+   "local:lb-craicn-campers",
+   "Craic'n Campers: internal panel with applied vinyl",
+   "50% 50%"
+  ],
+  "ig_codcrust": [
+   "local:bp-cod-and-crust",
+   "Cod & Crust: aperture-cut backlit panel with push-through opal acrylic",
+   "50% 50%"
+  ],
+  "ig_neon_orange": [
+   "local:neon-orange",
+   "Orange LED neon",
+   "50% 50%"
+  ],
+  "ig_neon_red": [
+   "local:neon-red",
+   "BYRE: 'Join the herd' LED neon",
+   "50% 50%"
+  ],
+  "ig_leancuisine": [
+   "local:neon-lean-cuisine",
+   "Lean Cuisine LED neon",
+   "50% 50%"
+  ],
+  "ig_neon_yellow": [
+   "local:neon-yellow",
+   "Yellow LED neon",
+   "50% 50%"
+  ],
+  "ig_pudes": [
+   "local:neon-the-pudes",
+   "The Pudes LED neon",
+   "50% 50%"
+  ],
+  "ig_durham": [
+   "local:vg-durham-microsoft",
+   "Durham University and Microsoft: flat-cut letters",
+   "50% 50%"
+  ],
+  "ig_pamper_trailer": [
+   "local:vg-little-pamper",
+   "Pretty Pamper trailer graphics",
+   "50% 50%"
+  ],
+  "ig_lineart_install": [
+   "local:vg-lineart-install",
+   "Identity Co. Salon: line-art wall graphic",
+   "50% 50%"
+  ],
+  "ig_lineart": [
+   "local:vg-lineart",
+   "Zen: Buddha window graphic",
+   "50% 50%"
+  ],
+  "ig_kier": [
+   "local:print-kier-flags",
+   "Kier feather flag",
+   "50% 50%"
+  ],
+  "ig_workwear": [
+   "local:print-workwear-window",
+   "Workwear Express: flat-cut letters",
+   "50% 50%"
+  ],
+  "ig_ocado": [
+   "local:print-ocado",
+   "Printed boards for an Ocado event",
+   "50% 50%"
+  ],
+  "ig_totem_dir": [
+   "local:tot-directional",
+   "Directional totem",
+   "50% 50%"
+  ],
+  "ig_visitor": [
+   "local:way-visitor-colleague",
+   "Visitor and colleague directional signs",
+   "50% 50%"
+  ],
+  "ig_cs_dir": [
+   "local:way-company-shop",
+   "Company Shop Group site sign",
+   "50% 50%"
+  ],
+  "ig_storeentrance": [
+   "local:way-store-entrance",
+   "Store entrance directional sign",
+   "50% 50%"
+  ],
+  "ig_toilet": [
+   "local:way-visitor-toilet",
+   "Tactile door sign with Braille",
+   "50% 50%"
+  ],
+  "ig_corridor": [
+   "local:way-corridor",
+   "Corridor wayfinding",
+   "50% 50%"
+  ],
+  "ig_way_dir": [
+   "local:way-directional",
+   "Directional wall and floor signs",
+   "50% 50%"
+  ],
+  "ig_salto": [
+   "local:veh-salto",
+   "Salto van graphics",
+   "50% 50%"
+  ],
+  "ig_park": [
+   "local:veh-park",
+   "Park Electrical van livery",
+   "50% 50%"
+  ],
+  "ig_park2": [
+   "local:veh-park-2",
+   "Park Electrical fleet livery",
+   "50% 50%"
+  ],
+  "n_jet2": [
+   "new:jet2-halo",
+   "Jet2: halo-lit fabricated 3D letters",
+   "50% 50%"
+  ],
+  "n_jet2glow": [
+   "new:jet2-halo-glow",
+   "Jet2 letters: the halo glow up close",
+   "50% 50%"
+  ],
+  "n_thatype": [
+   "new:thatype",
+   "Thatype: halo-lit script letters",
+   "50% 50%"
+  ],
+  "n_court": [
+   "new:the-court",
+   "The Court, Durham: gold 3D letters",
+   "50% 50%"
+  ],
+  "n_byre": [
+   "new:byre",
+   "BYRE: illuminated 3D letters",
+   "50% 50%"
+  ],
+  "n_tribeca": [
+   "new:tribeca",
+   "Tribeca: 3D letters on a fascia",
+   "50% 50%"
+  ],
+  "n_fitt": [
+   "new:fitt",
+   "Fitt: 3D letters",
+   "50% 50%"
+  ],
+  "n_superpower": [
+   "new:superpower",
+   "Superpower: illuminated 3D letters",
+   "50% 50%"
+  ],
+  "n_superpower_wide": [
+   "new:superpower-wide",
+   "Superpower shopfront",
+   "50% 50%"
+  ],
+  "n_renew_close": [
+   "new:renewable-close",
+   "Renewable Energy: 3D letters on timber cladding",
+   "50% 50%"
+  ],
+  "n_renew_bld": [
+   "new:renewable-building",
+   "Renewable Energy building sign",
+   "50% 50%"
+  ],
+  "n_grainger": [
+   "new:grainger-market",
+   "Grainger Market: gold 3D letters",
+   "50% 50%"
+  ],
+  "n_murphys": [
+   "new:dirty-murphys",
+   "Dirty Murphys: 3D letters",
+   "50% 50%"
+  ],
+  "n_aqua": [
+   "new:aqua-tcg",
+   "Aqua TCG: illuminated letters",
+   "50% 50%"
+  ],
+  "n_kosmic": [
+   "new:kosmic-kingdom",
+   "Kosmic Kingdom: flex face sign",
+   "50% 50%"
+  ],
+  "n_kosmic_close": [
+   "new:kosmic-kingdom-close",
+   "Kosmic Kingdom sign detail",
+   "50% 50%"
+  ],
+  "n_griffin": [
+   "new:griffin-court",
+   "Griffin Court: high level letters",
+   "50% 50%"
+  ],
+  "n_griffin_up": [
+   "new:griffin-court-up",
+   "Griffin Court letters from below",
+   "50% 50%"
+  ],
+  "n_fitt_int": [
+   "new:fitt-interior",
+   "Fitt interior",
+   "50% 50%"
+  ],
+  "n_jet2_ceiling": [
+   "new:jet2-ceiling",
+   "Jet2: printed LED ceiling panels",
+   "50% 50%"
+  ],
+  "fence2": [
+   "b37986290e6c491181d6f5316116596c~mv2.jpg",
+   "Printed mesh fence banner",
+   "50% 50%"
+  ],
+  "st_sign": [
+   "8c2d2ed5093546149f53cd0ae455987c~mv2.jpg",
+   "Bar Seventy Three: backlit panel",
+   "50% 50%"
+  ],
+  "st_design": [
+   "aa5adf7f99b5420d9f484161b5cfe58d~mv2.jpg",
+   "Artwork set up for production",
+   "50% 50%"
+  ],
+  "ws_cnc": [
+   "1e7f8b60efbd46ce877f5f9dc46b25d7~mv2.jpg",
+   "CNC routing",
+   "50% 50%"
+  ],
+  "ws_cnc2": [
+   "7d3ef632699642aa9a3c414f8b149e11~mv2.jpg",
+   "CNC routing",
+   "50% 50%"
+  ],
+  "ws_weld": [
+   "52f2e897853b4b259826031f64646550~mv2.jpg",
+   "Welding",
+   "50% 50%"
+  ],
+  "ws_weld2": [
+   "df09a6da3107457d8f32e71b5db091b2~mv2.jpg",
+   "Welding",
+   "50% 50%"
+  ],
+  "ws_cut": [
+   "13624282660241bf96bf94b5ac232cd0~mv2.jpg",
+   "Cutting metal",
+   "50% 50%"
+  ],
+  "ws_spray": [
+   "66ed4f69326f4cb895c77054f9f2e136~mv2.jpg",
+   "Spray finishing",
+   "50% 50%"
+  ],
+  "ws_assembly": [
+   "dae564f29df34dae85dee34cae1a2e2c~mv2.jpg",
+   "Assembly",
+   "50% 50%"
+  ],
+  "ws_finish": [
+   "984f85d15fcc48388b9d0ef29f04b079~mv2.jpg",
+   "Hand finishing",
+   "50% 50%"
+  ],
+  "ws_built": [
+   "3e908f32ee0b4c2d9e77f9ba78bb6796~mv2.jpg",
+   "A finished panel in the workshop",
+   "50% 50%"
+  ],
+  "ws_install": [
+   "4400b21f555e49f79b0b929dda95a62c~mv2.jpg",
+   "Installation",
+   "50% 50%"
+  ],
+  "ws_print": [
+   "58fa4b8477b84722b984c5dd309b9902~mv2.jpg",
+   "Flatbed printing",
+   "50% 50%"
+  ],
+  "vg_tree": [
+   "29362c7056c94f13acc85fcda79df655~mv2.jpg",
+   "Tree wall graphic",
+   "50% 50%"
+  ],
+  "vg_birds": [
+   "b01038205a624f8584e800ce02b05127~mv2.jpg",
+   "Feature wall graphics",
+   "50% 50%"
+  ],
+  "vg_workhard": [
+   "0a4696f3d7d7460d9cad83341a2eebb0~mv2.jpg",
+   "Woodham Academy: 'Work Hard' wall vinyl",
+   "50% 50%"
+  ],
+  "way_g": [
+   "2e6fa9d91d184d57a366c65f8f9585a7~mv2.jpg",
+   "Woodham Academy: floor identifier and directory",
+   "50% 50%"
+  ],
+  "way_1": [
+   "0a8a02bcefd74eef9e74b1b16f50c8c0~mv2.jpg",
+   "Woodham Academy: level 1 wayfinding",
+   "50% 50%"
+  ],
+  "way_2": [
+   "3c7355517aac405996482e6b9b55a652~mv2.jpg",
+   "Woodham Academy: level 2 wayfinding",
+   "50% 50%"
+  ],
+  "way_dir": [
+   "4a3ebc2a8360406691fcc18edeb80af9~mv2.jpg",
+   "Woodham Academy: directory sign",
+   "50% 50%"
+  ],
+  "print_fruit": [
+   "27e10e97e37e4f57be72ae72c98a32be~mv2.jpg",
+   "Large-format in-store graphics",
+   "50% 50%"
+  ],
+  "cork_dusk": [
+   "f6186d4a72b54968b137c4fb3a170500~mv2.jpg",
+   "Cork & Coffee: lit fascia at dusk",
+   "50% 50%"
+  ],
+  "hc_cdc": [
+   "318f8b3f9c7d4e2f8fd1d659d9d12888~mv2.jpg",
+   "NHS Community Diagnostic Centre: entrance signs",
+   "50% 50%"
+  ],
+  "hc_cdc2": [
+   "75d8810ff05344edb74d4e4bf4d440d2~mv2.jpg",
+   "NHS Community Diagnostic Centre: reception signs",
+   "50% 50%"
+  ],
+  "glow_int": [
+   "ee64cba746784ca48e291695d52f781a~mv2.jpg",
+   "glow.: 3D letters inside the salon",
+   "50% 50%"
+  ],
+  "glow_int2": [
+   "1c22fa9d23b942c89d11f4f3bef422b9~mv2.jpg",
+   "glow. salon interior",
+   "50% 50%"
+  ],
+  "totem_ww": [
+   "e963f888b64f40cb841ecc48026c4fbd~mv2.jpg",
+   "Workwear Express totem",
+   "50% 50%"
+  ],
+  "n_lean": [
+   "new:lean-cuisine-front",
+   "Lean Cuisine: backlit panel",
+   "50% 50%"
+  ],
+  "n_camden": [
+   "new:camden-clinic",
+   "The Camden Clinic: 3D letters on the fascia",
+   "50% 50%"
+  ],
+  "n_camden_close": [
+   "new:camden-clinic-close",
+   "The Camden Clinic: 3D letters up close",
+   "50% 50%"
+  ],
+  "n_pureglow": [
+   "new:pure-glow",
+   "Pure Glow Tanning: 3D letters and logo",
+   "50% 50%"
+  ],
+  "n_whiteswan": [
+   "new:white-swan",
+   "The White Swan: 3D letters",
+   "50% 50%"
+  ],
+  "n_savoy_ws": [
+   "new:savoy-workshop",
+   "Savoy letters in the workshop",
+   "50% 50%"
+  ],
+  "n_workwear_wall": [
+   "new:workwear-wall",
+   "Workwear Express: printed wall graphic",
+   "50% 50%"
+  ],
+  "n_atom": [
+   "new:atom-close",
+   "Atom: 3D letters up close",
+   "50% 50%"
+  ],
+  "n_glow_wall": [
+   "new:glow-wall",
+   "glow.: flat-cut letters on a slatted wall",
+   "50% 50%"
+  ],
+  "n_vivana_fascia": [
+   "new:vivana-fascia",
+   "Vivana Lounge: fascia",
+   "50% 50%"
+  ],
+  "n_savoy_ent": [
+   "new:savoy-entrance",
+   "Savoy: 3D letters over the entrance",
+   "50% 50%"
+  ],
+  "n_recite": [
+   "new:recite",
+   "Recite: halo-lit 3D letters",
+   "50% 50%"
+  ],
+  "n_betteryou": [
+   "new:better-you",
+   "Better You: 3D letters",
+   "50% 50%"
+  ],
+  "n_vivana_ent": [
+   "new:vivana-entrance",
+   "Vivana Lounge: entrance fascia",
+   "50% 50%"
+  ],
+  "n_identity": [
+   "new:identity-co",
+   "Identity Co. Salon: line-art wall graphic",
+   "50% 50%"
+  ],
+  "n_skinsoul": [
+   "new:skin-soul",
+   "Skin & Soul Medical: flat-cut letters",
+   "50% 50%"
+  ],
+  "n_skinsoul_feel": [
+   "new:skin-soul-feeling",
+   "Skin & Soul: tone-on-tone flat-cut letters",
+   "50% 50%"
+  ],
+  "n_redletter": [
+   "new:red-letter-build",
+   "Face-lit letters being built",
+   "50% 50%"
+  ],
+  "n_fora": [
+   "new:fora",
+   "Fora Beauty & Skin Clinic: flat-cut letters",
+   "50% 50%"
+  ],
+  "n_codcrust_build": [
+   "new:cod-crust-build",
+   "Cod & Crust panel in production",
+   "50% 50%"
+  ],
+  "n_vivana": [
+   "new:vivana-lounge",
+   "Vivana Lounge: 3D letters and logo",
+   "50% 50%"
+  ],
+  "n_pureglow_build": [
+   "new:pure-glow-build",
+   "Pure Glow panel in production",
+   "50% 50%"
+  ],
+  "n_jaymac_close": [
+   "new:jaymac-close",
+   "Jaymac Solutions: flat-cut letters up close",
+   "50% 50%"
+  ],
+  "n_jaymac_office": [
+   "new:jaymac-office",
+   "Jaymac Solutions: office logo",
+   "50% 50%"
+  ],
+  "n_jaymac_logo": [
+   "new:jaymac-logo",
+   "Jaymac Solutions: flat-cut logo",
+   "50% 50%"
+  ],
+  "n_quality": [
+   "new:quality-trust",
+   "Jaymac: 'Quality, Trust, Integrity' flat-cut letters",
+   "50% 50%"
+  ],
+  "n_quality_close": [
+   "new:quality-trust-close",
+   "'Quality, Trust, Integrity' up close",
+   "50% 50%"
+  ],
+  "n_jaymac_door": [
+   "new:jaymac-door",
+   "Jaymac Solutions: door vinyl",
+   "50% 50%"
+  ],
+  "n_builtup_build": [
+   "new:built-up-build",
+   "Built-up letters in production",
+   "50% 50%"
+  ],
+  "n_savoy": [
+   "new:savoy",
+   "Savoy: high level letters on the building",
+   "50% 50%"
+  ],
+  "n_flow_build": [
+   "new:flow-build",
+   "Flow Wellness Studio sign in the workshop",
+   "50% 50%"
+  ],
+  "n_act": [
+   "new:act-group",
+   "ACT Group: 3D letters and vehicle graphics",
+   "50% 50%"
+  ],
+  "n_skinsoul_neon": [
+   "new:skin-soul-neon",
+   "Skin & Soul: LED neon",
+   "50% 50%"
+  ],
+  "n_annas": [
+   "new:annas",
+   "Anna's Bar & Kitchen: backlit panel",
+   "50% 50%"
+  ],
+  "n_queens": [
+   "new:queens-head-fascia",
+   "Queens Head: backlit fascia panel",
+   "50% 50%"
+  ]
+ },
+ "TYPES": [
+  {
+   "slug": "3d-letters",
+   "name": "3D letters",
+   "label": "3D letters",
+   "code": "OS-3D",
+   "seo_title": "3D Letter Signs: Fabricated, Komacel & Acrylic",
+   "meta": "Built-up 3D letter signs made in Gateshead: fabricated face-lit and halo-lit letters, Komacel letters with brass or mirror inlays, and acrylic letters. Fixed to the wall or on a panel.",
+   "hero": "n_thatype",
+   "photos": [
+    "n_jet2",
+    "vault",
+    "rds",
+    "dog",
+    "n_recite",
+    "n_camden",
+    "n_betteryou",
+    "rascals_neon",
+    "n_vivana",
+    "n_whiteswan",
+    "n_act",
+    "ig_zen",
+    "n_court",
+    "n_thatype",
+    "n_byre",
+    "n_grainger",
+    "nhs_bld",
+    "ig_wrgroup",
+    "n_tribeca",
+    "n_fitt",
+    "n_superpower",
+    "n_renew_close",
+    "n_murphys",
+    "n_aqua",
+    "ig_maple",
+    "ig_atom",
+    "catalyst_l"
+   ],
+   "desc": "Letters with real depth that stand proud of the wall. We make three kinds: fabricated metal letters (aluminium, stainless, copper or brass), Komacel letters and acrylic letters, fixed straight to the wall on stand-off locators or mounted on a panel.",
+   "ideal": [
+    "shopfronts",
+    "bars & restaurants",
+    "receptions",
+    "offices"
+   ],
+   "spec": [
+    [
+     "Types",
+     "Fabricated (aluminium, stainless, copper or brass), Komacel, acrylic"
+    ],
+    [
+     "Fabricated",
+     "Face-lit (rim & return), halo-lit or non-lit"
+    ],
+    [
+     "Metals",
+     "Copper and brass, including aged finishes"
+    ],
+    [
+     "Komacel",
+     "Halo-lit only; inset-routed for brass, copper, Trotec metallics or mirrored acrylic"
+    ],
+    [
+     "Acrylic",
+     "Translucent, so light passes through the letter"
+    ],
+    [
+     "Fixing",
+     "Straight to the wall on stand-off locators, or on a panel"
+    ]
+   ],
+   "variants": [
+    {
+     "t": "Fabricated letters",
+     "img": "n_jet2",
+     "p": "Built from a metal face and folded returns in aluminium, stainless steel, copper or brass, including aged finishes. The most versatile option, and the one to choose for large or high-level letters.",
+     "tags": [
+      "face-lit (rim & return)",
+      "halo-lit",
+      "non-lit",
+      "copper & brass"
+     ]
+    },
+    {
+     "t": "Komacel letters",
+     "img": "dog",
+     "p": "Cut from solid Komacel, then inset-routed so the face can be filled with brass, copper or Trotec metallic laminates, a cheaper route to a brushed-metal finish. Mirrored acrylic in gold, silver or rose gold works too.",
+     "tags": [
+      "halo-lit only",
+      "brass / copper inlay",
+      "mirrored acrylic"
+     ]
+    },
+    {
+     "t": "Acrylic letters",
+     "img": "glow",
+     "p": "Solid acrylic lets light pass through, so letters glow when lit from behind. Often mounted on a panel, like our glow. fascia.",
+     "tags": [
+      "light passes through",
+      "on a panel",
+      "coloured or clear"
+     ]
+    }
+   ],
+   "notes": [
+    "Every letter can go straight onto the wall on stand-off locators, or onto a panel when the wall isn't suitable or you want a backdrop.",
+    "The Vault: fabricated, halo-lit letters on a panel. Jet2: halo-lit fabricated letters straight onto the wall. Dog & Parrot: inset brass Komacel.",
+    "Fabricated letters also come in copper and brass, including aged finishes.",
+    "Not sure which suits your budget? We'll mock up the options on a photo of your building."
+   ],
+   "faq": [
+    [
+     "What's the difference between face-lit and halo-lit?",
+     "Face-lit letters glow through the front face, with light contained by the rim and returns. Halo-lit letters have a solid face and throw light back onto the wall behind, creating a glow around each letter."
+    ],
+    [
+     "Can Komacel letters be face-lit?",
+     "No. Komacel letters are halo-lit only. If you want the face itself to glow, fabricated or acrylic letters are the better choice."
+    ],
+    [
+     "Can letters go straight onto brick or cladding?",
+     "Yes. We fix them on stand-off locators so they sit off the wall. If the surface isn't suitable, we mount them on a panel instead."
+    ]
+   ]
+  },
+  {
+   "slug": "backlit-panels",
+   "name": "Backlit panels",
+   "label": "backlit panels",
+   "code": "OS-BP",
+   "seo_title": "Backlit Panel Signs: Illuminated Aperture-Cut Panels",
+   "meta": "Illuminated backlit panel signs designed and fabricated in Gateshead. Shaped or rectangular panels with cut-through graphics that glow at night.",
+   "hero": "st_sign",
+   "photos": [
+    "st_sign",
+    "n_annas",
+    "ig_codcrust",
+    "n_queens",
+    "n_lean"
+   ],
+   "desc": "One of our most popular signs. A fabricated panel with your name and logo aperture-cut through it and filled with push-through opal acrylic, lit from inside with LEDs so the graphics glow at night and read crisply by day. Bar Seventy Three and Cod & Crust are good examples.",
+   "ideal": [
+    "bars & restaurants",
+    "shopfronts",
+    "salons",
+    "gyms"
+   ],
+   "spec": [
+    [
+     "Panel",
+     "Fabricated aluminium, powder-coated to any colour"
+    ],
+    [
+     "Graphics",
+     "Aperture-cut through the face, with push-through opal acrylic"
+    ],
+    [
+     "Lighting",
+     "Internal LEDs, so only the graphics glow"
+    ],
+    [
+     "Shape",
+     "Rectangular or cut to the outline of your logo"
+    ],
+    [
+     "Fixing",
+     "Wall-mounted on hidden fixings"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "Panels can be shaped around your logo, as with Bar Seventy Three, or kept as a clean rectangle.",
+    "Everything is cut, folded and wired in our own workshop."
+   ],
+   "faq": [
+    [
+     "Does the whole panel light up?",
+     "No. Only the cut-through graphics glow; the rest of the panel stays solid, which is what gives backlit panels their crisp look at night."
+    ],
+    [
+     "Can the panel be a custom shape?",
+     "Yes. Panels can follow the outline of your logo or be a simple rectangle."
+    ],
+    [
+     "Do you fit them too?",
+     "Yes. Our own fitting teams install every panel we make."
+    ]
+   ]
+  },
+  {
+   "slug": "flat-cut-letters",
+   "name": "Flat-cut letters",
+   "label": "flat-cut letters",
+   "code": "OS-FC",
+   "seo_title": "Flat-Cut Letter Signs: CNC & Laser Cut Lettering",
+   "meta": "Flat-cut letters cut from solid sheet on our CNC and laser in Gateshead. Crisp, cost-effective lettering for receptions, offices and exteriors.",
+   "hero": "ig_durham",
+   "photos": [
+    "ig_durham",
+    "glow",
+    "n_glow_wall",
+    "n_jaymac_logo",
+    "n_quality",
+    "n_skinsoul",
+    "n_fora",
+    "fira",
+    "ig_pantera"
+   ],
+   "desc": "Letters cut from solid sheet on our CNC router and laser, with a crisp flat face and no returns. A clean, cost-effective way to put a name on a wall, inside or out.",
+   "ideal": [
+    "receptions",
+    "offices",
+    "schools",
+    "feature walls"
+   ],
+   "spec": [
+    [
+     "Materials",
+     "Acrylic, foamex, aluminium composite, stainless steel"
+    ],
+    [
+     "Cutting",
+     "CNC router and laser, in-house"
+    ],
+    [
+     "Face",
+     "Flat, no returns"
+    ],
+    [
+     "Fixing",
+     "Stand-off locators, pins or flush"
+    ],
+    [
+     "Finish",
+     "Painted, brushed, mirrored or vinyl-faced"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "Flat-cut letters cost less than 3D letters and suit interiors especially well.",
+    "Pantera Advisory Group is cut from foamex, a light, rigid PVC board."
+   ],
+   "faq": [
+    [
+     "Are flat-cut letters illuminated?",
+     "Usually not. If you want lighting, 3D letters or a backlit panel are the better route."
+    ],
+    [
+     "Can they be used outside?",
+     "Yes, in exterior-grade materials such as aluminium composite or stainless steel."
+    ]
+   ]
+  },
+  {
+   "slug": "high-level-signs",
+   "name": "High level signs",
+   "label": "high level signs",
+   "code": "OS-HL",
+   "seo_title": "High Level Signs: Large Building Signage",
+   "meta": "Large, high-level building signs surveyed, fabricated and installed by Onesign's own IPAF and PASMA trained crews: fabricated letters, panels, printed Dibond and vinyl-wrapped panels.",
+   "hero": "rolls",
+   "photos": [
+    "rolls",
+    "vertu_night",
+    "n_savoy",
+    "n_griffin",
+    "woodham",
+    "aldi_bld",
+    "n_renew_bld",
+    "ig_urgent",
+    "ig_tms",
+    "ig_companyshop",
+    "n_vivana_fascia"
+   ],
+   "desc": "Large signs high on the side of buildings: big fabricated letters, letters on panels, digitally printed Dibond and vinyl-wrapped fabricated panels. Surveyed, engineered and fitted from powered access by our own crews.",
+   "ideal": [
+    "new builds",
+    "hospitals",
+    "schools",
+    "warehouses",
+    "HQs"
+   ],
+   "spec": [
+    [
+     "Built from",
+     "Fabricated letters, letters on panels, printed Dibond, vinyl on fabricated panels"
+    ],
+    [
+     "Scale",
+     "Large-format, high-level elevations"
+    ],
+    [
+     "Access",
+     "Powered access by our IPAF and PASMA trained teams"
+    ],
+    [
+     "Fixing",
+     "Engineered for cladding, brick and curtain wall"
+    ],
+    [
+     "Lighting",
+     "Illuminated or non-lit"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "Rolls-Royce: large high-level letters on cladding.",
+    "Woodham Academy: a large building sign in digitally printed Dibond.",
+    "Aldi: a large digitally printed vinyl applied to a fabricated panel."
+   ],
+   "faq": [
+    [
+     "Do you handle high-level installs?",
+     "Yes. Our IPAF and PASMA trained crews install from powered access, including on live hospital and campus sites."
+    ],
+    [
+     "Will my building sign need planning permission?",
+     "Many illuminated or large signs need advertisement consent. We'll tell you at the survey stage and can prepare the drawings you need."
+    ]
+   ]
+  },
+  {
+   "slug": "projecting-signs",
+   "name": "Projecting signs",
+   "label": "projecting signs",
+   "code": "OS-PR",
+   "seo_title": "Projecting Signs: Double-Sided Hanging Shop Signs",
+   "meta": "Double-sided projecting signs made in Gateshead, so you're seen from along the street. Round, square or bespoke, lit or non-lit.",
+   "hero": "ig_corner",
+   "photos": [
+    "ig_corner",
+    "ig_queenshead",
+    "ig_lane",
+    "works"
+   ],
+   "desc": "Double-sided signs that stick out from the building, so people walking along the street see you, not just those standing in front. Round, square or fully bespoke.",
+   "ideal": [
+    "high streets",
+    "pubs",
+    "cafés",
+    "shopping centres"
+   ],
+   "spec": [
+    [
+     "Format",
+     "Double-sided, round, square or bespoke"
+    ],
+    [
+     "Bracket",
+     "Fixed or decorative wall bracket, powder-coated"
+    ],
+    [
+     "Lighting",
+     "Internally lit or non-lit"
+    ],
+    [
+     "Build",
+     "Fabricated tray with acrylic or printed faces"
+    ],
+    [
+     "Consent",
+     "We'll advise on advertisement consent where needed"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "Projecting signs work hardest on busy streets where shopfronts are seen side-on."
+   ],
+   "faq": [
+    [
+     "Do projecting signs need planning permission?",
+     "Often, especially if illuminated or in a conservation area. We'll check and advise before you commit."
+    ]
+   ]
+  },
+  {
+   "slug": "light-boxes",
+   "name": "Light boxes",
+   "label": "light boxes",
+   "code": "OS-LB",
+   "seo_title": "Light Box Signs | Illuminated Shop Signs",
+   "meta": "Illuminated light box signs made in our Gateshead factory: aluminium boxes with acrylic faces lit evenly from inside, for shopfronts and projecting signs.",
+   "hero": "ig_gavroche",
+   "photos": [
+    "ig_gavroche",
+    "rascals_proj"
+   ],
+   "desc": "A light box is an aluminium box with an acrylic face, lit evenly from inside by LEDs. Light boxes are generally smaller signs, ideal for shopfronts, projecting signs and anywhere the whole face should glow.",
+   "ideal": [
+    "shopfronts",
+    "projecting signs",
+    "cafés and bars",
+    "salons"
+   ],
+   "spec": [
+    [
+     "Construction",
+     "Fabricated aluminium box, painted to any colour"
+    ],
+    [
+     "Face",
+     "Acrylic, printed or vinyl-applied artwork"
+    ],
+    [
+     "Lighting",
+     "LED modules, lit evenly across the face"
+    ],
+    [
+     "Sides",
+     "Single or double-sided"
+    ],
+    [
+     "Shapes",
+     "Rectangular, round or cut to your logo"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "Light boxes suit smaller, crisp signs. Once a sign gets large, a flex face avoids joins in the face."
+   ],
+   "faq": [
+    [
+     "How big can a light box be?",
+     "Acrylic faces come in sheets, so light boxes suit smaller signs. For large fascias we'd recommend a flex face, which covers big areas without joins."
+    ],
+    [
+     "Can a light box be double-sided?",
+     "Yes. Double-sided light boxes work well as projecting signs, lit on both faces."
+    ]
+   ]
+  },
+  {
+   "slug": "flex-faces",
+   "name": "Flex faces",
+   "label": "flex faces",
+   "code": "OS-FF",
+   "seo_title": "Flex Face Signs | Large Illuminated Signs",
+   "meta": "Large-scale flex face signs made in Gateshead: a printed flex fabric skin tensioned across an illuminated frame, seamless at any size and re-skinnable for a rebrand.",
+   "hero": "n_kosmic",
+   "photos": [
+    "n_kosmic"
+   ],
+   "desc": "A flex face is built for scale. A printed flex fabric skin is tensioned across a large illuminated frame, so even very big signs go up in one seamless face. When you rebrand, the skin can be replaced without changing the frame.",
+   "ideal": [
+    "retail parks",
+    "leisure venues",
+    "large fascias",
+    "forecourts"
+   ],
+   "spec": [
+    [
+     "Face",
+     "Printed flex fabric, tensioned in the frame"
+    ],
+    [
+     "Frame",
+     "Extruded aluminium tensioning system"
+    ],
+    [
+     "Lighting",
+     "LED, lit evenly across the face"
+    ],
+    [
+     "Size",
+     "Large-scale, with no joins in the face"
+    ],
+    [
+     "Rebrand",
+     "Re-skin without replacing the frame"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "Kosmic Kingdom is a large flex face: one seamless printed skin across the whole frame."
+   ],
+   "faq": [
+    [
+     "When should I choose a flex face over a light box?",
+     "Once a sign gets large, acrylic faces need joins. A flex face covers big areas in one seamless skin."
+    ],
+    [
+     "Can you replace just the face?",
+     "Yes. That's the big advantage of a flex face: a new printed skin goes into the existing frame for a rebrand."
+    ]
+   ]
+  },
+  {
+   "slug": "neon-led-neon",
+   "name": "Neon & LED neon",
+   "label": "neon & LED neon",
+   "code": "OS-NE",
+   "seo_title": "LED Neon Signs: Custom Neon for Bars, Salons & Walls",
+   "meta": "Custom LED neon signs made in Gateshead: low-voltage, cool to the touch and far tougher than glass. Any colour, shape or backing.",
+   "hero": "neonB",
+   "photos": [
+    "neonB",
+    "ig_dubliner",
+    "n_skinsoul_neon",
+    "ig_neon_red",
+    "ig_leancuisine",
+    "welcome_neon",
+    "ig_pudes",
+    "ig_neon_yellow",
+    "neonA",
+    "neonC",
+    "neonD"
+   ],
+   "desc": "The glow of classic neon made with modern LED flex: low voltage, cool to the touch and far tougher than glass. Ideal for statement walls, bars and photo moments.",
+   "ideal": [
+    "bars",
+    "salons",
+    "events",
+    "feature walls"
+   ],
+   "spec": [
+    [
+     "Tube",
+     "Silicone LED neon flex"
+    ],
+    [
+     "Backing",
+     "Clear, coloured or mirrored acrylic, cut to shape"
+    ],
+    [
+     "Colours",
+     "Warm white, ice white and a full colour range"
+    ],
+    [
+     "Power",
+     "Low-voltage, plug-in or hard-wired, dimmable options"
+    ],
+    [
+     "Rating",
+     "Indoor, with outdoor-rated versions"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "Send us your logo or a line of text and we'll draw it up in neon."
+   ],
+   "faq": [
+    [
+     "Is LED neon safe indoors?",
+     "Yes. It runs at low voltage and stays cool to the touch, unlike glass neon."
+    ],
+    [
+     "Can it go outside?",
+     "Yes, using outdoor-rated LED neon and fittings."
+    ]
+   ]
+  },
+  {
+   "slug": "vinyl-wall-graphics",
+   "name": "Vinyl & wall graphics",
+   "label": "vinyl & wall graphics",
+   "code": "OS-VG",
+   "seo_title": "Vinyl Graphics & Wall Graphics: Window, Glass & Murals",
+   "meta": "Cut vinyl lettering, window frosting, glass manifestation and printed wall graphics, designed and fitted by Onesign in the North East.",
+   "hero": "ig_lineart",
+   "photos": [
+    "ig_lineart",
+    "ig_lineart_install",
+    "n_workwear_wall",
+    "n_jaymac_door",
+    "bankhouse",
+    "vg_birds",
+    "vg_workhard",
+    "nhs_skyline",
+    "arv",
+    "univinyl",
+    "w_truetest",
+    "ig_jaymac_wall",
+    "ig_craicn"
+   ],
+   "desc": "Two related jobs under one roof. Vinyl graphics are cut from coloured or frosted film for lettering, windows and glass. Wall graphics are digitally printed wraps and murals that cover whole walls.",
+   "ideal": [
+    "schools",
+    "offices",
+    "clinics",
+    "windows & glass"
+   ],
+   "spec": [
+    [
+     "Vinyl graphics",
+     "Cut lettering, frosted and etched-effect films, glass manifestation"
+    ],
+    [
+     "Wall graphics",
+     "Digitally printed wall wraps and murals"
+    ],
+    [
+     "Surfaces",
+     "Glass, painted walls, doors"
+    ],
+    [
+     "Print",
+     "Large-format, in-house"
+    ],
+    [
+     "Fitting",
+     "Bubble-free install by our own team"
+    ]
+   ],
+   "variants": [
+    {
+     "t": "Vinyl graphics",
+     "img": "bankhouse",
+     "p": "Cut from solid-colour or frosted film: lettering, values walls, window graphics, privacy frosting and glass manifestation.",
+     "tags": [
+      "cut vinyl",
+      "frosting",
+      "manifestation"
+     ]
+    },
+    {
+     "t": "Wall graphics",
+     "img": "nhs_skyline",
+     "p": "Digitally printed and applied edge to edge to turn a whole wall into branding, wayfinding or artwork.",
+     "tags": [
+      "printed",
+      "full wall",
+      "murals"
+     ]
+    }
+   ],
+   "notes": [
+    "Glass manifestation helps doors and screens meet safety requirements."
+   ],
+   "faq": [
+    [
+     "Can wall graphics go on any wall?",
+     "Most smooth, painted walls are fine. We'll check the surface at survey."
+    ]
+   ]
+  },
+  {
+   "slug": "digital-large-format-print",
+   "name": "Digital & large format print",
+   "label": "digital & large format print",
+   "code": "OS-LF",
+   "seo_title": "Large Format Printing: Hoardings, Banners & Display Print",
+   "meta": "Large format digital print from our own wide-format printers in Gateshead: hoardings, banners, posters, boards and window graphics.",
+   "hero": "hoarding",
+   "photos": [
+    "hoarding",
+    "n_jet2_ceiling",
+    "print_fruit",
+    "fence_banner",
+    "bowmer",
+    "ig_ocado",
+    "lfPosters",
+    "lfPrint"
+   ],
+   "desc": "Big, bold, colour-matched print from our own wide-format printers: hoardings, printed LED ceiling panels, posters, window graphics and display boards, printed and finished in-house so turnaround stays fast.",
+   "ideal": [
+    "hoardings",
+    "banners",
+    "posters",
+    "promotions"
+   ],
+   "spec": [
+    [
+     "Output",
+     "Large-format and roll-to-roll digital print"
+    ],
+    [
+     "Media",
+     "Vinyl, banner PVC, paper, fabric, rigid boards"
+    ],
+    [
+     "Boards",
+     "Foamex, Dibond and composite panels"
+    ],
+    [
+     "Finish",
+     "Laminated, contour-cut or eyeleted"
+    ],
+    [
+     "Colour",
+     "Matched to your brand guidelines"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "Printing in-house means we control colour and turnaround."
+   ],
+   "faq": [
+    [
+     "Can you match our brand colours?",
+     "Yes. We colour-match to your brand guidelines."
+    ]
+   ]
+  },
+  {
+   "slug": "flags-banners",
+   "name": "Flags & banners",
+   "label": "flags & banners",
+   "code": "OS-FL",
+   "seo_title": "Feather Flags, Mesh Banners & Pop-Up Banners",
+   "meta": "Printed feather flags, mesh fence banners, PVC banners and pop-up banners from Onesign's in-house print room in Gateshead.",
+   "hero": "ig_kier",
+   "photos": [
+    "ig_kier"
+   ],
+   "desc": "Printed flags and banners for events, sites and shopfronts: feather and teardrop flags, mesh fence banners, PVC banners and pop-up banners, printed in-house and supplied with the hardware to put them up.",
+   "ideal": [
+    "events",
+    "construction sites",
+    "sports clubs",
+    "promotions"
+   ],
+   "spec": [
+    [
+     "Flags",
+     "Feather and teardrop flags with poles and bases"
+    ],
+    [
+     "Mesh banners",
+     "Wind-permeable mesh for fences and scaffolding"
+    ],
+    [
+     "PVC banners",
+     "Hemmed and eyeleted for walls and railings"
+    ],
+    [
+     "Pop-ups",
+     "Pull-up and pop-up display banners"
+    ],
+    [
+     "Print",
+     "Full colour, in-house"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "Mesh banners let wind pass through, so they suit site fences and scaffolding."
+   ],
+   "faq": [
+    [
+     "Do flags come with bases?",
+     "Yes. We supply poles and a choice of ground spike, cross base or weighted base."
+    ],
+    [
+     "Which banner suits a building site fence?",
+     "Mesh. It lets the wind through, so it stays put and doesn't strain the fence."
+    ]
+   ]
+  },
+  {
+   "slug": "totems-monoliths",
+   "name": "Totems & monoliths",
+   "label": "totems & monoliths",
+   "code": "OS-TM",
+   "seo_title": "Totem Signs & Monolith Signs",
+   "meta": "Freestanding totem and monolith signs, lit or non-lit, single-brand or multi-tenant, made and installed by Onesign.",
+   "hero": "sun_totem",
+   "photos": [
+    "sun_totem",
+    "tesco",
+    "ig_totem_dir",
+    "w_ext_dir",
+    "dealer_totem",
+    "uni_entry"
+   ],
+   "desc": "Freestanding signs that mark your entrance and guide people in from the road. Illuminated or non-lit, single-brand or multi-tenant.",
+   "ideal": [
+    "retail parks",
+    "car dealers",
+    "campuses",
+    "business parks"
+   ],
+   "spec": [
+    [
+     "Build",
+     "Steel frame with aluminium skins"
+    ],
+    [
+     "Faces",
+     "Fabricated letters, push-through acrylic or printed"
+    ],
+    [
+     "Lighting",
+     "Internally lit or non-lit"
+    ],
+    [
+     "Base",
+     "Concrete foundation, groundwork by our team"
+    ],
+    [
+     "Panels",
+     "Interchangeable tenant panels available"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "Multi-tenant totems can use swappable panels so tenants can change without replacing the sign."
+   ],
+   "faq": [
+    [
+     "Do you do the groundwork?",
+     "Yes. Our team handles foundations and installation."
+    ]
+   ]
+  },
+  {
+   "slug": "wayfinding",
+   "name": "Wayfinding",
+   "label": "wayfinding",
+   "code": "OS-WF",
+   "seo_title": "Wayfinding Signage for Hospitals, Schools & Campuses",
+   "meta": "Wayfinding sign schemes planned, made and installed by Onesign: directional signs, level identification, totems and door signs for hospitals, schools and campuses.",
+   "hero": "way_g",
+   "photos": [
+    "way_g",
+    "way_dir",
+    "w_red_g",
+    "ig_toilet",
+    "ig_visitor",
+    "nhs_dir",
+    "urban",
+    "ig_storeentrance",
+    "uni_totem",
+    "ig_cs_dir",
+    "ng_totem",
+    "ig_corridor",
+    "ig_way_dir",
+    "nhs_proj",
+    "wardDir"
+   ],
+   "desc": "Sign families that get people where they need to be, from the car park to the right room. Planned around how your site is used, and built to accessibility standards.",
+   "ideal": [
+    "hospitals",
+    "universities",
+    "schools",
+    "large sites"
+   ],
+   "spec": [
+    [
+     "Scope",
+     "Site survey, sign schedule and location plans"
+    ],
+    [
+     "Types",
+     "Directional, door, level ID, totems, fingerposts"
+    ],
+    [
+     "Accessible",
+     "Contrast, tactile and Braille options"
+    ],
+    [
+     "Modular",
+     "Updatable inserts for changing departments"
+    ],
+    [
+     "Sites",
+     "Live hospital and campus installs"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "We plan wayfinding from the visitor's point of view, starting at the car park."
+   ],
+   "faq": [
+    [
+     "Can you work on a live hospital site?",
+     "Yes. We've installed on live NHS sites and plan the work around the people using the building."
+    ]
+   ]
+  },
+  {
+   "slug": "vehicle-graphics",
+   "name": "Vehicle graphics",
+   "label": "vehicle graphics",
+   "code": "OS-VH",
+   "seo_title": "Van Signwriting & Vehicle Graphics",
+   "meta": "Van graphics, fleet livery and vehicle wraps designed, printed and fitted in Gateshead by Onesign.",
+   "hero": "ig_park2",
+   "photos": [
+    "ig_park2",
+    "vanYellow"
+   ],
+   "desc": "Turn your vans into moving adverts. From simple contact lettering to full wraps, designed and printed in-house and fitted to a crisp finish.",
+   "ideal": [
+    "trade vans",
+    "fleets",
+    "delivery",
+    "food trucks"
+   ],
+   "spec": [
+    [
+     "Coverage",
+     "Lettering, part-wrap or full wrap"
+    ],
+    [
+     "Film",
+     "Cast vinyl with protective laminate"
+    ],
+    [
+     "Print",
+     "Large-format, colour matched"
+    ],
+    [
+     "Fleet",
+     "Consistent livery across mixed vehicles"
+    ],
+    [
+     "Removal",
+     "Removable without damaging paint"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "We keep fleet livery consistent across different vehicle makes and sizes."
+   ],
+   "faq": [
+    [
+     "Will vehicle graphics damage my paintwork?",
+     "No. Quality cast vinyl removes cleanly from factory paint."
+    ]
+   ]
+  }
+ ],
+ "SECTORS": [
+  {
+   "slug": "healthcare",
+   "name": "healthcare",
+   "blurb": "Wayfinding and compliance signs for hospitals and clinics.",
+   "img": "hc_cdc",
+   "icon": "f7195e7a70624088b9833dc7549b4386",
+   "title": "Healthcare Signage for Hospitals & Clinics",
+   "intro": "Clear signage is critical in healthcare. From wayfinding to compliance signs, we provide solutions that make hospitals and clinics safer and easier to get around, installed by teams used to working on live sites.",
+   "gallery": [
+    "hc_cdc",
+    "hc_cdc2",
+    "ig_nhs_night",
+    "ig_urgent",
+    "ig_nhs_cumbria",
+    "ig_toilet",
+    "alwinton",
+    "nhs_bld",
+    "nhs_dir",
+    "nhs_skyline",
+    "sycamore",
+    "ng_totem",
+    "wardDir",
+    "nhs_proj"
+   ],
+   "types": [
+    "wayfinding",
+    "high-level-signs",
+    "vinyl-wall-graphics",
+    "totems-monoliths"
+   ],
+   "points": [
+    [
+     "Live-site installs",
+     "We plan work around patients, staff and visitors on working hospital sites."
+    ],
+    [
+     "Wayfinding that works",
+     "Schemes planned from the car park to the right ward."
+    ],
+    [
+     "Compliance",
+     "Safety and accessibility built into every sign family."
+    ]
+   ]
+  },
+  {
+   "slug": "education",
+   "name": "education",
+   "blurb": "Directional, branding and safety signs for schools and campuses.",
+   "img": "woodham",
+   "icon": "20409fa21f444682ac49b746537928b3",
+   "title": "School & University Signage",
+   "intro": "Our signage helps schools and universities create organised, easy-to-navigate spaces, with directional, branding and safety signs that keep campuses running smoothly.",
+   "gallery": [
+    "ig_durham",
+    "woodham",
+    "w_red_g",
+    "w_nevergiveup",
+    "w_green2",
+    "w_truetest",
+    "uni_totem",
+    "ncl",
+    "univinyl"
+   ],
+   "types": [
+    "wayfinding",
+    "vinyl-wall-graphics",
+    "high-level-signs",
+    "totems-monoliths"
+   ],
+   "points": [
+    [
+     "Whole-school schemes",
+     "Building signs, wayfinding and values walls designed as one family."
+    ],
+    [
+     "Safe materials",
+     "Durable signs suitable for busy corridors."
+    ],
+    [
+     "Holiday installs",
+     "We can schedule installs around term time."
+    ]
+   ]
+  },
+  {
+   "slug": "construction",
+   "name": "construction",
+   "blurb": "Branded hoardings and site safety boards that keep sites compliant.",
+   "img": "bowmer",
+   "icon": "e6d70cd2c2ac4170a00febc7dd17f224",
+   "title": "Construction Hoardings & Site Signage",
+   "intro": "From safety boards to branded hoardings, we deliver durable signage that keeps construction sites compliant and organised, with fast, reliable service.",
+   "gallery": [
+    "ig_kier",
+    "bowmer",
+    "hoarding2",
+    "fence_banner",
+    "catalyst"
+   ],
+   "types": [
+    "digital-large-format-print",
+    "flags-banners",
+    "high-level-signs",
+    "totems-monoliths"
+   ],
+   "points": [
+    [
+     "Branded hoardings",
+     "Printed in-house and fitted fast."
+    ],
+    [
+     "Site safety",
+     "Clear, durable safety boards."
+    ],
+    [
+     "Accredited",
+     "CSCS, IPAF, PASMA and Constructionline accredited."
+    ]
+   ]
+  },
+  {
+   "slug": "commercial",
+   "name": "commercial",
+   "blurb": "Workplace branding, wayfinding and safety signs.",
+   "img": "n_jet2",
+   "icon": "79390e70e1d34d88b0248554747aa146",
+   "title": "Commercial & Office Signage",
+   "intro": "Enhance your workplace with professional signage, from building signs and reception lettering to wayfinding and safety signs, tailored to your business environment.",
+   "gallery": [
+    "n_jet2",
+    "n_jaymac_logo",
+    "n_quality",
+    "n_recite",
+    "n_act",
+    "n_jaymac_door",
+    "rolls",
+    "n_renew_close",
+    "rolls_int",
+    "jaymac",
+    "rds",
+    "ig_wrgroup",
+    "ig_tms",
+    "catalyst_l"
+   ],
+   "types": [
+    "3d-letters",
+    "high-level-signs",
+    "flat-cut-letters",
+    "wayfinding"
+   ],
+   "points": [
+    [
+     "Reception to roofline",
+     "One team for the building sign and the reception wall."
+    ],
+    [
+     "Brand-accurate",
+     "Colour-matched finishes and materials."
+    ],
+    [
+     "Multi-site",
+     "Consistent signage across several sites."
+    ]
+   ]
+  },
+  {
+   "slug": "retail",
+   "name": "retail",
+   "blurb": "Storefronts and in-store displays that pull customers in.",
+   "img": "n_superpower_wide",
+   "icon": "67e60055c6a34be9b24852f28a1089c3",
+   "title": "Shop Signs & Retail Signage",
+   "intro": "Attract customers with striking signage that shows off your brand, from storefront signs to promotional displays that lift your retail space.",
+   "gallery": [
+    "n_superpower_wide",
+    "n_kosmic",
+    "ig_companyshop",
+    "harbro",
+    "works",
+    "tesco",
+    "aldi_bld",
+    "n_lean"
+   ],
+   "types": [
+    "backlit-panels",
+    "projecting-signs",
+    "light-boxes",
+    "flex-faces",
+    "totems-monoliths"
+   ],
+   "points": [
+    [
+     "Kerb appeal",
+     "Fascias and projecting signs that stop passers-by."
+    ],
+    [
+     "Promotions",
+     "Window and in-store print turned round fast."
+    ],
+    [
+     "Retail parks",
+     "Totems and large-scale flex faces."
+    ]
+   ]
+  },
+  {
+   "slug": "hospitality-leisure",
+   "name": "hospitality & leisure",
+   "blurb": "Bars, gyms, venues and spas: signs that set the mood.",
+   "img": "cork_dusk",
+   "icon": "e71f0723c3bf41a088216609768ab0bd",
+   "title": "Bar, Restaurant & Leisure Signage",
+   "intro": "For bars, restaurants, gyms, spas and venues, our signage blends function and style, setting the mood and guiding guests from the street to their seat.",
+   "gallery": [
+    "cork_dusk",
+    "n_savoy",
+    "n_queens",
+    "n_annas",
+    "n_whiteswan",
+    "n_vivana",
+    "n_vivana_ent",
+    "st_welcome",
+    "ig_codcrust",
+    "ig_dubliner",
+    "dog",
+    "n_murphys",
+    "n_grainger",
+    "ig_court",
+    "vault",
+    "ig_gavroche",
+    "ig_leancuisine",
+    "vertu_night",
+    "sunclub",
+    "n_fitt_int"
+   ],
+   "types": [
+    "backlit-panels",
+    "3d-letters",
+    "neon-led-neon",
+    "projecting-signs"
+   ],
+   "points": [
+    [
+     "Made to be seen at night",
+     "Backlit panels, halo-lit letters and LED neon."
+    ],
+    [
+     "Brand-led",
+     "Signs that match your interior design."
+    ],
+    [
+     "Venues of every size",
+     "From one bar to an arena."
+    ]
+   ]
+  },
+  {
+   "slug": "hair-beauty",
+   "name": "hair & beauty",
+   "blurb": "Exterior and in-salon signs with your brand's personality.",
+   "img": "n_thatype",
+   "icon": "25fce8e719e44c75a0c17b1db32eeaee",
+   "title": "Salon Signs for Hair & Beauty",
+   "intro": "Create a stylish, welcoming space with signage that reflects your brand's personality, from exterior signs to in-salon displays that win your clients over.",
+   "gallery": [
+    "n_thatype",
+    "n_skinsoul",
+    "n_identity",
+    "n_fora",
+    "n_skinsoul_neon",
+    "n_betteryou",
+    "n_camden",
+    "glow",
+    "glow_int",
+    "glow_int2",
+    "ig_zen",
+    "ig_pudes",
+    "kloset",
+    "welcome_neon",
+    "glow_night"
+   ],
+   "types": [
+    "3d-letters",
+    "neon-led-neon",
+    "backlit-panels",
+    "vinyl-wall-graphics"
+   ],
+   "points": [
+    [
+     "Statement walls",
+     "LED neon and mirrored letters made for photos."
+    ],
+    [
+     "Shopfronts",
+     "Fascias that match your interior."
+    ],
+    [
+     "Small details",
+     "Window vinyls and treatment-room signs."
+    ]
+   ]
+  },
+  {
+   "slug": "transport",
+   "name": "transport",
+   "blurb": "Durable, high-visibility signs and fleet graphics.",
+   "img": "ig_park",
+   "icon": "3f6e69f7d28a4952b25f79200d72f670",
+   "title": "Transport Signage & Fleet Graphics",
+   "intro": "Inside busy transport hubs, clear signage is essential. We provide durable, high-visibility signs and fleet graphics that help travellers find their way.",
+   "gallery": [
+    "ig_park",
+    "ig_park2",
+    "vanYellow"
+   ],
+   "types": [
+    "vehicle-graphics",
+    "wayfinding",
+    "digital-large-format-print"
+   ],
+   "points": [
+    [
+     "Fleet livery",
+     "Consistent graphics across mixed vehicles."
+    ],
+    [
+     "High visibility",
+     "Signs designed to read at a glance."
+    ],
+    [
+     "Durable",
+     "Materials chosen for heavy use."
+    ]
+   ]
+  },
+  {
+   "slug": "health-safety",
+   "name": "health & safety",
+   "blurb": "Clear, durable safety signs that keep premises compliant.",
+   "img": "carpark",
+   "icon": "099b1bbf6a3341969551b59b4dd00d1e",
+   "title": "Health & Safety Signs",
+   "intro": "Stay compliant with high-quality safety signage. Our durable, clear signs help you meet regulations and keep your premises safe and secure.",
+   "gallery": [
+    "carpark",
+    "fireExit",
+    "nhs_dir"
+   ],
+   "types": [
+    "wayfinding",
+    "vinyl-wall-graphics",
+    "digital-large-format-print"
+   ],
+   "points": [
+    [
+     "Compliance",
+     "Signs that meet current safety standards."
+    ],
+    [
+     "Durable",
+     "Built for car parks, warehouses and sites."
+    ],
+    [
+     "Floor graphics",
+     "Anti-slip floor markings and fire exit routes."
+    ]
+   ]
+  }
+ ],
+ "PROJECTS": [
+  {
+   "name": "Bar Seventy Three",
+   "k": "st_sign",
+   "label": "Backlit panel",
+   "url": "projects/seventy-three",
+   "fit": true
+  },
+  {
+   "name": "Vertu Motors Arena",
+   "k": "vertu",
+   "label": "Building signage",
+   "url": "projects/vertu-motors"
+  },
+  {
+   "name": "Jet2",
+   "k": "n_jet2",
+   "label": "Halo-lit 3D letters",
+   "url": null
+  },
+  {
+   "name": "NHS CDC",
+   "k": "nhs",
+   "label": "3D letters on a panel",
+   "url": "projects/nhs-community-diagnostics-centre"
+  },
+  {
+   "name": "Newcastle University",
+   "k": "ncl",
+   "label": "Illuminated building sign",
+   "url": "projects/newcastle-university"
+  },
+  {
+   "name": "Aldi & Jaymac",
+   "k": "aldi",
+   "label": "Building signage",
+   "url": "projects/aldi-warehouse"
+  },
+  {
+   "name": "Thatype",
+   "k": "n_thatype",
+   "label": "Halo-lit script letters",
+   "url": null,
+   "fit": true
+  },
+  {
+   "name": "Superpower",
+   "k": "n_superpower_wide",
+   "label": "Illuminated 3D letters",
+   "url": null
+  }
+ ],
+ "REEL_A": [
+  "st_welcome",
+  "n_court",
+  "works",
+  "vertu",
+  "neonB",
+  "n_byre",
+  "dog",
+  "n_kosmic",
+  "bowmer",
+  "arv",
+  "woodham",
+  "n_griffin",
+  "tesco",
+  "vault",
+  "ncl"
+ ],
+ "REEL_B": [
+  "n_jet2",
+  "glow",
+  "harbro",
+  "n_grainger",
+  "cork",
+  "nhs",
+  "n_superpower_wide",
+  "rolls",
+  "sunclub",
+  "n_thatype",
+  "kloset",
+  "n_renew_close",
+  "alwinton",
+  "catalyst",
+  "w_red_g"
+ ],
+ "CLIENT_LOGOS": [
+  "b3e8ef4323c74da294e5adc1d1a485c8",
+  "1822bb02b0d24934aa1ae4037115b9f1",
+  "5636a57a971b4536ba0f2e455fce6cbd",
+  "faf556ac38dd4e0eac91f9a633315ec4",
+  "ad4db19cfa45481d8b8468db0842fe2c",
+  "991cd2fdd18f426cb5cb6ed8cba3f3cb",
+  "b608dd4981184f69a957c23d1ce75442",
+  "392120d93e844ccb9113ef1756455a5b",
+  "79b95a91a6354bf78bdad56b575a2bcc",
+  "acc9f9802d7e41bfa539565781b422c8",
+  "42cdc991edee4943ab68e2373f046702",
+  "256dad9579cc4bfcac59eadf9eaee7cb",
+  "e13232bfb49f48b9bce301d7c15a646c",
+  "5c682d1f4b94409c992961cb26a875de",
+  "92769188d17142e0bbffc114215e0a7e",
+  "9ea581258bfd48da9c70df520dbcb7d2",
+  "e29b0d6623af4113a602a38c5fa253ee",
+  "6ce97783f791465b894968d97128d1de",
+  "6b0ad15c933a469abfca715fb30e787a",
+  "28b3777b93c444e3bc90002a6dcfc6ff"
+ ],
+ "LOGO": "https://static.wixstatic.com/media/653dfa_ea4e2d45d7ca408b95493574790bc8b5~mv2.png",
+ "ACCRED": "https://static.wixstatic.com/media/653dfa_33c82d7475df4710beb102bfcd242aff~mv2.png",
+ "MACHINES": [
+  [
+   "Piranha CNC router",
+   "High-precision routing for acrylic, aluminium composite, foamex and timber: letters, panels and complex shapes."
+  ],
+  [
+   "Ermak brake press",
+   "Precision metal bending for fabricated letters, trays, totems and structural signage."
+  ],
+  [
+   "New laser cutter",
+   "Our newest machine: precise, clean-edged cutting for metal and acrylic letters and intricate detail."
+  ],
+  [
+   "Boxford precision cutter",
+   "Fine engraving and cutting for intricate designs and small detailed parts."
+  ],
+  [
+   "HP Latex R1000",
+   "Large-format printing at up to 1200 x 1200 dpi, with water-based inks, straight onto board, acrylic, metal, timber and vinyl."
+  ],
+  [
+   "Epson SureColor",
+   "Ultra-high-quality roll printing for vinyl graphics, wall graphics and print."
+  ],
+  [
+   "Mimaki cutting plotter",
+   "Precision-cut vinyl lettering, shapes and application-ready graphics."
+  ],
+  [
+   "Rollsroller flatbed applicator",
+   "Bubble-free application of printed graphics and vinyl onto panels."
+  ]
+ ],
+ "WORKSHOP": [
+  "st_design",
+  "ws_cnc",
+  "ws_cut",
+  "ws_weld",
+  "ws_spray",
+  "ws_assembly",
+  "n_builtup_build",
+  "n_redletter",
+  "n_savoy_ws",
+  "n_flow_build",
+  "ws_finish",
+  "ws_print",
+  "n_codcrust_build",
+  "ws_built",
+  "ws_weld2",
+  "ws_install"
+ ],
+ "MEGA_POS": {
+  "backlit-panels": "28% 50%",
+  "projecting-signs": "50% 22%",
+  "flat-cut-letters": "50% 42%"
+ },
+ "WIX": "https://static.wixstatic.com/media/653dfa_",
+ "SITE_URL": "https://www.onesignanddigital.com"
+}

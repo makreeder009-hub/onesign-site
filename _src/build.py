@@ -34,7 +34,7 @@ for _s in SECTORS: _s["points"] = [tuple(p) for p in _s["points"]]
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "0"
+ASSET_V = "1"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)

@@ -14,6 +14,23 @@ MASTERS = os.path.join(SRC, "..", "masters")
 globals().update(json.load(open(os.path.join(SRC, "data.json"))))
 IMG = {k: tuple(v) for k, v in IMG.items()}
 for _s in SECTORS: _s["points"] = [tuple(p) for p in _s["points"]]
+# the same photo saved twice under two names: always show one of them
+ALIAS = {"ncl":"hero", "ig_totem_dir":"ng_totem", "ig_queenshead":"n_queens", "n_whiteswan":"p_ws_side",
+         "ws_weld2":"weld", "ig_smartvape":"p_sm_proj", "p_cork_new":"cork", "sun_totem":"p_sun_totem2",
+         "p_vv_ext":"n_vivana", "ig_wrgroup":"p_wr_brick", "p_gm_2":"p_gm_main", "p_cdc_ent":"hc_cdc2"}
+def canon(o):
+    if isinstance(o, str): return ALIAS.get(o, o)
+    if isinstance(o, dict): return {k: canon(v) for k, v in o.items()}
+    if isinstance(o, list):
+        out = []
+        for x in o:
+            x = canon(x)
+            if not (isinstance(x, str) and x in out): out.append(x)
+        return out
+    if isinstance(o, tuple): return o
+    return o
+TYPES = canon(TYPES); SECTORS = canon(SECTORS); PROJECTS = canon(PROJECTS); REEL_A = canon(REEL_A); REEL_B = [k for k in canon(REEL_B) if k not in REEL_A]
+for _s in SECTORS: _s["points"] = [tuple(p) for p in _s["points"]]
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
@@ -74,6 +91,7 @@ def og(key):
         ImageOps.fit(_open(key), (1200, 630), Image.LANCZOS, centering=(fx, fy)).save(full, "JPEG", quality=82, optimize=True, progressive=True)
     return SITE_URL + "/" + rel
 from content import CASES, AREAS, GUIDES, REVIEWS, PHONE
+CASES[:] = canon(CASES); AREAS[:] = canon(AREAS); GUIDES[:] = canon(GUIDES)
 def cap(k): return IMG[k][1]
 def pos(k): return IMG[k][2]
 def types_by_slug(): return {t["slug"]: t for t in TYPES}
@@ -543,7 +561,7 @@ def home_page():
             out += f'<figure{" aria-hidden=\"true\"" if dup else ""}>{pic(k, "(max-width:700px) 70vw, 380px", alt="" if dup else cap(k), style="object-position:"+pos(k), widths=(480,960))}<figcaption>{E(cap(k))}</figcaption></figure>'
         return out
     LINK = {"st_sign":"work/bar-seventy-three.html","vertu":"work/vertu-motors-arena.html","n_jet2":"work/jet2-dawson-sanderson.html","nhs":"work/nhs-community-diagnostic-centre.html",
-            "ncl":"work/newcastle-university.html","aldi":"work/aldi-jaymac-warehouse.html","n_thatype":"signs/3d-letters.html","n_superpower_wide":"work/superpower-metrocentre.html"}
+            "uni_entry":"work/newcastle-university.html","aldi":"work/aldi-jaymac-warehouse.html","n_thatype":"signs/3d-letters.html","n_superpower_wide":"work/superpower-metrocentre.html"}
     tiles = ""
     for i,p in enumerate(PROJECTS):
         big = i==0

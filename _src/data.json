@@ -1923,7 +1923,7 @@
   "p_r3_neon": [
    "new:p_r3_neon",
    "Recover3: LED neon",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_r3_room": [
    "new:p_r3_room",
@@ -2364,35 +2364,13 @@
    "code": "OS-3D",
    "seo_title": "3D Letter Signs: Fabricated, Komacel & Acrylic",
    "meta": "Built-up 3D letter signs made in Gateshead: fabricated face-lit and halo-lit letters, Komacel letters with brass or mirror inlays, and acrylic letters. Fixed to the wall or on a panel.",
-   "hero": "n_thatype",
+   "hero": "p_tr_halo",
    "photos": [
-    "n_jet2",
-    "vault",
-    "rds",
-    "dog",
-    "n_recite",
-    "n_camden",
-    "n_betteryou",
-    "rascals_neon",
-    "n_vivana",
-    "n_whiteswan",
-    "n_act",
-    "ig_zen",
-    "n_court",
-    "n_thatype",
-    "n_byre",
-    "n_grainger",
-    "nhs_bld",
-    "ig_wrgroup",
-    "n_tribeca",
-    "n_fitt",
-    "n_superpower",
-    "n_renew_close",
-    "n_murphys",
-    "n_aqua",
-    "ig_maple",
-    "ig_atom",
-    "catalyst_l",
+    "p_tr_halo",
+    "p_rm_main",
+    "p_ws_front",
+    "p_gm_main",
+    "p_wr_brick",
     "p_kk_front",
     "p_g_baxters",
     "p_rc_front",
@@ -2403,13 +2381,39 @@
     "p_bc_letters",
     "p_g_parmo",
     "p_g_bratz",
-    "p_tr_halo",
     "p_g_marquee",
     "p_gk_front",
     "p_qe_main",
     "p_tw_lit",
     "p_g_cove",
-    "p_ml_auto"
+    "p_ml_auto",
+    "p_pp_front",
+    "p_jp_front",
+    "p_du_front",
+    "p_r3_wall",
+    "n_jet2",
+    "vault",
+    "rds",
+    "dog",
+    "n_camden",
+    "n_betteryou",
+    "rascals_neon",
+    "n_vivana",
+    "n_act",
+    "ig_zen",
+    "n_court",
+    "n_thatype",
+    "n_byre",
+    "nhs_bld",
+    "n_tribeca",
+    "n_fitt",
+    "n_superpower",
+    "n_renew_close",
+    "n_murphys",
+    "n_aqua",
+    "ig_maple",
+    "ig_atom",
+    "catalyst_l"
    ],
    "desc": "Letters with real depth that stand proud of the wall. We make three kinds: fabricated metal letters (aluminium, stainless, copper or brass), Komacel letters and acrylic letters, fixed straight to the wall on stand-off locators or mounted on a panel.",
    "ideal": [
@@ -2505,11 +2509,11 @@
    "code": "OS-BP",
    "seo_title": "Backlit Panel Signs: Illuminated Aperture-Cut Panels",
    "meta": "Illuminated backlit panel signs designed and fabricated in Gateshead. Shaped or rectangular panels with cut-through graphics that glow at night.",
-   "hero": "st_sign",
+   "hero": "p_cc_main",
    "photos": [
+    "p_cc_main",
     "st_sign",
     "n_annas",
-    "ig_codcrust",
     "n_queens",
     "n_lean"
    ],
@@ -2569,8 +2573,12 @@
    "code": "OS-FC",
    "seo_title": "Flat-Cut Letter Signs: CNC & Laser Cut Lettering",
    "meta": "Flat-cut letters cut from solid sheet on our CNC and laser in Gateshead. Crisp, cost-effective lettering for receptions, offices and exteriors.",
-   "hero": "ig_durham",
+   "hero": "p_arv_logo",
    "photos": [
+    "p_arv_logo",
+    "p_ae_welcome",
+    "p_pa_rec",
+    "p_kk_int",
     "ig_durham",
     "glow",
     "n_glow_wall",
@@ -2579,10 +2587,7 @@
     "n_skinsoul",
     "n_fora",
     "fira",
-    "ig_pantera",
-    "p_arv_logo",
-    "p_ae_welcome",
-    "p_pa_rec"
+    "ig_pantera"
    ],
    "desc": "Letters cut from solid sheet on our CNC router and laser, with a crisp flat face and no returns. A clean, cost-effective way to put a name on a wall, inside or out.",
    "ideal": [
@@ -2636,8 +2641,12 @@
    "code": "OS-HL",
    "seo_title": "High Level Signs: Large Building Signage",
    "meta": "Large, high-level building signs surveyed, fabricated and installed by Onesign's own IPAF and PASMA trained crews: fabricated letters, panels, printed Dibond and vinyl-wrapped panels.",
-   "hero": "rolls",
+   "hero": "p_tms_main",
    "photos": [
+    "p_tms_main",
+    "p_cs_store",
+    "p_ns_fascia",
+    "p_ae_bld",
     "rolls",
     "vertu_night",
     "n_savoy",
@@ -2646,11 +2655,7 @@
     "aldi_bld",
     "n_renew_bld",
     "ig_urgent",
-    "ig_tms",
-    "ig_companyshop",
-    "n_vivana_fascia",
-    "p_ns_fascia",
-    "p_ae_bld"
+    "n_vivana_fascia"
    ],
    "desc": "Large signs high on the side of buildings: big fabricated letters, letters on panels, digitally printed Dibond and vinyl-wrapped fabricated panels. Surveyed, engineered and fitted from powered access by our own crews.",
    "ideal": [
@@ -2706,15 +2711,15 @@
    "code": "OS-PR",
    "seo_title": "Projecting Signs: Double-Sided Hanging Shop Signs",
    "meta": "Double-sided projecting signs made in Gateshead, so you're seen from along the street. Round, square or bespoke, lit or non-lit.",
-   "hero": "ig_corner",
+   "hero": "p_ch_main",
    "photos": [
-    "ig_corner",
-    "ig_queenshead",
-    "ig_lane",
-    "works",
     "p_ch_main",
+    "p_qh_proj",
     "p_cc_proj",
-    "p_sv_proj"
+    "p_sv_proj",
+    "p_sm_proj",
+    "p_bc_ext",
+    "works"
    ],
    "desc": "Double-sided signs that stick out from the building, so people walking along the street see you, not just those standing in front. Round, square or fully bespoke.",
    "ideal": [
@@ -2763,11 +2768,11 @@
    "code": "OS-LB",
    "seo_title": "Light Box Signs | Illuminated Shop Signs",
    "meta": "Illuminated light box signs made in our Gateshead factory: aluminium boxes with acrylic faces lit evenly from inside, for shopfronts and projecting signs.",
-   "hero": "ig_gavroche",
+   "hero": "p_bc_roundel",
    "photos": [
+    "p_bc_roundel",
     "ig_gavroche",
-    "rascals_proj",
-    "p_bc_roundel"
+    "rascals_proj"
    ],
    "desc": "A light box is an aluminium box with an acrylic face, lit evenly from inside by LEDs. Light boxes are generally smaller signs, ideal for shopfronts, projecting signs and anywhere the whole face should glow.",
    "ideal": [
@@ -2875,8 +2880,11 @@
    "code": "OS-NE",
    "seo_title": "LED Neon Signs: Custom Neon for Bars, Salons & Walls",
    "meta": "Custom LED neon signs made in Gateshead: low-voltage, cool to the touch and far tougher than glass. Any colour, shape or backing.",
-   "hero": "neonB",
+   "hero": "p_r3_neon",
    "photos": [
+    "p_r3_neon",
+    "p_sun_neon",
+    "p_g_raw",
     "neonB",
     "ig_dubliner",
     "n_skinsoul_neon",
@@ -2887,10 +2895,7 @@
     "ig_neon_yellow",
     "neonA",
     "neonC",
-    "neonD",
-    "p_sun_neon",
-    "p_r3_neon",
-    "p_g_raw"
+    "neonD"
    ],
    "desc": "The glow of classic neon made with modern LED flex: low voltage, cool to the touch and far tougher than glass. Ideal for statement walls, bars and photo moments.",
    "ideal": [
@@ -2946,6 +2951,12 @@
    "hero": "ig_lineart",
    "photos": [
     "ig_lineart",
+    "p_ae_road",
+    "p_cs_canteen",
+    "p_at_office",
+    "p_si_win",
+    "p_sun_win",
+    "p_st_door",
     "ig_lineart_install",
     "n_workwear_wall",
     "n_jaymac_door",
@@ -2957,13 +2968,7 @@
     "univinyl",
     "w_truetest",
     "ig_jaymac_wall",
-    "ig_craicn",
-    "p_ae_road",
-    "p_cs_canteen",
-    "p_at_office",
-    "p_si_win",
-    "p_sun_win",
-    "p_st_door"
+    "ig_craicn"
    ],
    "desc": "Two related jobs under one roof. Vinyl graphics are cut from coloured or frosted film for lettering, windows and glass. Wall graphics are digitally printed wraps and murals that cover whole walls.",
    "ideal": [
@@ -3033,8 +3038,14 @@
    "code": "OS-LF",
    "seo_title": "Large Format Printing: Hoardings, Banners & Display Print",
    "meta": "Large format digital print from our own wide-format printers in Gateshead: hoardings, banners, posters, boards and window graphics.",
-   "hero": "hoarding",
+   "hero": "p_cs_hoard",
    "photos": [
+    "p_cs_hoard",
+    "p_du_banner",
+    "p_cs_trolley",
+    "p_g_fab",
+    "p_sm_front",
+    "p_arv_prints",
     "hoarding",
     "n_jet2_ceiling",
     "print_fruit",
@@ -3042,12 +3053,7 @@
     "bowmer",
     "ig_ocado",
     "lfPosters",
-    "lfPrint",
-    "p_du_banner",
-    "p_cs_hoard",
-    "p_cs_trolley",
-    "p_g_fab",
-    "p_sm_front"
+    "lfPrint"
    ],
    "desc": "Big, bold, colour-matched print from our own wide-format printers: hoardings, printed LED ceiling panels, posters, window graphics and display boards, printed and finished in-house so turnaround stays fast.",
    "ideal": [
@@ -3151,9 +3157,9 @@
    "code": "OS-TM",
    "seo_title": "Totem Signs & Monolith Signs",
    "meta": "Freestanding totem and monolith signs, lit or non-lit, single-brand or multi-tenant, made and installed by Onesign.",
-   "hero": "sun_totem",
+   "hero": "p_sun_totem2",
    "photos": [
-    "sun_totem",
+    "p_sun_totem2",
     "tesco",
     "ig_totem_dir",
     "w_ext_dir",
@@ -3207,8 +3213,10 @@
    "code": "OS-WF",
    "seo_title": "Wayfinding Signage for Hospitals, Schools & Campuses",
    "meta": "Wayfinding sign schemes planned, made and installed by Onesign: directional signs, level identification, totems and door signs for hospitals, schools and campuses.",
-   "hero": "way_g",
+   "hero": "p_cs_column",
    "photos": [
+    "p_cs_column",
+    "p_ml_entry",
     "way_g",
     "way_dir",
     "w_red_g",
@@ -3223,8 +3231,7 @@
     "ig_corridor",
     "ig_way_dir",
     "nhs_proj",
-    "wardDir",
-    "p_cs_column"
+    "wardDir"
    ],
    "desc": "Sign families that get people where they need to be, from the car park to the right room. Planned around how your site is used, and built to accessibility standards.",
    "ideal": [
@@ -3276,9 +3283,9 @@
    "hero": "ig_park2",
    "photos": [
     "ig_park2",
-    "vanYellow",
     "p_g_lomond",
-    "p_ncl_van"
+    "p_ncl_van",
+    "vanYellow"
    ],
    "desc": "Turn your vans into moving adverts. From simple contact lettering to full wraps, designed and printed in-house and fitted to a crisp finish.",
    "ideal": [
@@ -3757,7 +3764,7 @@
   },
   {
    "name": "Newcastle University",
-   "k": "ncl",
+   "k": "uni_entry",
    "label": "Illuminated building sign",
    "url": "projects/newcastle-university"
   },
@@ -3891,11 +3898,7 @@
   "ws_weld2",
   "ws_install"
  ],
- "MEGA_POS": {
-  "backlit-panels": "28% 50%",
-  "projecting-signs": "50% 22%",
-  "flat-cut-letters": "50% 42%"
- },
+ "MEGA_POS": {},
  "WIX": "https://static.wixstatic.com/media/653dfa_",
  "SITE_URL": "https://www.onesignanddigital.com"
 }

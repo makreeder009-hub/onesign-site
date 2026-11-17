@@ -1094,6 +1094,1266 @@
    "new:queens-head-fascia",
    "Queens Head: backlit fascia panel",
    "50% 50%"
+  ],
+  "p_cdc_3d": [
+   "new:p_cdc_3d",
+   "NHS Community Diagnostic Centre: fabricated 3D letters",
+   "50% 50%"
+  ],
+  "p_cdc_wide": [
+   "new:p_cdc_wide",
+   "NHS Community Diagnostic Centre: high-level lettering on the building",
+   "50% 50%"
+  ],
+  "p_cdc_sky": [
+   "new:p_cdc_sky",
+   "NHS Community Diagnostic Centre: North East skyline wall graphic",
+   "50% 50%"
+  ],
+  "p_cdc_angel": [
+   "new:p_cdc_angel",
+   "NHS Community Diagnostic Centre: Angel of the North wall graphic",
+   "50% 50%"
+  ],
+  "p_cdc_corr": [
+   "new:p_cdc_corr",
+   "NHS Community Diagnostic Centre: corridor wayfinding",
+   "50% 50%"
+  ],
+  "p_cdc_ent": [
+   "new:p_cdc_ent",
+   "NHS Community Diagnostic Centre: internal entrance sign",
+   "50% 50%"
+  ],
+  "p_cdc_wc": [
+   "new:p_cdc_wc",
+   "NHS Community Diagnostic Centre: toilet door graphics",
+   "50% 50%"
+  ],
+  "p_cdc_wait": [
+   "new:p_cdc_wait",
+   "NHS Community Diagnostic Centre: waiting area wall graphic",
+   "50% 50%"
+  ],
+  "p_cdc_way": [
+   "new:p_cdc_way",
+   "NHS Community Diagnostic Centre: directional wall graphics",
+   "50% 50%"
+  ],
+  "p_cdc_m1": [
+   "new:p_cdc_m1",
+   "Stainless letters ready for finishing",
+   "50% 50%"
+  ],
+  "p_cdc_m2": [
+   "new:p_cdc_m2",
+   "Letters hung for spraying",
+   "50% 50%"
+  ],
+  "p_cdc_m3": [
+   "new:p_cdc_m3",
+   "Fitting the letters on site",
+   "50% 50%"
+  ],
+  "p_wd_ent": [
+   "new:p_wd_ent",
+   "Woodham Academy: entrance logo on timber cladding",
+   "50% 50%"
+  ],
+  "p_wd_ext": [
+   "new:p_wd_ext",
+   "Woodham Academy: main entrance",
+   "50% 50%"
+  ],
+  "p_wd_atrium": [
+   "new:p_wd_atrium",
+   "Woodham Academy: values lettering around the atrium",
+   "50% 50%"
+  ],
+  "p_wd_quote": [
+   "new:p_wd_quote",
+   "Woodham Academy: cut vinyl quote on the stairs",
+   "50% 50%"
+  ],
+  "p_wd_lvl1": [
+   "new:p_wd_lvl1",
+   "Woodham Academy: level 1 wall graphic",
+   "50% 50%"
+  ],
+  "p_wd_rec": [
+   "new:p_wd_rec",
+   "Woodham Academy: reception logo",
+   "50% 50%"
+  ],
+  "p_wd_hall": [
+   "new:p_wd_hall",
+   "Woodham Academy: sports hall logo",
+   "50% 50%"
+  ],
+  "p_wd_site": [
+   "new:p_wd_site",
+   "Woodham Academy: site directional sign",
+   "50% 50%"
+  ],
+  "p_jm_panels": [
+   "new:p_jm_panels",
+   "Jaymac: stacked logo panels on the warehouse",
+   "50% 50%"
+  ],
+  "p_aldi_panel": [
+   "new:p_aldi_panel",
+   "Aldi: illuminated logo panel",
+   "50% 50%"
+  ],
+  "p_cork_new": [
+   "new:p_cork_new",
+   "Cork & Coffee: lit fascia at dusk",
+   "50% 50%"
+  ],
+  "p_gl_door": [
+   "new:p_gl_door",
+   "glow.: printed door graphics and room number",
+   "50% 50%"
+  ],
+  "p_gl_rec": [
+   "new:p_gl_rec",
+   "glow.: reception and wall lettering",
+   "50% 50%"
+  ],
+  "p_gl_corr": [
+   "new:p_gl_corr",
+   "glow.: tanning room doors",
+   "50% 50%"
+  ],
+  "p_gl_wide": [
+   "new:p_gl_wide",
+   "glow.: corridor with LED lighting",
+   "50% 50%"
+  ],
+  "p_gl_num": [
+   "new:p_gl_num",
+   "glow.: illuminated room number",
+   "50% 50%"
+  ],
+  "p_gl_wall": [
+   "new:p_gl_wall",
+   "glow.: wall lettering",
+   "50% 50%"
+  ],
+  "p_gl_shop": [
+   "new:p_gl_shop",
+   "glow.: shopfront fascia",
+   "50% 50%"
+  ],
+  "p_vt_day": [
+   "new:p_vt_day",
+   "Vertu Motors Arena: entrance signage",
+   "50% 50%"
+  ],
+  "p_vt_night": [
+   "new:p_vt_night",
+   "Vertu Motors Arena: illuminated lettering at night",
+   "50% 50%"
+  ],
+  "p_ncl_van": [
+   "new:p_ncl_van",
+   "Newcastle University: electric van graphics",
+   "50% 50%"
+  ],
+  "p_cs_store": [
+   "new:p_cs_store",
+   "Company Shop: store fascia",
+   "50% 50%"
+  ],
+  "p_cs_front": [
+   "new:p_cs_front",
+   "Company Shop: store entrance",
+   "50% 50%"
+  ],
+  "p_cs_welcome": [
+   "new:p_cs_welcome",
+   "Company Shop Group: welcome entrance and visitor sign",
+   "50% 50%"
+  ],
+  "p_cs_dir": [
+   "new:p_cs_dir",
+   "Company Shop Group: directional sign",
+   "50% 50%"
+  ],
+  "p_cs_trolley": [
+   "new:p_cs_trolley",
+   "Company Shop: printed trolley shelters",
+   "50% 50%"
+  ],
+  "p_cs_hoard": [
+   "new:p_cs_hoard",
+   "Company Shop: printed hoarding graphics",
+   "50% 50%"
+  ],
+  "p_cs_instore": [
+   "new:p_cs_instore",
+   "Company Shop: in-store graphics",
+   "50% 50%"
+  ],
+  "p_cs_deli": [
+   "new:p_cs_deli",
+   "Company Shop: deli and frozen graphics",
+   "50% 50%"
+  ],
+  "p_cs_wow": [
+   "new:p_cs_wow",
+   "Company Shop: hanging promotional sign",
+   "50% 50%"
+  ],
+  "p_cs_cafe": [
+   "new:p_cs_cafe",
+   "Company Shop Group: office cafe wall graphic",
+   "50% 50%"
+  ],
+  "p_cs_canteen": [
+   "new:p_cs_canteen",
+   "Company Shop Group: canteen wall graphic",
+   "50% 50%"
+  ],
+  "p_cs_orange": [
+   "new:p_cs_orange",
+   "Company Shop Group: office wall graphic",
+   "50% 50%"
+  ],
+  "p_cs_column": [
+   "new:p_cs_column",
+   "Company Shop Group: office wayfinding",
+   "50% 50%"
+  ],
+  "p_cs_hang": [
+   "new:p_cs_hang",
+   "Company Shop Group: hanging department signs",
+   "50% 50%"
+  ],
+  "p_cs_great": [
+   "new:p_cs_great",
+   "Company Shop: printed wall panel",
+   "50% 50%"
+  ],
+  "p_sun_fascia": [
+   "new:p_sun_fascia",
+   "Sun Tanning: 3D letters on a timber fascia",
+   "50% 50%"
+  ],
+  "p_sun_site": [
+   "new:p_sun_site",
+   "Sun Tanning: the drive-thru site",
+   "50% 50%"
+  ],
+  "p_sun_totem2": [
+   "new:p_sun_totem2",
+   "Sun Tanning: drive-thru totem",
+   "50% 50%"
+  ],
+  "p_sun_desk": [
+   "new:p_sun_desk",
+   "Sun Tanning: printed reception desk",
+   "50% 50%"
+  ],
+  "p_sun_neon": [
+   "new:p_sun_neon",
+   "Sun Tanning: LED neon logo",
+   "50% 50%"
+  ],
+  "p_sun_neon2": [
+   "new:p_sun_neon2",
+   "Sun Tanning: LED neon with floral arch",
+   "50% 50%"
+  ],
+  "p_sun_vip": [
+   "new:p_sun_vip",
+   "Sun Tanning: VIP room lettering",
+   "50% 50%"
+  ],
+  "p_sun_win": [
+   "new:p_sun_win",
+   "Sun Tanning: window vinyl",
+   "50% 50%"
+  ],
+  "p_sun_m1": [
+   "new:p_sun_m1",
+   "Laser cutting in the factory",
+   "50% 50%"
+  ],
+  "p_bc_ext": [
+   "new:p_bc_ext",
+   "Blacks Corner: round projecting sign",
+   "50% 50%"
+  ],
+  "p_bc_letters": [
+   "new:p_bc_letters",
+   "Blacks Corner: 3D letters on the canopy",
+   "50% 50%"
+  ],
+  "p_bc_letters2": [
+   "new:p_bc_letters2",
+   "Blacks Corner: 3D letters from below",
+   "50% 50%"
+  ],
+  "p_bc_bar": [
+   "new:p_bc_bar",
+   "Blacks Corner: bar at Fenwick Food Hall",
+   "50% 50%"
+  ],
+  "p_bc_bar2": [
+   "new:p_bc_bar2",
+   "Blacks Corner: bar fit-out signage",
+   "50% 50%"
+  ],
+  "p_bc_roundel": [
+   "new:p_bc_roundel",
+   "Blacks Corner: illuminated roundel",
+   "50% 50%"
+  ],
+  "p_bc_shelf": [
+   "new:p_bc_shelf",
+   "Blacks Corner: lettering on the wine shelves",
+   "50% 50%"
+  ],
+  "p_bc_menu": [
+   "new:p_bc_menu",
+   "Blacks Corner: menu panel",
+   "50% 50%"
+  ],
+  "p_bc_night": [
+   "new:p_bc_night",
+   "Blacks Corner: illuminated roundel after dark",
+   "50% 50%"
+  ],
+  "p_bc_m1": [
+   "new:p_bc_m1",
+   "Blacks Corner sign in production",
+   "50% 50%"
+  ],
+  "p_ws_front": [
+   "new:p_ws_front",
+   "The White Swan: 3D letters on a rendered gable",
+   "50% 50%"
+  ],
+  "p_ws_close": [
+   "new:p_ws_close",
+   "The White Swan: 3D letters up close",
+   "50% 50%"
+  ],
+  "p_ws_logo": [
+   "new:p_ws_logo",
+   "The White Swan: swan logo detail",
+   "50% 50%"
+  ],
+  "p_ws_gable": [
+   "new:p_ws_gable",
+   "The White Swan: gable lettering",
+   "50% 50%"
+  ],
+  "p_ws_side": [
+   "new:p_ws_side",
+   "The White Swan: from the road",
+   "50% 50%"
+  ],
+  "p_ws_m1": [
+   "new:p_ws_m1",
+   "White Swan letters in the workshop",
+   "50% 50%"
+  ],
+  "p_ws_m2": [
+   "new:p_ws_m2",
+   "Letters ready for finishing",
+   "50% 50%"
+  ],
+  "p_ws_m3": [
+   "new:p_ws_m3",
+   "Fixing the swan logo",
+   "50% 50%"
+  ],
+  "p_cc_main": [
+   "new:p_cc_main",
+   "Cod & Crust: backlit fascia panel",
+   "50% 50%"
+  ],
+  "p_cc_wide": [
+   "new:p_cc_wide",
+   "Cod & Crust: shopfront",
+   "50% 50%"
+  ],
+  "p_cc_close": [
+   "new:p_cc_close",
+   "Cod & Crust: aperture-cut lettering",
+   "50% 50%"
+  ],
+  "p_cc_side": [
+   "new:p_cc_side",
+   "Cod & Crust: fascia detail",
+   "50% 50%"
+  ],
+  "p_cc_proj": [
+   "new:p_cc_proj",
+   "Cod & Crust: projecting sign",
+   "50% 50%"
+  ],
+  "p_cc_street": [
+   "new:p_cc_street",
+   "Cod & Crust: on the street",
+   "50% 50%"
+  ],
+  "p_kk_front": [
+   "new:p_kk_front",
+   "Kids Kloset: 3D letters on a fascia panel",
+   "50% 50%"
+  ],
+  "p_kk_wide": [
+   "new:p_kk_wide",
+   "Kids Kloset: shopfront",
+   "50% 50%"
+  ],
+  "p_kk_int": [
+   "new:p_kk_int",
+   "Kids Kloset: interior lettering",
+   "50% 50%"
+  ],
+  "p_kk_store": [
+   "new:p_kk_store",
+   "Kids Kloset: inside the store",
+   "50% 50%"
+  ],
+  "p_kk_int2": [
+   "new:p_kk_int2",
+   "Kids Kloset: feature wall lettering",
+   "50% 50%"
+  ],
+  "p_kk_m1": [
+   "new:p_kk_m1",
+   "Kids Kloset panel in the workshop",
+   "50% 50%"
+  ],
+  "p_kk_m2": [
+   "new:p_kk_m2",
+   "Script letters on the panel",
+   "50% 50%"
+  ],
+  "p_kk_m3": [
+   "new:p_kk_m3",
+   "Letter detail before fitting",
+   "50% 50%"
+  ],
+  "p_at_moss": [
+   "new:p_at_moss",
+   "atom: logo on a moss wall",
+   "50% 50%"
+  ],
+  "p_at_lit": [
+   "new:p_at_lit",
+   "atom: illuminated logo",
+   "50% 50%"
+  ],
+  "p_at_office": [
+   "new:p_at_office",
+   "atom: office wall graphics",
+   "50% 50%"
+  ],
+  "p_at_wall": [
+   "new:p_at_wall",
+   "atom: wall graphic",
+   "50% 50%"
+  ],
+  "p_at_wall2": [
+   "new:p_at_wall2",
+   "atom: wall lettering",
+   "50% 50%"
+  ],
+  "p_at_glass": [
+   "new:p_at_glass",
+   "atom: meeting room glass manifestation",
+   "50% 50%"
+  ],
+  "p_at_manif": [
+   "new:p_at_manif",
+   "atom: frosted door manifestation",
+   "50% 50%"
+  ],
+  "p_at_kitchen": [
+   "new:p_at_kitchen",
+   "atom: kitchen manifestation",
+   "50% 50%"
+  ],
+  "p_at_bld": [
+   "new:p_at_bld",
+   "atom: building signage",
+   "50% 50%"
+  ],
+  "p_at_m1": [
+   "new:p_at_m1",
+   "atom illuminated logo before fitting",
+   "50% 50%"
+  ],
+  "p_ae_rec": [
+   "new:p_ae_rec",
+   "AND-E: branded reception desk",
+   "50% 50%"
+  ],
+  "p_ae_welcome": [
+   "new:p_ae_welcome",
+   "AND-E: welcome wall lettering",
+   "50% 50%"
+  ],
+  "p_ae_board": [
+   "new:p_ae_board",
+   "AND-E: boardroom wall lettering",
+   "50% 50%"
+  ],
+  "p_ae_road": [
+   "new:p_ae_road",
+   "AND-E: printed wall mural",
+   "50% 50%"
+  ],
+  "p_ae_office": [
+   "new:p_ae_office",
+   "AND-E: office wall graphic",
+   "50% 50%"
+  ],
+  "p_ae_circle": [
+   "new:p_ae_circle",
+   "AND-E: printed wall graphic",
+   "50% 50%"
+  ],
+  "p_ae_blossom": [
+   "new:p_ae_blossom",
+   "AND-E: printed blossom mural",
+   "50% 50%"
+  ],
+  "p_ae_moss": [
+   "new:p_ae_moss",
+   "AND-E: logo on a moss wall",
+   "50% 50%"
+  ],
+  "p_ae_bld": [
+   "new:p_ae_bld",
+   "AND-E: building sign",
+   "50% 50%"
+  ],
+  "p_arv_logo": [
+   "new:p_arv_logo",
+   "ARV Studio: flat-cut logo",
+   "50% 50%"
+  ],
+  "p_arv_gym": [
+   "new:p_arv_gym",
+   "ARV Studio: studio floor",
+   "50% 50%"
+  ],
+  "p_arv_words": [
+   "new:p_arv_words",
+   "ARV Studio: wall lettering",
+   "50% 50%"
+  ],
+  "p_arv_lit": [
+   "new:p_arv_lit",
+   "ARV Studio: logo lit by the studio lights",
+   "50% 50%"
+  ],
+  "p_arv_merch": [
+   "new:p_arv_merch",
+   "ARV Studio: merchandise wall",
+   "50% 50%"
+  ],
+  "p_arv_ext": [
+   "new:p_arv_ext",
+   "ARV Studio: external panel",
+   "50% 50%"
+  ],
+  "p_arv_prints": [
+   "new:p_arv_prints",
+   "ARV Studio: printed acrylic panels",
+   "50% 50%"
+  ],
+  "p_arv_vinyl": [
+   "new:p_arv_vinyl",
+   "ARV Studio: cut vinyl lettering",
+   "50% 50%"
+  ],
+  "p_arv_door": [
+   "new:p_arv_door",
+   "ARV Studio: door plaque",
+   "50% 50%"
+  ],
+  "p_tr_halo": [
+   "new:p_tr_halo",
+   "Trident: halo-lit 3D letters",
+   "50% 50%"
+  ],
+  "p_tr_logo": [
+   "new:p_tr_logo",
+   "Trident: halo-lit flame logo",
+   "50% 50%"
+  ],
+  "p_tr_glow": [
+   "new:p_tr_glow",
+   "Trident: the finished sign lit up",
+   "50% 50%"
+  ],
+  "p_tr_flame": [
+   "new:p_tr_flame",
+   "Trident: flame detail",
+   "50% 50%"
+  ],
+  "p_tr_m1": [
+   "new:p_tr_m1",
+   "Trident letters on the panel",
+   "50% 50%"
+  ],
+  "p_tr_m2": [
+   "new:p_tr_m2",
+   "Trident sign in the factory",
+   "50% 50%"
+  ],
+  "p_tr_m3": [
+   "new:p_tr_m3",
+   "Checking the halo-lit letters",
+   "50% 50%"
+  ],
+  "p_sv_bld": [
+   "new:p_sv_bld",
+   "Savoy: the building",
+   "50% 50%"
+  ],
+  "p_sv_letters": [
+   "new:p_sv_letters",
+   "Savoy: 3D letters over the entrance",
+   "50% 50%"
+  ],
+  "p_sv_gable": [
+   "new:p_sv_gable",
+   "Savoy: letters on the glazed gable",
+   "50% 50%"
+  ],
+  "p_sv_ent": [
+   "new:p_sv_ent",
+   "Savoy: entrance",
+   "50% 50%"
+  ],
+  "p_sv_proj": [
+   "new:p_sv_proj",
+   "Savoy: projecting sign",
+   "50% 50%"
+  ],
+  "p_sv_plaque": [
+   "new:p_sv_plaque",
+   "Savoy: wall plaque",
+   "50% 50%"
+  ],
+  "p_sv_m1": [
+   "new:p_sv_m1",
+   "Savoy letters in the workshop",
+   "50% 50%"
+  ],
+  "p_sv_m2": [
+   "new:p_sv_m2",
+   "Savoy panel lettering",
+   "50% 50%"
+  ],
+  "p_qh_front": [
+   "new:p_qh_front",
+   "Queens Head: fascia lettering",
+   "50% 50%"
+  ],
+  "p_qh_side": [
+   "new:p_qh_side",
+   "Queens Head: fascia and projecting sign",
+   "50% 50%"
+  ],
+  "p_qh_proj": [
+   "new:p_qh_proj",
+   "Porters Bistro: projecting sign",
+   "50% 50%"
+  ],
+  "p_qh_corner": [
+   "new:p_qh_corner",
+   "Queens Head: from the corner",
+   "50% 50%"
+  ],
+  "p_qh_wide": [
+   "new:p_qh_wide",
+   "Queens Head: the pub frontage",
+   "50% 50%"
+  ],
+  "p_qh_porters": [
+   "new:p_qh_porters",
+   "Porters Bistro: projecting sign up close",
+   "50% 50%"
+  ],
+  "p_qh_m1": [
+   "new:p_qh_m1",
+   "Cut fascia lettering in production",
+   "50% 50%"
+  ],
+  "p_qh_m2": [
+   "new:p_qh_m2",
+   "Porters Bistro sign in the workshop",
+   "50% 50%"
+  ],
+  "p_qh_m3": [
+   "new:p_qh_m3",
+   "Porters Bistro panel",
+   "50% 50%"
+  ],
+  "p_gk_front": [
+   "new:p_gk_front",
+   "Grace Kelly's: gold 3D letters",
+   "50% 50%"
+  ],
+  "p_gk_wide": [
+   "new:p_gk_wide",
+   "Grace Kelly's: fascia",
+   "50% 50%"
+  ],
+  "p_gk_new": [
+   "new:p_gk_new",
+   "Grace Kelly's: frontage",
+   "50% 50%"
+  ],
+  "p_gk_side": [
+   "new:p_gk_side",
+   "Grace Kelly's: letters on stone",
+   "50% 50%"
+  ],
+  "p_gk_street": [
+   "new:p_gk_street",
+   "Grace Kelly's: from the street",
+   "50% 50%"
+  ],
+  "p_st_main": [
+   "new:p_st_main",
+   "Station Espresso Bar: 3D letters",
+   "50% 50%"
+  ],
+  "p_st_front2": [
+   "new:p_st_front2",
+   "Station Espresso Bar: fascia",
+   "50% 50%"
+  ],
+  "p_st_wide": [
+   "new:p_st_wide",
+   "Station Espresso Bar: shopfront",
+   "50% 50%"
+  ],
+  "p_st_angle": [
+   "new:p_st_angle",
+   "Station Espresso Bar: letters from the side",
+   "50% 50%"
+  ],
+  "p_st_door": [
+   "new:p_st_door",
+   "Station Espresso Bar: door vinyl",
+   "50% 50%"
+  ],
+  "p_sm_front": [
+   "new:p_sm_front",
+   "Smart Vape: printed fascia and window graphics",
+   "50% 50%"
+  ],
+  "p_sm_fascia": [
+   "new:p_sm_fascia",
+   "Smart Vape: fascia detail",
+   "50% 50%"
+  ],
+  "p_sm_wide": [
+   "new:p_sm_wide",
+   "Smart Vape: shopfront",
+   "50% 50%"
+  ],
+  "p_sm_proj": [
+   "new:p_sm_proj",
+   "Smart Vape: projecting sign",
+   "50% 50%"
+  ],
+  "p_pp_front": [
+   "new:p_pp_front",
+   "Pickle & Peach: corner fascia",
+   "50% 50%"
+  ],
+  "p_pp_close": [
+   "new:p_pp_close",
+   "Pickle & Peach: fascia lettering",
+   "50% 50%"
+  ],
+  "p_pp_side": [
+   "new:p_pp_side",
+   "Pickle & Peach: fascia",
+   "50% 50%"
+  ],
+  "p_pp_wide": [
+   "new:p_pp_wide",
+   "Pickle & Peach: on the corner",
+   "50% 50%"
+  ],
+  "p_ch_main": [
+   "new:p_ch_main",
+   "The Chair: hanging sign",
+   "50% 50%"
+  ],
+  "p_ch_2": [
+   "new:p_ch_2",
+   "The Chair: hanging sign on the frontage",
+   "50% 50%"
+  ],
+  "p_ch_3": [
+   "new:p_ch_3",
+   "The Chair: hanging sign on a bracket",
+   "50% 50%"
+  ],
+  "p_ch_4": [
+   "new:p_ch_4",
+   "The Chair: in the lane",
+   "50% 50%"
+  ],
+  "p_r3_front": [
+   "new:p_r3_front",
+   "Recover3: shopfront",
+   "50% 50%"
+  ],
+  "p_r3_wall": [
+   "new:p_r3_wall",
+   "Recover3: lettering on timber",
+   "50% 50%"
+  ],
+  "p_r3_neon": [
+   "new:p_r3_neon",
+   "Recover3: LED neon",
+   "50% 50%"
+  ],
+  "p_r3_room": [
+   "new:p_r3_room",
+   "Recover3: illuminated room sign",
+   "50% 50%"
+  ],
+  "p_r3_rec": [
+   "new:p_r3_rec",
+   "Recover3: illuminated reception sign",
+   "50% 50%"
+  ],
+  "p_r3_plaque": [
+   "new:p_r3_plaque",
+   "Recover3: halo-lit plaque",
+   "50% 50%"
+  ],
+  "p_pa_main": [
+   "new:p_pa_main",
+   "Pantera Advisory Group: flat-cut logo",
+   "50% 50%"
+  ],
+  "p_pa_rec": [
+   "new:p_pa_rec",
+   "Pantera Advisory Group: reception logo",
+   "50% 50%"
+  ],
+  "p_pa_stair": [
+   "new:p_pa_stair",
+   "Pantera Advisory Group: logo at the top of the stairs",
+   "50% 50%"
+  ],
+  "p_pa_view": [
+   "new:p_pa_view",
+   "Pantera Advisory Group: from the stairs",
+   "50% 50%"
+  ],
+  "p_vv_ext": [
+   "new:p_vv_ext",
+   "Vivana Lounge: entrance fascia",
+   "50% 50%"
+  ],
+  "p_vv_front": [
+   "new:p_vv_front",
+   "Vivana Lounge: fascia and lighting",
+   "50% 50%"
+  ],
+  "p_vv_int": [
+   "new:p_vv_int",
+   "Vivana Lounge: interior",
+   "50% 50%"
+  ],
+  "p_vv_int2": [
+   "new:p_vv_int2",
+   "Vivana Lounge: inside the lounge",
+   "50% 50%"
+  ],
+  "p_vv_lit": [
+   "new:p_vv_lit",
+   "Vivana Lounge: illuminated lettering",
+   "50% 50%"
+  ],
+  "p_vv_m1": [
+   "new:p_vv_m1",
+   "Vivana Lounge letters in production",
+   "50% 50%"
+  ],
+  "p_lb_front": [
+   "new:p_lb_front",
+   "The Library: 3D letters on the fascia",
+   "50% 50%"
+  ],
+  "p_lb_2": [
+   "new:p_lb_2",
+   "The Library: fascia",
+   "50% 50%"
+  ],
+  "p_lb_night": [
+   "new:p_lb_night",
+   "The Library: after dark",
+   "50% 50%"
+  ],
+  "p_lb_3": [
+   "new:p_lb_3",
+   "The Library: from the corner",
+   "50% 50%"
+  ],
+  "p_lb_close": [
+   "new:p_lb_close",
+   "The Library: letters up close",
+   "50% 50%"
+  ],
+  "p_ml_night": [
+   "new:p_ml_night",
+   "Mapleleaf: forecourt at night",
+   "50% 50%"
+  ],
+  "p_ml_auto": [
+   "new:p_ml_auto",
+   "Mapleleaf Automotive: illuminated letters",
+   "50% 50%"
+  ],
+  "p_ml_night2": [
+   "new:p_ml_night2",
+   "Mapleleaf: the site lit up",
+   "50% 50%"
+  ],
+  "p_ml_chilled": [
+   "new:p_ml_chilled",
+   "Mapleleaf Express: in-store lettering",
+   "50% 50%"
+  ],
+  "p_ml_beer": [
+   "new:p_ml_beer",
+   "Mapleleaf Express: beer cave lettering",
+   "50% 50%"
+  ],
+  "p_ml_frozen": [
+   "new:p_ml_frozen",
+   "Mapleleaf Express: frozen section",
+   "50% 50%"
+  ],
+  "p_ml_coffee": [
+   "new:p_ml_coffee",
+   "Mapleleaf Express: coffee bar lettering",
+   "50% 50%"
+  ],
+  "p_ml_entry": [
+   "new:p_ml_entry",
+   "Mapleleaf Express: entry sign",
+   "50% 50%"
+  ],
+  "p_ns_fascia": [
+   "new:p_ns_fascia",
+   "North Shore: fascia",
+   "50% 50%"
+  ],
+  "p_ns_2": [
+   "new:p_ns_2",
+   "North Shore: fascia lettering",
+   "50% 50%"
+  ],
+  "p_ns_3": [
+   "new:p_ns_3",
+   "North Shore: from below",
+   "50% 50%"
+  ],
+  "p_ns_kiosk": [
+   "new:p_ns_kiosk",
+   "North Shore Coffee Roasters: kiosk lettering",
+   "50% 50%"
+  ],
+  "p_ns_kiosk2": [
+   "new:p_ns_kiosk2",
+   "North Shore Coffee Roasters: kiosk menu",
+   "50% 50%"
+  ],
+  "p_rc_front": [
+   "new:p_rc_front",
+   "Rustic Cup: 3D letters on the fascia",
+   "50% 50%"
+  ],
+  "p_rc_2": [
+   "new:p_rc_2",
+   "Rustic Cup: letters up close",
+   "50% 50%"
+  ],
+  "p_rc_3": [
+   "new:p_rc_3",
+   "Rustic Cup: shopfront",
+   "50% 50%"
+  ],
+  "p_rc_4": [
+   "new:p_rc_4",
+   "Rustic Cup: from the street",
+   "50% 50%"
+  ],
+  "p_jp_front": [
+   "new:p_jp_front",
+   "Just Peachy: fascia",
+   "50% 50%"
+  ],
+  "p_jp_2": [
+   "new:p_jp_2",
+   "Just Peachy: shopfront",
+   "50% 50%"
+  ],
+  "p_jp_3": [
+   "new:p_jp_3",
+   "Just Peachy: from the street",
+   "50% 50%"
+  ],
+  "p_jp_close": [
+   "new:p_jp_close",
+   "Just Peachy: fascia lettering",
+   "50% 50%"
+  ],
+  "p_si_front": [
+   "new:p_si_front",
+   "Sienna House of Beauty: fascia",
+   "50% 50%"
+  ],
+  "p_si_2": [
+   "new:p_si_2",
+   "Sienna House of Beauty: shopfront",
+   "50% 50%"
+  ],
+  "p_si_close": [
+   "new:p_si_close",
+   "Sienna House of Beauty: fascia lettering",
+   "50% 50%"
+  ],
+  "p_si_win": [
+   "new:p_si_win",
+   "Sienna House of Beauty: window frosting",
+   "50% 50%"
+  ],
+  "p_si_m1": [
+   "new:p_si_m1",
+   "Sienna panel in production",
+   "50% 50%"
+  ],
+  "p_du_front": [
+   "new:p_du_front",
+   "Dolled Up Luxe: fascia",
+   "50% 50%"
+  ],
+  "p_du_2": [
+   "new:p_du_2",
+   "Dolled Up Luxe: shopfront",
+   "50% 50%"
+  ],
+  "p_du_3": [
+   "new:p_du_3",
+   "Dolled Up Luxe: from the street",
+   "50% 50%"
+  ],
+  "p_tms_main": [
+   "new:p_tms_main",
+   "TMS Grid: building sign",
+   "50% 50%"
+  ],
+  "p_tms_2": [
+   "new:p_tms_2",
+   "TMS Grid: signs on the unit",
+   "50% 50%"
+  ],
+  "p_tms_3": [
+   "new:p_tms_3",
+   "TMS Grid: entrance",
+   "50% 50%"
+  ],
+  "p_wr_halo": [
+   "new:p_wr_halo",
+   "WR Group: halo-lit logo",
+   "50% 50%"
+  ],
+  "p_wr_brick": [
+   "new:p_wr_brick",
+   "WR Group: 3D logo on brick",
+   "50% 50%"
+  ],
+  "p_wr_2": [
+   "new:p_wr_2",
+   "WR Group: logo up close",
+   "50% 50%"
+  ],
+  "p_rm_main": [
+   "new:p_rm_main",
+   "Recite Me: 3D logo on a red wall",
+   "50% 50%"
+  ],
+  "p_rm_2": [
+   "new:p_rm_2",
+   "Recite Me: logo detail",
+   "50% 50%"
+  ],
+  "p_rm_3": [
+   "new:p_rm_3",
+   "Recite Me: from the side",
+   "50% 50%"
+  ],
+  "p_du_banner": [
+   "new:p_du_banner",
+   "Ward Group: Welcome to Durham scaffold banner",
+   "50% 50%"
+  ],
+  "p_du_banner2": [
+   "new:p_du_banner2",
+   "Ward Group: banner on the scaffold",
+   "50% 50%"
+  ],
+  "p_du_banner3": [
+   "new:p_du_banner3",
+   "Ward Group: banner from the junction",
+   "50% 50%"
+  ],
+  "p_du_banner4": [
+   "new:p_du_banner4",
+   "Ward Group: banner close up",
+   "50% 50%"
+  ],
+  "p_qe_main": [
+   "new:p_qe_main",
+   "QE Facilities: 3D letters on the glazing",
+   "50% 50%"
+  ],
+  "p_qe_close": [
+   "new:p_qe_close",
+   "QE Facilities: letters up close",
+   "50% 50%"
+  ],
+  "p_qe_2": [
+   "new:p_qe_2",
+   "QE Facilities: entrance",
+   "50% 50%"
+  ],
+  "p_qe_m1": [
+   "new:p_qe_m1",
+   "QE Facilities letters in production",
+   "50% 50%"
+  ],
+  "p_gm_main": [
+   "new:p_gm_main",
+   "Grainger Market: 3D letters over the entrance",
+   "50% 50%"
+  ],
+  "p_gm_2": [
+   "new:p_gm_2",
+   "Grainger Market: letters on stone",
+   "50% 50%"
+  ],
+  "p_gm_3": [
+   "new:p_gm_3",
+   "Grainger Market: entrance",
+   "50% 50%"
+  ],
+  "p_gm_4": [
+   "new:p_gm_4",
+   "Grainger Market: from the street",
+   "50% 50%"
+  ],
+  "p_tw_shop": [
+   "new:p_tw_shop",
+   "The Works: illuminated shopfront",
+   "50% 50%"
+  ],
+  "p_tw_dusk": [
+   "new:p_tw_dusk",
+   "The Works: at dusk",
+   "50% 50%"
+  ],
+  "p_tw_lit": [
+   "new:p_tw_lit",
+   "The Works: illuminated letters",
+   "50% 50%"
+  ],
+  "p_tw_lit2": [
+   "new:p_tw_lit2",
+   "The Works: lit lettering",
+   "50% 50%"
+  ],
+  "p_tw_mall": [
+   "new:p_tw_mall",
+   "The Works: in the shopping centre",
+   "50% 50%"
+  ],
+  "p_tw_m1": [
+   "new:p_tw_m1",
+   "The Works panel in the workshop",
+   "50% 50%"
+  ],
+  "p_tw_m2": [
+   "new:p_tw_m2",
+   "Lettering detail",
+   "50% 50%"
+  ],
+  "p_g_kink": [
+   "new:p_g_kink",
+   "Kink: 3D letters on the fascia",
+   "50% 50%"
+  ],
+  "p_g_baxters": [
+   "new:p_g_baxters",
+   "Baxter's: 3D script letters",
+   "50% 50%"
+  ],
+  "p_g_parmo": [
+   "new:p_g_parmo",
+   "Parm-O-Rama: 3D letters",
+   "50% 50%"
+  ],
+  "p_g_bratz": [
+   "new:p_g_bratz",
+   "Bratz Salon: 3D letters",
+   "50% 50%"
+  ],
+  "p_g_marquee": [
+   "new:p_g_marquee",
+   "Bar: marquee letters with bulbs",
+   "50% 50%"
+  ],
+  "p_g_copeland": [
+   "new:p_g_copeland",
+   "Copeland Residential: letters on brick",
+   "50% 50%"
+  ],
+  "p_g_raw": [
+   "new:p_g_raw",
+   "Take It Raw: LED neon",
+   "50% 50%"
+  ],
+  "p_g_lomond": [
+   "new:p_g_lomond",
+   "Lomond: van graphics",
+   "50% 50%"
+  ],
+  "p_g_fab": [
+   "new:p_g_fab",
+   "Printed window graphics on a vacant unit",
+   "50% 50%"
+  ],
+  "p_g_cove": [
+   "new:p_g_cove",
+   "The Cove: 3D letters",
+   "50% 50%"
+  ],
+  "p_g_camden": [
+   "new:p_g_camden",
+   "The Camden Clinic: 3D letters",
+   "50% 50%"
   ]
  },
  "TYPES": [
@@ -1132,7 +2392,24 @@
     "n_aqua",
     "ig_maple",
     "ig_atom",
-    "catalyst_l"
+    "catalyst_l",
+    "p_kk_front",
+    "p_g_baxters",
+    "p_rc_front",
+    "p_lb_front",
+    "p_st_main",
+    "p_g_kink",
+    "p_sun_fascia",
+    "p_bc_letters",
+    "p_g_parmo",
+    "p_g_bratz",
+    "p_tr_halo",
+    "p_g_marquee",
+    "p_gk_front",
+    "p_qe_main",
+    "p_tw_lit",
+    "p_g_cove",
+    "p_ml_auto"
    ],
    "desc": "Letters with real depth that stand proud of the wall. We make three kinds: fabricated metal letters (aluminium, stainless, copper or brass), Komacel letters and acrylic letters, fixed straight to the wall on stand-off locators or mounted on a panel.",
    "ideal": [
@@ -1302,7 +2579,10 @@
     "n_skinsoul",
     "n_fora",
     "fira",
-    "ig_pantera"
+    "ig_pantera",
+    "p_arv_logo",
+    "p_ae_welcome",
+    "p_pa_rec"
    ],
    "desc": "Letters cut from solid sheet on our CNC router and laser, with a crisp flat face and no returns. A clean, cost-effective way to put a name on a wall, inside or out.",
    "ideal": [
@@ -1368,7 +2648,9 @@
     "ig_urgent",
     "ig_tms",
     "ig_companyshop",
-    "n_vivana_fascia"
+    "n_vivana_fascia",
+    "p_ns_fascia",
+    "p_ae_bld"
    ],
    "desc": "Large signs high on the side of buildings: big fabricated letters, letters on panels, digitally printed Dibond and vinyl-wrapped fabricated panels. Surveyed, engineered and fitted from powered access by our own crews.",
    "ideal": [
@@ -1429,7 +2711,10 @@
     "ig_corner",
     "ig_queenshead",
     "ig_lane",
-    "works"
+    "works",
+    "p_ch_main",
+    "p_cc_proj",
+    "p_sv_proj"
    ],
    "desc": "Double-sided signs that stick out from the building, so people walking along the street see you, not just those standing in front. Round, square or fully bespoke.",
    "ideal": [
@@ -1481,7 +2766,8 @@
    "hero": "ig_gavroche",
    "photos": [
     "ig_gavroche",
-    "rascals_proj"
+    "rascals_proj",
+    "p_bc_roundel"
    ],
    "desc": "A light box is an aluminium box with an acrylic face, lit evenly from inside by LEDs. Light boxes are generally smaller signs, ideal for shopfronts, projecting signs and anywhere the whole face should glow.",
    "ideal": [
@@ -1601,7 +2887,10 @@
     "ig_neon_yellow",
     "neonA",
     "neonC",
-    "neonD"
+    "neonD",
+    "p_sun_neon",
+    "p_r3_neon",
+    "p_g_raw"
    ],
    "desc": "The glow of classic neon made with modern LED flex: low voltage, cool to the touch and far tougher than glass. Ideal for statement walls, bars and photo moments.",
    "ideal": [
@@ -1668,7 +2957,13 @@
     "univinyl",
     "w_truetest",
     "ig_jaymac_wall",
-    "ig_craicn"
+    "ig_craicn",
+    "p_ae_road",
+    "p_cs_canteen",
+    "p_at_office",
+    "p_si_win",
+    "p_sun_win",
+    "p_st_door"
    ],
    "desc": "Two related jobs under one roof. Vinyl graphics are cut from coloured or frosted film for lettering, windows and glass. Wall graphics are digitally printed wraps and murals that cover whole walls.",
    "ideal": [
@@ -1747,7 +3042,12 @@
     "bowmer",
     "ig_ocado",
     "lfPosters",
-    "lfPrint"
+    "lfPrint",
+    "p_du_banner",
+    "p_cs_hoard",
+    "p_cs_trolley",
+    "p_g_fab",
+    "p_sm_front"
    ],
    "desc": "Big, bold, colour-matched print from our own wide-format printers: hoardings, printed LED ceiling panels, posters, window graphics and display boards, printed and finished in-house so turnaround stays fast.",
    "ideal": [
@@ -1923,7 +3223,8 @@
     "ig_corridor",
     "ig_way_dir",
     "nhs_proj",
-    "wardDir"
+    "wardDir",
+    "p_cs_column"
    ],
    "desc": "Sign families that get people where they need to be, from the car park to the right room. Planned around how your site is used, and built to accessibility standards.",
    "ideal": [
@@ -1975,7 +3276,9 @@
    "hero": "ig_park2",
    "photos": [
     "ig_park2",
-    "vanYellow"
+    "vanYellow",
+    "p_g_lomond",
+    "p_ncl_van"
    ],
    "desc": "Turn your vans into moving adverts. From simple contact lettering to full wraps, designed and printed in-house and fitted to a crisp finish.",
    "ideal": [
@@ -2041,7 +3344,10 @@
     "sycamore",
     "ng_totem",
     "wardDir",
-    "nhs_proj"
+    "nhs_proj",
+    "p_cdc_sky",
+    "p_cdc_way",
+    "p_qe_main"
    ],
    "types": [
     "wayfinding",
@@ -2081,7 +3387,11 @@
     "w_truetest",
     "uni_totem",
     "ncl",
-    "univinyl"
+    "univinyl",
+    "p_wd_atrium",
+    "p_wd_ent",
+    "p_wd_lvl1",
+    "p_ncl_van"
    ],
    "types": [
     "wayfinding",
@@ -2117,7 +3427,9 @@
     "bowmer",
     "hoarding2",
     "fence_banner",
-    "catalyst"
+    "catalyst",
+    "p_du_banner",
+    "p_du_banner3"
    ],
    "types": [
     "digital-large-format-print",
@@ -2162,7 +3474,13 @@
     "rds",
     "ig_wrgroup",
     "ig_tms",
-    "catalyst_l"
+    "catalyst_l",
+    "p_ae_welcome",
+    "p_at_moss",
+    "p_pa_main",
+    "p_tr_halo",
+    "p_wr_brick",
+    "p_tms_main"
    ],
    "types": [
     "3d-letters",
@@ -2201,7 +3519,14 @@
     "works",
     "tesco",
     "aldi_bld",
-    "n_lean"
+    "n_lean",
+    "p_cs_store",
+    "p_cs_instore",
+    "p_kk_front",
+    "p_sm_front",
+    "p_ml_night",
+    "p_tw_shop",
+    "p_gm_main"
    ],
    "types": [
     "backlit-panels",
@@ -2253,7 +3578,13 @@
     "ig_leancuisine",
     "vertu_night",
     "sunclub",
-    "n_fitt_int"
+    "n_fitt_int",
+    "p_ws_front",
+    "p_bc_letters",
+    "p_gk_front",
+    "p_lb_night",
+    "p_arv_logo",
+    "p_r3_neon"
    ],
    "types": [
     "backlit-panels",
@@ -2299,7 +3630,12 @@
     "ig_pudes",
     "kloset",
     "welcome_neon",
-    "glow_night"
+    "glow_night",
+    "p_sun_fascia",
+    "p_sun_neon",
+    "p_gl_rec",
+    "p_ch_main",
+    "p_si_front"
    ],
    "types": [
     "3d-letters",
@@ -2333,7 +3669,9 @@
    "gallery": [
     "ig_park",
     "ig_park2",
-    "vanYellow"
+    "vanYellow",
+    "p_g_lomond",
+    "p_ml_auto"
    ],
    "types": [
     "vehicle-graphics",
@@ -2366,7 +3704,9 @@
    "gallery": [
     "carpark",
     "fireExit",
-    "nhs_dir"
+    "nhs_dir",
+    "p_cs_dir",
+    "p_ml_entry"
    ],
    "types": [
     "wayfinding",

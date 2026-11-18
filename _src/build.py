@@ -54,7 +54,7 @@ for _t in TYPES:
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "4"
+ASSET_V = "5"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)
@@ -270,8 +270,33 @@ def crumbs_ld(items):
 HUBSPOT = dict(portal="", form="")
 HS_SNIPPET = f'<script>window.OS_FORM={json.dumps(HUBSPOT)}</script>\n' if HUBSPOT["portal"] and HUBSPOT["form"] else ""
 PAGES = []
+
+# Sections that share a background run together: the second one drops its top padding ("flush"),
+# so two paddings never stack. Sections on different backgrounds always keep both paddings.
+_BG = {"sec":"page","types":"page","work":"page","sec alt":"white","process":"white","rating":"white","sectors":"white"}
+def _bg(cls):
+    c = cls.split()
+    if not c: return None
+    if c[0] == "sec": return "white" if "alt" in c else "page"
+    return _BG.get(c[0])
+def flush_sections(html):
+    out, pos, depth, prev = [], 0, 0, None
+    for m in re.finditer(r'<(/?)section\b([^>]*)>', html):
+        if m.group(1):
+            depth -= 1; continue
+        depth += 1
+        if depth != 1: continue
+        cm = re.search(r'class="([^"]*)"', m.group(2)); cls = cm.group(1) if cm else ""
+        bg = _bg(cls)
+        if bg and bg == prev and "flush" not in cls.split():
+            tag = m.group(0).replace(f'class="{cls}"', f'class="{cls} flush"')
+            out.append(html[pos:m.start()]); out.append(tag); pos = m.end()
+        prev = bg
+    out.append(html[pos:]); return "".join(out)
+
 def page(path, *, title, desc, canonical, body, ogimg, r, ld=(), bodyattrs="", ogtype="website", preload=None):
     PAGES.append(path)
+    body = flush_sections(body)
     lds = "\n".join(f'<script type="application/ld+json">{json.dumps(x,ensure_ascii=False)}</script>' for x in [BUSINESS,*ld])
     doc = f'''<!doctype html>
 <html lang="en-GB">
@@ -356,7 +381,7 @@ def case_card(c, r, sizes="(max-width:620px) 92vw, (max-width:980px) 46vw, 31vw"
 def guide_card(g, r):
     return (f'<a class="gcard" href="{r}guides/{g["slug"]}.html"><small>{E(g["kicker"])}</small><h3>{E(g["h1"])}</h3><p>{E(g["desc"])}</p><span class="gc-go">read the guide <span aria-hidden="true">→</span></span></a>')
 def area_chips(r, skip=None):
-    return "".join(f'<a href="{r}areas/{a["slug"]}.html">sign makers {E(a["short"])}</a>' for a in AREAS if a["slug"] != skip) + f'<a href="{r}nationwide-signage.html">nationwide</a>'
+    return "".join(f'<a href="{r}areas/{a["slug"]}.html">sign makers {E(a["short"])}</a>' for a in AREAS if a["slug"] != skip) + f'<a href="{r}nationwide-signage.html">Nationwide</a>'
 ILLUMINATED = {"3d-letters","backlit-panels","light-boxes","flex-faces","neon-led-neon","high-level-signs","projecting-signs","totems-monoliths"}
 def guides_for(type_slug):
     G = {g["slug"]: g for g in GUIDES}
@@ -576,7 +601,7 @@ def home_page():
     def _logo_row(ids):
         return "".join(f'<img src="img/brand/client-{n:02d}.png" alt="{"Client logo" if j < len(ids) else ""}"{"" if j < len(ids) else " aria-hidden=\"true\""} draggable="false" decoding="async" width="150" height="46">' for j, n in enumerate(ids + ids))
     _ids = list(range(1, len(CLIENT_LOGOS) + 1))
-    logos_a, logos_b = _logo_row(_ids[0::2]), _logo_row(_ids[1::2])
+    logos_a, logos_b, logos_all = _logo_row(_ids[0::2]), _logo_row(_ids[1::2]), _logo_row(_ids)
     def reel(keys):
         out=""
         for i,k in enumerate(keys+keys):
@@ -598,7 +623,7 @@ def home_page():
     slides = "".join(f'<div class="hs{" on" if i==0 else ""}">{pic(k, "100vw", alt=n+": "+l.lower()+" by Onesign", lazy=i>0, prio=i==0, style="object-position:"+("60% 40%" if i==0 else pos(k)))}</div>' for i,(k,n,l,u) in enumerate(HERO))
     hnow = "".join(f'<a class="hn{" on" if i==0 else ""}" href="{u}"><span class="hn-n">{i+1:02d}</span><span class="hn-t"><b>{E(n)}</b><small>{E(l)}</small></span><i></i></a>' for i,(k,n,l,u) in enumerate(HERO))
     arealist = "".join(f'<a class="arow" href="areas/{a["slug"]}.html" data-img="{wix(a["hero"],900,900,"fit")}"><span class="ar-n">{i+1:02d}</span><span class="ar-t">{E(a["short"])}</span><span class="ar-go" aria-hidden="true">→</span></a>' for i,a in enumerate(AREAS))
-    arealist += f'<a class="arow uk" href="nationwide-signage.html" data-img="{wix("rolls",900,900,"fit")}"><span class="ar-n">UK</span><span class="ar-t">nationwide</span><span class="ar-go" aria-hidden="true">→</span></a>'
+    arealist += f'<a class="arow uk" href="nationwide-signage.html" data-img="{wix("rolls",900,900,"fit")}"><span class="ar-n">UK</span><span class="ar-t">Nationwide</span><span class="ar-go" aria-hidden="true">→</span></a>'
     guides = "".join(guide_card(g, r) for g in GUIDES)
     sectors = "".join(link_card(f'sectors/{s["slug"]}.html', s["img"], s["name"], s["blurb"], s["slug"]) for s in SECTORS)
     body = f'''<section class="hero" id="top">
@@ -626,7 +651,7 @@ def home_page():
 </section>
 <div class="trusted">
   <p>Trusted by the North East and beyond</p>
-  <div id="marqueeBox"><div class="marquee"><div class="marquee-track">{logos_a}</div></div><div class="marquee rev"><div class="marquee-track">{logos_b}</div></div></div>
+  <div id="marqueeBox"><div class="marquee one"><div class="marquee-track">{logos_all}</div></div><div class="marquee two" aria-hidden="true"><div class="marquee-track">{logos_a}</div></div><div class="marquee two rev" aria-hidden="true"><div class="marquee-track">{logos_b}</div></div></div>
 </div>
 <section class="intro">
   <div class="wrap intro-grid">

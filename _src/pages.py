@@ -174,7 +174,7 @@ def area_page(a):
 def areas_index():
     r = "../"
     cards = "".join(link_card(f'{a["slug"]}.html', a["hero"], f'sign makers {a["short"]}', a["lede"]) for a in AREAS)
-    cards += link_card("../nationwide-signage.html", "rolls", "nationwide rollouts", "Multi-site signage programmes made in one factory and fitted across the UK.")
+    cards += link_card("../nationwide-signage.html", "rolls", "Nationwide rollouts", "Multi-site signage programmes made in one factory and fitted across the UK.")
     body = f'''{phero(r, [("Home","index.html"),("Areas",None)], "areas we cover.", "Made in Team Valley, Gateshead. Fitted across the North East by our own installers, and anywhere in the UK for larger projects.", "hero", kicker="Where we work")}
 <section class="sec"><div class="wrap">
   {head("North East", "local to you.")}

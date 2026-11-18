@@ -215,8 +215,8 @@ form.mock label.drop{font:400 14px/1.5 var(--f-body);letter-spacing:0;text-trans
 body :is(.sec,.types,.work,.sectors,.process,.cta,.areas){padding-block:64px}
 .intro{padding-block:64px 56px}
 .sec-head{margin-bottom:36px}
-/* two sections on the same background run together: don't stack two paddings */
-body :is(.sec:not(.alt) + .sec:not(.alt),.sec.alt + .sec.alt,.sec:not(.alt) + .cta,.work + .cta,.types + .work,.sectors + .sec.alt,.process + .sec.alt){padding-top:0}
+/* two sections on the same background run together (class added at build time) */
+body section.flush{padding-top:0}
 @media (max-width:900px){
   body :is(.sec,.types,.work,.sectors,.process,.cta,.areas){padding-block:48px}
   .intro{padding-block:48px 40px}
@@ -233,9 +233,12 @@ body :is(.sec:not(.alt) + .sec:not(.alt),.sec.alt + .sec.alt,.sec:not(.alt) + .c
 .trusted p{margin-bottom:18px}
 .marquee{padding-block:8px}
 .marquee + .marquee{margin-top:6px}
+.marquee.two{display:none}
 .marquee-track{gap:48px;animation-duration:50s}
 .marquee.rev .marquee-track{animation-direction:reverse}
 @media (max-width:700px){
+  .marquee.one{display:none}
+  .marquee.two{display:block}
   .marquee-track{gap:30px;animation-duration:36s}
   .marquee img{height:30px;max-width:96px}
   .marquee{-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}

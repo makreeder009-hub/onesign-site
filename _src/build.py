@@ -522,15 +522,15 @@ def sector_page(s):
 <section class="sec"><div class="wrap">
   <div class="points">{points}</div>
 </div></section>
-<section class="sec alt"><div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">What we make</span><h2 class="h2 rv">every sign type, for {E(s["name"])}.</h2></div><p class="lede rv">We make all fifteen in-house. Where we have fitted one for a {E(s["name"])} client, that is the photo you see.</p></div>
-  {tcards}
-</div></section>
 <section class="sec"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Fitted by us</span><h2 class="h2 rv">recent {E(s["name"])} work.</h2></div><p class="lede rv">Tap any photo to see it full size.</p></div>
   {gallery(s["gallery"], r)}
 </div></section>
 {cases_html}
+<section class="sec"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">What we make</span><h2 class="h2 rv">every sign type, for {E(s["name"])}.</h2></div><p class="lede rv">We make all fifteen in-house. Where we have fitted one for a {E(s["name"])} client, that is the photo you see.</p></div>
+  {tcards}
+</div></section>
 <section class="sec alt tight"><div class="wrap">
   <span class="eyebrow" style="margin-bottom:16px;display:flex">Other sectors</span>
   <div class="chips-row">{others}</div>

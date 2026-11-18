@@ -259,11 +259,11 @@ if($(".phero")){
 }
 /* scroll reveals: soft fade and a short rise, rows come in together, no jump or flash */
 const pending=[];let rq=0;
-const check=()=>{rq=0;const line=innerHeight*.94,go=new Map();
+const check=()=>{clearTimeout(rq);rq=0;const line=innerHeight*.94,go=new Map();
   for(let i=pending.length-1;i>=0;i--){const p=pending[i];if(p.el.getBoundingClientRect().top<line){(go.get(p.o)||go.set(p.o,[]).get(p.o)).push(p.el);pending.splice(i,1)}}
   go.forEach((els,o)=>{els.reverse();gsap.to(els,{opacity:1,y:0,duration:o.d,ease:"power3.out",stagger:{each:o.each,ease:"power1.in"},overwrite:true})});
 };
-const queue=()=>{if(!rq&&pending.length)rq=requestAnimationFrame(check)};
+let lastQ=0;const queue=()=>{if(!pending.length)return;const n=Date.now();if(n-lastQ>50){lastQ=n;check()}else if(!rq)rq=setTimeout(check,60)};
 addEventListener("scroll",queue,{passive:true});addEventListener("resize",queue);addEventListener("load",queue);
 const reveal=(sel,{y=14,d=1.15,each=.07}={})=>{
   // live position check on every scroll frame: shows anything that has reached the bottom of the screen

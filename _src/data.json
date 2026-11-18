@@ -772,7 +772,7 @@
   ],
   "n_fitt_int": [
    "new:fitt-interior",
-   "Fitt interior",
+   "Filto and Thatype, Fenwick Newcastle: interior lettering",
    "50% 50%"
   ],
   "n_jet2_ceiling": [
@@ -3354,6 +3354,121 @@
    "new:p_z_camdenclin_0",
    "The Camden Clinic: letters up close",
    "50% 50%"
+  ],
+  "p_seh_09749": [
+   "new:p_seh_09749",
+   "Sunderland Eye Hospital: Main Entrance letters and directory totem",
+   "50% 50%"
+  ],
+  "p_seh_00187": [
+   "new:p_seh_00187",
+   "Sunderland Eye Hospital: illuminated Main Entrance letters",
+   "50% 50%"
+  ],
+  "p_seh_09759": [
+   "new:p_seh_09759",
+   "Sunderland Eye Hospital: entrance directory board",
+   "50% 50%"
+  ],
+  "p_seh_09774": [
+   "new:p_seh_09774",
+   "Sunderland Eye Hospital: suspended Welcome Desk sign",
+   "50% 50%"
+  ],
+  "p_seh_09803": [
+   "new:p_seh_09803",
+   "Sunderland Eye Hospital: Retina Unit wall lettering",
+   "50% 50%"
+  ],
+  "p_seh_09795": [
+   "new:p_seh_09795",
+   "Sunderland Eye Hospital: freestanding directional totem",
+   "50% 50%"
+  ],
+  "p_seh_00126": [
+   "new:p_seh_00126",
+   "Sunderland Eye Hospital: balustrade manifestation graphics",
+   "50% 50%"
+  ],
+  "p_seh_00027": [
+   "new:p_seh_00027",
+   "Sunderland Eye Hospital: Surgical Day Unit wall lettering",
+   "50% 50%"
+  ],
+  "p_seh_09896": [
+   "new:p_seh_09896",
+   "Sunderland Eye Hospital: lift lobby floor number",
+   "50% 50%"
+  ],
+  "p_seh_09861": [
+   "new:p_seh_09861",
+   "Sunderland Eye Hospital: floor directory with number roundel",
+   "50% 50%"
+  ],
+  "p_seh_00086b": [
+   "new:p_seh_00086b",
+   "Sunderland Eye Hospital: tactile door sign with Braille",
+   "50% 50%"
+  ],
+  "p_seh_00084b": [
+   "new:p_seh_00084b",
+   "Sunderland Eye Hospital: projecting Baby Changing signs",
+   "50% 50%"
+  ],
+  "p_fw_08147": [
+   "new:p_fw_08147",
+   "Fawcett Street Community Kitchen: wall graphics",
+   "50% 50%"
+  ],
+  "p_fw_08150": [
+   "new:p_fw_08150",
+   "Fawcett Street: menu wall graphic",
+   "50% 50%"
+  ],
+  "p_fw_08160": [
+   "new:p_fw_08160",
+   "Fawcett Street: Surplus changes lives wall graphic",
+   "50% 50%"
+  ],
+  "p_fw_08170": [
+   "new:p_fw_08170",
+   "Fawcett Street: toilets wayfinding graphic",
+   "50% 50%"
+  ],
+  "p_fw_08176": [
+   "new:p_fw_08176",
+   "Fawcett Street: Making a difference wall graphic",
+   "50% 50%"
+  ],
+  "p_fw_08194": [
+   "new:p_fw_08194",
+   "Fawcett Street Community Store: shop graphics",
+   "50% 50%"
+  ],
+  "p_fw_08196": [
+   "new:p_fw_08196",
+   "Fawcett Street Community Store: aisle headers",
+   "50% 50%"
+  ],
+  "p_fw_08205": [
+   "new:p_fw_08205",
+   "Fawcett Street Community Store: bakery graphic",
+   "50% 50%"
+  ],
+  "p_fw_08222": [
+   "new:p_fw_08222",
+   "Fawcett Street: Community Shop wall graphics",
+   "50% 50%"
+  ],
+  "p_fw_08224": [
+   "new:p_fw_08224",
+   "Fawcett Street: Kids eat free wall graphic",
+   "50% 50%"
+  ],
+  "p_fw_08226": [
+   "new:p_fw_08226",
+   "Fawcett Street: heritage display panel",
+   "50% 50%"
   ]
  },
  "TYPES": [
@@ -3430,7 +3545,8 @@
     "p_y_theavenue_0",
     "p_y_streeteats_0",
     "p_y_actgroup_0",
-    "p_y_littleherh_0"
+    "p_y_littleherh_0",
+    "p_seh_00187"
    ],
    "desc": "Letters with real depth that stand proud of the wall. We make three kinds: fabricated metal letters (aluminium, stainless, copper or brass), Komacel letters and acrylic letters, fixed straight to the wall on stand-off locators or mounted on a panel.",
    "ideal": [
@@ -3603,7 +3719,8 @@
     "ig_pantera",
     "p_du_front",
     "p_x_skinandsou_4",
-    "p_y_alba_1"
+    "p_y_alba_1",
+    "p_y_filto_0"
    ],
    "desc": "Letters cut from solid sheet on our CNC router and laser, with a crisp flat face and no returns. A clean, cost-effective way to put a name on a wall, inside or out.",
    "ideal": [
@@ -4040,7 +4157,11 @@
     "ig_lineart_install",
     "p_y_fawcettstr_0",
     "p_y_jamjar_0",
-    "p_y_averydenni_0"
+    "p_y_averydenni_0",
+    "p_fw_08160",
+    "p_fw_08224",
+    "p_fw_08147",
+    "p_seh_00126"
    ],
    "desc": "Two related jobs under one roof. Vinyl graphics are cut from coloured or frosted film for lettering, windows and glass. Wall graphics are digitally printed wraps and murals that cover whole walls.",
    "ideal": [
@@ -4233,7 +4354,8 @@
     "tesco",
     "ig_totem_dir",
     "dealer_totem",
-    "p_y_sunderland_3"
+    "p_y_sunderland_3",
+    "p_seh_09759"
    ],
    "desc": "Freestanding signs that mark your entrance and guide people in from the road. Illuminated or non-lit, single-brand or multi-tenant.",
    "ideal": [
@@ -4304,7 +4426,12 @@
     "w_ext_dir",
     "uni_entry",
     "p_x_workwearex_2",
-    "p_z_companysho_0"
+    "p_z_companysho_0",
+    "p_seh_09774",
+    "p_seh_09861",
+    "p_seh_00086b",
+    "p_seh_00084b",
+    "p_seh_09795"
    ],
    "desc": "Sign families that get people where they need to be, from the car park to the right room. Planned around how your site is used, and built to accessibility standards.",
    "ideal": [

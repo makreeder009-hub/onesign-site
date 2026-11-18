@@ -2463,10 +2463,10 @@ GUIDES += [
       hero="n_fitt", card="p_arv_logo", updated="2026-11-18", kicker="Letters guide",
       lede="Both put your name on the wall in separate letters. One is fabricated like a small box and can be lit. The other is cut from a solid sheet. Here is how to choose between them.",
       sections=[
-       ("the short answer", "<ul><li><b>3D built-up letters</b> are hollow letters made from a face, a return (the sides) and often a back. They can be deep, and they can hold LEDs, so they are the choice for illuminated shopfronts and building signs.</li><li><b>Flat-cut letters</b> are cut in one piece from solid acrylic, aluminium composite, stainless steel, brass or Komacel. They are slimmer and crisp, and usually unlit or lit from outside. They suit receptions, offices and interiors.</li></ul>"),
-       ("how 3D built-up letters are made", "{FIG ws_weld|Fabricating the returns for built-up letters in our Team Valley workshop.}<p>Each letter is built individually. The face is cut on a CNC router or laser, a metal or acrylic return is formed and fixed around its edge, and the letter is finished in paint, metal or acrylic. For lit letters, LEDs and wiring go inside before the letter is sealed.</p><p>Depth is usually somewhere between 30mm and 100mm, and more on large building signs. That depth gives a strong shadow in daylight and room for the light at night.</p><p><a href=\"{R}signs/3d-letters.html\">See our 3D letters →</a></p>"),
-       ("how flat-cut letters are made", "{FIG p_arv_logo|ARV Studio: a flat-cut logo stood off a textured wall.}<p>Flat-cut letters are cut straight from a sheet, typically 3mm to 25mm thick. Thicker acrylic, aluminium and Komacel give a solid, chunky look. Stainless steel and brass give a fine, premium edge. Letters can be fixed flat to the wall or on stand-off locators so they cast a small shadow.</p><p><a href=\"{R}signs/flat-cut-letters.html\">See our flat-cut letters →</a></p>"),
-       ("side by side", "<table class=\"cmp\"><thead><tr><th></th><th>3D built-up</th><th>Flat-cut</th></tr></thead><tbody><tr><td>Depth</td><td>Deep, usually 30mm+</td><td>Slim, usually 3–25mm</td></tr><tr><td>Lighting</td><td>Face-lit, halo-lit or both</td><td>Unlit, or lit by external lights</td></tr><tr><td>Best viewed from</td><td>Across the street and further</td><td>Close to mid range</td></tr><tr><td>Typical use</td><td>Shopfronts, building signs</td><td>Receptions, offices, interiors</td></tr><tr><td>Fine detail</td><td>Limited by how small a return can be formed</td><td>Very fine detail is possible</td></tr><tr><td>Cost</td><td>Higher, every letter is fabricated</td><td>Lower, cut in one operation</td></tr></tbody></table>"),
+       ("the short answer", "<ul><li><b>3D built-up letters</b> are hollow letters made from a face, a return (the sides) and often a back. They are 20mm deep or more, and they can hold LEDs, so they are the choice for illuminated shopfronts and building signs.</li><li><b>Flat-cut letters</b> are cut in one piece from solid acrylic, aluminium composite, stainless steel, brass or Komacel. They are slimmer and crisp, and usually unlit or lit from outside. They suit receptions, offices and interiors.</li></ul>"),
+       ("how 3D built-up letters are made", "{FIG ws_weld|Fabricating the returns for built-up letters in our Team Valley workshop.}<p>Each letter is built individually. The face is cut on a CNC router or laser, a metal or acrylic return is formed and fixed around its edge, and the letter is finished in paint, metal or acrylic. For lit letters, LEDs and wiring go inside before the letter is sealed.</p><p>At Onesign, anything 20mm deep or more is built as a 3D letter. Depth is usually somewhere between 20mm and 100mm, and more on large building signs. That depth gives a strong shadow in daylight and room for the light at night.</p><p><a href=\"{R}signs/3d-letters.html\">See our 3D letters →</a></p>"),
+       ("how flat-cut letters are made", "{FIG p_arv_logo|ARV Studio: a flat-cut logo stood off a textured wall.}<p>Flat-cut letters are cut straight from a sheet, up to 20mm thick. Anything deeper than that we build as a 3D letter. Thicker acrylic, aluminium and Komacel give a solid, chunky look. Stainless steel and brass give a fine, premium edge. Letters can be fixed flat to the wall or on stand-off locators so they cast a small shadow.</p><p><a href=\"{R}signs/flat-cut-letters.html\">See our flat-cut letters →</a></p>"),
+       ("side by side", "<table class=\"cmp\"><thead><tr><th></th><th>3D built-up</th><th>Flat-cut</th></tr></thead><tbody><tr><td>Depth</td><td>20mm and deeper</td><td>Up to 20mm</td></tr><tr><td>Lighting</td><td>Face-lit, halo-lit or both</td><td>Unlit, or lit by external lights</td></tr><tr><td>Best viewed from</td><td>Across the street and further</td><td>Close to mid range</td></tr><tr><td>Typical use</td><td>Shopfronts, building signs</td><td>Receptions, offices, interiors</td></tr><tr><td>Fine detail</td><td>Limited by how small a return can be formed</td><td>Very fine detail is possible</td></tr><tr><td>Cost</td><td>Higher, every letter is fabricated</td><td>Lower, cut in one operation</td></tr></tbody></table>"),
        ("which one for your building", "<ul><li><b>Need it seen at night?</b> Choose 3D letters. Flat-cut letters cannot hold LEDs.</li><li><b>Reading distance over 20 metres?</b> The depth and size of built-up letters carry further.</li><li><b>Inside a reception or office?</b> Flat-cut letters give a clean, architectural look and cost less.</li><li><b>A thin script or fine logo?</b> Flat-cut handles very fine strokes better. We can also cut the detail out of a <a href=\"{R}signs/backlit-panels.html\">backlit panel</a> if it needs lighting.</li><li><b>Not sure?</b> Send us a photo and we will mock up both on your building.</li></ul>")],
       faq=[("Can flat-cut letters be illuminated?", "Not from inside, because they are solid. They can be lit by small spotlights or a trough light above, or mounted on a lit panel."),
            ("Which lasts longer?", "Both last for many years when made from the right materials for indoors or outdoors. Outside, we use aluminium, stainless steel or exterior-grade acrylic."),
@@ -2781,3 +2781,33 @@ LOC.update({
 for _c in CASES:
     if _c["slug"] in LOC: _c["where"] = LOC[_c["slug"]][0]
     elif _c["slug"] in ["mapleleaf-express", "the-works", "alba", "pantera-advisory", "pickle-and-peach"]: _c["where"] = None
+
+# ---- Mak's corrections, 18 Nov (afternoon)
+IMG_CAPS = {"n_fitt_int": "Filto and Thatype, Fenwick Newcastle: interior lettering"}
+for _c in CASES:
+    if _c["slug"] == "filto":
+        _c.update(types=["flat-cut-letters", "digital-large-format-print"], label="Painted Foamex letters and hoarding",
+                  lede="Painted Foamex lettering above the door and on the fascia, plus a printed hoarding while the café was fitted out.",
+                  made=[["Foamex lettering", "Flat-cut Foamex letters, painted in the brand grey, above the door and on the fascia."],
+                        ["Hoarding", "Large format printed hoarding announcing the opening."],
+                        ["Interior", "Lettering inside the Fenwick Food Hall unit, alongside Thatype."]])
+        _c["photos"] = ["p_y_filto_0", "p_y_filto_1", "n_fitt_int", "p_y_filto_3", "p_y_filto_4"]
+        _c["making"] = list(_c.get("making") or []) + ["p_y_filto_2"]
+    if _c["slug"] == "sunderland-eye-hospital":
+        _c.update(hero="p_seh_09749", types=["wayfinding", "3d-letters", "totems-monoliths", "vinyl-wall-graphics"],
+                  label="Full wayfinding scheme",
+                  lede="Illuminated entrance letters, directory totems, floor directories, door and projecting signs, tactile Braille signs and glass manifestation across a new eye hospital.",
+                  photos=["p_seh_09749", "p_seh_00187", "p_seh_09759", "p_seh_09774", "p_seh_09803", "p_seh_09795", "p_seh_00126",
+                          "p_seh_00027", "p_seh_09896", "p_seh_09861", "p_seh_00086b", "p_seh_00084b", "p_y_sunderland_3"])
+    if _c["slug"] == "fawcett-street-community-shop":
+        _c["photos"] = list(dict.fromkeys(_c["photos"] + ["p_fw_08147", "p_fw_08150", "p_fw_08160", "p_fw_08170", "p_fw_08176",
+                         "p_fw_08194", "p_fw_08196", "p_fw_08205", "p_fw_08222", "p_fw_08224", "p_fw_08226"]))
+CASES.append(dict(slug="thatype", old=None, name="Thatype", where="Fenwick, Newcastle", sector="hospitality-leisure",
+    types=["3d-letters"], hero="n_thatype", label="Halo-lit script letters",
+    lede="Halo-lit 3D script lettering for Thatype, next to Filto in Fenwick Newcastle.",
+    brief="A warm, premium glow that sits comfortably beside its neighbours in the food hall.",
+    made=[["Halo-lit 3D letters", "Fabricated script letters with LEDs behind, glowing onto the fascia."],
+          ["Interior lettering", "Matching lettering inside the unit."]],
+    result="A sign that reads beautifully from across the food hall.",
+    photos=["n_thatype", "n_fitt_int"], making=[]))
+LOC["thatype"] = ["Fenwick, Newcastle", "newcastle", 54.97604, -1.61360, "address"]

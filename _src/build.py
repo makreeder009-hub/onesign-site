@@ -410,7 +410,9 @@ def all_type_cards(r, cases):
     """Every sign type as a card; the photo comes from one of the given jobs when one used that type."""
     used, out = set(), []
     for t in TYPES:
-        img = next((c["hero"] for c in cases if t["slug"] in (c.get("types") or []) and c["hero"] not in used), t["hero"])
+        # only a photo already curated into this sign type's gallery, so the card always shows that type of sign
+        theirs = {p for c in cases for p in [c["hero"]] + list(c.get("photos") or [])}
+        img = next((p for p in t["photos"] if p in theirs and p not in used), t["hero"])
         used.add(img)
         out.append(link_card(f'{r}signs/{t["slug"]}.html', img, t["label"], t["desc"][:96].rsplit(" ", 1)[0] + "…"))
     return f'<div class="cards3">{"".join(out)}</div>'

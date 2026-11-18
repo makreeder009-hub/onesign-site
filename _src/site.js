@@ -168,7 +168,7 @@ if(form){
       for(let i=0;i<10;i++){const h=open[d.getDay()];if(h){const st=new Date(d);st.setHours(h[0]+1,0,0,0);const en=new Date(d);en.setHours(h[1],0,0,0);if(d<st)d=st;if(d<en){const sameDay=d.toDateString()===now.toDateString();const tm=new Date(now);tm.setDate(tm.getDate()+1);
         return (sameDay?"today":d.toDateString()===tm.toDateString()?"tomorrow":d.toLocaleDateString("en-GB",{weekday:"long"}))+" from "+fmt(d)}}
         d.setDate(d.getDate()+1);d.setHours(0,0,0,0)}return "soon"};
-    slotEl.textContent=next(); setInterval(()=>slotEl.textContent=next(),60000);
+    const set=()=>{window.OS_SLOT=slotEl.textContent=next()};set(); setInterval(set,60000);
   }
   const call=$("#f-call"),sl=$("#sendLabel");
   if(call&&sl){const u=()=>{sl.textContent=call.checked?"send & call me back":"send my enquiry";$("#liveSlot").classList.toggle("off",!call.checked)};call.addEventListener("change",u);u()}
@@ -200,8 +200,10 @@ if(form){
     if(cfg.portal&&cfg.form){
       const btn=form.querySelector("button[type=submit]"); btn.disabled=true;
       fetch("https://api.hsforms.com/submissions/v3/integration/submit/"+cfg.portal+"/"+cfg.form,{method:"POST",headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({fields:[{name:"firstname",value:v("#f-name")},{name:"email",value:v("#f-email")},{name:"phone",value:v("#f-tel")},{name:"company",value:v("#f-biz")},{name:"zip",value:v("#f-post")},{name:"message",value:lines.slice(4).join("\n")}],context:{pageUri:location.href,pageName:document.title}})})
-        .then(r=>{if(!r.ok)throw 0;done("thanks, ",nfiles?"Your enquiry is in. Reply to our email with your building photo attached and we will start your mockup.":"")})
+        body:JSON.stringify({fields:[["firstname",first],["lastname",nm.value.trim().split(" ").slice(1).join(" ")],["email",v("#f-email")],["phone",v("#f-tel")],["company",v("#f-biz")],["zip",v("#f-post")],
+          ["website_sign_type",v("#f-type")||"Not sure yet"],["website_timescale",pick("when")||"Not said"],["website_budget",pick("budget")||"Not said"],["website_call_back",$("#f-call")&&$("#f-call").checked?"Yes":"No"],["website_call_slot",$("#f-call")&&$("#f-call").checked?(window.OS_SLOT||""):""],["message",v("#f-msg")]]
+          .filter(([,x])=>x).map(([name,value])=>({objectTypeId:"0-1",name,value})),context:{pageUri:location.href,pageName:document.title}})})
+        .then(r=>{if(!r.ok)throw 0;done("thanks, ",$("#f-call")&&$("#f-call").checked?"Your enquiry is in and we will call you back"+(window.OS_SLOT?" "+window.OS_SLOT:"")+"."+(nfiles?" Reply to our email with your building photo attached and we will start your mockup.":""):nfiles?"Your enquiry is in. Reply to our email with your building photo attached and we will start your mockup.":"")})
         .catch(()=>{btn.disabled=false;byEmail()});
     } else byEmail();
   });

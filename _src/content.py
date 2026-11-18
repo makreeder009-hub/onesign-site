@@ -1697,3 +1697,697 @@ for _c in NEW2:
 
 for _c in CASES:
     if _c["slug"] == "dunelm-food-store": _c["types"] = ["3d-letters"]; _c["label"] = "3D letter fascia"
+
+# ---- Part 2 folder (Nov 2026)
+NEW3 = [
+ {
+  "slug": "better-you",
+  "old": None,
+  "name": "Better You",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_y_betteryou_0",
+  "label": "3D logo wall",
+  "lede": "3D letters and logo for a medical aesthetics and skin clinic.",
+  "brief": "A logo wall that sets a premium tone in the treatment rooms.",
+  "made": [
+   [
+    "3D logo",
+    "Logo and lettering standing off the feature wall."
+   ]
+  ],
+  "result": "A clinic that looks as polished as its treatments.",
+  "photos": [
+   "p_y_betteryou_0",
+   "p_y_betteryou_1",
+   "p_y_betteryou_2",
+   "p_y_betteryou_3"
+  ],
+  "making": []
+ },
+ {
+  "slug": "little-her-hair",
+  "old": None,
+  "name": "Little Her Hair",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_y_littleherh_0",
+  "label": "Shopfront lettering",
+  "lede": "Lettering on a white fascia with matching window graphics.",
+  "brief": "A clean, simple shopfront for a hair salon.",
+  "made": [
+   [
+    "Fascia lettering",
+    "Black letters on a white fascia."
+   ],
+   [
+    "Window graphics",
+    "Logo on the frosted glazing."
+   ]
+  ],
+  "result": "A tidy shopfront that matches the salon.",
+  "photos": [
+   "p_y_littleherh_0",
+   "p_y_littleherh_1"
+  ],
+  "making": []
+ },
+ {
+  "slug": "fawcett-street-community-shop",
+  "old": None,
+  "name": "Fawcett Street Community Shop",
+  "where": None,
+  "sector": "retail",
+  "types": [
+   "vinyl-wall-graphics",
+   "wayfinding"
+  ],
+  "hero": "p_y_fawcettstr_0",
+  "label": "Wall graphics",
+  "lede": "Full wall graphics, wayfinding and story panels for a community shop and kitchen supported by Ocado.",
+  "brief": "The community shop wanted bright, friendly walls that tell its story.",
+  "made": [
+   [
+    "Wall graphics",
+    "Printed walls in the shop and community kitchen."
+   ],
+   [
+    "Wayfinding",
+    "Toilets and menu graphics in the same style."
+   ]
+  ],
+  "result": "A welcoming space that tells people what it is about.",
+  "photos": [
+   "p_y_fawcettstr_0",
+   "p_y_fawcettstr_1",
+   "p_y_fawcettstr_2",
+   "p_y_fawcettstr_3",
+   "p_y_fawcettstr_4",
+   "p_y_fawcettstr_5"
+  ],
+  "making": []
+ },
+ {
+  "slug": "amethyst",
+  "old": None,
+  "name": "Amethyst Acupuncture & Holistics",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_y_amethyst_0",
+  "label": "3D logo on a fascia panel",
+  "lede": "A 3D flower logo and lettering on a white fascia panel.",
+  "brief": "A bright fascia that shows off the logo.",
+  "made": [
+   [
+    "3D logo",
+    "Raised purple flower logo and lettering on a panel."
+   ]
+  ],
+  "result": "A fascia that stands out on the street.",
+  "photos": [
+   "p_y_amethyst_0",
+   "p_y_amethyst_1",
+   "p_y_amethyst_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "jam-jar",
+  "old": None,
+  "name": "Jam Jar",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "vinyl-wall-graphics"
+  ],
+  "hero": "p_y_jamjar_0",
+  "label": "Wall lettering",
+  "lede": "Large cut lettering on a feature wall.",
+  "brief": "A bold brand wall for a Jesmond bar.",
+  "made": [
+   [
+    "Wall lettering",
+    "Large lettering on a painted wall."
+   ]
+  ],
+  "result": "A wall that people remember.",
+  "photos": [
+   "p_y_jamjar_0",
+   "p_y_jamjar_1"
+  ],
+  "making": []
+ },
+ {
+  "slug": "country",
+  "old": None,
+  "name": "Country",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_y_country_0",
+  "label": "Illuminated letters",
+  "lede": "Illuminated letters above a bar stage.",
+  "brief": "A lit sign for the stage area.",
+  "made": [
+   [
+    "Illuminated letters",
+    "Lit letters over the stage."
+   ]
+  ],
+  "result": "A stage that looks the part.",
+  "photos": [
+   "p_y_country_0",
+   "p_y_country_1",
+   "p_y_country_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "lean-cuisine",
+  "old": None,
+  "name": "Lean Cuisine",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "neon-led-neon"
+  ],
+  "hero": "p_y_leancuisin_0",
+  "label": "LED neon and branding",
+  "lede": "An LED neon logo, counter branding and window graphics.",
+  "brief": "Lean Cuisine wanted its brand from the window to the counter.",
+  "made": [
+   [
+    "LED neon",
+    "A round neon logo on a dark wall."
+   ],
+   [
+    "Counter and windows",
+    "Logo on the counter and window frosting."
+   ]
+  ],
+  "result": "A brand you see everywhere in the shop.",
+  "photos": [
+   "p_y_leancuisin_0",
+   "p_y_leancuisin_1",
+   "p_y_leancuisin_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "craft-and-crumb",
+  "old": None,
+  "name": "Craft & Crumb",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters",
+   "vinyl-wall-graphics"
+  ],
+  "hero": "p_y_craftandcr_0",
+  "label": "Shopfront and interior",
+  "lede": "Fascia lettering, window graphics and counter branding for a coffee bar.",
+  "brief": "One clean look outside and in.",
+  "made": [
+   [
+    "Fascia lettering",
+    "Lettering on the fascia."
+   ],
+   [
+    "Interior",
+    "Lit lettering, counter logo and window graphics."
+   ]
+  ],
+  "result": "A coffee bar that looks finished in every corner.",
+  "photos": [
+   "p_y_craftandcr_0",
+   "p_y_craftandcr_1",
+   "p_y_craftandcr_2",
+   "p_y_craftandcr_3",
+   "p_y_craftandcr_4"
+  ],
+  "making": []
+ },
+ {
+  "slug": "sunderland-eye-hospital",
+  "old": None,
+  "name": "Sunderland Specialist Eye Hospital",
+  "where": None,
+  "sector": "healthcare",
+  "types": [
+   "wayfinding",
+   "totems-monoliths"
+  ],
+  "hero": "p_y_sunderland_0",
+  "label": "Wayfinding and totem",
+  "lede": "Directional signs and a site totem for a hospital.",
+  "brief": "Clear routes for patients and ambulances.",
+  "made": [
+   [
+    "Wayfinding",
+    "Directional signs along the corridors."
+   ],
+   [
+    "Totem",
+    "A site totem with car park and drop-off directions."
+   ]
+  ],
+  "result": "A site that is easy to find your way around.",
+  "photos": [
+   "p_y_sunderland_0",
+   "p_y_sunderland_1",
+   "p_y_sunderland_2",
+   "p_y_sunderland_3"
+  ],
+  "making": []
+ },
+ {
+  "slug": "temple-tacos",
+  "old": None,
+  "name": "Temple Tacos",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "neon-led-neon"
+  ],
+  "hero": "p_y_templetaco_0",
+  "label": "LED neon",
+  "lede": "A blue LED neon sign.",
+  "brief": "A bright neon feature.",
+  "made": [
+   [
+    "LED neon",
+    "Blue neon lettering."
+   ]
+  ],
+  "result": "A sign made for photos.",
+  "photos": [
+   "p_y_templetaco_0"
+  ],
+  "making": []
+ },
+ {
+  "slug": "filto",
+  "old": None,
+  "name": "Filto",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters",
+   "digital-large-format-print"
+  ],
+  "hero": "p_y_filto_0",
+  "label": "Fascia and hoarding",
+  "lede": "3D letters on the shopfront, interior lettering and printed hoarding.",
+  "brief": "Filto needed the opening hyped up and a strong shopfront.",
+  "made": [
+   [
+    "3D letters",
+    "Letters on the corner fascia."
+   ],
+   [
+    "Hoarding",
+    "Printed hoarding while the unit was fitted out."
+   ]
+  ],
+  "result": "A launch people noticed.",
+  "photos": [
+   "p_y_filto_0",
+   "p_y_filto_1",
+   "p_y_filto_2",
+   "p_y_filto_3",
+   "p_y_filto_4"
+  ],
+  "making": []
+ },
+ {
+  "slug": "salto",
+  "old": None,
+  "name": "Salto",
+  "where": None,
+  "sector": "transport",
+  "types": [
+   "vehicle-graphics"
+  ],
+  "hero": "p_y_salto_0",
+  "label": "Van graphics",
+  "lede": "Printed van graphics for a cleaning company.",
+  "brief": "A fleet that looks smart on the road.",
+  "made": [
+   [
+    "Van graphics",
+    "Printed graphics across the sides and back."
+   ]
+  ],
+  "result": "Vans that advertise the business everywhere.",
+  "photos": [
+   "p_y_salto_0",
+   "p_y_salto_1",
+   "p_y_salto_2",
+   "p_y_salto_3"
+  ],
+  "making": []
+ },
+ {
+  "slug": "the-lumen",
+  "old": None,
+  "name": "The Lumen",
+  "where": None,
+  "sector": "commercial",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_y_thelumen_0",
+  "label": "3D letters",
+  "lede": "3D letters on a dark wall.",
+  "brief": "A clean name sign for the building.",
+  "made": [
+   [
+    "3D letters",
+    "Letters fixed to the wall."
+   ]
+  ],
+  "result": "A smart name sign.",
+  "photos": [
+   "p_y_thelumen_0"
+  ],
+  "making": []
+ },
+ {
+  "slug": "alba",
+  "old": None,
+  "name": "Alba Ristorante",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "projecting-signs",
+   "flat-cut-letters"
+  ],
+  "hero": "p_y_alba_0",
+  "label": "Plaque and canopy",
+  "lede": "A logo plaque and canopy lettering for a restaurant.",
+  "brief": "A refined look for the restaurant entrance.",
+  "made": [
+   [
+    "Logo plaque",
+    "A logo plaque beside the entrance."
+   ],
+   [
+    "Canopy",
+    "Lettering on the canopy."
+   ]
+  ],
+  "result": "An entrance that suits the restaurant.",
+  "photos": [
+   "p_y_alba_0",
+   "p_y_alba_1",
+   "p_y_alba_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "newstreet",
+  "old": None,
+  "name": "Newstreet Groundwork Services",
+  "where": None,
+  "sector": "commercial",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_y_newstreet_0",
+  "label": "3D logo",
+  "lede": "A 3D logo with halo detail on a reception wall.",
+  "brief": "A reception logo for a groundworks firm.",
+  "made": [
+   [
+    "3D logo",
+    "Logo and lettering standing off the wall."
+   ]
+  ],
+  "result": "A reception that shows off the brand.",
+  "photos": [
+   "p_y_newstreet_0",
+   "p_y_newstreet_1",
+   "p_y_newstreet_2",
+   "p_y_newstreet_3"
+  ],
+  "making": []
+ },
+ {
+  "slug": "fabios",
+  "old": None,
+  "name": "Fabio's",
+  "where": None,
+  "sector": "transport",
+  "types": [
+   "vehicle-graphics"
+  ],
+  "hero": "p_y_fabios_0",
+  "label": "Van graphics",
+  "lede": "Cut vinyl van graphics for an Italian restaurant.",
+  "brief": "Branded vans for deliveries.",
+  "made": [
+   [
+    "Van graphics",
+    "Logo and contact details in cut vinyl."
+   ]
+  ],
+  "result": "Vans that advertise the restaurant.",
+  "photos": [
+   "p_y_fabios_0",
+   "p_y_fabios_1",
+   "p_y_fabios_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "the-drunken-duck",
+  "old": None,
+  "name": "The Drunken Duck",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "neon-led-neon"
+  ],
+  "hero": "p_y_thedrunken_0",
+  "label": "LED neon",
+  "lede": "A script LED neon sign.",
+  "brief": "A warm neon feature for a bar.",
+  "made": [
+   [
+    "LED neon",
+    "Script neon in warm orange."
+   ]
+  ],
+  "result": "A bar feature people photograph.",
+  "photos": [
+   "p_y_thedrunken_0"
+  ],
+  "making": []
+ },
+ {
+  "slug": "avery-dennison",
+  "old": None,
+  "name": "Avery Dennison",
+  "where": None,
+  "sector": "commercial",
+  "types": [
+   "vinyl-wall-graphics"
+  ],
+  "hero": "p_y_averydenni_0",
+  "label": "Wall mural",
+  "lede": "A printed wall mural with local landmarks.",
+  "brief": "A feature wall for an office.",
+  "made": [
+   [
+    "Wall mural",
+    "A printed mural with the logo and local landmarks."
+   ]
+  ],
+  "result": "An office wall with local pride.",
+  "photos": [
+   "p_y_averydenni_0",
+   "p_y_averydenni_1",
+   "p_y_averydenni_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "dog-and-parrot",
+  "old": None,
+  "name": "The Dog & Parrot",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters",
+   "vinyl-wall-graphics"
+  ],
+  "hero": "p_y_dogandparr_0",
+  "label": "3D letters and murals",
+  "lede": "Brass 3D letters and painted murals for a Newcastle pub.",
+  "brief": "A frontage people stop and look at.",
+  "made": [
+   [
+    "3D letters",
+    "Brass lettering across the fascia."
+   ],
+   [
+    "Murals",
+    "Large painted murals on the building."
+   ]
+  ],
+  "result": "A pub you can't walk past.",
+  "photos": [
+   "p_y_dogandparr_0",
+   "p_y_dogandparr_1",
+   "p_y_dogandparr_2",
+   "p_y_dogandparr_3"
+  ],
+  "making": []
+ },
+ {
+  "slug": "the-avenue",
+  "old": None,
+  "name": "The Avenue",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_y_theavenue_0",
+  "label": "3D letter fascia",
+  "lede": "Gold 3D letters on a blue fascia for a café and deli.",
+  "brief": "A traditional look for a corner café.",
+  "made": [
+   [
+    "3D letters",
+    "Gold letters on the fascia."
+   ]
+  ],
+  "result": "A café that looks established.",
+  "photos": [
+   "p_y_theavenue_0",
+   "p_y_theavenue_1",
+   "p_y_theavenue_2",
+   "p_y_theavenue_3"
+  ],
+  "making": []
+ },
+ {
+  "slug": "street-eats",
+  "old": None,
+  "name": "Street Eats",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_y_streeteats_0",
+  "label": "Letters on a food trailer",
+  "lede": "Gold 3D letters on the roof of a food trailer.",
+  "brief": "Branding for a street food trailer.",
+  "made": [
+   [
+    "3D letters",
+    "Letters mounted on the trailer roof."
+   ]
+  ],
+  "result": "A trailer people spot from across the event.",
+  "photos": [
+   "p_y_streeteats_0",
+   "p_y_streeteats_1",
+   "p_y_streeteats_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "act-group",
+  "old": None,
+  "name": "ACT Group",
+  "where": None,
+  "sector": "commercial",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_y_actgroup_0",
+  "label": "Building letters and plaques",
+  "lede": "3D letters on the building, plaques and van branding.",
+  "brief": "ACT Group wanted its brand on the building and inside.",
+  "made": [
+   [
+    "3D letters",
+    "Letters on the cladding."
+   ],
+   [
+    "Plaques",
+    "Printed plaques in reception."
+   ]
+  ],
+  "result": "A building that looks like head office.",
+  "photos": [
+   "p_y_actgroup_0",
+   "p_y_actgroup_1",
+   "p_y_actgroup_2",
+   "p_y_actgroup_3"
+  ],
+  "making": []
+ },
+ {
+  "slug": "houghton-colliery",
+  "old": None,
+  "name": "Houghton Colliery Retail Park",
+  "where": None,
+  "sector": "retail",
+  "types": [
+   "totems-monoliths"
+  ],
+  "hero": "p_y_houghtonco_0",
+  "label": "Retail park totem",
+  "lede": "A large retail park totem, lifted in by crane.",
+  "brief": "A totem listing every tenant.",
+  "made": [
+   [
+    "Totem",
+    "A tall double-sided totem with tenant panels."
+   ]
+  ],
+  "result": "A site you can find from the road.",
+  "photos": [
+   "p_y_houghtonco_0"
+  ],
+  "making": []
+ }
+]
+for _c in NEW3: _c['made'] = [tuple(m) for m in _c['made']]
+CASES += NEW3
+_ADD3 = {"company-shop-group": [["p_z_companysho_0", False], ["p_z_companysho_1", False], ["p_z_companysho_2", False], ["p_z_companysho_3", False], ["p_z_companysho_4", False]], "nhs-community-diagnostic-centre": [["p_z_nhscommuni_0", False], ["p_z_nhscommuni_1", False]], "savoy": [["p_z_savoy_0", False], ["p_z_savoy_1", False]], "my-car-cleaning": [["p_z_mycarclean_0", True]], "nobles-casino": [["p_z_noblescasi_0", True]], "fora": [["p_z_fora_0", False]], "the-chair": [["p_z_thechair_0", False]], "vivana-lounge": [["p_z_vivanaloun_0", False]], "glow-tanning": [["p_z_glowtannin_0", False], ["p_z_glowtannin_1", False]], "cork-and-coffee": [["p_z_corkandcof_0", False]], "pickle-and-peach": [["p_z_pickleandp_0", False]], "just-peachy": [["p_z_justpeachy_0", False]], "woodham-academy": [["p_z_woodhamaca_0", False]], "aldi-jaymac-warehouse": [["p_z_aldijaymac_0", False]], "camden-clinic": [["p_z_camdenclin_0", False]]}
+for _c in CASES:
+    for _k,_h in _ADD3.get(_c['slug'],[]):
+        if _h: _c['hero']=_k; _c['photos']=[_k]+[p for p in _c['photos'] if p!=_k]
+        elif _k not in _c['photos']: _c['photos'].append(_k)
+# Our Work main photos: best available shot for each job (reviewed Nov 2026)
+_BEST_HERO = {"nhs-community-diagnostic-centre": "p_z_nhscommuni_0", "glow-tanning": "p_z_glowtannin_0",
+              "savoy": "p_z_savoy_0", "recover3": "p_r3_neon", "renewable-energy": "n_renew_close"}
+for _c in CASES:
+    _h = _BEST_HERO.get(_c["slug"])
+    if _h:
+        _c["hero"] = _h; _c["photos"] = [_h] + [p for p in _c["photos"] if p != _h]
+_DROP3 = {"p_z_nhscommuni_0":"ig_nhs_night","p_y_leancuisin_0":"ig_leancuisine","p_y_jamjar_1":None,"p_z_vivanaloun_0":None,"p_y_country_2":None,
+          "p_z_savoy_1":None,"p_y_littleherh_1":None,"p_y_betteryou_1":None,"p_z_aldijaymac_0":None,"p_y_actgroup_1":None,"p_y_alba_2":None}
+for _c in CASES:
+    _new = []
+    for p in _c["photos"]:
+        q = _DROP3.get(p, p) if p in _DROP3 else p
+        if q and q not in _new: _new.append(q)
+    _c["photos"] = _new
+    if _c["hero"] in _DROP3: _c["hero"] = _DROP3[_c["hero"]] or _c["photos"][0]

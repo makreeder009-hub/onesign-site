@@ -2396,3 +2396,10 @@ for _c in CASES:
         if q and q not in _new: _new.append(q)
     _c["photos"] = _new
     if _c["hero"] in _DROP3: _c["hero"] = _DROP3[_c["hero"]] or _c["photos"][0]
+
+# area cards on the homepage use a portrait-friendly photo
+for _a in AREAS:
+    _a["stage"] = {"gateshead": "n_superpower", "sunderland": "p_y_fawcettstr_0"}.get(_a["slug"], _a["hero"])
+for _c in CASES:
+    if _c["slug"] == "vertu-motors-arena":
+        _c["hero"] = "vertu"; _c["photos"] = ["vertu"] + [p for p in _c["photos"] if p != "vertu"]

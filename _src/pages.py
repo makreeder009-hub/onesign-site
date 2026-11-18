@@ -60,7 +60,7 @@ def work_index():
     used = [s for s in SECTORS if any(c["sector"] == s["slug"] for c in CASES)]
     filters = '<button class="on" data-f="all">all</button>' + "".join(f'<button data-f="{s["slug"]}">{E(s["name"])}</button>' for s in used)
     cards = "".join(f'<div class="cc-wrap" data-sector="{c["sector"]}">{case_card(c, r)}</div>' for c in CASES)
-    body = f'''{phero(r, [("Home","index.html"),("Our work",None)], "our work.", "Case studies from across the North East and beyond: what the client needed, what we made and how it turned out.", "vertu_night", kicker="Case studies")}
+    body = f'''{phero(r, [("Home","index.html"),("Our work",None)], "our work.", "Case studies from across the North East and beyond: what the client needed, what we made and how it turned out.", "vertu", kicker="Case studies")}
 <section class="sec"><div class="wrap">
   <div class="filters" id="filters" role="group" aria-label="Filter case studies by sector">{filters}</div>
   <div class="ccards" id="caseGrid">{cards}</div>
@@ -76,7 +76,7 @@ def work_index():
               {"@type": "ListItem", "position": i + 1, "name": c["name"], "url": f"{SITE_URL}/work/{c['slug']}"} for i, c in enumerate(CASES)]}]
     return page("work/index.html", title="Signage Case Studies & Recent Projects | Onesign & Digital",
                 desc="Signage case studies from Onesign: Newcastle University, NHS, Rolls-Royce, Vertu Motors Arena, Aldi and more. See what we made and how.",
-                canonical=SITE_URL + "/work", body=body, ogimg=og("vertu_night"), r=r, ld=ld)
+                canonical=SITE_URL + "/work", body=body, ogimg=og("vertu"), r=r, ld=ld)
 
 def case_page(c):
     r = "../"; url = f"{SITE_URL}/work/{c['slug']}"; sec = SS[c["sector"]]

@@ -4768,8 +4768,8 @@
   },
   {
    "name": "Vertu Motors Arena",
-   "k": "vertu",
-   "label": "Building signage",
+   "k": "p_vt_night",
+   "label": "High-level illuminated letters",
    "url": "projects/vertu-motors"
   },
   {
@@ -4786,7 +4786,7 @@
   },
   {
    "name": "Newcastle University",
-   "k": "uni_entry",
+   "k": "hero",
    "label": "Illuminated building sign",
    "url": "projects/newcastle-university"
   },
@@ -4814,7 +4814,7 @@
   "st_welcome",
   "n_court",
   "works",
-  "vertu",
+  "p_vt_day",
   "neonB",
   "n_byre",
   "dog",

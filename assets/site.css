@@ -608,6 +608,11 @@ body section.flush{padding-top:0}
   .marquee{-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
 }
 
+/* homepage hero: darker wash so the headline reads over lit signs, photo still visible */
+.hero::after{background:linear-gradient(180deg,rgba(10,14,16,.55) 0%,rgba(10,14,16,.22) 30%,rgba(10,14,16,.32) 55%,rgba(10,14,16,.82) 100%),linear-gradient(90deg,rgba(10,14,16,.8) 0%,rgba(10,14,16,.45) 45%,rgba(10,14,16,.1) 75%)}
+.hero h1,.hero .hero-sub{text-shadow:0 2px 24px rgba(0,0,0,.45)}
+.hero-now{text-shadow:0 1px 10px rgba(0,0,0,.5)}
+
 /* ===================== v2 (Nov 2026): self-hosted fonts, new page families ===================== */
 @font-face{font-family:"Outfit";src:url(fonts/outfit-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-display:swap}
 @font-face{font-family:"Inter";src:url(fonts/inter-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-display:swap}

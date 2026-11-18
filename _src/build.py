@@ -54,7 +54,7 @@ for _t in TYPES:
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "6"
+ASSET_V = "7"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)
@@ -608,8 +608,8 @@ def home_page():
             dup = i>=len(keys)
             out += f'<figure{" aria-hidden=\"true\"" if dup else ""}>{pic(k, "(max-width:700px) 70vw, 380px", alt="" if dup else cap(k), style="object-position:"+pos(k), widths=(480,960))}<figcaption>{E(cap(k))}</figcaption></figure>'
         return out
-    LINK = {"st_sign":"work/bar-seventy-three.html","vertu":"work/vertu-motors-arena.html","n_jet2":"work/jet2-dawson-sanderson.html","nhs":"work/nhs-community-diagnostic-centre.html",
-            "uni_entry":"work/newcastle-university.html","aldi_bld":"work/aldi-jaymac-warehouse.html","n_thatype":"signs/3d-letters.html","n_superpower_wide":"work/superpower-metrocentre.html"}
+    LINK = {"st_sign":"work/bar-seventy-three.html","p_vt_night":"work/vertu-motors-arena.html","n_jet2":"work/jet2-dawson-sanderson.html","nhs":"work/nhs-community-diagnostic-centre.html",
+            "hero":"work/newcastle-university.html","aldi_bld":"work/aldi-jaymac-warehouse.html","n_thatype":"signs/3d-letters.html","n_superpower_wide":"work/superpower-metrocentre.html"}
     tiles = ""
     for i,p in enumerate(PROJECTS):
         w, h = dims(p["k"]); ar = w / h
@@ -617,12 +617,12 @@ def home_page():
         media = pic(p["k"], "(max-width:700px) 92vw, 45vw", alt=p["name"]+" sign by Onesign")
         tiles += f'<a class="tile jt" style="--ar:{ar:.4f};aspect-ratio:{w}/{h}" href="{LINK[p["k"]]}">{media}<div class="tile-info"><div><small>{E(p["label"])}</small><h3>{E(p["name"])}</h3></div><span class="go" aria-hidden="true">→</span></div></a>'
     HERO = [("hero","Newcastle University","Illuminated building sign","work/newcastle-university.html"),
-            ("vertu_night","Vertu Motors Arena","High-level illuminated letters","work/vertu-motors-arena.html"),
+            ("vertu","Vertu Motors Arena","High-level building letters","work/vertu-motors-arena.html"),
             ("n_thatype","Thatype","Halo-lit script letters","signs/3d-letters.html"),
             ("cork_dusk","Cork & Coffee","Komacel 3D letters","work/cork-and-coffee.html")]
     slides = "".join(f'<div class="hs{" on" if i==0 else ""}">{pic(k, "100vw", alt=n+": "+l.lower()+" by Onesign", lazy=i>0, prio=i==0, style="object-position:"+("60% 40%" if i==0 else pos(k)))}</div>' for i,(k,n,l,u) in enumerate(HERO))
     hnow = "".join(f'<a class="hn{" on" if i==0 else ""}" href="{u}"><span class="hn-n">{i+1:02d}</span><span class="hn-t"><b>{E(n)}</b><small>{E(l)}</small></span><i></i></a>' for i,(k,n,l,u) in enumerate(HERO))
-    arealist = "".join(f'<a class="arow" href="areas/{a["slug"]}.html" data-img="{wix(a["hero"],900,900,"fit")}"><span class="ar-n">{i+1:02d}</span><span class="ar-t">{E(a["short"])}</span><span class="ar-go" aria-hidden="true">→</span></a>' for i,a in enumerate(AREAS))
+    arealist = "".join(f'<a class="arow" href="areas/{a["slug"]}.html" data-img="{wix(a.get("stage",a["hero"]),900,900,"fit")}"><span class="ar-n">{i+1:02d}</span><span class="ar-t">{E(a["short"])}</span><span class="ar-go" aria-hidden="true">→</span></a>' for i,a in enumerate(AREAS))
     arealist += f'<a class="arow uk" href="nationwide-signage.html" data-img="{wix("rolls",900,900,"fit")}"><span class="ar-n">UK</span><span class="ar-t">Nationwide</span><span class="ar-go" aria-hidden="true">→</span></a>'
     guides = "".join(guide_card(g, r) for g in GUIDES)
     sectors = "".join(link_card(f'sectors/{s["slug"]}.html', s["img"], s["name"], s["blurb"], s["slug"]) for s in SECTORS)
@@ -754,7 +754,7 @@ def home_page():
       <p class="lede rv">Every sign leaves the same Team Valley factory. Most go up within an hour's drive, and our own installers fit the rest across the UK.</p>
       <div class="area-list" id="areaList">{arealist}</div>
     </div>
-    <div class="area-stage" id="areaStage" aria-hidden="true"><img alt="" src="{wix(AREAS[0]["hero"],900,900,"fit")}" loading="lazy"></div>
+    <div class="area-stage" id="areaStage" aria-hidden="true"><img alt="" src="{wix(AREAS[0].get("stage",AREAS[0]["hero"]),900,900,"fit")}" loading="lazy"></div>
   </div>
 </section>
 <section class="rating">

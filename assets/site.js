@@ -247,7 +247,7 @@ const reveal=(sel,{y=14,d=1.15,each=.07,start="top 88%"}={})=>{
   gsap.set(els,{opacity:0,y});
   ScrollTrigger.batch(els,{once:true,start,interval:.15,batchMax:6,onEnter:b=>{
     // items that share a row start together; only the order across the row is staggered
-    gsap.to(b,{opacity:1,y:0,duration:d,ease:"power3.out",stagger:{each,ease:"power1.in"},overwrite:true,clearProps:"transform"});
+    gsap.to(b,{opacity:1,y:0,duration:d,ease:"power3.out",stagger:{each,ease:"power1.in"},overwrite:true});
   }});
 };
 reveal(".rv",{y:18,each:0});

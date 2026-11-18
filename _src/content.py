@@ -2444,7 +2444,8 @@ for _c in CASES:
 
 # ---- guides: photos inside the articles, and two new guides (18 Nov)
 _GFIG = {
- "illuminated-signs": {"halo-lit letters": "{FIG p_tr_halo|Halo-lit 3D letters for Trident. The glow spreads onto the panel behind.}",
+ "illuminated-signs": {"face-lit letters": "{FIG vertu_night|Vertu Motors Arena: face-lit letters above the entrance, bright and readable from across the car park.}",
+                       "halo-lit letters": "{FIG p_tr_halo|Halo-lit 3D letters for Trident. The glow spreads onto the panel behind.}",
                        "backlit panels": "{FIG st_sign|Bar Seventy Three: a backlit panel with cut-out lettering.}",
                        "light boxes": "{FIG ig_gavroche|A Le Gavroche light box, tested in our workshop before it went out.}",
                        "flex faces": "{FIG n_kosmic|Kosmic Kingdom: one printed flex face across a large frame, with no joins.}",

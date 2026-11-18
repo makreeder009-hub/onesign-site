@@ -303,3 +303,9 @@ form.mock.live .form-note{text-align:center;font-size:12px}
 .guide table.cmp th,.guide table.cmp td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;min-width:120px}
 .guide table.cmp thead th{font:600 13px/1.2 var(--f-display);text-transform:lowercase;color:var(--accent-ink)}
 .guide table.cmp td:first-child{font-weight:600;min-width:110px}
+/* guide sidebar button: undo the .toc link styles */
+.toc a.pill{display:inline-flex;align-items:center;gap:12px;padding:10px 10px 10px 20px;margin-left:0;border:0;color:#fff;background:var(--fg);font-size:15px;white-space:nowrap;border-radius:999px}
+.toc a.pill .dot{background:#fff;color:var(--fg)}
+.toc a.pill:hover{color:#fff;border:0}
+/* nothing may push the page sideways on phones */
+html,body{overflow-x:clip}

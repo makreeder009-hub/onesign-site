@@ -1,3 +1,5 @@
+/* scroll a horizontal strip to show an item, without moving the page */
+function stripTo(c,el){if(!c||!el)return;const cr=c.getBoundingClientRect(),er=el.getBoundingClientRect(),l=c.scrollLeft+(er.left-cr.left)-(c.clientWidth-er.width)/2;c.scrollTo({left:Math.max(0,l),behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}
 /* Onesign & Digital — shared site behaviour */
 (function(){
 "use strict";
@@ -100,7 +102,7 @@ if(list&&TYPES.length){
     const th=$("#typeThumbs"); th.innerHTML="";
     if(t.photos.length>1) t.photos.forEach((p,i)=>{
       const b=el("button",{"aria-pressed":String(i===0),"aria-label":"Show "+p.cap},`<img alt="" src="${p.thumb}">`);
-      b.addEventListener("click",()=>{$$("button",th).forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");setPhoto(t,i);b.scrollIntoView({block:"nearest",inline:"nearest",behavior:reduce?"auto":"smooth"})});
+      b.addEventListener("click",()=>{$$("button",th).forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");setPhoto(t,i);stripTo(th,b)});
       th.appendChild(b);
     });
     $("#typeTitle").textContent=t.label;
@@ -110,7 +112,7 @@ if(list&&TYPES.length){
     $("#typeSpec").innerHTML=t.spec.map(([a,b])=>`<dt>${esc(a)}</dt><dd>${esc(b)}</dd>`).join("");
     const more=$("#typeMore"); more.href=t.url; more.innerHTML=`everything about ${esc(t.label)} <span aria-hidden="true">→</span>`;
     if(!reduce){body.classList.remove("swap");void body.offsetWidth;body.classList.add("swap")}
-    if(innerWidth<1100) tabs[n].scrollIntoView({block:"nearest",inline:"center",behavior:reduce?"auto":"smooth"});
+    if(innerWidth<1100) stripTo(tabs[n].parentElement,tabs[n]);
     t.photos.slice(1).forEach(p=>load(p.full));
   }
   tabs.forEach((b,n)=>{
@@ -256,13 +258,17 @@ if($(".phero")){
   if($(".phero .bgimg img")) gsap.fromTo(".phero .bgimg img",{scale:1.12},{scale:1,duration:2.2,ease:"power2.out"});
 }
 /* scroll reveals: soft fade and a short rise, rows come in together, no jump or flash */
-const reveal=(sel,{y=14,d=1.15,each=.07,start="top 88%"}={})=>{
+const reveal=(sel,{y=14,d=1.15,each=.07}={})=>{
+  // IntersectionObserver, not scroll positions: positions go stale on phones as lazy images load,
+  // which made sections appear only after you had scrolled past them
   const els=$$(sel); if(!els.length) return;
   gsap.set(els,{opacity:0,y});
-  ScrollTrigger.batch(els,{once:true,start,interval:.15,batchMax:6,onEnter:b=>{
-    // items that share a row start together; only the order across the row is staggered
+  const io=new IntersectionObserver(ents=>{
+    const b=ents.filter(e=>e.isIntersecting).map(e=>e.target); if(!b.length) return;
+    b.forEach(e=>io.unobserve(e));
     gsap.to(b,{opacity:1,y:0,duration:d,ease:"power3.out",stagger:{each,ease:"power1.in"},overwrite:true});
-  }});
+  },{rootMargin:"0px 0px -6% 0px",threshold:0});
+  els.forEach(e=>io.observe(e));
 };
 reveal(".rv",{y:18,each:0});
 if($(".explorer")) reveal(".type-stage,.spec",{y:20});

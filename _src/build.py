@@ -111,7 +111,7 @@ def og(key):
         fx, fy = [float(x.strip("%")) / 100 for x in IMG[key][2].split()]
         ImageOps.fit(_open(key), (1200, 630), Image.LANCZOS, centering=(fx, fy)).save(full, "JPEG", quality=82, optimize=True, progressive=True)
     return SITE_URL + "/" + rel
-from content import CASES, AREAS, GUIDES, REVIEWS, PHONE
+from content import CASES, AREAS, GUIDES, REVIEWS, PHONE, LOC
 CASES[:] = canon(CASES); AREAS[:] = canon(AREAS); GUIDES[:] = canon(GUIDES)
 def cap(k): return IMG[k][1]
 def pos(k): return IMG[k][2]
@@ -170,7 +170,7 @@ ONEDESIGN = "{{R}}img/brand/onedesign.svg"
 def footer(r):
     ft = "".join(f'<li><a href="{r}signs/{t["slug"]}.html">{E(t["name"])}</a></li>' for t in TYPES)
     fs = "".join(f'<li><a href="{r}sectors/{s["slug"]}.html">{E(tcap(s["name"]))}</a></li>' for s in SECTORS)
-    fa = "".join(f'<li><a href="{r}areas/{a["slug"]}.html">Sign makers {E(a["short"])}</a></li>' for a in AREAS)
+    fa = "".join(f'<li><a href="{r}areas/{a["slug"]}.html">{E(a["short"])}</a></li>' for a in AREAS)
     fg = "".join(f'<li><a href="{r}guides/{g["slug"]}.html">{E(g["kicker"])}</a></li>' for g in GUIDES)
     return f'''<footer class="dark">
   <div class="wrap">
@@ -395,8 +395,19 @@ def case_card(c, r, sizes="(max-width:620px) 92vw, (max-width:980px) 46vw, 31vw"
             f'<div class="cc-body"><small>{E(c["label"])}</small><h3>{E(c["name"])}</h3>{where}<span class="cc-go" aria-hidden="true">→</span></div></a>')
 def guide_card(g, r):
     return (f'<a class="gcard" href="{r}guides/{g["slug"]}.html"><img class="gc-img" loading="lazy" alt="" src="{wix(g.get("card", g["hero"]),720,480)}" style="object-position:{pos(g.get("card", g["hero"]))}"><small>{E(g["kicker"])}</small><h3>{E(g["h1"])}</h3><p>{E(g["desc"])}</p><span class="gc-go">read the guide <span aria-hidden="true">→</span></span></a>')
+HQ = (54.9330, -1.6237)  # Onesign & Digital, D86 Princesway North, Team Valley (from workshop photo GPS)
+def map_block(r, area=None, cls="", hq=True, title=None):
+    """Branded Leaflet map of fitted jobs (and our HQ). Leaflet + tiles load only when the map scrolls near."""
+    jobs = []
+    for s, (place, ar, lat, lng, _src) in LOC.items():
+        if s not in CASE or (area and ar != area): continue
+        c = CASE[s]
+        jobs.append({"n": c["name"], "p": place, "t": c["label"], "lat": lat, "lng": lng, "u": f"{r}work/{s}.html", "i": wix(c["hero"], 480, 360)})
+    data = {"hq": list(HQ) if hq else None, "jobs": jobs, "area": area}
+    return (f'<div class="jobmap {cls}" data-map=\'{json.dumps(data, ensure_ascii=False).replace(chr(39), "&#39;")}\' role="region" aria-label="{E(title or "Map of signs we have fitted")}">'
+            f'<div class="jm-fallback"><b>{len(jobs)} jobs on the map</b><span>Loading map…</span></div></div>')
 def area_chips(r, skip=None):
-    return "".join(f'<a href="{r}areas/{a["slug"]}.html">sign makers {E(a["short"])}</a>' for a in AREAS if a["slug"] != skip) + f'<a href="{r}nationwide-signage.html">Nationwide</a>'
+    return "".join(f'<a href="{r}areas/{a["slug"]}.html">Sign makers in {E(a["short"])}</a>' for a in AREAS if a["slug"] != skip) + f'<a href="{r}nationwide-signage.html">Nationwide</a>'
 ILLUMINATED = {"3d-letters","backlit-panels","light-boxes","flex-faces","neon-led-neon","high-level-signs","projecting-signs","totems-monoliths"}
 def guides_for(type_slug):
     G = {g["slug"]: g for g in GUIDES}
@@ -589,6 +600,7 @@ def contact_page():
   {MINI_STEPS}
 </div></section>
 <section class="sec alt"><div class="wrap">
+  {map_block(r, None, "hq", title="Find Onesign & Digital in Team Valley, Gateshead")}
   <div class="find">
     <div class="point"><h3>visit us</h3><p>D86 Princesway North<br>Team Valley, Gateshead<br>NE11 0TU</p><p style="margin-top:14px"><a href="https://www.google.com/maps/search/?api=1&amp;query=Onesign+%26+Digital+Princesway+North+Gateshead+NE11+0TU" target="_blank" rel="noopener">Open in Google Maps →</a></p></div>
     <div class="point"><h3>opening times</h3><p>Monday to Thursday: 07:00–16:00<br>Friday: 07:00–12:00<br>Saturday and Sunday: closed</p></div>

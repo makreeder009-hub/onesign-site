@@ -2487,3 +2487,275 @@ GUIDES += [
            ("Who connects an illuminated sign to the power?", "The sign is wired and tested in our workshop. On site it is connected to a suitable supply by a qualified electrician."),
            ("When should I order a sign for a new shop?", "As soon as you have the keys and your branding. Six to eight weeks before opening is a comfortable lead time, and longer if consent is needed.")]),
 ]
+
+# ---- job locations (photo GPS where available, otherwise the known venue). Jobs not listed have no known location yet.
+LOC = {
+"savoy": [
+"Morpeth",
+"northumberland",
+55.16918,
+-1.68964,
+"gps"
+],
+"grace-kellys": [
+"Seaham",
+"durham",
+54.83868,
+-1.33176,
+"gps"
+],
+"pickle-and-peach": [
+"South Shields",
+"south-tyneside",
+55.00008,
+-1.42642,
+"gps"
+],
+"pantera-advisory": [
+"Harrogate",
+None,
+53.97571,
+-1.56591,
+"gps"
+],
+"vivana-lounge": [
+"Newcastle city centre",
+"newcastle",
+54.97544,
+-1.62949,
+"gps"
+],
+"the-library": [
+"Whitley Bay",
+None,
+55.04263,
+-1.44361,
+"gps"
+],
+"mapleleaf-express": [
+"Herefordshire",
+None,
+52.18118,
+-2.52144,
+"gps"
+],
+"the-works": [
+"Herefordshire",
+None,
+52.18758,
+-2.50438,
+"gps"
+],
+"fora": [
+"Chester-le-Street",
+"durham",
+54.85857,
+-1.57478,
+"gps"
+],
+"park-electrical": [
+"County Durham",
+"durham",
+54.80184,
+-1.67085,
+"gps"
+],
+"copeland-residential": [
+"Chester-le-Street",
+"durham",
+54.85786,
+-1.57223,
+"gps"
+],
+"parm-o-rama": [
+"Heaton, Newcastle",
+"newcastle",
+54.98854,
+-1.57757,
+"gps"
+],
+"nobles-casino": [
+"South Shields",
+"south-tyneside",
+54.99847,
+-1.43366,
+"gps"
+],
+"little-her-hair": [
+"Low Fell, Gateshead",
+"gateshead",
+54.93407,
+-1.59931,
+"gps"
+],
+"fawcett-street-community-shop": [
+"Sunderland city centre",
+"sunderland",
+54.90472,
+-1.38098,
+"gps"
+],
+"amethyst": [
+"Sunderland",
+"sunderland",
+54.93002,
+-1.37899,
+"gps"
+],
+"jam-jar": [
+"Jesmond, Newcastle",
+"newcastle",
+54.99196,
+-1.6034,
+"gps"
+],
+"cowgirl-and-country": [
+"Newcastle city centre",
+"newcastle",
+54.97123,
+-1.60903,
+"gps"
+],
+"lean-cuisine": [
+"Jesmond, Newcastle",
+"newcastle",
+54.98763,
+-1.59301,
+"gps"
+],
+"craft-and-crumb": [
+"South Shields",
+"south-tyneside",
+54.98731,
+-1.42356,
+"gps"
+],
+"salto": [
+"Gateshead",
+"gateshead",
+54.94068,
+-1.61705,
+"gps"
+],
+"alba": [
+"London",
+None,
+51.50012,
+-0.16305,
+"gps"
+],
+"dog-and-parrot": [
+"Newcastle city centre",
+"newcastle",
+54.9684,
+-1.6209,
+"gps"
+],
+"the-avenue": [
+"Seghill, Northumberland",
+"northumberland",
+55.07374,
+-1.52792,
+"gps"
+],
+"act-group": [
+"Hebburn",
+"south-tyneside",
+54.95482,
+-1.50698,
+"gps"
+],
+"houghton-colliery": [
+"Houghton-le-Spring",
+"sunderland",
+54.8471,
+-1.47277,
+"gps"
+],
+"newcastle-university": [
+"Newcastle University",
+"newcastle",
+54.979,
+-1.615,
+"place"
+],
+"vertu-motors-arena": [
+"Benton, Newcastle",
+"newcastle",
+55.0187,
+-1.5756,
+"place"
+],
+"grainger-market": [
+"Grainger Market, Newcastle",
+"newcastle",
+54.9718,
+-1.6165,
+"place"
+],
+"blacks-corner-fenwick": [
+"Fenwick, Newcastle",
+"newcastle",
+54.9748,
+-1.6125,
+"place"
+],
+"superpower-metrocentre": [
+"Metrocentre, Gateshead",
+"gateshead",
+54.9588,
+-1.665,
+"place"
+],
+"nhs-community-diagnostic-centre": [
+"Metrocentre, Gateshead",
+"gateshead",
+54.9575,
+-1.6682,
+"place"
+],
+"woodham-academy": [
+"Newton Aycliffe",
+"durham",
+54.629,
+-1.559,
+"place"
+],
+"northgate-hospital": [
+"Morpeth",
+"northumberland",
+55.17,
+-1.662,
+"place"
+],
+"cork-and-coffee": [
+"Seaham",
+"durham",
+54.8395,
+-1.341,
+"place"
+],
+"griffin-court": [
+"Hebburn",
+"south-tyneside",
+54.973,
+-1.513,
+"place"
+],
+"welcome-to-durham": [
+"Durham City",
+"durham",
+54.7761,
+-1.5733,
+"place"
+],
+"the-white-swan": [
+"Dinnington, Newcastle",
+"newcastle",
+55.0556,
+-1.6726,
+"place"
+]
+}
+for _c in CASES:
+    if _c['slug'] in LOC and not _c.get('where'): _c['where'] = LOC[_c['slug']][0]

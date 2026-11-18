@@ -5,7 +5,7 @@ Run this file to build the whole site into ../site."""
 import hashlib, json, os, shutil
 import build as B
 from build import (E, pic, wix, og, cap, pos, page, phero, gallery, link_card, cta, crumbs_ld, case_card, guide_card,
-                   area_chips, tcap, TYPES, SECTORS, CASES, AREAS, GUIDES, REVIEWS, SITE_URL, MINI_STEPS, CASE)
+                   area_chips, tcap, map_block, LOC, TYPES, SECTORS, CASES, AREAS, GUIDES, REVIEWS, SITE_URL, MINI_STEPS, CASE)
 
 TS = {t["slug"]: t for t in TYPES}
 SS = {s["slug"]: s for s in SECTORS}
@@ -127,11 +127,15 @@ def case_page(c):
 KEY_TYPES = ["3d-letters", "backlit-panels", "high-level-signs", "projecting-signs", "neon-led-neon", "vinyl-wall-graphics"]
 def area_page(a):
     r = "../"; url = f"{SITE_URL}/areas/{a['slug']}"
-    proof = "".join(case_card(CASE[s], r) for s, _ in a["proof"])
+    picked = [s for s, _ in a["proof"]] + [s for s, v in LOC.items() if v[1] == a["slug"] and s in CASE and s not in [x for x, _ in a["proof"]]]
+    proof = "".join(case_card(CASE[s], r) for s in picked[:9])
+    a = dict(a, proof=[(s, "") for s in picked], photos=list(dict.fromkeys(list(a["photos"]) + [CASE[s]["hero"] for s in picked]))[:12])
     proof_html = f'''<section class="sec alt"><div class="wrap">
   {head("Local work", f"our work in {E(a['short'])}.")}
   <div class="ccards">{proof}</div>
   <p class="also">{E(a["also"])}</p>
+  <div class="map-head"><span class="eyebrow">On the map</span><a class="type-more" href="index.html#map">see every job we've fitted <span aria-hidden="true">→</span></a></div>
+  {map_block(r, a["slug"], "area", title=f"Signs we have fitted in {a['short']}")}
 </div></section>''' if a["proof"] else f'''<section class="sec alt tight"><div class="wrap"><p class="also solo">{E(a["also"])}</p></div></section>'''
     rest = "".join(f'<a href="../signs/{t["slug"]}.html">{E(t["label"])}</a>' for t in TYPES if t["slug"] not in KEY_TYPES)
     places = "".join(f"<span>{E(p)}</span>" for p in a["places"])
@@ -141,9 +145,9 @@ def area_page(a):
       <a class="pill pill-solid" href="#contact">book a survey <span class="dot">→</span></a>
       <a class="tel" href="tel:+441914876767">or call 0191 487 6767</a>
     </aside>'''
-    body = f'''{phero(r, [("Home","index.html"),("Areas","areas/index.html"),(a["short"],None)], f"sign makers in {E(a['name'])}.", E(a["lede"]), a["hero"], kicker="Areas we cover")}
+    body = f'''{phero(r, [("Home","index.html"),("Areas","areas/index.html"),(a["short"],None)], f"Sign makers in {E(a['name'])}.", E(a["lede"]), a["hero"], kicker="Areas we cover")}
 <section class="sec"><div class="wrap two area-intro">
-  <div class="prose"><span class="eyebrow" style="margin-bottom:18px;display:flex">Local sign company</span><h2>your sign makers for {E(a["short"])}.</h2>{"".join(f"<p>{E(p)}</p>" for p in a["intro"])}
+  <div class="prose"><span class="eyebrow" style="margin-bottom:18px;display:flex">Local sign company</span><h2>Your sign makers for {E(a["short"])}.</h2>{"".join(f"<p>{E(p)}</p>" for p in a["intro"])}
     <div class="places"><small>Areas we cover</small><div>{places}</div></div></div>
   {side}
 </div></section>
@@ -174,10 +178,14 @@ def area_page(a):
 
 def areas_index():
     r = "../"
-    cards = "".join(link_card(f'{a["slug"]}.html', a["hero"], f'sign makers {a["short"]}', a["lede"]) for a in AREAS)
+    cards = "".join(link_card(f'{a["slug"]}.html', a["hero"], f"Sign makers in {a['short']}", a["lede"]) for a in AREAS)
     cards += link_card("../nationwide-signage.html", "rolls", "Nationwide rollouts", "Multi-site signage programmes made in one factory and fitted across the UK.")
     body = f'''{phero(r, [("Home","index.html"),("Areas",None)], "areas we cover.", "Made in Team Valley, Gateshead. Fitted across the North East by our own installers, and anywhere in the UK for larger projects.", "hero", kicker="Where we work")}
-<section class="sec"><div class="wrap">
+<section class="sec" id="map"><div class="wrap">
+  {head("Job map", "signs we've fitted.", "Every pin is a finished job. Tap one to see the photos and what we made. Our workshop is the black pin in Team Valley.")}
+  {map_block(r, None, "big")}
+</div></section>
+<section class="sec alt"><div class="wrap">
   {head("North East", "local to you.")}
   <div class="cards3">{cards}</div>
 </div></section>

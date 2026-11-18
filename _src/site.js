@@ -127,6 +127,16 @@ if(list&&TYPES.length){
   addEventListener("load",()=>{const all=TYPES.filter(t=>t.photos[0]).map(t=>t.photos[0]);let i=0;(function next(){if(i>=all.length)return;const p=all[i++];Promise.all([load(p.full),load(p.bg)]).then(()=>setTimeout(next,60))})()});
 }
 
+/* sign-type photo box: swipe left/right on phones to change photo (desktop keeps click-only thumbnails) */
+(()=>{const st=$("#typeStage"),th=$("#typeThumbs");if(!st||!th)return;
+  const mob=matchMedia("(max-width:900px)");let sx=0,sy=0,on=false;
+  st.addEventListener("touchstart",e=>{if(!mob.matches)return;on=true;sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+  st.addEventListener("touchend",e=>{if(!on)return;on=false;const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;
+    if(Math.abs(dx)<40||Math.abs(dx)<Math.abs(dy)*1.3)return;
+    const bs=$$("button",th);if(bs.length<2)return;let i=bs.findIndex(b=>b.getAttribute("aria-pressed")==="true");
+    i=(i+(dx<0?1:-1)+bs.length)%bs.length;bs[i].click();
+    st.classList.remove("swipe-l","swipe-r");void st.offsetWidth;st.classList.add(dx<0?"swipe-l":"swipe-r")},{passive:true});
+})();
 /* ---------- gallery lightbox ---------- */
 let lb=null, lbItems=[], lbIdx=0;
 function openLb(items,i){
@@ -286,4 +296,33 @@ reveal(".arow",{y:0,d:.9,each:.04});
 if($("#stepsBar")) gsap.to("#stepsBar",{scaleX:1,duration:1.6,ease:"power2.inOut",scrollTrigger:{trigger:"#steps",start:"top 80%",once:true}});
 $$("[data-count]").forEach(e=>{const to=+e.dataset.count,o={v:0};gsap.to(o,{v:to,duration:1.6,ease:"power3.out",scrollTrigger:{trigger:e,start:"top 92%",once:true},onUpdate(){e.textContent=Math.round(o.v)}})});
 addEventListener("load",()=>ScrollTrigger.refresh());
+})();
+
+/* ---------- job maps (Leaflet, loaded only when a map comes near the screen) ---------- */
+(()=>{const maps=$$(".jobmap[data-map]");if(!maps.length)return;
+  let loading=null;
+  const need=()=>loading||(loading=new Promise((ok,no)=>{
+    const css=document.createElement("link");css.rel="stylesheet";css.href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";document.head.appendChild(css);
+    const s=document.createElement("script");s.src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";s.onload=ok;s.onerror=no;document.head.appendChild(s)}));
+  const esc2=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const build=box=>{const d=JSON.parse(box.dataset.map);box.innerHTML="";
+    const m=L.map(box,{scrollWheelZoom:false,zoomControl:true,attributionControl:true,tap:true});
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{maxZoom:19,subdomains:"abcd",
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'}).addTo(m);
+    const pin=L.divIcon({className:"jm-pin",html:"<i></i>",iconSize:[22,22],iconAnchor:[11,11],popupAnchor:[0,-10]});
+    const pts=[];
+    d.jobs.forEach(j=>{pts.push([j.lat,j.lng]);
+      L.marker([j.lat,j.lng],{icon:pin,title:j.n}).addTo(m).bindPopup(`<a class="jm-pop" href="${esc2(j.u)}"><img src="${esc2(j.i)}" alt=""><span><small>${esc2(j.t)}</small><b>${esc2(j.n)}</b><em>${esc2(j.p)}</em><u>see the job →</u></span></a>`,{maxWidth:260,minWidth:220})});
+    if(d.hq){const hq=L.divIcon({className:"jm-hq",html:'<span class="jm-hq-dot"></span><span class="jm-hq-tag"><b>Onesign HQ</b>Team Valley</span>',iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]});
+      L.marker(d.hq,{icon:hq,title:"Onesign & Digital HQ",zIndexOffset:1000}).addTo(m).bindPopup('<div class="jm-pop hq"><span><small>Our workshop</small><b>Onesign &amp; Digital</b><em>D86 Princesway North, Team Valley, Gateshead NE11 0TU</em><a href="https://www.google.com/maps/dir/?api=1&destination=54.9330,-1.6237" target="_blank" rel="noopener">get directions →</a></span></div>',{maxWidth:260});
+      if(!d.area)pts.push(d.hq)}
+    if(box.classList.contains("hq"))m.setView(d.hq,13);
+    else if(pts.length>1){const ne=pts.filter(p=>p[0]>54.3&&p[0]<55.8&&p[1]>-2.6&&p[1]<-1);/* frame the North East; far-off jobs still show when you zoom out */
+      m.fitBounds(L.latLngBounds(ne.length>1?ne:pts),{padding:[30,30],maxZoom:13})}
+    else if(pts.length)m.setView(pts[0],13);
+    box.addEventListener("click",()=>m.scrollWheelZoom.enable(),{once:true});
+  };
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);
+    need().then(()=>build(e.target)).catch(()=>{e.target.querySelector(".jm-fallback span").textContent="The map could not load. Our address is D86 Princesway North, Team Valley, Gateshead NE11 0TU."})}),{rootMargin:"300px"});
+  maps.forEach(b=>io.observe(b));
 })();

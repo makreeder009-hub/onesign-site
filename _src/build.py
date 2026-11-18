@@ -54,7 +54,7 @@ for _t in TYPES:
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "2"
+ASSET_V = "3"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)
@@ -573,7 +573,10 @@ def home_page():
     t0 = TYPES[0]
     spec0 = "".join(f"<dt>{E(a)}</dt><dd>{E(b)}</dd>" for a,b in t0["spec"])
     ideal0 = "".join(f'<span class="tag">{E(x)}</span>' for x in t0["ideal"])
-    logos = "".join(f'<img src="img/brand/client-{(i % len(CLIENT_LOGOS))+1:02d}.png" alt="{"Client logo" if i < len(CLIENT_LOGOS) else ""}"{"" if i < len(CLIENT_LOGOS) else " aria-hidden=\"true\""} draggable="false" loading="lazy" width="150" height="46">' for i,lid in enumerate(CLIENT_LOGOS+CLIENT_LOGOS))
+    def _logo_row(ids):
+        return "".join(f'<img src="img/brand/client-{n:02d}.png" alt="{"Client logo" if j < len(ids) else ""}"{"" if j < len(ids) else " aria-hidden=\"true\""} draggable="false" decoding="async" width="150" height="46">' for j, n in enumerate(ids + ids))
+    _ids = list(range(1, len(CLIENT_LOGOS) + 1))
+    logos_a, logos_b = _logo_row(_ids[0::2]), _logo_row(_ids[1::2])
     def reel(keys):
         out=""
         for i,k in enumerate(keys+keys):
@@ -623,7 +626,7 @@ def home_page():
 </section>
 <div class="trusted">
   <p>Trusted by the North East and beyond</p>
-  <div class="marquee" id="marqueeBox"><div class="marquee-track">{logos}</div></div>
+  <div id="marqueeBox"><div class="marquee"><div class="marquee-track">{logos_a}</div></div><div class="marquee rev"><div class="marquee-track">{logos_b}</div></div></div>
 </div>
 <section class="intro">
   <div class="wrap intro-grid">

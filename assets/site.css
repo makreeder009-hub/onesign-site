@@ -575,6 +575,36 @@ form.mock label.drop{font:400 14px/1.5 var(--f-body);letter-spacing:0;text-trans
 .jgrid .tile.jt .tile-info h3{font-size:clamp(18px,1.7vw,26px)}
 @media (max-width:700px){.jgrid .tile.jt{flex-basis:100%}}
 
+/* ---- section spacing: one rhythm everywhere, no double gaps ---- */
+.sec,.types,.work,.sectors,.process,.cta{padding-block:72px}
+.intro{padding-block:64px 56px}
+.sec-head{margin-bottom:36px}
+/* two sections on the same background run together: don't stack two paddings */
+.sec:not(.alt) + .sec:not(.alt),.sec.alt + .sec.alt,.sec:not(.alt) + .cta,.work + .cta,.types + .work,.sectors + .sec.alt,.process + .sec.alt{padding-top:0}
+@media (max-width:900px){
+  .sec,.types,.work,.sectors,.process,.cta{padding-block:52px}
+  .intro{padding-block:48px 40px}
+  .sec-head{margin-bottom:26px}
+}
+@media (max-width:560px){
+  .sec,.types,.work,.sectors,.process,.cta{padding-block:40px}
+  .sec-head{margin-bottom:22px}
+  .case-top{gap:28px}
+}
+
+/* ---- client logos: two rows, always loaded, more on screen ---- */
+.trusted{padding-block:32px 34px}
+.trusted p{margin-bottom:18px}
+.marquee{padding-block:8px}
+.marquee + .marquee{margin-top:6px}
+.marquee-track{gap:48px;animation-duration:50s}
+.marquee.rev .marquee-track{animation-direction:reverse}
+@media (max-width:700px){
+  .marquee-track{gap:30px;animation-duration:36s}
+  .marquee img{height:30px;max-width:96px}
+  .marquee{-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+}
+
 /* ===================== v2 (Nov 2026): self-hosted fonts, new page families ===================== */
 @font-face{font-family:"Outfit";src:url(fonts/outfit-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-display:swap}
 @font-face{font-family:"Inter";src:url(fonts/inter-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-display:swap}

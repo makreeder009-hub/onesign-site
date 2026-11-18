@@ -54,7 +54,7 @@ for _t in TYPES:
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "5"
+ASSET_V = "6"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)

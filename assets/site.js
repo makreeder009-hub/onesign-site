@@ -241,16 +241,24 @@ if($(".phero")){
   gsap.from(".phero-in > *",{y:26,opacity:0,duration:1,stagger:.08,ease:"expo.out"});
   if($(".phero .bgimg img")) gsap.fromTo(".phero .bgimg img",{scale:1.12},{scale:1,duration:2.2,ease:"power2.out"});
 }
-$$(".rv").forEach(e=>gsap.to(e,{opacity:1,y:0,duration:1,ease:"expo.out",scrollTrigger:{trigger:e,start:"top 90%",once:true}}));
-if($(".explorer")) gsap.from(".type-stage,.spec",{y:36,opacity:0,duration:1,stagger:.1,ease:"expo.out",scrollTrigger:{trigger:".explorer",start:"top 82%",once:true}});
-const batch=(sel,vars)=>{if($(sel))ScrollTrigger.batch(sel,{once:true,start:"top 92%",onEnter:els=>gsap.from(els,vars)})};
-batch(".tile",{y:40,opacity:0,duration:.9,stagger:.06,ease:"expo.out"});
-batch(".sector",{opacity:0,duration:.8,stagger:.06,ease:"power2.out"});
-batch(".step",{y:40,opacity:0,duration:.9,stagger:.12,ease:"expo.out"});
-batch(".variant",{opacity:0,duration:.8,stagger:.08,ease:"power2.out"});
-batch(".point",{opacity:0,duration:.8,stagger:.08,ease:"power2.out"});
-batch(".ccard,.gcard,.made li",{opacity:0,y:22,duration:.8,stagger:.07,ease:"power2.out"});
-batch(".arow",{opacity:0,x:-18,duration:.7,stagger:.05,ease:"power2.out"});
+/* scroll reveals: soft fade and a short rise, rows come in together, no jump or flash */
+const reveal=(sel,{y=14,d=1.15,each=.07,start="top 88%"}={})=>{
+  const els=$$(sel); if(!els.length) return;
+  gsap.set(els,{opacity:0,y});
+  ScrollTrigger.batch(els,{once:true,start,interval:.15,batchMax:6,onEnter:b=>{
+    // items that share a row start together; only the order across the row is staggered
+    gsap.to(b,{opacity:1,y:0,duration:d,ease:"power3.out",stagger:{each,ease:"power1.in"},overwrite:true,clearProps:"transform"});
+  }});
+};
+reveal(".rv",{y:18,each:0});
+if($(".explorer")) reveal(".type-stage,.spec",{y:20});
+reveal(".tile",{y:16,d:1.3,each:.09});
+reveal(".sector",{y:12,each:.06});
+reveal(".step",{y:16,d:1.3,each:.1});
+reveal(".variant,.point",{y:10});
+reveal(".ccard,.gcard",{y:0,d:1.1,each:.06});
+reveal(".made li",{y:10});
+reveal(".arow",{y:0,d:.9,each:.04});
 if($("#stepsBar")) gsap.to("#stepsBar",{scaleX:1,duration:1.6,ease:"power2.inOut",scrollTrigger:{trigger:"#steps",start:"top 80%",once:true}});
 $$("[data-count]").forEach(e=>{const to=+e.dataset.count,o={v:0};gsap.to(o,{v:to,duration:1.6,ease:"power3.out",scrollTrigger:{trigger:e,start:"top 92%",once:true},onUpdate(){e.textContent=Math.round(o.v)}})});
 addEventListener("load",()=>ScrollTrigger.refresh());

@@ -2403,3 +2403,41 @@ for _a in AREAS:
 for _c in CASES:
     if _c["slug"] == "vertu-motors-arena":
         _c["hero"] = "vertu"; _c["photos"] = ["vertu"] + [p for p in _c["photos"] if p != "vertu"]
+
+# ---- Mak's corrections, 18 Nov
+CASES[:] = [c for c in CASES if c["slug"] not in ("assenheims-56", "good-lash-gang")]
+def _set(_slug, hero=None, drop=(), add=(), **kw):
+    for c in CASES:
+        if c["slug"] != _slug: continue
+        c["photos"] = [p for p in c["photos"] if p not in drop] + [p for p in add if p not in c["photos"]]
+        if hero: c["hero"] = hero
+        if c["hero"] in drop or c["hero"] not in c["photos"]:
+            c["photos"] = [c["hero"]] + [p for p in c["photos"] if p != c["hero"]] if c["hero"] not in drop else c["photos"]
+            if c["hero"] in drop: c["hero"] = c["photos"][0]
+        c["photos"] = [c["hero"]] + [p for p in c["photos"] if p != c["hero"]]
+        c.update(kw)
+_set("kink", hero="p_x_kink_1", drop=("p_x_kink_0","p_x_kink_3"), add=("p_x_goodlashga_1","welcome_neon"),
+     slug="wink", name="Wink", types=["3d-letters","neon-led-neon"], label="3D letter fascia and LED neon",
+     lede="Pink 3D letters on a new grey fascia, and an LED neon feature wall for the Good Lash Gang inside.",
+     brief="Wink wanted a bold shopfront and a feature wall clients would want to photograph.",
+     made=[("3D letters","Fabricated letters in the brand pink, fixed to a new grey fascia."),("LED neon","Welcome to the Good Lash Gang in script neon on a printed pink wall.")],
+     result="A shopfront you can spot from the end of the street, and a wall made for photos.")
+_set("the-chair", hero="p_ch_2")
+_set("company-shop-group", drop=("p_z_companysho_4",))
+_set("woodham-academy", drop=("p_z_woodhamaca_0",))
+_set("originals-glow", hero="p_x_originalsg_2")
+_set("kiss-me-irish", hero="p_x_kissmeiris_2")
+_set("aspire-health-group", hero="p_x_aspireheal_0", drop=("p_x_aspireheal_1",))
+_set("country", hero="p_y_country_1", slug="cowgirl-and-country", name="Cowgirl & Country", where="Newcastle upon Tyne",
+     lede="Illuminated letters above the stage at Cowgirl & Country, a country music bar in Newcastle.")
+_set("alba", hero="p_y_alba_1", drop=("p_y_alba_0","p_y_alba_2"), types=["flat-cut-letters"], label="Cut metal sign",
+     lede="A cut metal logo sign for Alba Ristorante.", brief="Alba wanted a refined metal sign at the entrance.",
+     made=[("Cut metal sign","The Alba logo cut from metal and finished in gold and copper tones, mounted beside the entrance.")],
+     result="An entrance sign that suits the restaurant.")
+_set("act-group", hero="p_y_actgroup_3")
+_set("sunderland-eye-hospital", hero="p_y_sunderland_3", drop=("p_y_sunderland_0","p_y_sunderland_1","p_y_sunderland_2"),
+     types=["totems-monoliths"], label="Site totem", lede="A site totem with car park, drop-off and emergency directions for a hospital.")
+_set("north-shore", types=["printed-fascia-panels"])
+_set("sienna", types=["printed-fascia-panels"] + [t for t in next(c for c in CASES if c["slug"]=="sienna")["types"] if t!="printed-fascia-panels"])
+for _c in CASES:
+    _c["making"] = [m for m in (_c.get("making") or []) if m not in ("p_z_woodhamaca_0",)]

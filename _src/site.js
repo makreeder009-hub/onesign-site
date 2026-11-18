@@ -157,6 +157,19 @@ $$(".gallery").forEach(g=>{
 /* ---------- FORM ---------- */
 const form=$("#mockForm");
 if(form){
+  /* live "next available call": the next half hour at least 30 minutes away, inside opening hours (Mon-Thu 07-16, Fri 07-12) */
+  const slotEl=$("#liveSlotTime");
+  if(slotEl){
+    const open={1:[7,16],2:[7,16],3:[7,16],4:[7,16],5:[7,12]};
+    const fmt=d=>d.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",hour12:false});
+    const next=()=>{const now=new Date(new Date().toLocaleString("en-US",{timeZone:"Europe/London"}));let d=new Date(now.getTime()+30*60000);d.setSeconds(0,0);d.setMinutes(d.getMinutes()<=30?(d.getMinutes()===0?0:30):60);
+      for(let i=0;i<10;i++){const h=open[d.getDay()];if(h){const st=new Date(d);st.setHours(h[0]+1,0,0,0);const en=new Date(d);en.setHours(h[1],0,0,0);if(d<st)d=st;if(d<en){const sameDay=d.toDateString()===now.toDateString();const tm=new Date(now);tm.setDate(tm.getDate()+1);
+        return (sameDay?"today":d.toDateString()===tm.toDateString()?"tomorrow":d.toLocaleDateString("en-GB",{weekday:"long"}))+" from "+fmt(d)}}
+        d.setDate(d.getDate()+1);d.setHours(0,0,0,0)}return "soon"};
+    slotEl.textContent=next(); setInterval(()=>slotEl.textContent=next(),60000);
+  }
+  const call=$("#f-call"),sl=$("#sendLabel");
+  if(call&&sl){const u=()=>{sl.textContent=call.checked?"send & call me back":"send my enquiry";$("#liveSlot").classList.toggle("off",!call.checked)};call.addEventListener("change",u);u()}
   const pre=document.body.dataset.signtype; if(pre&&$("#f-type"))$("#f-type").value=pre;
   const drop=$("#drop"), file=$("#f-file");
   ["dragenter","dragover"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add("over")}));
@@ -173,7 +186,8 @@ if(form){
     if(!okN){nm.focus();return} if(!okE){em.focus();return}
     const v=id=>($(id)&&$(id).value||"").trim();
     const first=nm.value.trim().split(" ")[0], nfiles=file.files?file.files.length:0;
-    const lines=["Name: "+v("#f-name"),"Business: "+v("#f-biz"),"Email: "+v("#f-email"),"Phone: "+v("#f-tel"),"Sign type: "+(v("#f-type")||"Not sure yet"),"Site postcode: "+v("#f-post"),"","What I need:",v("#f-msg"),"","Sent from "+location.href];
+    const pick=n=>{const r=form.querySelector(`input[name=${n}]:checked`);return r?r.value:""};
+    const lines=["Call back: "+($("#f-call")&&$("#f-call").checked?"Yes":"No"),"When: "+(pick("when")||"Not said"),"Budget: "+(pick("budget")||"Not said"),"Name: "+v("#f-name"),"Business: "+v("#f-biz"),"Email: "+v("#f-email"),"Phone: "+v("#f-tel"),"Sign type: "+(v("#f-type")||"Not sure yet"),"Site postcode: "+v("#f-post"),"","What I need:",v("#f-msg"),"","Sent from "+location.href];
     const done=(head,msg)=>{$("#doneName").parentNode.firstChild.textContent=head;$("#doneName").textContent=first;if(msg)$("#doneMsg").textContent=msg;form.classList.add("sent")};
     const byEmail=()=>{
       location.href="mailto:sales@onesignanddigital.com?subject="+encodeURIComponent("Sign enquiry from "+v("#f-name")+(v("#f-biz")?" ("+v("#f-biz")+")":""))+"&body="+encodeURIComponent(lines.join("\n"));

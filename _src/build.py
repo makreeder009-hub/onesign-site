@@ -33,6 +33,7 @@ TYPES = canon(TYPES); SECTORS = canon(SECTORS); PROJECTS = canon(PROJECTS); REEL
 for _s in SECTORS: _s["points"] = [tuple(p) for p in _s["points"]]
 # Sign-type hero photos chosen by Mak. LOCKED: do not change these when adding photos or rebuilding.
 LOCKED_HEROES = {
+ "printed-fascia-panels": "p_ns_fascia",
  "3d-letters": "n_thatype",
  "backlit-panels": "st_sign",
  "flat-cut-letters": "ig_durham",
@@ -54,7 +55,7 @@ for _t in TYPES:
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "7"
+ASSET_V = "8"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)
@@ -211,7 +212,10 @@ def footer(r):
   <a class="pill pill-solid" href="#contact">free mockup</a>
 </div>'''
 
+# HubSpot meetings link for 'book a slot'. Leave empty until Mak sends it.
+HUBSPOT_MEETINGS = ""
 def cta(heading="let's make<br>it happen.", eyebrow="Free mockup"):
+    BOOK = (f'Prefer to pick a time? <a href="{HUBSPOT_MEETINGS}" target="_blank" rel="noopener">Book a call slot →</a>' if HUBSPOT_MEETINGS else 'Prefer to talk now? Call <a href="tel:+441914876767">0191 487 6767</a>')
     opts = '<option value="">Not sure yet</option>' + "".join(f'<option>{E(t["name"])}</option>' for t in TYPES)
     return f'''<section class="cta onacc" id="contact">
   <div class="wrap cta-grid">
@@ -230,17 +234,27 @@ def cta(heading="let's make<br>it happen.", eyebrow="Free mockup"):
         <div><small>Opening times</small><span class="hours">Mon–Thu 07:00–16:00<br>Fri 07:00–12:00 · Sat–Sun closed</span></div>
       </div>
     </div>
-    <form class="mock lightc" id="mockForm" novalidate>
-      <h3 class="hide-sent">tell us about your sign</h3>
-      <div class="hide-sent" id="f-name-wrap"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><div class="err">Add your name so we know who to ask for.</div></div>
+    <form class="mock lightc live" id="mockForm" novalidate>
+      <div class="hide-sent full live-head">
+        <span class="live-kicker"><i class="live-dot" aria-hidden="true"></i>Free mockup &middot; free survey</span>
+        <h3>tell us about your sign</h3>
+        <p class="live-sub">Leave your details and one of our sign team calls you back. We'll talk it through, then send a free visual of your sign on your building.</p>
+        <div class="live-slot" id="liveSlot" aria-live="polite"><i class="live-dot" aria-hidden="true"></i><span>Next available call: <b id="liveSlotTime">today</b>. We'll book it in for you.</span></div>
+      </div>
+      <div class="hide-sent" id="f-name-wrap"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" placeholder="Your name" required><div class="err">Add your name so we know who to ask for.</div></div>
+      <div class="hide-sent"><label for="f-tel">Phone</label><input id="f-tel" name="phone" type="tel" autocomplete="tel" placeholder="07… or 0191…"></div>
+      <div class="hide-sent" id="f-email-wrap"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.co.uk" required><div class="err">Enter an email like name@company.co.uk.</div></div>
       <div class="hide-sent"><label for="f-biz">Business</label><input id="f-biz" name="business" autocomplete="organization"></div>
-      <div class="hide-sent" id="f-email-wrap"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><div class="err">Enter an email like name@company.co.uk.</div></div>
-      <div class="hide-sent"><label for="f-tel">Phone</label><input id="f-tel" name="phone" type="tel" autocomplete="tel"></div>
       <div class="hide-sent"><label for="f-type">Sign type</label><select id="f-type" name="type">{opts}</select></div>
       <div class="hide-sent"><label for="f-post">Site postcode</label><input id="f-post" name="postcode" autocomplete="postal-code" placeholder="NE11 0TU"></div>
-      <div class="hide-sent full"><label for="f-msg">What do you need?</label><textarea id="f-msg" name="message" placeholder="Sizes, wording, deadline, anything you know so far"></textarea></div>
-      <label class="drop hide-sent full" id="drop" for="f-file"><input type="file" id="f-file" accept="image/*" multiple><span id="dropText">Drop a photo of your building here, or <u>browse</u>. It's what we draw your mockup on.</span></label>
-      <button class="pill pill-solid hide-sent" type="submit">send my enquiry <span class="dot">→</span></button>
+      <fieldset class="hide-sent full chips"><legend>When do you need the signage?</legend><div class="chip-row"><label class="chip"><input type="radio" name="when" value="Within 4 weeks"><span>Within 4 weeks</span></label><label class="chip"><input type="radio" name="when" value="1–3 months"><span>1–3 months</span></label><label class="chip"><input type="radio" name="when" value="3+ months"><span>3+ months</span></label><label class="chip"><input type="radio" name="when" value="Not sure yet"><span>Not sure yet</span></label></div></fieldset>
+      <fieldset class="hide-sent full chips"><legend>Rough budget <em>optional</em></legend><div class="chip-row"><label class="chip"><input type="radio" name="budget" value="Under £2k"><span>Under £2k</span></label><label class="chip"><input type="radio" name="budget" value="£2k–£5k"><span>£2k–£5k</span></label><label class="chip"><input type="radio" name="budget" value="£5k–£10k"><span>£5k–£10k</span></label><label class="chip"><input type="radio" name="budget" value="£10k+"><span>£10k+</span></label></div></fieldset>
+      <div class="hide-sent full"><label for="f-msg">Anything else?</label><textarea id="f-msg" name="message" placeholder="Sizes, wording, anything you know so far"></textarea></div>
+      <label class="drop hide-sent full" id="drop" for="f-file"><input type="file" id="f-file" accept="image/*" multiple><span id="dropText">Add a photo of your building, or <u>browse</u>. It's what we draw your mockup on.</span></label>
+      <label class="callme hide-sent full"><input type="checkbox" id="f-call" checked><span>Call me back to talk it through</span></label>
+      <button class="glow-btn hide-sent full" type="submit"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span id="sendLabel">send &amp; call me back</span></button>
+      <p class="live-alt hide-sent full">{BOOK}</p>
+      <div class="live-trust hide-sent full"><span><b class="stars">★★★★★</b> {REVIEWS["count"]} Google reviews</span><span>No obligation</span><span>UK-wide, since 2008</span></div>
       <p class="form-note hide-sent full">We only use your details to reply to this enquiry. <a href="{{{{R}}}}privacy.html">Privacy policy</a>.</p>
       <div class="form-done" role="status"><h3 style="font-size:28px;margin-bottom:8px">thanks, <span id="doneName">there</span>.</h3><p style="color:var(--fg-2)" id="doneMsg">Your enquiry is in. A member of our team will be in touch to talk through your mockup.</p></div>
     </form>
@@ -616,7 +630,7 @@ def home_page():
         # each tile takes the photo's own shape, so the photo fills it with nothing cut off
         media = pic(p["k"], "(max-width:700px) 92vw, 45vw", alt=p["name"]+" sign by Onesign")
         tiles += f'<a class="tile jt" style="--ar:{ar:.4f};aspect-ratio:{w}/{h}" href="{LINK[p["k"]]}">{media}<div class="tile-info"><div><small>{E(p["label"])}</small><h3>{E(p["name"])}</h3></div><span class="go" aria-hidden="true">→</span></div></a>'
-    HERO = [("hero","Newcastle University","Illuminated building sign","work/newcastle-university.html"),
+    HERO = [("hero","Newcastle University","Fabricated building sign","work/newcastle-university.html"),
             ("vertu","Vertu Motors Arena","High-level building letters","work/vertu-motors-arena.html"),
             ("n_thatype","Thatype","Halo-lit script letters","signs/3d-letters.html"),
             ("cork_dusk","Cork & Coffee","Komacel 3D letters","work/cork-and-coffee.html")]

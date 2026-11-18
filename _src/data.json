@@ -2,7 +2,7 @@
  "IMG": {
   "hero": [
    "3d36cad1fad04584b632515b872d7218~mv2.jpg",
-   "Newcastle University illuminated building sign",
+   "Newcastle University: fabricated building sign",
    "60% 40%"
   ],
   "seventy3": [
@@ -212,7 +212,7 @@
   ],
   "welcome_neon": [
    "0b608b59ba174f208a0f4dec8faf27d3~mv2.jpg",
-   "Pink LED neon welcome wall",
+   "Wink: LED neon on the Good Lash Gang feature wall",
    "50% 50%"
   ],
   "w_nevergiveup": [
@@ -1338,7 +1338,7 @@
   "p_sun_fascia": [
    "new:p_sun_fascia",
    "Sun Tanning: 3D letters on a timber fascia",
-   "50% 50%"
+   "50% 15%"
   ],
   "p_sun_site": [
    "new:p_sun_site",
@@ -1943,7 +1943,7 @@
   "p_pa_main": [
    "new:p_pa_main",
    "Pantera Advisory Group: flat-cut logo",
-   "50% 50%"
+   "50% 60%"
   ],
   "p_pa_rec": [
    "new:p_pa_rec",
@@ -2302,7 +2302,7 @@
   ],
   "p_g_kink": [
    "new:p_g_kink",
-   "Kink: 3D letters on the fascia",
+   "Wink: 3D letters on the fascia",
    "50% 50%"
   ],
   "p_g_baxters": [
@@ -2357,28 +2357,28 @@
   ],
   "p_x_kink_0": [
    "new:p_x_kink_0",
-   "Kink: 3D letters on the fascia",
+   "Wink: 3D letters on the fascia",
    "50% 50%"
   ],
   "p_x_kink_1": [
    "new:p_x_kink_1",
-   "Kink: 3D letters on the fascia",
-   "50% 50%"
+   "Wink: 3D letters on the fascia",
+   "50% 0%"
   ],
   "p_x_kink_2": [
    "new:p_x_kink_2",
-   "Kink: 3D letters on the fascia",
+   "Wink: 3D letters on the fascia",
    "50% 50%"
   ],
   "p_x_kink_3": [
    "new:p_x_kink_3",
-   "Kink: 3D letters on the fascia",
+   "Wink: 3D letters on the fascia",
    "50% 50%"
   ],
   "p_x_skinandsou_0": [
    "new:p_x_skinandsou_0",
    "Skin & Soul Medical",
-   "50% 50%"
+   "50% 70%"
   ],
   "p_x_skinandsou_1": [
    "new:p_x_skinandsou_1",
@@ -2738,7 +2738,7 @@
   "p_x_dreamdolls_0": [
    "new:p_x_dreamdolls_0",
    "Dream Dolls: illuminated arch",
-   "50% 50%"
+   "50% 12%"
   ],
   "p_x_dreamdolls_1": [
    "new:p_x_dreamdolls_1",
@@ -2903,7 +2903,7 @@
   "p_y_littleherh_0": [
    "new:p_y_littleherh_0",
    "Little Her Hair: fascia",
-   "50% 50%"
+   "50% 0%"
   ],
   "p_y_littleherh_1": [
    "new:p_y_littleherh_1",
@@ -2913,7 +2913,7 @@
   "p_y_fawcettstr_0": [
    "new:p_y_fawcettstr_0",
    "Fawcett Street Community Shop: wall graphics",
-   "50% 50%"
+   "50% 10%"
   ],
   "p_y_fawcettstr_1": [
    "new:p_y_fawcettstr_1",
@@ -2973,7 +2973,7 @@
   "p_y_country_1": [
    "new:p_y_country_1",
    "Country: illuminated letters",
-   "50% 50%"
+   "50% 20%"
   ],
   "p_y_country_2": [
    "new:p_y_country_2",
@@ -3038,7 +3038,7 @@
   "p_y_sunderland_3": [
    "new:p_y_sunderland_3",
    "Sunderland Eye Hospital: wayfinding",
-   "50% 50%"
+   "50% 25%"
   ],
   "p_y_templetaco_0": [
    "new:p_y_templetaco_0",
@@ -3048,7 +3048,7 @@
   "p_y_filto_0": [
    "new:p_y_filto_0",
    "Filto",
-   "50% 50%"
+   "50% 0%"
   ],
   "p_y_filto_1": [
    "new:p_y_filto_1",
@@ -3208,7 +3208,7 @@
   "p_y_streeteats_0": [
    "new:p_y_streeteats_0",
    "Street Eats",
-   "50% 50%"
+   "50% 0%"
   ],
   "p_y_streeteats_1": [
    "new:p_y_streeteats_1",
@@ -3243,7 +3243,7 @@
   "p_y_houghtonco_0": [
    "new:p_y_houghtonco_0",
    "Houghton Colliery: totem",
-   "50% 50%"
+   "50% 0%"
   ],
   "p_z_companysho_0": [
    "new:p_z_companysho_0",
@@ -3293,7 +3293,7 @@
   "p_z_mycarclean_0": [
    "new:p_z_mycarclean_0",
    "My Car Cleaning: 3D letters on the fascia",
-   "50% 50%"
+   "50% 20%"
   ],
   "p_z_noblescasi_0": [
    "new:p_z_noblescasi_0",
@@ -3318,7 +3318,7 @@
   "p_z_glowtannin_0": [
    "new:p_z_glowtannin_0",
    "glow.: 3D letters at sunset",
-   "50% 50%"
+   "50% 8%"
   ],
   "p_z_glowtannin_1": [
    "new:p_z_glowtannin_1",
@@ -3602,7 +3602,8 @@
     "fira",
     "ig_pantera",
     "p_du_front",
-    "p_x_skinandsou_4"
+    "p_x_skinandsou_4",
+    "p_y_alba_1"
    ],
    "desc": "Letters cut from solid sheet on our CNC router and laser, with a crisp flat face and no returns. A clean, cost-effective way to put a name on a wall, inside or out.",
    "ideal": [
@@ -3661,7 +3662,6 @@
     "rolls",
     "p_tms_main",
     "p_cs_store",
-    "p_ns_fascia",
     "p_ae_bld",
     "vertu_night",
     "n_savoy",
@@ -3735,8 +3735,7 @@
     "p_sm_proj",
     "works",
     "p_x_skinandsou_3",
-    "p_bc_roundel",
-    "p_y_alba_1"
+    "p_bc_roundel"
    ],
    "desc": "Double-sided signs that stick out from the building, so people walking along the street see you, not just those standing in front. Round, square or fully bespoke.",
    "ideal": [
@@ -3831,6 +3830,62 @@
     [
      "Can a light box be double-sided?",
      "Yes. Double-sided light boxes work well as projecting signs, lit on both faces."
+    ]
+   ]
+  },
+  {
+   "slug": "printed-fascia-panels",
+   "name": "Printed fascia panels",
+   "label": "printed fascia panels",
+   "code": "OS-PF",
+   "seo_title": "Printed Fascia Signs & Folded Panel Signs",
+   "meta": "Printed fascia signs made in Gateshead: digitally printed graphics on aluminium composite or folded aluminium tray panels, a sharp full-colour shopfront at a sensible price.",
+   "hero": "p_ns_fascia",
+   "photos": [
+    "p_ns_fascia",
+    "p_si_front"
+   ],
+   "desc": "The quickest way to a sharp, full-colour shopfront. Your artwork is digitally printed and laminated, then applied to a flat aluminium composite fascia or to a folded aluminium tray panel that wraps the edges for a clean, solid finish.",
+   "ideal": [
+    "shopfronts",
+    "salons",
+    "cafés",
+    "takeaways"
+   ],
+   "spec": [
+    [
+     "Panel",
+     "Aluminium composite (flat) or folded aluminium tray"
+    ],
+    [
+     "Face",
+     "Digitally printed vinyl, laminated for UV and weather"
+    ],
+    [
+     "Colours",
+     "Full colour, photos and gradients"
+    ],
+    [
+     "Fixing",
+     "Onto the existing fascia or a new subframe"
+    ],
+    [
+     "Upgrade",
+     "Add 3D letters, a trough light or projecting sign later"
+    ]
+   ],
+   "variants": [],
+   "notes": [
+    "North Shore Coffee Roasters and Sienna House of Beauty both have printed fascia panels."
+   ],
+   "faq": [
+    [
+     "Flat panel or folded tray?",
+     "A flat composite panel is the most economical. A folded tray has returned edges, so it looks thicker and more solid, and hides the fixings."
+    ],
+    [
+     "How long will the print last?",
+     "We print on outdoor-grade vinyl and laminate it, so colours stay bright for years on a normal shopfront."
     ]
    ]
   },
@@ -4066,8 +4121,7 @@
     "print_fruit",
     "fence_banner",
     "bowmer",
-    "p_y_filto_3",
-    "p_z_companysho_4"
+    "p_y_filto_3"
    ],
    "desc": "Big, bold, colour-matched print from our own wide-format printers: hoardings, printed LED ceiling panels, posters, window graphics and display boards, printed and finished in-house so turnaround stays fast.",
    "ideal": [
@@ -4250,7 +4304,6 @@
     "w_ext_dir",
     "uni_entry",
     "p_x_workwearex_2",
-    "p_y_sunderland_0",
     "p_z_companysho_0"
    ],
    "desc": "Sign families that get people where they need to be, from the car park to the right room. Planned around how your site is used, and built to accessibility standards.",
@@ -4787,7 +4840,7 @@
   {
    "name": "Newcastle University",
    "k": "hero",
-   "label": "Illuminated building sign",
+   "label": "Fabricated building sign",
    "url": "projects/newcastle-university"
   },
   {

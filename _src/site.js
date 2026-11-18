@@ -258,17 +258,19 @@ if($(".phero")){
   if($(".phero .bgimg img")) gsap.fromTo(".phero .bgimg img",{scale:1.12},{scale:1,duration:2.2,ease:"power2.out"});
 }
 /* scroll reveals: soft fade and a short rise, rows come in together, no jump or flash */
+const pending=[];let rq=0;
+const check=()=>{rq=0;const line=innerHeight*.94,go=new Map();
+  for(let i=pending.length-1;i>=0;i--){const p=pending[i];if(p.el.getBoundingClientRect().top<line){(go.get(p.o)||go.set(p.o,[]).get(p.o)).push(p.el);pending.splice(i,1)}}
+  go.forEach((els,o)=>{els.reverse();gsap.to(els,{opacity:1,y:0,duration:o.d,ease:"power3.out",stagger:{each:o.each,ease:"power1.in"},overwrite:true})});
+};
+const queue=()=>{if(!rq&&pending.length)rq=requestAnimationFrame(check)};
+addEventListener("scroll",queue,{passive:true});addEventListener("resize",queue);addEventListener("load",queue);
 const reveal=(sel,{y=14,d=1.15,each=.07}={})=>{
-  // IntersectionObserver, not scroll positions: positions go stale on phones as lazy images load,
-  // which made sections appear only after you had scrolled past them
+  // live position check on every scroll frame: shows anything that has reached the bottom of the screen
+  // or been scrolled past, so fast flicks on phones never leave a section blank
   const els=$$(sel); if(!els.length) return;
-  gsap.set(els,{opacity:0,y});
-  const io=new IntersectionObserver(ents=>{
-    const b=ents.filter(e=>e.isIntersecting).map(e=>e.target); if(!b.length) return;
-    b.forEach(e=>io.unobserve(e));
-    gsap.to(b,{opacity:1,y:0,duration:d,ease:"power3.out",stagger:{each,ease:"power1.in"},overwrite:true});
-  },{rootMargin:"0px 0px -6% 0px",threshold:0});
-  els.forEach(e=>io.observe(e));
+  gsap.set(els,{opacity:0,y}); const o={d,each};
+  els.forEach(el=>pending.push({el,o})); queue();
 };
 reveal(".rv",{y:18,each:0});
 if($(".explorer")) reveal(".type-stage,.spec",{y:20});

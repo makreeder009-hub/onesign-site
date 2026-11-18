@@ -55,7 +55,7 @@ for _t in TYPES:
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "8"
+ASSET_V = "9"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)
@@ -125,6 +125,7 @@ def nav(r):
     mega_cards = "".join(
         f'<a class="mega-card" href="{r}signs/{t["slug"]}.html"><img class="mc" loading="lazy" alt="" src="{wix(t["hero"],480,480,"fit")}" style="object-position:{MEGA_POS.get(t["slug"], pos(t["hero"]))}"><span>{E(t["label"])}</span></a>'
         for t in TYPES)
+    mega_cards += f'<a class="mega-card all" href="{r}signs/index.html"><b>all {len(TYPES)} sign types</b><small>Compare them side by side, with real jobs and specs.</small><em>see them all →</em></a>'
     chips = "".join(f'<a href="{r}signs/{t["slug"]}.html">{E(t["label"])}</a>' for t in TYPES)
     return f'''<div class="progress" id="progress"></div>
 <header class="nav" id="nav">
@@ -145,7 +146,7 @@ def nav(r):
   <div class="mega" id="mega">
     <div class="wrap mega-in">
       <div class="mega-grid">{mega_cards}</div>
-      <div class="mega-foot"><a href="{r}signs/index.html">compare all 14 sign types <span aria-hidden="true">→</span></a><a href="{r}guides/illuminated-signs.html">not sure which? read the illuminated signs guide <span aria-hidden="true">→</span></a></div>
+      <div class="mega-foot"><a href="{r}signs/index.html">compare all {len(TYPES)} sign types <span aria-hidden="true">→</span></a><a href="{r}guides/illuminated-signs.html">not sure which? read the illuminated signs guide <span aria-hidden="true">→</span></a></div>
     </div>
   </div>
 </header>
@@ -241,15 +242,15 @@ def cta(heading="let's make<br>it happen.", eyebrow="Free mockup"):
         <p class="live-sub">Leave your details and one of our sign team calls you back. We'll talk it through, then send a free visual of your sign on your building.</p>
         <div class="live-slot" id="liveSlot" aria-live="polite"><i class="live-dot" aria-hidden="true"></i><span>Next available call: <b id="liveSlotTime">today</b>. We'll book it in for you.</span></div>
       </div>
-      <div class="hide-sent" id="f-name-wrap"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" placeholder="Your name" required><div class="err">Add your name so we know who to ask for.</div></div>
-      <div class="hide-sent"><label for="f-tel">Phone</label><input id="f-tel" name="phone" type="tel" autocomplete="tel" placeholder="07… or 0191…"></div>
-      <div class="hide-sent" id="f-email-wrap"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.co.uk" required><div class="err">Enter an email like name@company.co.uk.</div></div>
-      <div class="hide-sent"><label for="f-biz">Business</label><input id="f-biz" name="business" autocomplete="organization"></div>
+      <div class="hide-sent" id="f-name-wrap"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" placeholder="Your name here" required><div class="err">Add your name so we know who to ask for.</div></div>
+      <div class="hide-sent"><label for="f-tel">Phone</label><input id="f-tel" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number"></div>
+      <div class="hide-sent" id="f-email-wrap"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="Your email address" required><div class="err">Enter an email like name@company.co.uk.</div></div>
+      <div class="hide-sent"><label for="f-biz">Business name</label><input id="f-biz" name="business" autocomplete="organization" placeholder="Your business name"></div>
       <div class="hide-sent"><label for="f-type">Sign type</label><select id="f-type" name="type">{opts}</select></div>
-      <div class="hide-sent"><label for="f-post">Site postcode</label><input id="f-post" name="postcode" autocomplete="postal-code" placeholder="NE11 0TU"></div>
+      <div class="hide-sent"><label for="f-post">Site postcode</label><input id="f-post" name="postcode" autocomplete="postal-code" placeholder="Your site postcode"></div>
       <fieldset class="hide-sent full chips"><legend>When do you need the signage?</legend><div class="chip-row"><label class="chip"><input type="radio" name="when" value="Within 4 weeks"><span>Within 4 weeks</span></label><label class="chip"><input type="radio" name="when" value="1–3 months"><span>1–3 months</span></label><label class="chip"><input type="radio" name="when" value="3+ months"><span>3+ months</span></label><label class="chip"><input type="radio" name="when" value="Not sure yet"><span>Not sure yet</span></label></div></fieldset>
       <fieldset class="hide-sent full chips"><legend>Rough budget <em>optional</em></legend><div class="chip-row"><label class="chip"><input type="radio" name="budget" value="Under £2k"><span>Under £2k</span></label><label class="chip"><input type="radio" name="budget" value="£2k–£5k"><span>£2k–£5k</span></label><label class="chip"><input type="radio" name="budget" value="£5k–£10k"><span>£5k–£10k</span></label><label class="chip"><input type="radio" name="budget" value="£10k+"><span>£10k+</span></label></div></fieldset>
-      <div class="hide-sent full"><label for="f-msg">Anything else?</label><textarea id="f-msg" name="message" placeholder="Sizes, wording, anything you know so far"></textarea></div>
+      <div class="hide-sent full"><label for="f-msg">Anything else?</label><textarea id="f-msg" name="message" placeholder="Your sizes, wording, anything you know so far"></textarea></div>
       <label class="drop hide-sent full" id="drop" for="f-file"><input type="file" id="f-file" accept="image/*" multiple><span id="dropText">Add a photo of your building, or <u>browse</u>. It's what we draw your mockup on.</span></label>
       <label class="callme hide-sent full"><input type="checkbox" id="f-call" checked><span>Call me back to talk it through</span></label>
       <button class="glow-btn hide-sent full" type="submit"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span id="sendLabel">send &amp; call me back</span></button>
@@ -393,13 +394,14 @@ def case_card(c, r, sizes="(max-width:620px) 92vw, (max-width:980px) 46vw, 31vw"
     return (f'<a class="ccard" href="{r}work/{c["slug"]}.html"><div class="cc-img">{pic(c["hero"], sizes, alt=c["name"]+" signage by Onesign", style="object-position:"+pos(c["hero"]), widths=(480,960))}</div>'
             f'<div class="cc-body"><small>{E(c["label"])}</small><h3>{E(c["name"])}</h3>{where}<span class="cc-go" aria-hidden="true">→</span></div></a>')
 def guide_card(g, r):
-    return (f'<a class="gcard" href="{r}guides/{g["slug"]}.html"><small>{E(g["kicker"])}</small><h3>{E(g["h1"])}</h3><p>{E(g["desc"])}</p><span class="gc-go">read the guide <span aria-hidden="true">→</span></span></a>')
+    return (f'<a class="gcard" href="{r}guides/{g["slug"]}.html"><img class="gc-img" loading="lazy" alt="" src="{wix(g.get("card", g["hero"]),720,480)}" style="object-position:{pos(g.get("card", g["hero"]))}"><small>{E(g["kicker"])}</small><h3>{E(g["h1"])}</h3><p>{E(g["desc"])}</p><span class="gc-go">read the guide <span aria-hidden="true">→</span></span></a>')
 def area_chips(r, skip=None):
     return "".join(f'<a href="{r}areas/{a["slug"]}.html">sign makers {E(a["short"])}</a>' for a in AREAS if a["slug"] != skip) + f'<a href="{r}nationwide-signage.html">Nationwide</a>'
 ILLUMINATED = {"3d-letters","backlit-panels","light-boxes","flex-faces","neon-led-neon","high-level-signs","projecting-signs","totems-monoliths"}
 def guides_for(type_slug):
     G = {g["slug"]: g for g in GUIDES}
-    if type_slug == "wayfinding": order = ["accessible-wayfinding-signage", "sign-planning-permission", "shop-sign-cost"]
+    if type_slug in ("3d-letters", "flat-cut-letters"): order = ["3d-vs-flat-cut-letters", "illuminated-signs", "shop-sign-cost"]
+    elif type_slug == "wayfinding": order = ["accessible-wayfinding-signage", "sign-planning-permission", "shop-sign-cost"]
     elif type_slug in ILLUMINATED: order = ["illuminated-signs", "sign-planning-permission", "shop-sign-cost"]
     else: order = ["shop-sign-cost", "sign-planning-permission", "illuminated-signs"]
     return [G[x] for x in order]
@@ -781,7 +783,7 @@ def home_page():
 <section class="sec" id="guides">
   <div class="wrap">
     <div class="sec-head"><div><span class="eyebrow">Guides</span><h2 class="h2 rv">straight answers<br>before you spend.</h2></div><p class="lede rv">What signs cost, when you need consent and how to choose between sign types, written by the people who make them.</p></div>
-    <div class="gcards four">{guides}</div>
+    <div class="gcards">{guides}</div>
   </div>
 </section>
 {cta()}'''

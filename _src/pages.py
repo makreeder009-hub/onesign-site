@@ -1,3 +1,4 @@
+import re
 # -*- coding: utf-8 -*-
 """New page families: index pages, our work + case studies, areas, guides, nationwide, privacy.
 Run this file to build the whole site into ../site."""
@@ -20,14 +21,14 @@ def head(eyebrow, h2, lede="", extra=""):
 def signs_index():
     r = "../"
     cards = "".join(type_card(t["slug"], r) for t in TYPES)
-    body = f'''{phero(r, [("Home","index.html"),("Sign types",None)], "every kind of sign.", "Fourteen sign types, all designed, made and installed by our own team in Team Valley, Gateshead. Pick one to see real jobs, materials and specifications.", "n_thatype", kicker="Sign types")}
+    body = f'''{phero(r, [("Home","index.html"),("Sign types",None)], "every kind of sign.", "Fifteen sign types, all designed, made and installed by our own team in Team Valley, Gateshead. Pick one to see real jobs, materials and specifications.", "n_thatype", kicker="Sign types")}
 <section class="sec"><div class="wrap">
   {head("Made in-house", "choose a sign type.", "Not sure which you need? Send us a photo of your building and we will mock up the options for free.")}
   <div class="cards3">{cards}</div>
 </div></section>
 <section class="sec alt"><div class="wrap">
   {head("Help choosing", "guides from the factory floor.")}
-  <div class="gcards four">{"".join(guide_card(g, r) for g in GUIDES)}</div>
+  <div class="gcards">{"".join(guide_card(g, r) for g in GUIDES)}</div>
 </div></section>
 {cta()}'''
     ld = [crumbs_ld([("Home", "/"), ("Sign types", "/signs")]),
@@ -190,7 +191,9 @@ def slug(s): return "".join(ch if ch.isalnum() else "-" for ch in s.lower()).str
 def guide_page(g):
     r = "../"; url = f"{SITE_URL}/guides/{g['slug']}"
     toc = "".join(f'<li><a href="#{slug(h)}">{E(h)}</a></li>' for h, _ in g["sections"]) + '<li><a href="#questions">common questions</a></li>'
-    secs = "".join(f'<section id="{slug(h)}"><h2>{E(h)}</h2>{html.replace("{R}", r)}</section>' for h, html in g["sections"])
+    def figs(s):
+        return re.sub(r"\{FIG (\w+)\|([^}]*)\}", lambda m: f'<figure class="gfig"><img loading="lazy" src="{wix(m.group(1),1200,800)}" alt="{E(m.group(2))}" style="object-position:{pos(m.group(1))}"><figcaption>{E(m.group(2))}</figcaption></figure>', s)
+    secs = "".join(f'<section id="{slug(h)}"><h2>{E(h)}</h2>{figs(html.replace("{R}", r))}</section>' for h, html in g["sections"])
     others = "".join(guide_card(x, r) for x in GUIDES if x["slug"] != g["slug"])
     d = g["updated"]
     body = f'''{phero(r, [("Home","index.html"),("Guides","guides/index.html"),(g["kicker"],None)], f'<span class="lg">{E(g["h1"])}</span>', E(g["lede"]), g["hero"], kicker=g["kicker"], ctas=False, meta=f'<div class="ph-meta"><span>By the Onesign team</span><span>Updated <time datetime="{d}">November 2026</time></span></div>')}

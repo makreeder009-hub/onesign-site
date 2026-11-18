@@ -285,3 +285,21 @@ form.mock label.callme input{width:18px;height:18px;accent-color:var(--accent);f
 form.mock.live .form-note{text-align:center;font-size:12px}
 @media (max-width:640px){.chip-row{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){.live-dot,.glow-btn,.glow-btn::after{animation:none}}
+/* 18 Nov: mega menu two even rows of 8 (15 types + "all") */
+.mega-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:10px}
+.mega-card > span{padding:8px 9px 10px;font-size:12.5px}
+.mega-card.all{background:var(--fg);color:var(--bg);padding:12px}
+.mega-card.all b{font-size:16px}
+@media (max-width:1180px){.mega-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:7px}.mega-card > span{font-size:11.5px;padding:7px}.mega-card.all small{display:none}}
+/* guide cards and article photos */
+.gcard{overflow:hidden}
+.gcard .gc-img{display:block;width:calc(100% + 48px);max-width:none;margin:-26px -24px 4px;aspect-ratio:3/2;height:auto;object-fit:cover;background:var(--surface-2);transition:transform .6s var(--ease)}
+.gcard:hover .gc-img{transform:scale(1.03)}
+.guide .gfig{margin:6px 0 22px}
+.guide .gfig img{display:block;width:100%;aspect-ratio:3/2;height:auto;object-fit:cover;border-radius:14px;background:var(--surface-2)}
+.guide .gfig figcaption{margin-top:8px;font-size:13px;color:var(--mute)}
+.guide .cmp-wrap,.guide table.cmp{display:block;overflow-x:auto}
+.guide table.cmp{border-collapse:collapse;width:100%;font-size:14.5px;margin:4px 0 8px}
+.guide table.cmp th,.guide table.cmp td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;min-width:120px}
+.guide table.cmp thead th{font:600 13px/1.2 var(--f-display);text-transform:lowercase;color:var(--accent-ink)}
+.guide table.cmp td:first-child{font-weight:600;min-width:110px}

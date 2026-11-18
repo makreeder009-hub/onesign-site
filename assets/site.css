@@ -708,6 +708,30 @@ html,body{overflow-x:clip}
 .jm-pop u,.jm-pop.hq a{text-decoration:none;font:500 13px/1 var(--f-display);color:#111415;margin-top:5px}
 .map-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:40px}
 
+/* 18 Nov: modern map, photo pins, branded HQ */
+.jobmap{background:#eef0ee}
+.jobmap .maplibregl-ctrl-group{border-radius:12px;box-shadow:0 6px 18px rgba(17,20,21,.18)}
+.jobmap .maplibregl-ctrl-attrib{font-size:10px}
+.jm-photo{all:unset;cursor:pointer;display:block;position:relative;width:46px;height:54px}
+.jm-photo img{display:block;width:46px;height:46px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 0 0 2px #111415,0 8px 18px rgba(17,20,21,.45);background:#111415;transition:transform .25s var(--ease)}
+.jm-photo i{position:absolute;left:50%;bottom:0;width:12px;height:12px;background:#111415;transform:translateX(-50%) rotate(45deg);border-radius:2px;z-index:-1}
+.jm-photo:hover img,.jm-photo:focus-visible img{transform:scale(1.18)}
+.jm-photo:focus-visible{outline:none}
+.jm-hq2{all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px}
+.jm-hq2-badge{display:flex;align-items:center;gap:10px;background:#111415;color:#fff;padding:8px 16px 8px 8px;border-radius:999px;box-shadow:0 12px 28px rgba(17,20,21,.45);white-space:nowrap}
+.jm-hq2-badge svg{width:34px;height:34px;flex:none;background:#1d2426;border-radius:50%;padding:3px}
+.jm-hq2-badge b{display:block;font:600 15px/1.05 var(--f-display);color:#fff}
+.jm-hq2-badge small{display:block;font:500 10px/1.2 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:#9cc6d6;margin-top:2px}
+.jm-hq2-dot{width:14px;height:14px;border-radius:50%;background:#9cc6d6;border:3px solid #111415;animation:hqPulse2 2.2s infinite}
+@keyframes hqPulse2{0%{box-shadow:0 0 0 0 rgba(81,125,144,.6)}70%{box-shadow:0 0 0 18px rgba(81,125,144,0)}100%{box-shadow:0 0 0 0 rgba(81,125,144,0)}}
+@media (prefers-reduced-motion:reduce){.jm-hq2-dot{animation:none}}
+.jm-count{position:absolute;left:14px;top:14px;z-index:2;background:#111415;color:#fff;padding:8px 14px;border-radius:999px;font:500 12px/1 var(--f-display);box-shadow:0 6px 18px rgba(17,20,21,.3)}
+.jm-count b{color:#9cc6d6;font-weight:700}
+.jm-popup .maplibregl-popup-content{padding:0;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(17,20,21,.3)}
+.jm-popup .maplibregl-popup-close-button{width:26px;height:26px;top:8px;right:8px;border-radius:50%;background:rgba(17,20,21,.7);color:#fff;font-size:16px;line-height:1;z-index:2}
+.jm-popup .jm-pop{width:250px}
+.jm-pop.hq span{padding:16px 18px 16px}
+
 /* ===================== v2 (Nov 2026): self-hosted fonts, new page families ===================== */
 @font-face{font-family:"Outfit";src:url(fonts/outfit-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-display:swap}
 @font-face{font-family:"Inter";src:url(fonts/inter-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-display:swap}

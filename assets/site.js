@@ -298,30 +298,54 @@ $$("[data-count]").forEach(e=>{const to=+e.dataset.count,o={v:0};gsap.to(o,{v:to
 addEventListener("load",()=>ScrollTrigger.refresh());
 })();
 
-/* ---------- job maps (Leaflet, loaded only when a map comes near the screen) ---------- */
+/* ---------- job maps: MapLibre vector map (OpenFreeMap tiles, no key), recoloured to the Onesign palette ---------- */
 (()=>{const maps=[...document.querySelectorAll(".jobmap[data-map]")];if(!maps.length)return;
   let loading=null;
   const need=()=>loading||(loading=new Promise((ok,no)=>{
-    const css=document.createElement("link");css.rel="stylesheet";css.href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";document.head.appendChild(css);
-    const s=document.createElement("script");s.src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";s.onload=ok;s.onerror=no;document.head.appendChild(s)}));
-  const esc2=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+    const css=document.createElement("link");css.rel="stylesheet";css.href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css";document.head.appendChild(css);
+    const s=document.createElement("script");s.src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js";s.onload=ok;s.onerror=no;document.head.appendChild(s)}));
+  const esc2=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const MARK='<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="20" fill="none" stroke="#fff" stroke-width="7"/><path d="M28 22h8v22h-8z" fill="#9cc6d6"/></svg>';
+  /* brand palette applied over the Positron style */
+  const paint=m=>{const set=(id,p,v)=>{try{if(m.getLayer(id))m.setPaintProperty(id,p,v)}catch(_){}};
+    m.getStyle().layers.forEach(l=>{
+      if(l.id==="background")set(l.id,"background-color","#eef0ee");
+      else if(l.id==="water")set(l.id,"fill-color","#c9dde5");
+      else if(l.id==="waterway")set(l.id,"line-color","#c9dde5");
+      else if(l.id==="park"||l.id==="landcover_wood")set(l.id,"fill-color","#e2e8e1");
+      else if(l.id==="landuse_residential")set(l.id,"fill-color","#e9ebe8");
+      else if(l.id==="building")set(l.id,"fill-color","#e1e4e2");
+      else if(/^highway_(motorway|major)_inner|highway_motorway_bridge_inner/.test(l.id))set(l.id,"line-color","#ffffff");
+      else if(/casing/.test(l.id))set(l.id,"line-color","#d9dedd");
+      else if(/^highway_minor|highway_path/.test(l.id))set(l.id,"line-color","#fbfbfa");
+      else if(/^boundary/.test(l.id))set(l.id,"line-color","#b9c6cb");
+      else if(l.type==="symbol"){set(l.id,"text-color","#5d6b70");set(l.id,"text-halo-color","#eef0ee")}
+    })};
   const build=box=>{const d=JSON.parse(box.dataset.map);box.innerHTML="";
-    const m=L.map(box,{scrollWheelZoom:false,zoomControl:true,attributionControl:true,tap:true});
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(m);
-    const pin=L.divIcon({className:"jm-pin",html:"<i></i>",iconSize:[22,22],iconAnchor:[11,11],popupAnchor:[0,-10]});
-    const pts=[];
-    d.jobs.forEach(j=>{pts.push([j.lat,j.lng]);
-      L.marker([j.lat,j.lng],{icon:pin,title:j.n}).addTo(m).bindPopup(`<a class="jm-pop" href="${esc2(j.u)}"><img src="${esc2(j.i)}" alt=""><span><small>${esc2(j.t)}</small><b>${esc2(j.n)}</b><em>${esc2(j.p)}</em><u>see the job →</u></span></a>`,{maxWidth:260,minWidth:220})});
-    if(d.hq){const hq=L.divIcon({className:"jm-hq",html:'<span class="jm-hq-dot"></span><span class="jm-hq-tag"><b>Onesign HQ</b>Team Valley</span>',iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]});
-      L.marker(d.hq,{icon:hq,title:"Onesign & Digital HQ",zIndexOffset:1000}).addTo(m).bindPopup('<div class="jm-pop hq"><span><small>Our workshop</small><b>Onesign &amp; Digital</b><em>D86 Princesway North, Team Valley, Gateshead NE11 0TU</em><a href="https://www.google.com/maps/dir/?api=1&destination=54.9330,-1.6237" target="_blank" rel="noopener">get directions →</a></span></div>',{maxWidth:260});
-      if(!d.area)pts.push(d.hq)}
-    if(box.classList.contains("hq"))m.setView(d.hq,13);
-    else if(pts.length>1){const ne=pts.filter(p=>p[0]>54.3&&p[0]<55.8&&p[1]>-2.6&&p[1]<-1);/* frame the North East; far-off jobs still show when you zoom out */
-      m.fitBounds(L.latLngBounds(ne.length>1?ne:pts),{padding:[30,30],maxZoom:13})}
-    else if(pts.length)m.setView(pts[0],13);
-    box.addEventListener("click",()=>m.scrollWheelZoom.enable(),{once:true});
+    const isHQ=box.classList.contains("hq");
+    const m=new maplibregl.Map({container:box,style:"https://tiles.openfreemap.org/styles/positron",center:d.hq||[54.97,-1.61].reverse(),zoom:isHQ?13.2:9,
+      attributionControl:{compact:true},cooperativeGestures:true,dragRotate:false,pitchWithRotate:false});
+    if(d.hq)m.setCenter([d.hq[1],d.hq[0]]);
+    m.addControl(new maplibregl.NavigationControl({showCompass:false}),"top-right");
+    m.on("styledata",()=>paint(m));
+    const bounds=new maplibregl.LngLatBounds();
+    d.jobs.forEach(j=>{
+      const el=document.createElement("button");el.type="button";el.className="jm-photo";el.setAttribute("aria-label",j.n+", "+j.p);
+      el.innerHTML=`<img src="${esc2(j.i)}" alt="" loading="lazy"><i></i>`;
+      const pop=new maplibregl.Popup({offset:28,closeButton:true,maxWidth:"260px",className:"jm-popup"})
+        .setHTML(`<a class="jm-pop" href="${esc2(j.u)}"><img src="${esc2(j.i)}" alt=""><span><small>${esc2(j.t)}</small><b>${esc2(j.n)}</b><em>${esc2(j.p)}</em><u>see the job →</u></span></a>`);
+      new maplibregl.Marker({element:el,anchor:"bottom"}).setLngLat([j.lng,j.lat]).setPopup(pop).addTo(m);
+      if(j.lat>54.3&&j.lat<55.8&&j.lng>-2.6&&j.lng<-1)bounds.extend([j.lng,j.lat]);
+    });
+    if(d.hq){const el=document.createElement("button");el.type="button";el.className="jm-hq2";el.setAttribute("aria-label","Onesign & Digital HQ, Team Valley");
+      el.innerHTML=`<span class="jm-hq2-badge">${MARK}<span><b>Onesign HQ</b><small>Team Valley, Gateshead</small></span></span><span class="jm-hq2-dot"></span>`;
+      const pop=new maplibregl.Popup({offset:34,maxWidth:"280px",className:"jm-popup"}).setHTML('<div class="jm-pop hq"><span><small>Our workshop &amp; showroom</small><b>Onesign &amp; Digital</b><em>D86 Princesway North, Team Valley, Gateshead NE11 0TU</em><em>Mon–Thu 7:00–16:00 · Fri 7:00–12:00</em><a href="https://www.google.com/maps/dir/?api=1&destination=54.9330,-1.6237" target="_blank" rel="noopener">get directions →</a></span></div>');
+      new maplibregl.Marker({element:el,anchor:"bottom"}).setLngLat([d.hq[1],d.hq[0]]).setPopup(pop).addTo(m);
+      if(!d.area)bounds.extend([d.hq[1],d.hq[0]])}
+    m.on("load",()=>{paint(m);if(!isHQ&&!bounds.isEmpty())m.fitBounds(bounds,{padding:{top:60,bottom:30,left:40,right:40},maxZoom:13.5,duration:0})});
+    if(!isHQ){const tag=document.createElement("div");tag.className="jm-count";tag.innerHTML=`<b>${d.jobs.length}</b> ${d.jobs.length===1?"job":"jobs"} on the map · tap a photo`;box.appendChild(tag)}
   };
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);
-    need().then(()=>build(e.target)).catch(()=>{e.target.querySelector(".jm-fallback span").textContent="The map could not load. Our address is D86 Princesway North, Team Valley, Gateshead NE11 0TU."})}),{rootMargin:"300px"});
+    need().then(()=>build(e.target)).catch(()=>{const f=e.target.querySelector(".jm-fallback span");if(f)f.textContent="The map could not load. Our address is D86 Princesway North, Team Valley, Gateshead NE11 0TU."})}),{rootMargin:"300px"});
   maps.forEach(b=>io.observe(b));
 })();

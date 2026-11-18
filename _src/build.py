@@ -406,6 +406,14 @@ def map_block(r, area=None, cls="", hq=True, title=None):
     data = {"hq": list(HQ) if hq else None, "jobs": jobs, "area": area}
     return (f'<div class="jobmap {cls}" data-map=\'{json.dumps(data, ensure_ascii=False).replace(chr(39), "&#39;")}\' role="region" aria-label="{E(title or "Map of signs we have fitted")}">'
             f'<div class="jm-fallback"><b>{len(jobs)} jobs on the map</b><span>Loading map…</span></div></div>')
+def all_type_cards(r, cases):
+    """Every sign type as a card; the photo comes from one of the given jobs when one used that type."""
+    used, out = set(), []
+    for t in TYPES:
+        img = next((c["hero"] for c in cases if t["slug"] in (c.get("types") or []) and c["hero"] not in used), t["hero"])
+        used.add(img)
+        out.append(link_card(f'{r}signs/{t["slug"]}.html', img, t["label"], t["desc"][:96].rsplit(" ", 1)[0] + "…"))
+    return f'<div class="cards3">{"".join(out)}</div>'
 def area_chips(r, skip=None):
     return "".join(f'<a href="{r}areas/{a["slug"]}.html">Sign makers in {E(a["short"])}</a>' for a in AREAS if a["slug"] != skip) + f'<a href="{r}nationwide-signage.html">Nationwide</a>'
 ILLUMINATED = {"3d-letters","backlit-panels","light-boxes","flex-faces","neon-led-neon","high-level-signs","projecting-signs","totems-monoliths"}
@@ -501,7 +509,7 @@ def type_page(t):
 def sector_page(s):
     r = "../"; TS = types_by_slug()
     url = f"{SITE_URL}/sectors/{s['slug']}"
-    tcards = "".join(link_card(f'../signs/{x}.html', TS[x]["hero"], TS[x]["label"], TS[x]["desc"][:96].rsplit(" ",1)[0]+"…") for x in s["types"])
+    tcards = all_type_cards(r, [c for c in CASES if c.get("sector") == s["slug"]])
     points = "".join(f'<div class="point"><h3>{E(a)}</h3><p>{E(b)}</p></div>' for a,b in s["points"])
     others = "".join(f'<a href="{o["slug"]}.html">{E(o["name"])}</a>' for o in SECTORS if o["slug"]!=s["slug"])
     cs = cases_for(sector=s["slug"])
@@ -513,8 +521,8 @@ def sector_page(s):
   <div class="points">{points}</div>
 </div></section>
 <section class="sec alt"><div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">What we make</span><h2 class="h2 rv">signs we make for {E(s["name"])}.</h2></div></div>
-  <div class="cards3">{tcards}</div>
+  <div class="sec-head"><div><span class="eyebrow">What we make</span><h2 class="h2 rv">every sign type, for {E(s["name"])}.</h2></div><p class="lede rv">We make all fifteen in-house. Where we have fitted one for a {E(s["name"])} client, that is the photo you see.</p></div>
+  {tcards}
 </div></section>
 <section class="sec"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Fitted by us</span><h2 class="h2 rv">recent {E(s["name"])} work.</h2></div><p class="lede rv">Tap any photo to see it full size.</p></div>

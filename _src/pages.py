@@ -5,7 +5,7 @@ Run this file to build the whole site into ../site."""
 import hashlib, json, os, shutil
 import build as B
 from build import (E, pic, wix, og, cap, pos, page, phero, gallery, link_card, cta, crumbs_ld, case_card, guide_card,
-                   area_chips, tcap, map_block, LOC, TYPES, SECTORS, CASES, AREAS, GUIDES, REVIEWS, SITE_URL, MINI_STEPS, CASE)
+                   area_chips, tcap, map_block, LOC, all_type_cards, TYPES, SECTORS, CASES, AREAS, GUIDES, REVIEWS, SITE_URL, MINI_STEPS, CASE)
 
 TS = {t["slug"]: t for t in TYPES}
 SS = {s["slug"]: s for s in SECTORS}
@@ -153,9 +153,8 @@ def area_page(a):
 </div></section>
 {proof_html}
 <section class="sec"><div class="wrap">
-  {head("What we make", f"signs for {E(a['short'])} businesses.", "Every type is designed, made and fitted by our own team.")}
-  <div class="cards3">{"".join(type_card(t, r) for t in KEY_TYPES)}</div>
-  <div class="chips-row" style="margin-top:22px">{rest}</div>
+  {head("What we make", f"every sign type, for {E(a['short'])}.", "All fifteen are designed, made and fitted by our own team. Photos are from jobs near you where we have them.")}
+  {all_type_cards(r, [CASE[s] for s in picked if s in CASE])}
 </div></section>
 <section class="sec alt"><div class="wrap">
   {head("Our signs", "a few we have made.", "Tap any photo to see it full size.")}

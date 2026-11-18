@@ -2759,3 +2759,25 @@ None,
 }
 for _c in CASES:
     if _c['slug'] in LOC and not _c.get('where'): _c['where'] = LOC[_c['slug']][0]
+
+# ---- location corrections from address lookups (18 Nov). Postcode centroids from the ONS postcode list.
+for _s in ["mapleleaf-express", "the-works", "alba", "pantera-advisory", "pickle-and-peach"]:
+    LOC.pop(_s, None)   # photo GPS did not match where the sign is; left off until confirmed
+LOC.update({
+ "trident-fire": ["Washington", "sunderland", 54.89287, -1.50744, "address"],
+ "cod-and-crust": ["Sunderland", "sunderland", 54.91687, -1.44066, "address"],
+ "renewable-energy": ["Sunderland Enterprise Park", "sunderland", 54.91835, -1.41504, "address"],
+ "skin-and-soul": ["Roker, Sunderland", "sunderland", 54.93000, -1.37834, "address"],
+ "rustic-cup": ["Whitley Bay", None, 55.04206, -1.44876, "address"],
+ "recite-me": ["Baltic Business Quarter, Gateshead", "gateshead", 54.96660, -1.59546, "address"],
+ "qe-facilities": ["Queen Elizabeth Hospital, Gateshead", "gateshead", 54.93938, -1.58078, "address"],
+ "north-shore": ["Grainger Market, Newcastle", "newcastle", 54.97160, -1.61600, "address"],
+ "filto": ["Fenwick, Newcastle", "newcastle", 54.97604, -1.61360, "address"],
+ "merz-court": ["Newcastle University", "newcastle", 54.98032, -1.61571, "address"],
+ "workwear-express": ["Belmont, Durham", "durham", 54.78832, -1.53677, "address"],
+ "newstreet": ["Durham", "durham", 54.77519, -1.58669, "address"],
+ "fabios": ["Saddler Street, Durham", "durham", 54.77639, -1.57532, "address"],
+})
+for _c in CASES:
+    if _c["slug"] in LOC: _c["where"] = LOC[_c["slug"]][0]
+    elif _c["slug"] in ["mapleleaf-express", "the-works", "alba", "pantera-advisory", "pickle-and-peach"]: _c["where"] = None

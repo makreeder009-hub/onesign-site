@@ -334,7 +334,7 @@ html,body{overflow-x:clip}
 @keyframes hqPulse{0%{box-shadow:0 0 0 0 rgba(17,20,21,.45),0 4px 14px rgba(0,0,0,.4)}70%{box-shadow:0 0 0 18px rgba(17,20,21,0),0 4px 14px rgba(0,0,0,.4)}100%{box-shadow:0 0 0 0 rgba(17,20,21,0),0 4px 14px rgba(0,0,0,.4)}}
 @media (prefers-reduced-motion:reduce){.jm-hq-dot{animation:none}}
 .jobmap .leaflet-popup-content-wrapper{border-radius:14px;padding:0;overflow:hidden}
-.jobmap .leaflet-popup-content{margin:0;width:auto!important}
+.jobmap .leaflet-popup-content{margin:0;width:240px!important}
 .jm-pop{display:flex;flex-direction:column;text-decoration:none;color:#111415;font-family:var(--f-body)}
 .jm-pop img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
 .jm-pop span{display:grid;gap:3px;padding:11px 14px 13px}

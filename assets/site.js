@@ -299,7 +299,7 @@ addEventListener("load",()=>ScrollTrigger.refresh());
 })();
 
 /* ---------- job maps (Leaflet, loaded only when a map comes near the screen) ---------- */
-(()=>{const maps=$$(".jobmap[data-map]");if(!maps.length)return;
+(()=>{const maps=[...document.querySelectorAll(".jobmap[data-map]")];if(!maps.length)return;
   let loading=null;
   const need=()=>loading||(loading=new Promise((ok,no)=>{
     const css=document.createElement("link");css.rel="stylesheet";css.href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";document.head.appendChild(css);

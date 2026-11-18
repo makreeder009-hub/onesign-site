@@ -598,7 +598,10 @@ GUIDES = [
 ]
 
 # ---- type and hero corrections (checked photo by photo, Nov 2026)
-_FIX_TYPES = {"glow-tanning": ["flat-cut-letters", "vinyl-wall-graphics", "wayfinding"],
+_FIX_TYPES = {"glow-tanning": ["3d-letters", "vinyl-wall-graphics", "wayfinding"],
+              "cod-and-crust": ["backlit-panels"],
+              "blacks-corner": ["3d-letters", "projecting-signs"],
+              "welcome-to-durham": ["flags-banners"],
               "dolled-up-luxe": ["flat-cut-letters"],
               "the-works": ["3d-letters", "projecting-signs"]}
 _FIX_HERO = {"aldi-jaymac-warehouse": "aldi_bld", "mapleleaf-express": "p_ml_auto"}
@@ -1691,3 +1694,6 @@ for _c in NEW2:
     _c["photos"] = [p for p in _c["photos"] if p not in _DROP]
     _c["making"] = [p for p in _c["making"] if p not in _DROP]
     if _c["hero"] in _DROP: _c["hero"] = _c["photos"][0]
+
+for _c in CASES:
+    if _c["slug"] == "dunelm-food-store": _c["types"] = ["3d-letters"]; _c["label"] = "3D letter fascia"

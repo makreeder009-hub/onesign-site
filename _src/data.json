@@ -137,7 +137,7 @@
   ],
   "glow": [
    "c5609ebee285428a90d432dc37239297~mv2.jpg",
-   "glow.: flat-cut letters on a fascia panel",
+   "glow.: 3D letters on the fascia",
    "50% 50%"
   ],
   "glow_ext": [
@@ -147,7 +147,7 @@
   ],
   "glow_night": [
    "c33d3038684948909f7828e52d66d941~mv2.jpg",
-   "glow. fascia after dark",
+   "glow.: 3D letters on the fascia at dusk",
    "50% 50%"
   ],
   "ncl": [
@@ -452,7 +452,7 @@
   ],
   "ig_byre": [
    "local:3d-byre",
-   "BYRE: 3D letters",
+   "BYRE: illuminated letters",
    "50% 50%"
   ],
   "ig_maple": [
@@ -962,7 +962,7 @@
   ],
   "n_glow_wall": [
    "new:glow-wall",
-   "glow.: flat-cut letters on a slatted wall",
+   "glow.: 3D letters on a slatted wall",
    "50% 50%"
   ],
   "n_vivana_fascia": [
@@ -1407,7 +1407,7 @@
   ],
   "p_bc_roundel": [
    "new:p_bc_roundel",
-   "Blacks Corner: illuminated roundel",
+   "Blacks Corner: illuminated projecting roundel",
    "50% 50%"
   ],
   "p_bc_shelf": [
@@ -1492,7 +1492,7 @@
   ],
   "p_cc_proj": [
    "new:p_cc_proj",
-   "Cod & Crust: projecting sign",
+   "Cod & Crust: logo sign",
    "50% 50%"
   ],
   "p_cc_street": [
@@ -2892,10 +2892,11 @@
    "hero": "n_thatype",
    "photos": [
     "n_thatype",
+    "glow_night",
     "p_tr_halo",
     "p_rm_main",
     "p_ws_front",
-    "p_gm_main",
+    "n_grainger",
     "p_wr_brick",
     "p_kk_front",
     "p_g_baxters",
@@ -2940,7 +2941,8 @@
     "p_x_aykleygrou_0",
     "p_x_menu_0",
     "p_x_tipsy_0",
-    "p_x_copelandre_0"
+    "p_x_copelandre_0",
+    "p_x_dunelmfood_0"
    ],
    "desc": "Letters with real depth that stand proud of the wall. We make three kinds: fabricated metal letters (aluminium, stainless, copper or brass), Komacel letters and acrylic letters, fixed straight to the wall on stand-off locators or mounted on a panel.",
    "ideal": [
@@ -3106,8 +3108,6 @@
     "p_arv_logo",
     "p_pa_rec",
     "p_kk_int",
-    "glow",
-    "n_glow_wall",
     "n_jaymac_logo",
     "n_quality",
     "n_fora",
@@ -3242,12 +3242,12 @@
    "photos": [
     "ig_corner",
     "p_ch_main",
-    "p_qh_proj",
-    "p_cc_proj",
+    "p_qh_porters",
     "p_sv_proj",
     "p_sm_proj",
     "works",
-    "p_x_skinandsou_3"
+    "p_x_skinandsou_3",
+    "p_bc_roundel"
    ],
    "desc": "Double-sided signs that stick out from the building, so people walking along the street see you, not just those standing in front. Round, square or fully bespoke.",
    "ideal": [
@@ -3299,7 +3299,6 @@
    "hero": "ig_gavroche",
    "photos": [
     "ig_gavroche",
-    "p_bc_roundel",
     "rascals_proj"
    ],
    "desc": "A light box is an aluminium box with an acrylic face, lit evenly from inside by LEDs. Light boxes are generally smaller signs, ideal for shopfronts, projecting signs and anywhere the whole face should glow.",
@@ -3415,7 +3414,7 @@
     "p_sun_neon",
     "ig_dubliner",
     "n_skinsoul_neon",
-    "ig_neon_red",
+    "ig_byre",
     "ig_leancuisine",
     "welcome_neon",
     "ig_pudes",
@@ -3565,7 +3564,6 @@
    "hero": "hoarding",
    "photos": [
     "hoarding",
-    "p_du_banner",
     "p_cs_hoard",
     "p_g_fab",
     "p_sm_front",
@@ -3573,8 +3571,7 @@
     "n_jet2_ceiling",
     "print_fruit",
     "fence_banner",
-    "bowmer",
-    "p_x_dunelmfood_0"
+    "bowmer"
    ],
    "desc": "Big, bold, colour-matched print from our own wide-format printers: hoardings, printed LED ceiling panels, posters, window graphics and display boards, printed and finished in-house so turnaround stays fast.",
    "ideal": [
@@ -3625,7 +3622,8 @@
    "meta": "Printed feather flags, mesh fence banners, PVC banners and pop-up banners from Onesign's in-house print room in Gateshead.",
    "hero": "ig_kier",
    "photos": [
-    "ig_kier"
+    "ig_kier",
+    "p_du_banner"
    ],
    "desc": "Printed flags and banners for events, sites and shopfronts: feather and teardrop flags, mesh fence banners, PVC banners and pop-up banners, printed in-house and supplied with the hardware to put them up.",
    "ideal": [

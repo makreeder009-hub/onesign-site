@@ -3474,6 +3474,121 @@
    "new:p_seh_09751",
    "Sunderland Eye Hospital: main entrance and Main Entrance letters",
    "60% 55%"
+  ],
+  "p_seh_00003": [
+   "new:p_seh_00003",
+   "Sunderland Eye Hospital: Queen Alexandra Ward entrance lettering",
+   "50% 50%"
+  ],
+  "p_seh_00012": [
+   "new:p_seh_00012",
+   "Sunderland Eye Hospital: Surgical Day Unit lettering over the doors",
+   "50% 50%"
+  ],
+  "p_seh_00015": [
+   "new:p_seh_00015",
+   "Sunderland Eye Hospital: Accessible toilet door sign",
+   "50% 50%"
+  ],
+  "p_seh_00033": [
+   "new:p_seh_00033",
+   "Sunderland Eye Hospital: Corridor with suspended directional signs",
+   "50% 50%"
+  ],
+  "p_seh_00045": [
+   "new:p_seh_00045",
+   "Sunderland Eye Hospital: Room 4 door sign",
+   "50% 50%"
+  ],
+  "p_seh_00051": [
+   "new:p_seh_00051",
+   "Sunderland Eye Hospital: Lift lobby floor directory",
+   "50% 50%"
+  ],
+  "p_seh_00066": [
+   "new:p_seh_00066",
+   "Sunderland Eye Hospital: Staircase 1 lettering",
+   "50% 50%"
+  ],
+  "p_seh_00078b": [
+   "new:p_seh_00078b",
+   "Sunderland Eye Hospital: Children’s Waiting suspended sign",
+   "50% 50%"
+  ],
+  "p_seh_00095b": [
+   "new:p_seh_00095b",
+   "Sunderland Eye Hospital: Corridor of projecting room signs",
+   "50% 50%"
+  ],
+  "p_seh_00109b": [
+   "new:p_seh_00109b",
+   "Sunderland Eye Hospital: Waiting 4 sign on the green feature wall",
+   "50% 50%"
+  ],
+  "p_seh_00120": [
+   "new:p_seh_00120",
+   "Sunderland Eye Hospital: Reception and toilets wall lettering",
+   "50% 50%"
+  ],
+  "p_seh_00122": [
+   "new:p_seh_00122",
+   "Sunderland Eye Hospital: Green lift lobby with floor directory",
+   "50% 50%"
+  ],
+  "p_seh_00142": [
+   "new:p_seh_00142",
+   "Sunderland Eye Hospital: Café lettering",
+   "50% 50%"
+  ],
+  "p_seh_00153": [
+   "new:p_seh_00153",
+   "Sunderland Eye Hospital: Pharmacy Waiting suspended sign",
+   "50% 50%"
+  ],
+  "p_seh_09767": [
+   "new:p_seh_09767",
+   "Sunderland Eye Hospital: Ground floor lift identifier",
+   "50% 50%"
+  ],
+  "p_seh_09787": [
+   "new:p_seh_09787",
+   "Sunderland Eye Hospital: Infant Feeding projecting sign",
+   "50% 50%"
+  ],
+  "p_seh_09793": [
+   "new:p_seh_09793",
+   "Sunderland Eye Hospital: Accessible WC and changing place signs",
+   "50% 50%"
+  ],
+  "p_seh_09822": [
+   "new:p_seh_09822",
+   "Sunderland Eye Hospital: Medical Physics door sign",
+   "50% 50%"
+  ],
+  "p_seh_09839": [
+   "new:p_seh_09839",
+   "Sunderland Eye Hospital: Floor roundel and directory close up",
+   "50% 50%"
+  ],
+  "p_seh_09893": [
+   "new:p_seh_09893",
+   "Sunderland Eye Hospital: Welcome to the Cataract Treatment Centre reception",
+   "50% 50%"
+  ],
+  "p_seh_09899": [
+   "new:p_seh_09899",
+   "Sunderland Eye Hospital: Floor 3 lift identifier on orange",
+   "50% 50%"
+  ],
+  "p_seh_09971": [
+   "new:p_seh_09971",
+   "Sunderland Eye Hospital: Suspended Reception sign",
+   "50% 50%"
+  ],
+  "p_seh_09981": [
+   "new:p_seh_09981",
+   "Sunderland Eye Hospital: Treatment Investigation Unit lettering",
+   "50% 50%"
   ]
  },
  "TYPES": [
@@ -4436,7 +4551,11 @@
     "p_seh_09861",
     "p_seh_00086b",
     "p_seh_00084b",
-    "p_seh_09795"
+    "p_seh_09795",
+    "p_seh_00095b",
+    "p_seh_09787",
+    "p_seh_00033",
+    "p_seh_09839"
    ],
    "desc": "Sign families that get people where they need to be, from the car park to the right room. Planned around how your site is used, and built to accessibility standards.",
    "ideal": [

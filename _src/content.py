@@ -2811,3 +2811,7 @@ CASES.append(dict(slug="thatype", old=None, name="Thatype", where="Fenwick, Newc
     result="A sign that reads beautifully from across the food hall.",
     photos=["n_thatype", "n_fitt_int"], making=[]))
 LOC["thatype"] = ["Fenwick, Newcastle", "newcastle", 54.97604, -1.61360, "address"]
+
+for _c in CASES:
+    if _c["slug"] == "sunderland-eye-hospital":
+        _c["hero"] = "p_seh_09751"; _c["photos"] = ["p_seh_09751"] + [p for p in _c["photos"] if p != "p_seh_09751"]

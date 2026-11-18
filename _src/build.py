@@ -16,7 +16,7 @@ IMG = {k: tuple(v) for k, v in IMG.items()}
 for _s in SECTORS: _s["points"] = [tuple(p) for p in _s["points"]]
 # the same photo saved twice under two names: always show one of them
 ALIAS = {"ncl":"hero", "ig_totem_dir":"ng_totem", "ig_queenshead":"n_queens", "n_whiteswan":"p_ws_side",
-         "ws_weld2":"weld", "ig_smartvape":"p_sm_proj", "p_cork_new":"cork", "sun_totem":"p_sun_totem2",
+         "ws_weld2":"weld", "ig_smartvape":"p_sm_proj", "p_cork_new":"cork", "p_sun_totem2":"sun_totem",
          "p_vv_ext":"n_vivana", "ig_wrgroup":"p_wr_brick", "p_gm_2":"p_gm_main", "p_cdc_ent":"hc_cdc2"}
 def canon(o):
     if isinstance(o, str): return ALIAS.get(o, o)
@@ -31,6 +31,26 @@ def canon(o):
     return o
 TYPES = canon(TYPES); SECTORS = canon(SECTORS); PROJECTS = canon(PROJECTS); REEL_A = canon(REEL_A); REEL_B = [k for k in canon(REEL_B) if k not in REEL_A]
 for _s in SECTORS: _s["points"] = [tuple(p) for p in _s["points"]]
+# Sign-type hero photos chosen by Mak. LOCKED: do not change these when adding photos or rebuilding.
+LOCKED_HEROES = {
+ "3d-letters": "n_thatype",
+ "backlit-panels": "st_sign",
+ "flat-cut-letters": "ig_durham",
+ "high-level-signs": "rolls",
+ "projecting-signs": "ig_corner",
+ "light-boxes": "ig_gavroche",
+ "flex-faces": "n_kosmic",
+ "neon-led-neon": "neonB",
+ "vinyl-wall-graphics": "ig_lineart",
+ "digital-large-format-print": "hoarding",
+ "flags-banners": "ig_kier",
+ "totems-monoliths": "sun_totem",
+ "wayfinding": "way_g",
+ "vehicle-graphics": "ig_park2"
+}
+for _t in TYPES:
+    _t["hero"] = LOCKED_HEROES[_t["slug"]]
+    _t["photos"] = [_t["hero"]] + [p for p in _t["photos"] if p != _t["hero"]]
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
@@ -561,14 +581,13 @@ def home_page():
             out += f'<figure{" aria-hidden=\"true\"" if dup else ""}>{pic(k, "(max-width:700px) 70vw, 380px", alt="" if dup else cap(k), style="object-position:"+pos(k), widths=(480,960))}<figcaption>{E(cap(k))}</figcaption></figure>'
         return out
     LINK = {"st_sign":"work/bar-seventy-three.html","vertu":"work/vertu-motors-arena.html","n_jet2":"work/jet2-dawson-sanderson.html","nhs":"work/nhs-community-diagnostic-centre.html",
-            "uni_entry":"work/newcastle-university.html","aldi":"work/aldi-jaymac-warehouse.html","n_thatype":"signs/3d-letters.html","n_superpower_wide":"work/superpower-metrocentre.html"}
+            "uni_entry":"work/newcastle-university.html","aldi_bld":"work/aldi-jaymac-warehouse.html","n_thatype":"signs/3d-letters.html","n_superpower_wide":"work/superpower-metrocentre.html"}
     tiles = ""
     for i,p in enumerate(PROJECTS):
-        big = i==0
-        sz = "(max-width:900px) 92vw, 50vw" if big else "(max-width:900px) 92vw, 33vw"
-        media = (f'<div class="frame tile-img"><img class="b" alt="" loading="lazy" src="{wix(p["k"],80,60)}">{pic(p["k"], sz, cls="f", alt=p["name"]+" sign by Onesign")}</div>' if p.get("fit") else
-                 pic(p["k"], sz, alt=p["name"]+" sign by Onesign", style="object-position:"+pos(p["k"])))
-        tiles += f'<a class="tile" href="{LINK[p["k"]]}">{media}<div class="tile-info"><div><small>{E(p["label"])}</small><h3>{E(p["name"])}</h3></div><span class="go" aria-hidden="true">→</span></div></a>'
+        w, h = dims(p["k"]); ar = w / h
+        # each tile takes the photo's own shape, so the photo fills it with nothing cut off
+        media = pic(p["k"], "(max-width:700px) 92vw, 45vw", alt=p["name"]+" sign by Onesign")
+        tiles += f'<a class="tile jt" style="--ar:{ar:.4f};aspect-ratio:{w}/{h}" href="{LINK[p["k"]]}">{media}<div class="tile-info"><div><small>{E(p["label"])}</small><h3>{E(p["name"])}</h3></div><span class="go" aria-hidden="true">→</span></div></a>'
     HERO = [("hero","Newcastle University","Illuminated building sign","work/newcastle-university.html"),
             ("vertu_night","Vertu Motors Arena","High-level illuminated letters","work/vertu-motors-arena.html"),
             ("n_thatype","Thatype","Halo-lit script letters","signs/3d-letters.html"),
@@ -687,7 +706,7 @@ def home_page():
       <div><span class="eyebrow">Our work</span><h2 class="h2 rv">recent statements.</h2></div>
       <a class="pill pill-ghost" href="work/index.html">all case studies <span class="dot">→</span></a>
     </div>
-    <div class="bento">{tiles}</div>
+    <div class="jgrid">{tiles}</div>
   </div>
 </section>
 <section class="sectors" id="sectors">

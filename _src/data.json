@@ -2354,6 +2354,531 @@
    "new:p_g_camden",
    "The Camden Clinic: 3D letters",
    "50% 50%"
+  ],
+  "p_x_kink_0": [
+   "new:p_x_kink_0",
+   "Kink: 3D letters on the fascia",
+   "50% 50%"
+  ],
+  "p_x_kink_1": [
+   "new:p_x_kink_1",
+   "Kink: 3D letters on the fascia",
+   "50% 50%"
+  ],
+  "p_x_kink_2": [
+   "new:p_x_kink_2",
+   "Kink: 3D letters on the fascia",
+   "50% 50%"
+  ],
+  "p_x_kink_3": [
+   "new:p_x_kink_3",
+   "Kink: 3D letters on the fascia",
+   "50% 50%"
+  ],
+  "p_x_skinandsou_0": [
+   "new:p_x_skinandsou_0",
+   "Skin & Soul Medical",
+   "50% 50%"
+  ],
+  "p_x_skinandsou_1": [
+   "new:p_x_skinandsou_1",
+   "Skin & Soul Medical",
+   "50% 50%"
+  ],
+  "p_x_skinandsou_2": [
+   "new:p_x_skinandsou_2",
+   "Skin & Soul Medical",
+   "50% 50%"
+  ],
+  "p_x_skinandsou_3": [
+   "new:p_x_skinandsou_3",
+   "Skin & Soul Medical",
+   "50% 50%"
+  ],
+  "p_x_skinandsou_4": [
+   "new:p_x_skinandsou_4",
+   "Skin & Soul Medical",
+   "50% 50%"
+  ],
+  "p_x_skinandsou_5": [
+   "new:p_x_skinandsou_5",
+   "Skin & Soul Medical",
+   "50% 50%"
+  ],
+  "p_x_fikaaesthe_0": [
+   "new:p_x_fikaaesthe_0",
+   "FIKA Aesthetics: flat-cut lettering",
+   "50% 50%"
+  ],
+  "p_x_fikaaesthe_1": [
+   "new:p_x_fikaaesthe_1",
+   "FIKA Aesthetics: flat-cut lettering",
+   "50% 50%"
+  ],
+  "p_x_fikaaesthe_2": [
+   "new:p_x_fikaaesthe_2",
+   "FIKA Aesthetics: flat-cut lettering",
+   "50% 50%"
+  ],
+  "p_x_fora_0": [
+   "new:p_x_fora_0",
+   "Fora: flat-cut lettering",
+   "50% 50%"
+  ],
+  "p_x_goodlashga_0": [
+   "new:p_x_goodlashga_0",
+   "The Good Lash Gang: LED neon",
+   "50% 50%"
+  ],
+  "p_x_goodlashga_1": [
+   "new:p_x_goodlashga_1",
+   "The Good Lash Gang: LED neon",
+   "50% 50%"
+  ],
+  "p_x_camdenclin_0": [
+   "new:p_x_camdenclin_0",
+   "The Camden Clinic: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_camdenclin_1": [
+   "new:p_x_camdenclin_1",
+   "The Camden Clinic: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_camdenclin_2": [
+   "new:p_x_camdenclin_2",
+   "The Camden Clinic: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_zen_0": [
+   "new:p_x_zen_0",
+   "Zen: window graphics",
+   "50% 50%"
+  ],
+  "p_x_zen_2": [
+   "new:p_x_zen_2",
+   "Zen: window graphics",
+   "50% 50%"
+  ],
+  "p_x_zen_3": [
+   "new:p_x_zen_3",
+   "Zen: window graphics",
+   "50% 50%"
+  ],
+  "p_x_zen_4": [
+   "new:p_x_zen_4",
+   "Zen: window graphics",
+   "50% 50%"
+  ],
+  "p_x_zen_5": [
+   "new:p_x_zen_5",
+   "Zen: window graphics",
+   "50% 50%"
+  ],
+  "p_x_zen_6": [
+   "new:p_x_zen_6",
+   "Zen: window graphics",
+   "50% 50%"
+  ],
+  "p_x_baxters_0": [
+   "new:p_x_baxters_0",
+   "Baxter's: 3D script letters",
+   "50% 50%"
+  ],
+  "p_x_baxters_1": [
+   "new:p_x_baxters_1",
+   "Baxter's: 3D script letters",
+   "50% 50%"
+  ],
+  "p_x_baxters_2": [
+   "new:p_x_baxters_2",
+   "Baxter's: 3D script letters",
+   "50% 50%"
+  ],
+  "p_x_renewablee_0": [
+   "new:p_x_renewablee_0",
+   "Renewable Energy Management: halo-lit letters",
+   "50% 50%"
+  ],
+  "p_x_renewablee_1": [
+   "new:p_x_renewablee_1",
+   "Renewable Energy Management: halo-lit letters",
+   "50% 50%"
+  ],
+  "p_x_renewablee_m0": [
+   "new:p_x_renewablee_m0",
+   "Renewable Energy Management: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_renewablee_m1": [
+   "new:p_x_renewablee_m1",
+   "Renewable Energy Management: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_workwearex_0": [
+   "new:p_x_workwearex_0",
+   "Workwear Express: office wall graphics",
+   "50% 50%"
+  ],
+  "p_x_workwearex_1": [
+   "new:p_x_workwearex_1",
+   "Workwear Express: office wall graphics",
+   "50% 50%"
+  ],
+  "p_x_workwearex_2": [
+   "new:p_x_workwearex_2",
+   "Workwear Express: office wall graphics",
+   "50% 50%"
+  ],
+  "p_x_workwearex_3": [
+   "new:p_x_workwearex_3",
+   "Workwear Express: office wall graphics",
+   "50% 50%"
+  ],
+  "p_x_workwearex_4": [
+   "new:p_x_workwearex_4",
+   "Workwear Express: office wall graphics",
+   "50% 50%"
+  ],
+  "p_x_workwearex_5": [
+   "new:p_x_workwearex_5",
+   "Workwear Express: office wall graphics",
+   "50% 50%"
+  ],
+  "p_x_lomond_0": [
+   "new:p_x_lomond_0",
+   "Lomond: van graphics",
+   "50% 50%"
+  ],
+  "p_x_parkelectr_0": [
+   "new:p_x_parkelectr_0",
+   "Park Electrical: van graphics",
+   "50% 50%"
+  ],
+  "p_x_aykleygrou_0": [
+   "new:p_x_aykleygrou_0",
+   "Aykley Group: lettering",
+   "50% 50%"
+  ],
+  "p_x_aykleygrou_1": [
+   "new:p_x_aykleygrou_1",
+   "Aykley Group: lettering",
+   "50% 50%"
+  ],
+  "p_x_dunelmfood_0": [
+   "new:p_x_dunelmfood_0",
+   "Dunelm Food Store: fascia and windows",
+   "50% 50%"
+  ],
+  "p_x_dunelmfood_1": [
+   "new:p_x_dunelmfood_1",
+   "Dunelm Food Store: fascia and windows",
+   "50% 50%"
+  ],
+  "p_x_maker_0": [
+   "new:p_x_maker_0",
+   "Maker: window graphics",
+   "50% 50%"
+  ],
+  "p_x_maker_1": [
+   "new:p_x_maker_1",
+   "Maker: window graphics",
+   "50% 50%"
+  ],
+  "p_x_maker_2": [
+   "new:p_x_maker_2",
+   "Maker: window graphics",
+   "50% 50%"
+  ],
+  "p_x_maker_3": [
+   "new:p_x_maker_3",
+   "Maker: window graphics",
+   "50% 50%"
+  ],
+  "p_x_barmarquee_0": [
+   "new:p_x_barmarquee_0",
+   "BAR: marquee letters",
+   "50% 50%"
+  ],
+  "p_x_barmarquee_1": [
+   "new:p_x_barmarquee_1",
+   "BAR: marquee letters",
+   "50% 50%"
+  ],
+  "p_x_barmarquee_2": [
+   "new:p_x_barmarquee_2",
+   "BAR: marquee letters",
+   "50% 50%"
+  ],
+  "p_x_barmarquee_3": [
+   "new:p_x_barmarquee_3",
+   "BAR: marquee letters",
+   "50% 50%"
+  ],
+  "p_x_legavroche_0": [
+   "new:p_x_legavroche_0",
+   "Le Gavroche: light box",
+   "50% 50%"
+  ],
+  "p_x_menu_0": [
+   "new:p_x_menu_0",
+   "Menu: illuminated lettering",
+   "50% 50%"
+  ],
+  "p_x_menu_1": [
+   "new:p_x_menu_1",
+   "Menu: illuminated lettering",
+   "50% 50%"
+  ],
+  "p_x_menu_2": [
+   "new:p_x_menu_2",
+   "Menu: illuminated lettering",
+   "50% 50%"
+  ],
+  "p_x_menu_3": [
+   "new:p_x_menu_3",
+   "Menu: illuminated lettering",
+   "50% 50%"
+  ],
+  "p_x_menu_m0": [
+   "new:p_x_menu_m0",
+   "Menu: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_menu_m1": [
+   "new:p_x_menu_m1",
+   "Menu: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_menu_m2": [
+   "new:p_x_menu_m2",
+   "Menu: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_menu_m3": [
+   "new:p_x_menu_m3",
+   "Menu: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_thevault_0": [
+   "new:p_x_thevault_0",
+   "The Vault: halo-lit letters",
+   "50% 50%"
+  ],
+  "p_x_thevault_1": [
+   "new:p_x_thevault_1",
+   "The Vault: halo-lit letters",
+   "50% 50%"
+  ],
+  "p_x_thecove_0": [
+   "new:p_x_thecove_0",
+   "The Cove: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_thecove_1": [
+   "new:p_x_thecove_1",
+   "The Cove: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_thecove_m0": [
+   "new:p_x_thecove_m0",
+   "The Cove: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_thecove_m1": [
+   "new:p_x_thecove_m1",
+   "The Cove: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_thecove_m2": [
+   "new:p_x_thecove_m2",
+   "The Cove: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_thecove_m3": [
+   "new:p_x_thecove_m3",
+   "The Cove: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_thecove_m4": [
+   "new:p_x_thecove_m4",
+   "The Cove: in the workshop",
+   "50% 50%"
+  ],
+  "p_x_bratzsalon_0": [
+   "new:p_x_bratzsalon_0",
+   "Bratz Salon: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_tipsy_0": [
+   "new:p_x_tipsy_0",
+   "Tipsy: lettering",
+   "50% 50%"
+  ],
+  "p_x_copelandre_0": [
+   "new:p_x_copelandre_0",
+   "Copeland Residential: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_copelandre_1": [
+   "new:p_x_copelandre_1",
+   "Copeland Residential: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_parmorama_0": [
+   "new:p_x_parmorama_0",
+   "Parm-o-rama: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_glostudios_0": [
+   "new:p_x_glostudios_0",
+   "Glo Studios: fascia",
+   "50% 50%"
+  ],
+  "p_x_dreamdolls_0": [
+   "new:p_x_dreamdolls_0",
+   "Dream Dolls: illuminated arch",
+   "50% 50%"
+  ],
+  "p_x_dreamdolls_1": [
+   "new:p_x_dreamdolls_1",
+   "Dream Dolls: illuminated arch",
+   "50% 50%"
+  ],
+  "p_x_mycarclean_0": [
+   "new:p_x_mycarclean_0",
+   "My Car Cleaning: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_merzcourt_0": [
+   "new:p_x_merzcourt_0",
+   "Merz Court: building sign",
+   "50% 50%"
+  ],
+  "p_x_originalsg_0": [
+   "new:p_x_originalsg_0",
+   "Originals Glow: illuminated fascia",
+   "50% 50%"
+  ],
+  "p_x_originalsg_1": [
+   "new:p_x_originalsg_1",
+   "Originals Glow: illuminated fascia",
+   "50% 50%"
+  ],
+  "p_x_originalsg_2": [
+   "new:p_x_originalsg_2",
+   "Originals Glow: illuminated fascia",
+   "50% 50%"
+  ],
+  "p_x_blackrabbi_0": [
+   "new:p_x_blackrabbi_0",
+   "Black Rabbit: fascia panel",
+   "50% 50%"
+  ],
+  "p_x_blackrabbi_1": [
+   "new:p_x_blackrabbi_1",
+   "Black Rabbit: fascia panel",
+   "50% 50%"
+  ],
+  "p_x_blackrabbi_2": [
+   "new:p_x_blackrabbi_2",
+   "Black Rabbit: fascia panel",
+   "50% 50%"
+  ],
+  "p_x_olivias_0": [
+   "new:p_x_olivias_0",
+   "Olivia's: fascia panel",
+   "50% 50%"
+  ],
+  "p_x_olivias_1": [
+   "new:p_x_olivias_1",
+   "Olivia's: fascia panel",
+   "50% 50%"
+  ],
+  "p_x_olivias_2": [
+   "new:p_x_olivias_2",
+   "Olivia's: fascia panel",
+   "50% 50%"
+  ],
+  "p_x_kissmeiris_0": [
+   "new:p_x_kissmeiris_0",
+   "Kiss Me I'm Irish: illuminated sign",
+   "50% 50%"
+  ],
+  "p_x_kissmeiris_1": [
+   "new:p_x_kissmeiris_1",
+   "Kiss Me I'm Irish: illuminated sign",
+   "50% 50%"
+  ],
+  "p_x_kissmeiris_2": [
+   "new:p_x_kissmeiris_2",
+   "Kiss Me I'm Irish: illuminated sign",
+   "50% 50%"
+  ],
+  "p_x_unstoppabl_0": [
+   "new:p_x_unstoppabl_0",
+   "Unstoppable HQ: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_unstoppabl_1": [
+   "new:p_x_unstoppabl_1",
+   "Unstoppable HQ: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_unstoppabl_2": [
+   "new:p_x_unstoppabl_2",
+   "Unstoppable HQ: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_combat96_0": [
+   "new:p_x_combat96_0",
+   "Combat 96: illuminated sign",
+   "50% 50%"
+  ],
+  "p_x_combat96_1": [
+   "new:p_x_combat96_1",
+   "Combat 96: illuminated sign",
+   "50% 50%"
+  ],
+  "p_x_combat96_2": [
+   "new:p_x_combat96_2",
+   "Combat 96: illuminated sign",
+   "50% 50%"
+  ],
+  "p_x_assenheims_0": [
+   "new:p_x_assenheims_0",
+   "Assenheims 56: laser-cut sign",
+   "50% 50%"
+  ],
+  "p_x_assenheims_1": [
+   "new:p_x_assenheims_1",
+   "Assenheims 56: laser-cut sign",
+   "50% 50%"
+  ],
+  "p_x_aspireheal_0": [
+   "new:p_x_aspireheal_0",
+   "Aspire Health Group: sign panel",
+   "50% 50%"
+  ],
+  "p_x_aspireheal_1": [
+   "new:p_x_aspireheal_1",
+   "Aspire Health Group: sign panel",
+   "50% 50%"
+  ],
+  "p_x_level_0": [
+   "new:p_x_level_0",
+   "Level: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_level_1": [
+   "new:p_x_level_1",
+   "Level: 3D letters",
+   "50% 50%"
+  ],
+  "p_x_noblescasi_0": [
+   "new:p_x_noblescasi_0",
+   "Nobles: fascia panel",
+   "50% 50%"
   ]
  },
  "TYPES": [
@@ -2364,8 +2889,9 @@
    "code": "OS-3D",
    "seo_title": "3D Letter Signs: Fabricated, Komacel & Acrylic",
    "meta": "Built-up 3D letter signs made in Gateshead: fabricated face-lit and halo-lit letters, Komacel letters with brass or mirror inlays, and acrylic letters. Fixed to the wall or on a panel.",
-   "hero": "p_tr_halo",
+   "hero": "n_thatype",
    "photos": [
+    "n_thatype",
     "p_tr_halo",
     "p_rm_main",
     "p_ws_front",
@@ -2389,7 +2915,6 @@
     "p_ml_auto",
     "p_pp_front",
     "p_jp_front",
-    "p_du_front",
     "p_r3_wall",
     "n_jet2",
     "vault",
@@ -2402,7 +2927,6 @@
     "n_act",
     "ig_zen",
     "n_court",
-    "n_thatype",
     "n_byre",
     "nhs_bld",
     "n_tribeca",
@@ -2411,9 +2935,12 @@
     "n_renew_close",
     "n_murphys",
     "n_aqua",
-    "ig_maple",
     "ig_atom",
-    "catalyst_l"
+    "catalyst_l",
+    "p_x_aykleygrou_0",
+    "p_x_menu_0",
+    "p_x_tipsy_0",
+    "p_x_copelandre_0"
    ],
    "desc": "Letters with real depth that stand proud of the wall. We make three kinds: fabricated metal letters (aluminium, stainless, copper or brass), Komacel letters and acrylic letters, fixed straight to the wall on stand-off locators or mounted on a panel.",
    "ideal": [
@@ -2509,10 +3036,10 @@
    "code": "OS-BP",
    "seo_title": "Backlit Panel Signs: Illuminated Aperture-Cut Panels",
    "meta": "Illuminated backlit panel signs designed and fabricated in Gateshead. Shaped or rectangular panels with cut-through graphics that glow at night.",
-   "hero": "p_cc_main",
+   "hero": "st_sign",
    "photos": [
-    "p_cc_main",
     "st_sign",
+    "p_cc_main",
     "n_annas",
     "n_queens",
     "n_lean"
@@ -2573,21 +3100,21 @@
    "code": "OS-FC",
    "seo_title": "Flat-Cut Letter Signs: CNC & Laser Cut Lettering",
    "meta": "Flat-cut letters cut from solid sheet on our CNC and laser in Gateshead. Crisp, cost-effective lettering for receptions, offices and exteriors.",
-   "hero": "p_arv_logo",
+   "hero": "ig_durham",
    "photos": [
+    "ig_durham",
     "p_arv_logo",
-    "p_ae_welcome",
     "p_pa_rec",
     "p_kk_int",
-    "ig_durham",
     "glow",
     "n_glow_wall",
     "n_jaymac_logo",
     "n_quality",
-    "n_skinsoul",
     "n_fora",
     "fira",
-    "ig_pantera"
+    "ig_pantera",
+    "p_du_front",
+    "p_x_skinandsou_4"
    ],
    "desc": "Letters cut from solid sheet on our CNC router and laser, with a crisp flat face and no returns. A clean, cost-effective way to put a name on a wall, inside or out.",
    "ideal": [
@@ -2641,13 +3168,13 @@
    "code": "OS-HL",
    "seo_title": "High Level Signs: Large Building Signage",
    "meta": "Large, high-level building signs surveyed, fabricated and installed by Onesign's own IPAF and PASMA trained crews: fabricated letters, panels, printed Dibond and vinyl-wrapped panels.",
-   "hero": "p_tms_main",
+   "hero": "rolls",
    "photos": [
+    "rolls",
     "p_tms_main",
     "p_cs_store",
     "p_ns_fascia",
     "p_ae_bld",
-    "rolls",
     "vertu_night",
     "n_savoy",
     "n_griffin",
@@ -2711,15 +3238,16 @@
    "code": "OS-PR",
    "seo_title": "Projecting Signs: Double-Sided Hanging Shop Signs",
    "meta": "Double-sided projecting signs made in Gateshead, so you're seen from along the street. Round, square or bespoke, lit or non-lit.",
-   "hero": "p_ch_main",
+   "hero": "ig_corner",
    "photos": [
+    "ig_corner",
     "p_ch_main",
     "p_qh_proj",
     "p_cc_proj",
     "p_sv_proj",
     "p_sm_proj",
-    "p_bc_ext",
-    "works"
+    "works",
+    "p_x_skinandsou_3"
    ],
    "desc": "Double-sided signs that stick out from the building, so people walking along the street see you, not just those standing in front. Round, square or fully bespoke.",
    "ideal": [
@@ -2768,10 +3296,10 @@
    "code": "OS-LB",
    "seo_title": "Light Box Signs | Illuminated Shop Signs",
    "meta": "Illuminated light box signs made in our Gateshead factory: aluminium boxes with acrylic faces lit evenly from inside, for shopfronts and projecting signs.",
-   "hero": "p_bc_roundel",
+   "hero": "ig_gavroche",
    "photos": [
-    "p_bc_roundel",
     "ig_gavroche",
+    "p_bc_roundel",
     "rascals_proj"
    ],
    "desc": "A light box is an aluminium box with an acrylic face, lit evenly from inside by LEDs. Light boxes are generally smaller signs, ideal for shopfronts, projecting signs and anywhere the whole face should glow.",
@@ -2880,12 +3408,11 @@
    "code": "OS-NE",
    "seo_title": "LED Neon Signs: Custom Neon for Bars, Salons & Walls",
    "meta": "Custom LED neon signs made in Gateshead: low-voltage, cool to the touch and far tougher than glass. Any colour, shape or backing.",
-   "hero": "p_r3_neon",
+   "hero": "neonB",
    "photos": [
+    "neonB",
     "p_r3_neon",
     "p_sun_neon",
-    "p_g_raw",
-    "neonB",
     "ig_dubliner",
     "n_skinsoul_neon",
     "ig_neon_red",
@@ -2957,10 +3484,7 @@
     "p_si_win",
     "p_sun_win",
     "p_st_door",
-    "ig_lineart_install",
     "n_workwear_wall",
-    "n_jaymac_door",
-    "bankhouse",
     "vg_birds",
     "vg_workhard",
     "nhs_skyline",
@@ -2968,7 +3492,7 @@
     "univinyl",
     "w_truetest",
     "ig_jaymac_wall",
-    "ig_craicn"
+    "ig_lineart_install"
    ],
    "desc": "Two related jobs under one roof. Vinyl graphics are cut from coloured or frosted film for lettering, windows and glass. Wall graphics are digitally printed wraps and murals that cover whole walls.",
    "ideal": [
@@ -3038,22 +3562,19 @@
    "code": "OS-LF",
    "seo_title": "Large Format Printing: Hoardings, Banners & Display Print",
    "meta": "Large format digital print from our own wide-format printers in Gateshead: hoardings, banners, posters, boards and window graphics.",
-   "hero": "p_du_banner",
+   "hero": "hoarding",
    "photos": [
+    "hoarding",
     "p_du_banner",
     "p_cs_hoard",
-    "p_cs_trolley",
     "p_g_fab",
     "p_sm_front",
     "p_arv_prints",
-    "hoarding",
     "n_jet2_ceiling",
     "print_fruit",
     "fence_banner",
     "bowmer",
-    "ig_ocado",
-    "lfPosters",
-    "lfPrint"
+    "p_x_dunelmfood_0"
    ],
    "desc": "Big, bold, colour-matched print from our own wide-format printers: hoardings, printed LED ceiling panels, posters, window graphics and display boards, printed and finished in-house so turnaround stays fast.",
    "ideal": [
@@ -3157,14 +3678,13 @@
    "code": "OS-TM",
    "seo_title": "Totem Signs & Monolith Signs",
    "meta": "Freestanding totem and monolith signs, lit or non-lit, single-brand or multi-tenant, made and installed by Onesign.",
-   "hero": "p_sun_totem2",
+   "hero": "sun_totem",
    "photos": [
+    "sun_totem",
     "p_sun_totem2",
     "tesco",
     "ig_totem_dir",
-    "w_ext_dir",
-    "dealer_totem",
-    "uni_entry"
+    "dealer_totem"
    ],
    "desc": "Freestanding signs that mark your entrance and guide people in from the road. Illuminated or non-lit, single-brand or multi-tenant.",
    "ideal": [
@@ -3213,11 +3733,11 @@
    "code": "OS-WF",
    "seo_title": "Wayfinding Signage for Hospitals, Schools & Campuses",
    "meta": "Wayfinding sign schemes planned, made and installed by Onesign: directional signs, level identification, totems and door signs for hospitals, schools and campuses.",
-   "hero": "p_cs_column",
+   "hero": "way_g",
    "photos": [
+    "way_g",
     "p_cs_column",
     "p_ml_entry",
-    "way_g",
     "way_dir",
     "w_red_g",
     "ig_toilet",
@@ -3231,7 +3751,10 @@
     "ig_corridor",
     "ig_way_dir",
     "nhs_proj",
-    "wardDir"
+    "wardDir",
+    "w_ext_dir",
+    "uni_entry",
+    "p_x_workwearex_2"
    ],
    "desc": "Sign families that get people where they need to be, from the car park to the right room. Planned around how your site is used, and built to accessibility standards.",
    "ideal": [
@@ -3770,7 +4293,7 @@
   },
   {
    "name": "Aldi & Jaymac",
-   "k": "aldi",
+   "k": "aldi_bld",
    "label": "Building signage",
    "url": "projects/aldi-warehouse"
   },
@@ -3898,7 +4421,11 @@
   "ws_weld2",
   "ws_install"
  ],
- "MEGA_POS": {},
+ "MEGA_POS": {
+  "backlit-panels": "28% 50%",
+  "projecting-signs": "50% 22%",
+  "flat-cut-letters": "50% 42%"
+ },
  "WIX": "https://static.wixstatic.com/media/653dfa_",
  "SITE_URL": "https://www.onesignanddigital.com"
 }

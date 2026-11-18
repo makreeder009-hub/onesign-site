@@ -596,3 +596,1098 @@ GUIDES = [
            ("Do you survey existing buildings?", "Yes. We can walk your site, mark up routes and decision points and propose a scheme."),
            ("Do you install on live hospital and school sites?", "Yes. We plan installation around patients, pupils and staff, and our fitters hold CSCS cards.")]),
 ]
+
+# ---- type and hero corrections (checked photo by photo, Nov 2026)
+_FIX_TYPES = {"glow-tanning": ["flat-cut-letters", "vinyl-wall-graphics", "wayfinding"],
+              "dolled-up-luxe": ["flat-cut-letters"],
+              "the-works": ["3d-letters", "projecting-signs"]}
+_FIX_HERO = {"aldi-jaymac-warehouse": "aldi_bld", "mapleleaf-express": "p_ml_auto"}
+for _c in CASES:
+    if _c["slug"] in _FIX_TYPES: _c["types"] = _FIX_TYPES[_c["slug"]]
+    if _c["slug"] in _FIX_HERO:
+        _c["hero"] = _FIX_HERO[_c["slug"]]
+        _c["photos"] = [_c["hero"]] + [p for p in _c["photos"] if p != _c["hero"]]
+for _c in CASES:
+    if _c["slug"] == "aldi-jaymac-warehouse":
+        _wip = ["aldi", "jaymac", "install"]
+        _c["photos"] = [p for p in _c["photos"] if p not in _wip]
+        _c["making"] = list(_c.get("making") or []) + [p for p in _wip if p not in (_c.get("making") or [])]
+
+# ---- jobs added from the full photo folder (Nov 2026)
+NEW2 = [
+ {
+  "slug": "kink",
+  "old": None,
+  "name": "Kink",
+  "where": None,
+  "sector": "retail",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_kink_0",
+  "label": "3D letter fascia",
+  "lede": "Pink 3D letters on a new grey fascia and shopfront.",
+  "brief": "A bold fascia that stands out on a busy high street.",
+  "made": [
+   [
+    "3D letters",
+    "Fabricated letters in the brand pink, fixed to the fascia."
+   ],
+   [
+    "Fascia panel",
+    "A smooth grey panel to finish the shopfront."
+   ]
+  ],
+  "result": "A shopfront you can spot from the end of the street.",
+  "photos": [
+   "p_x_kink_0",
+   "p_x_kink_1",
+   "p_x_kink_2",
+   "p_x_kink_3",
+   "p_g_kink"
+  ],
+  "making": []
+ },
+ {
+  "slug": "skin-and-soul",
+  "old": None,
+  "name": "Skin & Soul Medical",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [
+   "flat-cut-letters",
+   "projecting-signs",
+   "neon-led-neon"
+  ],
+  "hero": "p_x_skinandsou_0",
+  "label": "Shopfront, projecting sign and interior",
+  "lede": "Shopfront lettering, a projecting sign and interior lettering for a medical aesthetics clinic.",
+  "brief": "The clinic wanted one clean brand look from the street to the treatment rooms.",
+  "made": [
+   [
+    "Shopfront lettering",
+    "Lettering on the rendered frontage."
+   ],
+   [
+    "Projecting sign",
+    "A double-sided sign so the clinic is seen from along the street."
+   ],
+   [
+    "Interior lettering",
+    "Flat-cut lettering and an LED sign inside."
+   ]
+  ],
+  "result": "A clinic that looks the part inside and out.",
+  "photos": [
+   "p_x_skinandsou_0",
+   "p_x_skinandsou_1",
+   "p_x_skinandsou_2",
+   "p_x_skinandsou_3",
+   "p_x_skinandsou_4",
+   "p_x_skinandsou_5",
+   "n_skinsoul",
+   "n_skinsoul_neon"
+  ],
+  "making": []
+ },
+ {
+  "slug": "fika-aesthetics",
+  "old": None,
+  "name": "FIKA Aesthetics",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [
+   "flat-cut-letters"
+  ],
+  "hero": "p_x_fikaaesthe_0",
+  "label": "Interior lettering",
+  "lede": "Flat-cut logo lettering for an aesthetics clinic.",
+  "brief": "A simple, elegant logo on the wall of the treatment room.",
+  "made": [
+   [
+    "Flat-cut letters",
+    "The FIKA logo cut from solid sheet and fixed to the wall."
+   ]
+  ],
+  "result": "A calm, premium finish to the clinic.",
+  "photos": [
+   "p_x_fikaaesthe_0",
+   "p_x_fikaaesthe_1",
+   "p_x_fikaaesthe_2",
+   "fira"
+  ],
+  "making": []
+ },
+ {
+  "slug": "fora",
+  "old": None,
+  "name": "Fora Beauty and Skin Clinic",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [
+   "flat-cut-letters"
+  ],
+  "hero": "p_x_fora_0",
+  "label": "Interior lettering",
+  "lede": "Flat-cut lettering for a beauty and skin clinic.",
+  "brief": "A clean logo wall for the clinic.",
+  "made": [
+   [
+    "Flat-cut letters",
+    "Black lettering cut from solid sheet and fixed to the wall."
+   ]
+  ],
+  "result": "A crisp logo that fits the clinic's style.",
+  "photos": [
+   "p_x_fora_0",
+   "n_fora"
+  ],
+  "making": []
+ },
+ {
+  "slug": "good-lash-gang",
+  "old": None,
+  "name": "The Good Lash Gang",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [
+   "neon-led-neon"
+  ],
+  "hero": "p_x_goodlashga_0",
+  "label": "LED neon",
+  "lede": "An LED neon sign on a printed feature wall.",
+  "brief": "A welcome sign clients would want to photograph.",
+  "made": [
+   [
+    "LED neon",
+    "Script neon fixed over the printed lettering on a pink wall."
+   ]
+  ],
+  "result": "A feature wall made for photos.",
+  "photos": [
+   "p_x_goodlashga_0",
+   "p_x_goodlashga_1",
+   "welcome_neon"
+  ],
+  "making": []
+ },
+ {
+  "slug": "camden-clinic",
+  "old": None,
+  "name": "The Camden Clinic",
+  "where": None,
+  "sector": "healthcare",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_camdenclin_0",
+  "label": "3D letter fascia",
+  "lede": "Chrome-effect 3D letters on a dark fascia.",
+  "brief": "A smart, clinical look for the clinic frontage.",
+  "made": [
+   [
+    "3D letters",
+    "Polished letters on a dark fascia panel."
+   ]
+  ],
+  "result": "A frontage that looks professional from the street.",
+  "photos": [
+   "p_x_camdenclin_0",
+   "p_x_camdenclin_1",
+   "p_x_camdenclin_2",
+   "n_camden"
+  ],
+  "making": []
+ },
+ {
+  "slug": "zen",
+  "old": None,
+  "name": "Zen",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "vinyl-wall-graphics",
+   "3d-letters"
+  ],
+  "hero": "p_x_zen_0",
+  "label": "Window graphics and lettering",
+  "lede": "Line-art window graphics and lettering for a Thai and Asian restaurant.",
+  "brief": "Zen wanted its windows to show off the brand without blocking the view.",
+  "made": [
+   [
+    "Window graphics",
+    "A Buddha line-art design and a city skyline across the glazing."
+   ],
+   [
+    "Lettering",
+    "Zen lettering outside and in."
+   ]
+  ],
+  "result": "Windows that tell you what the restaurant is about.",
+  "photos": [
+   "p_x_zen_0",
+   "ig_lineart",
+   "p_x_zen_2",
+   "p_x_zen_3",
+   "p_x_zen_4",
+   "p_x_zen_5",
+   "p_x_zen_6",
+   "ig_zen"
+  ],
+  "making": []
+ },
+ {
+  "slug": "baxters",
+  "old": None,
+  "name": "Baxter's",
+  "where": None,
+  "sector": "retail",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_baxters_0",
+  "label": "3D script letters",
+  "lede": "A large script logo in 3D letters along the roofline.",
+  "brief": "A big, readable logo on a plain building.",
+  "made": [
+   [
+    "3D letters",
+    "Script lettering with a red outline, fixed above the shutters."
+   ]
+  ],
+  "result": "A plain unit with a logo you can't miss.",
+  "photos": [
+   "p_x_baxters_0",
+   "p_x_baxters_1",
+   "p_x_baxters_2",
+   "p_g_baxters"
+  ],
+  "making": []
+ },
+ {
+  "slug": "renewable-energy",
+  "old": None,
+  "name": "Renewable Energy Management",
+  "where": None,
+  "sector": "commercial",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_renewablee_0",
+  "label": "Halo-lit 3D letters",
+  "lede": "Halo-lit 3D letters and logo on timber cladding.",
+  "brief": "A lit sign that works on slatted timber, day and night.",
+  "made": [
+   [
+    "Halo-lit letters",
+    "Letters and logo that glow onto the timber behind."
+   ],
+   [
+    "Fixing",
+    "Fitted to the slatted cladding."
+   ]
+  ],
+  "result": "A building sign that glows warm after dark.",
+  "photos": [
+   "p_x_renewablee_0",
+   "p_x_renewablee_1",
+   "n_renew_close",
+   "n_renew_bld"
+  ],
+  "making": [
+   "p_x_renewablee_m0",
+   "p_x_renewablee_m1"
+  ]
+ },
+ {
+  "slug": "workwear-express",
+  "old": None,
+  "name": "Workwear Express",
+  "where": None,
+  "sector": "commercial",
+  "types": [
+   "vinyl-wall-graphics",
+   "wayfinding"
+  ],
+  "hero": "p_x_workwearex_0",
+  "label": "Office wall graphics",
+  "lede": "Printed wall graphics and room signs for a head office.",
+  "brief": "Workwear Express wanted the brand on every wall of its office.",
+  "made": [
+   [
+    "Wall graphics",
+    "Large printed walls in the brand orange."
+   ],
+   [
+    "Room signs",
+    "Meeting room and office signs to match."
+   ]
+  ],
+  "result": "An office that feels like the brand.",
+  "photos": [
+   "p_x_workwearex_0",
+   "p_x_workwearex_1",
+   "p_x_workwearex_2",
+   "p_x_workwearex_3",
+   "p_x_workwearex_4",
+   "p_x_workwearex_5",
+   "n_workwear_wall"
+  ],
+  "making": []
+ },
+ {
+  "slug": "lomond",
+  "old": None,
+  "name": "Lomond Property Maintenance",
+  "where": None,
+  "sector": "transport",
+  "types": [
+   "vehicle-graphics"
+  ],
+  "hero": "p_x_lomond_0",
+  "label": "Van graphics",
+  "lede": "Cut vinyl graphics for a property maintenance van.",
+  "brief": "Clear branding on the back and sides of the van.",
+  "made": [
+   [
+    "Van graphics",
+    "Logo and contact details in cut vinyl."
+   ]
+  ],
+  "result": "A van that advertises the business everywhere it goes.",
+  "photos": [
+   "p_x_lomond_0",
+   "p_g_lomond"
+  ],
+  "making": []
+ },
+ {
+  "slug": "park-electrical",
+  "old": None,
+  "name": "Park Electrical Distributors",
+  "where": None,
+  "sector": "transport",
+  "types": [
+   "vehicle-graphics"
+  ],
+  "hero": "p_x_parkelectr_0",
+  "label": "Van graphics",
+  "lede": "Full-colour van graphics for an electrical distributor.",
+  "brief": "Bold, recognisable graphics for the company vans.",
+  "made": [
+   [
+    "Van graphics",
+    "Printed and cut graphics in the brand colours."
+   ]
+  ],
+  "result": "Vans that stand out on the road.",
+  "photos": [
+   "p_x_parkelectr_0",
+   "ig_park2",
+   "ig_park"
+  ],
+  "making": []
+ },
+ {
+  "slug": "aykley-group",
+  "old": None,
+  "name": "Aykley Group",
+  "where": None,
+  "sector": "commercial",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_aykleygrou_0",
+  "label": "Lettering",
+  "lede": "Lit 3D lettering and wall lettering for an office.",
+  "brief": "A reception sign and wall lettering for the business.",
+  "made": [
+   [
+    "3D letters",
+    "Lit lettering on a panel."
+   ],
+   [
+    "Wall lettering",
+    "Lettering beside a living wall."
+   ]
+  ],
+  "result": "A reception that shows off the brand.",
+  "photos": [
+   "p_x_aykleygrou_0",
+   "p_x_aykleygrou_1"
+  ],
+  "making": []
+ },
+ {
+  "slug": "dunelm-food-store",
+  "old": None,
+  "name": "Dunelm Food Store",
+  "where": None,
+  "sector": "retail",
+  "types": [
+   "digital-large-format-print"
+  ],
+  "hero": "p_x_dunelmfood_0",
+  "label": "Printed fascia and windows",
+  "lede": "A printed fascia and window graphics for a convenience store.",
+  "brief": "A clear fascia and windows that list what the shop sells.",
+  "made": [
+   [
+    "Fascia",
+    "A printed fascia panel."
+   ],
+   [
+    "Window graphics",
+    "Product lists printed on the windows."
+   ]
+  ],
+  "result": "A shop people know what to expect from.",
+  "photos": [
+   "p_x_dunelmfood_0",
+   "p_x_dunelmfood_1"
+  ],
+  "making": []
+ },
+ {
+  "slug": "maker",
+  "old": None,
+  "name": "Maker",
+  "where": None,
+  "sector": "commercial",
+  "types": [
+   "vinyl-wall-graphics"
+  ],
+  "hero": "p_x_maker_0",
+  "label": "Window graphics",
+  "lede": "Window graphics for empty units in a new development.",
+  "brief": "Vacant units that look inviting to new tenants.",
+  "made": [
+   [
+    "Window graphics",
+    "Printed graphics across the glazing of each unit."
+   ]
+  ],
+  "result": "Empty units that look ready to let.",
+  "photos": [
+   "p_x_maker_0",
+   "p_x_maker_1",
+   "p_x_maker_2",
+   "p_x_maker_3",
+   "p_g_fab"
+  ],
+  "making": []
+ },
+ {
+  "slug": "bar-marquee",
+  "old": None,
+  "name": "BAR marquee letters",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_barmarquee_0",
+  "label": "Marquee letters",
+  "lede": "Red marquee letters with bulbs, mounted on a roof.",
+  "brief": "A bar sign that could be seen from far away.",
+  "made": [
+   [
+    "Marquee letters",
+    "Fabricated letters with bulbs, painted red."
+   ],
+   [
+    "Roof frame",
+    "Mounted on a frame on the roof."
+   ]
+  ],
+  "result": "A sign you can see from far away.",
+  "photos": [
+   "p_x_barmarquee_0",
+   "p_x_barmarquee_1",
+   "p_x_barmarquee_2",
+   "p_x_barmarquee_3",
+   "p_g_marquee"
+  ],
+  "making": []
+ },
+ {
+  "slug": "le-gavroche",
+  "old": None,
+  "name": "Le Gavroche",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "light-boxes"
+  ],
+  "hero": "p_x_legavroche_0",
+  "label": "Light box",
+  "lede": "An illuminated light box sign.",
+  "brief": "A light box lit evenly across the face.",
+  "made": [
+   [
+    "Light box",
+    "A box lit by LEDs with a printed face."
+   ]
+  ],
+  "result": "A sign that glows evenly day and night.",
+  "photos": [
+   "p_x_legavroche_0",
+   "ig_gavroche"
+  ],
+  "making": []
+ },
+ {
+  "slug": "menu",
+  "old": None,
+  "name": "Menu",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_menu_0",
+  "label": "Illuminated lettering",
+  "lede": "Illuminated lettering on a timber-clad restaurant front.",
+  "brief": "A lit logo for the restaurant frontage.",
+  "made": [
+   [
+    "Illuminated letters",
+    "Lettering with a lit outline, fixed to timber cladding."
+   ]
+  ],
+  "result": "A frontage that glows in the evening.",
+  "photos": [
+   "p_x_menu_0",
+   "p_x_menu_1",
+   "p_x_menu_2",
+   "p_x_menu_3"
+  ],
+  "making": [
+   "p_x_menu_m0",
+   "p_x_menu_m1",
+   "p_x_menu_m2",
+   "p_x_menu_m3"
+  ]
+ },
+ {
+  "slug": "the-vault",
+  "old": None,
+  "name": "The Vault",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_thevault_0",
+  "label": "Halo-lit letters",
+  "lede": "Halo-lit fabricated letters for a bar.",
+  "brief": "Lit signage that suits a dark, moody interior.",
+  "made": [
+   [
+    "Halo-lit letters",
+    "Fabricated letters glowing onto the panel behind."
+   ],
+   [
+    "Logo",
+    "A lit V logo."
+   ]
+  ],
+  "result": "Signs that set the mood.",
+  "photos": [
+   "p_x_thevault_0",
+   "p_x_thevault_1",
+   "vault"
+  ],
+  "making": []
+ },
+ {
+  "slug": "the-cove",
+  "old": None,
+  "name": "The Cove",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_thecove_0",
+  "label": "3D letters",
+  "lede": "Large white 3D letters over a bar entrance.",
+  "brief": "A big, simple logo on a brick frontage.",
+  "made": [
+   [
+    "3D letters",
+    "Fabricated letters in white, fixed to the brickwork."
+   ]
+  ],
+  "result": "A logo you can read from across the street.",
+  "photos": [
+   "p_x_thecove_0",
+   "p_x_thecove_1",
+   "p_g_cove"
+  ],
+  "making": [
+   "p_x_thecove_m0",
+   "p_x_thecove_m1",
+   "p_x_thecove_m2",
+   "p_x_thecove_m3",
+   "p_x_thecove_m4"
+  ]
+ },
+ {
+  "slug": "bratz-salon",
+  "old": None,
+  "name": "Bratz Salon",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_bratzsalon_0",
+  "label": "3D letter fascia",
+  "lede": "Pink and gold 3D letters for a salon fascia.",
+  "brief": "A fun fascia that matches the salon brand.",
+  "made": [
+   [
+    "3D letters",
+    "Pink letters with a gold script."
+   ]
+  ],
+  "result": "A fascia that suits the brand.",
+  "photos": [
+   "p_x_bratzsalon_0",
+   "p_g_bratz"
+  ],
+  "making": []
+ },
+ {
+  "slug": "tipsy",
+  "old": None,
+  "name": "Tipsy",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_tipsy_0",
+  "label": "3D letters",
+  "lede": "Gold lettering on a white shopfront.",
+  "brief": "A simple, smart fascia.",
+  "made": [
+   [
+    "Letters",
+    "Gold letters on a white frontage."
+   ]
+  ],
+  "result": "A clean shopfront.",
+  "photos": [
+   "p_x_tipsy_0"
+  ],
+  "making": []
+ },
+ {
+  "slug": "copeland-residential",
+  "old": None,
+  "name": "Copeland Residential",
+  "where": None,
+  "sector": "commercial",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_copelandre_0",
+  "label": "3D letters on brick",
+  "lede": "3D letters on brickwork for an estate agent.",
+  "brief": "Lettering fixed straight onto the building.",
+  "made": [
+   [
+    "3D letters",
+    "Letters fixed to the brickwork."
+   ]
+  ],
+  "result": "A smart sign that suits the building.",
+  "photos": [
+   "p_x_copelandre_0",
+   "p_x_copelandre_1"
+  ],
+  "making": []
+ },
+ {
+  "slug": "parm-o-rama",
+  "old": None,
+  "name": "Parm-o-rama",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_parmorama_0",
+  "label": "3D letter fascia",
+  "lede": "Bright yellow 3D letters on a grey fascia.",
+  "brief": "A loud, fun fascia for a takeaway.",
+  "made": [
+   [
+    "3D letters",
+    "Yellow letters and logo on a grey fascia."
+   ]
+  ],
+  "result": "A fascia that is hard to miss.",
+  "photos": [
+   "p_x_parmorama_0",
+   "p_g_parmo"
+  ],
+  "making": []
+ },
+ {
+  "slug": "glo-studios",
+  "old": None,
+  "name": "Glo Studios",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [],
+  "hero": "p_x_glostudios_0",
+  "label": "Fascia",
+  "lede": "A fascia and window graphics for a studio.",
+  "brief": "A simple frontage.",
+  "made": [
+   [
+    "Fascia",
+    "Logo on the fascia."
+   ],
+   [
+    "Window graphics",
+    "Logo on the windows."
+   ]
+  ],
+  "result": "A clean, simple frontage.",
+  "photos": [
+   "p_x_glostudios_0"
+  ],
+  "making": []
+ },
+ {
+  "slug": "dream-dolls",
+  "old": None,
+  "name": "Dream Dolls",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [],
+  "hero": "p_x_dreamdolls_0",
+  "label": "Illuminated arch",
+  "lede": "An illuminated arch sign.",
+  "brief": "A lit feature for the salon.",
+  "made": [
+   [
+    "Illuminated arch",
+    "An arch with LED lighting around the edge."
+   ]
+  ],
+  "result": "A feature made for photos.",
+  "photos": [
+   "p_x_dreamdolls_0",
+   "p_x_dreamdolls_1"
+  ],
+  "making": []
+ },
+ {
+  "slug": "my-car-cleaning",
+  "old": None,
+  "name": "My Car Cleaning",
+  "where": None,
+  "sector": "commercial",
+  "types": [
+   "3d-letters"
+  ],
+  "hero": "p_x_mycarclean_0",
+  "label": "3D letters",
+  "lede": "3D lettering for a car cleaning business.",
+  "brief": "A simple sign for the business.",
+  "made": [
+   [
+    "3D letters",
+    "Fabricated lettering."
+   ]
+  ],
+  "result": "A clear sign for the business.",
+  "photos": [
+   "p_x_mycarclean_0"
+  ],
+  "making": []
+ },
+ {
+  "slug": "merz-court",
+  "old": None,
+  "name": "Merz Court",
+  "where": None,
+  "sector": "education",
+  "types": [],
+  "hero": "p_x_merzcourt_0",
+  "label": "Building sign",
+  "lede": "A building name sign.",
+  "brief": "A clear name sign on the building.",
+  "made": [
+   [
+    "Name sign",
+    "Lettering on a panel."
+   ]
+  ],
+  "result": "A building that is easy to find.",
+  "photos": [
+   "p_x_merzcourt_0"
+  ],
+  "making": []
+ },
+ {
+  "slug": "originals-glow",
+  "old": None,
+  "name": "Originals Glow",
+  "where": None,
+  "sector": "hair-beauty",
+  "types": [],
+  "hero": "p_x_originalsg_0",
+  "label": "Illuminated fascia",
+  "lede": "An illuminated 3D letter fascia, built in our workshop.",
+  "brief": "A lit fascia for a tanning salon.",
+  "made": [
+   [
+    "Illuminated letters",
+    "Lit letters on a black panel with a gold frame."
+   ]
+  ],
+  "result": "Built and tested in our workshop before fitting.",
+  "photos": [
+   "p_x_originalsg_0",
+   "p_x_originalsg_1",
+   "p_x_originalsg_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "black-rabbit",
+  "old": None,
+  "name": "Black Rabbit",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [],
+  "hero": "p_x_blackrabbi_0",
+  "label": "Printed fascia panel",
+  "lede": "A black and gold fascia panel, built in our workshop.",
+  "brief": "A detailed gold illustration on a black fascia.",
+  "made": [
+   [
+    "Fascia panel",
+    "Black panel with gold artwork and lettering."
+   ]
+  ],
+  "result": "Built in our workshop before fitting.",
+  "photos": [
+   "p_x_blackrabbi_0",
+   "p_x_blackrabbi_1",
+   "p_x_blackrabbi_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "olivias",
+  "old": None,
+  "name": "Olivia's",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [],
+  "hero": "p_x_olivias_0",
+  "label": "Fascia panel",
+  "lede": "A fascia panel for a coffee, ice cream and dessert shop.",
+  "brief": "A soft pink panel with elegant script lettering.",
+  "made": [
+   [
+    "Fascia panel",
+    "Pink panel with script lettering."
+   ]
+  ],
+  "result": "Built in our workshop before fitting.",
+  "photos": [
+   "p_x_olivias_0",
+   "p_x_olivias_1",
+   "p_x_olivias_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "kiss-me-irish",
+  "old": None,
+  "name": "Kiss Me I'm Irish",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [],
+  "hero": "p_x_kissmeiris_0",
+  "label": "Illuminated sign",
+  "lede": "An illuminated sign, built in our workshop.",
+  "brief": "A bright green sign with a lit edge.",
+  "made": [
+   [
+    "Illuminated sign",
+    "Green panel with lettering and a lit edge."
+   ]
+  ],
+  "result": "Built and tested in our workshop.",
+  "photos": [
+   "p_x_kissmeiris_0",
+   "p_x_kissmeiris_1",
+   "p_x_kissmeiris_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "unstoppable-hq",
+  "old": None,
+  "name": "Unstoppable HQ",
+  "where": None,
+  "sector": "commercial",
+  "types": [],
+  "hero": "p_x_unstoppabl_0",
+  "label": "3D letters",
+  "lede": "Large 3D letters, built in our workshop.",
+  "brief": "Big building letters for a new HQ.",
+  "made": [
+   [
+    "3D letters",
+    "Large fabricated letters."
+   ]
+  ],
+  "result": "Built in our workshop before fitting.",
+  "photos": [
+   "p_x_unstoppabl_0",
+   "p_x_unstoppabl_1",
+   "p_x_unstoppabl_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "combat-96",
+  "old": None,
+  "name": "Combat 96",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [],
+  "hero": "p_x_combat96_0",
+  "label": "Illuminated sign",
+  "lede": "An illuminated 3D letter sign, built in our workshop.",
+  "brief": "A bold lit sign in the brand colours.",
+  "made": [
+   [
+    "Illuminated letters",
+    "Lit white and purple letters on a black panel."
+   ]
+  ],
+  "result": "Built and tested in our workshop.",
+  "photos": [
+   "p_x_combat96_0",
+   "p_x_combat96_1",
+   "p_x_combat96_2"
+  ],
+  "making": []
+ },
+ {
+  "slug": "assenheims-56",
+  "old": None,
+  "name": "Assenheims 56",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [],
+  "hero": "p_x_assenheims_0",
+  "label": "Laser-cut sign",
+  "lede": "A laser-cut metal sign, made in our workshop.",
+  "brief": "A round cut-metal logo sign.",
+  "made": [
+   [
+    "Laser-cut sign",
+    "The logo cut from metal sheet."
+   ]
+  ],
+  "result": "Cut and finished in our workshop.",
+  "photos": [
+   "p_x_assenheims_0",
+   "p_x_assenheims_1"
+  ],
+  "making": []
+ },
+ {
+  "slug": "aspire-health-group",
+  "old": None,
+  "name": "Aspire Health Group",
+  "where": None,
+  "sector": "healthcare",
+  "types": [],
+  "hero": "p_x_aspireheal_0",
+  "label": "Sign panel",
+  "lede": "A printed sign panel for a health group.",
+  "brief": "A clean panel with the logo.",
+  "made": [
+   [
+    "Sign panel",
+    "Logo on a white panel."
+   ]
+  ],
+  "result": "Made in our workshop before fitting.",
+  "photos": [
+   "p_x_aspireheal_0",
+   "p_x_aspireheal_1"
+  ],
+  "making": []
+ },
+ {
+  "slug": "level",
+  "old": None,
+  "name": "Level",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [],
+  "hero": "p_x_level_0",
+  "label": "3D letters",
+  "lede": "3D letters, built in our workshop.",
+  "brief": "Fabricated letters for the business.",
+  "made": [
+   [
+    "3D letters",
+    "Fabricated letters."
+   ]
+  ],
+  "result": "Built in our workshop before fitting.",
+  "photos": [
+   "p_x_level_0",
+   "p_x_level_1"
+  ],
+  "making": []
+ },
+ {
+  "slug": "nobles-casino",
+  "old": None,
+  "name": "Nobles Casino Gaming",
+  "where": None,
+  "sector": "hospitality-leisure",
+  "types": [],
+  "hero": "p_x_noblescasi_0",
+  "label": "Fascia panel",
+  "lede": "A fascia panel for a casino arcade.",
+  "brief": "A bright fascia in the brand colours.",
+  "made": [
+   [
+    "Fascia panel",
+    "Panel with lettering in the brand colours."
+   ]
+  ],
+  "result": "Made in our workshop before fitting.",
+  "photos": [
+   "p_x_noblescasi_0"
+  ],
+  "making": []
+ }
+]
+for _c in NEW2: _c['made'] = [tuple(m) for m in _c['made']]
+CASES += NEW2
+# near-identical frames removed after a duplicate check
+_DROP = {"p_x_barmarquee_0","p_x_barmarquee_1","p_x_maker_0","p_x_maker_2","p_x_thecove_1","p_x_bratzsalon_0","p_x_parmorama_0",
+         "p_x_baxters_1","p_x_lomond_0","p_x_goodlashga_0","p_x_renewablee_m0","p_x_workwearex_1","p_x_combat96_1","p_x_fora_0",
+         "p_x_kissmeiris_1","p_x_menu_2","n_skinsoul","p_x_originalsg_1","p_x_level_1","p_x_skinandsou_2","p_x_menu_3"}
+for _c in NEW2:
+    _c["photos"] = [p for p in _c["photos"] if p not in _DROP]
+    _c["making"] = [p for p in _c["making"] if p not in _DROP]
+    if _c["hero"] in _DROP: _c["hero"] = _c["photos"][0]

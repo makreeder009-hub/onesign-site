@@ -201,3 +201,12 @@ form.mock label.drop{font:400 14px/1.5 var(--f-body);letter-spacing:0;text-trans
 .mach p{color:var(--mute);font-size:14px;line-height:1.5}
 @media (max-width:980px){.caps,.machs{grid-template-columns:1fr 1fr}.gallery.grid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:620px){.caps,.machs{grid-template-columns:1fr}.gallery.grid{grid-template-columns:1fr 1fr;gap:8px}}
+
+/* recent projects: justified rows, every tile keeps its photo's own shape (fills the tile, nothing cropped) */
+.jgrid{display:flex;flex-wrap:wrap;gap:14px}
+.jgrid::after{content:"";flex:999 1 0}
+.jgrid .tile.jt{flex:var(--ar) 1 calc(var(--ar) * 300px);grid-column:auto;grid-row:auto;min-width:0}
+.jgrid .tile.jt img{object-fit:cover;transition:filter .5s}
+.jgrid .tile.jt:hover img{transform:none;filter:brightness(1.06)}
+.jgrid .tile.jt .tile-info h3{font-size:clamp(18px,1.7vw,26px)}
+@media (max-width:700px){.jgrid .tile.jt{flex-basis:100%}.jgrid::after{display:none}}

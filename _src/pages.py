@@ -83,7 +83,7 @@ def case_page(c):
     made = "".join(f'<li><span class="mk-n">{i+1:02d}</span><div><h3>{E(a)}</h3><p>{E(b)}</p></div></li>' for i, (a, b) in enumerate(c["made"]))
     facts = f'<dt>Client</dt><dd>{E(c["name"])}</dd>' + (f'<dt>Location</dt><dd>{E(c["where"])}</dd>' if c["where"] else "") + \
             f'<dt>Sector</dt><dd><a href="../sectors/{sec["slug"]}.html">{E(tcap(sec["name"]))}</a></dd>' + \
-            '<dt>Sign types</dt><dd>' + ", ".join(f'<a href="../signs/{t}.html">{E(TS[t]["label"])}</a>' for t in c["types"]) + '</dd>' + \
+            (('<dt>Sign types</dt><dd>' + ", ".join(f'<a href="../signs/{t}.html">{E(TS[t]["label"])}</a>' for t in c["types"]) + '</dd>') if c["types"] else '') + \
             '<dt>Delivered</dt><dd>Survey, design, manufacture and installation</dd>'
     making = f'''<section class="sec alt"><div class="wrap">
   {head("In the factory", "how it was made.", "Design, routing, cutting, welding, spraying, assembly and fitting, all by our own team.")}
@@ -111,8 +111,7 @@ def case_page(c):
 </div></section>
 {making}
 <section class="sec{"" if c["making"] else " alt"}"><div class="wrap">
-  {head("Used on this project", "the sign types.")}
-  <div class="cards3">{"".join(type_card(t, r) for t in c["types"][:3])}</div>
+  {(head("Used on this project", "the sign types.") + '<div class="cards3">' + "".join(type_card(t, r) for t in c["types"][:3]) + '</div>') if c["types"] else ""}
   <nav class="case-nav" aria-label="More case studies"><a href="{prv["slug"]}.html"><small>← previous</small><b>{E(prv["name"])}</b></a><a href="index.html" class="all">all case studies</a><a href="{nxt["slug"]}.html"><small>next →</small><b>{E(nxt["name"])}</b></a></nav>
 </div></section>
 {cta("want a result<br>like this?")}'''

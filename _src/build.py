@@ -400,9 +400,9 @@ def map_block(r, area=None, cls="", hq=True, title=None):
     """Branded Leaflet map of fitted jobs (and our HQ). Leaflet + tiles load only when the map scrolls near."""
     jobs = []
     for s, (place, ar, lat, lng, _src) in LOC.items():
-        if s not in CASE or (area and ar != area): continue
+        if s not in CASE: continue   # every map shows every job; an area page just opens on its own area
         c = CASE[s]
-        jobs.append({"n": c["name"], "p": place, "t": c["label"], "lat": lat, "lng": lng, "u": f"{r}work/{s}.html", "i": wix(c["hero"], 480, 360)})
+        jobs.append({"n": c["name"], "p": place, "t": c["label"], "lat": lat, "lng": lng, "a": ar, "u": f"{r}work/{s}.html", "i": wix(c["hero"], 480, 360)})
     data = {"hq": list(HQ) if hq else None, "jobs": jobs, "area": area}
     return (f'<div class="jobmap {cls}" data-map=\'{json.dumps(data, ensure_ascii=False).replace(chr(39), "&#39;")}\' role="region" aria-label="{E(title or "Map of signs we have fitted")}">'
             f'<div class="jm-fallback"><b>{len(jobs)} jobs on the map</b><span>Loading map…</span></div></div>')
@@ -838,6 +838,8 @@ def extras(pages):
          "/construction":"/sectors/construction","/commercial":"/sectors/commercial","/retail":"/sectors/retail",
          "/leisure":"/sectors/hospitality-leisure","/hair-and-beauty":"/sectors/hair-beauty",
          "/signs/building-signs":"/signs/high-level-signs","/signs/lightboxes-flex-faces":"/signs/light-boxes"}
+    R.update({"/work/kink":"/work/wink","/work/good-lash-gang":"/work/wink","/work/country":"/work/cowgirl-and-country",
+              "/work/blacks-corner":"/work/blacks-corner-fenwick","/work/assenheims-56":"/work"})
     for c in CASES:
         if c["old"]:
             R[c["old"]] = "/work/" + c["slug"]
@@ -853,9 +855,9 @@ def extras(pages):
     open(os.path.join(OUT,"assets","favicon.svg"),"w").write(fav)
 
 def not_found():
-    body = f'''{phero("", [("Home","index.html"),("Page not found",None)], "this page has moved.", "We've rebuilt our website. Try one of these instead, or call us on 0191 487 6767.", None, ctas=False, plain=True)}
+    body = f'''{phero("", [("Home","index.html"),("Page not found",None)], "we can't find that page.", "We've rebuilt our website. Try one of these instead, or call us on 0191 487 6767.", None, ctas=False, plain=True)}
 <section class="sec"><div class="wrap"><div class="chips-row">{"".join(f'<a href="/signs/{t["slug"]}">{E(t["label"])}</a>' for t in TYPES)}</div></div></section>'''
-    return page("404.html", title="Page not found | Onesign & Digital", desc="This page has moved.", canonical=SITE_URL+"/404", body=body, ogimg=og("hero"), r="/")
+    return page("404.html", title="Page not found | Onesign & Digital", desc="We can't find that page.", canonical=SITE_URL+"/404", body=body, ogimg=og("hero"), r="/")
 
 # --------------------------------------------------------------- css
 def build_css():

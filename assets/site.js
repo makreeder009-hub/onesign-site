@@ -335,7 +335,7 @@ addEventListener("load",()=>ScrollTrigger.refresh());
       const pop=new maplibregl.Popup({offset:28,closeButton:true,maxWidth:"260px",className:"jm-popup"})
         .setHTML(`<a class="jm-pop" href="${esc2(j.u)}"><img src="${esc2(j.i)}" alt=""><span><small>${esc2(j.t)}</small><b>${esc2(j.n)}</b><em>${esc2(j.p)}</em><u>see the job →</u></span></a>`);
       new maplibregl.Marker({element:el,anchor:"bottom"}).setLngLat([j.lng,j.lat]).setPopup(pop).addTo(m);
-      if(j.lat>54.3&&j.lat<55.8&&j.lng>-2.6&&j.lng<-1)bounds.extend([j.lng,j.lat]);
+      if(d.area?j.a===d.area:(j.lat>54.3&&j.lat<55.8&&j.lng>-2.6&&j.lng<-1))bounds.extend([j.lng,j.lat]);
     });
     if(d.hq){const el=document.createElement("button");el.type="button";el.className="jm-hq2";el.setAttribute("aria-label","Onesign & Digital HQ, Team Valley");
       el.innerHTML=`<span class="jm-hq2-badge">${MARK}<span><b>Onesign HQ</b><small>Team Valley, Gateshead</small></span></span><span class="jm-hq2-dot"></span>`;
@@ -343,7 +343,7 @@ addEventListener("load",()=>ScrollTrigger.refresh());
       new maplibregl.Marker({element:el,anchor:"bottom"}).setLngLat([d.hq[1],d.hq[0]]).setPopup(pop).addTo(m);
       if(!d.area)bounds.extend([d.hq[1],d.hq[0]])}
     m.on("load",()=>{paint(m);if(!isHQ&&!bounds.isEmpty())m.fitBounds(bounds,{padding:{top:60,bottom:30,left:40,right:40},maxZoom:13.5,duration:0})});
-    if(!isHQ){const tag=document.createElement("div");tag.className="jm-count";tag.innerHTML=`<b>${d.jobs.length}</b> ${d.jobs.length===1?"job":"jobs"} on the map · tap a photo`;box.appendChild(tag)}
+    if(!isHQ){const tag=document.createElement("div");tag.className="jm-count";const here=d.area?d.jobs.filter(x=>x.a===d.area).length:0;tag.innerHTML=d.area?`<b>${here}</b> here · <b>${d.jobs.length}</b> across the map · tap a photo`:`<b>${d.jobs.length}</b> jobs on the map · tap a photo`;box.appendChild(tag)}
   };
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);
     need().then(()=>build(e.target)).catch(()=>{const f=e.target.querySelector(".jm-fallback span");if(f)f.textContent="The map could not load. Our address is D86 Princesway North, Team Valley, Gateshead NE11 0TU."})}),{rootMargin:"300px"});

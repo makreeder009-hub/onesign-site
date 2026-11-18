@@ -128,6 +128,31 @@
       "permanent": true
     },
     {
+      "source": "/work/kink",
+      "destination": "/work/wink",
+      "permanent": true
+    },
+    {
+      "source": "/work/good-lash-gang",
+      "destination": "/work/wink",
+      "permanent": true
+    },
+    {
+      "source": "/work/country",
+      "destination": "/work/cowgirl-and-country",
+      "permanent": true
+    },
+    {
+      "source": "/work/blacks-corner",
+      "destination": "/work/blacks-corner-fenwick",
+      "permanent": true
+    },
+    {
+      "source": "/work/assenheims-56",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
       "source": "/projects/seventy-three",
       "destination": "/work/bar-seventy-three",
       "permanent": true

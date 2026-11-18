@@ -307,8 +307,7 @@ addEventListener("load",()=>ScrollTrigger.refresh());
   const esc2=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   const build=box=>{const d=JSON.parse(box.dataset.map);box.innerHTML="";
     const m=L.map(box,{scrollWheelZoom:false,zoomControl:true,attributionControl:true,tap:true});
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{maxZoom:19,subdomains:"abcd",
-      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'}).addTo(m);
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(m);
     const pin=L.divIcon({className:"jm-pin",html:"<i></i>",iconSize:[22,22],iconAnchor:[11,11],popupAnchor:[0,-10]});
     const pts=[];
     d.jobs.forEach(j=>{pts.push([j.lat,j.lng]);

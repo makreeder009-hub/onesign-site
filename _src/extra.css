@@ -321,7 +321,7 @@ html,body{overflow-x:clip}
 @media (max-width:700px){.jobmap{height:440px}.jobmap.area,.jobmap.hq{height:340px}}
 .jm-fallback{position:absolute;inset:0;display:grid;place-content:center;gap:6px;text-align:center;color:var(--mute);font-size:14px}
 .jm-fallback b{font:600 18px/1 var(--f-display);color:var(--fg)}
-.jobmap .leaflet-tile-pane{filter:grayscale(1) sepia(.18) hue-rotate(160deg) saturate(1.4) contrast(.94) brightness(1.03)}
+.jobmap .leaflet-tile-pane{filter:grayscale(1) sepia(.25) hue-rotate(155deg) saturate(1.6) contrast(.88) brightness(1.08)}
 .jobmap .leaflet-control-zoom a{color:#111415;border-color:var(--line)}
 .jobmap .leaflet-control-attribution{font-size:10px;background:rgba(255,255,255,.75)}
 .jm-pin{display:grid;place-items:center}

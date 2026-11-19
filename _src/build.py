@@ -55,7 +55,7 @@ for _t in TYPES:
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "9"
+ASSET_V = "10"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)
@@ -662,7 +662,7 @@ def home_page():
     hnow = "".join(f'<a class="hn{" on" if i==0 else ""}" href="{u}"><span class="hn-n">{i+1:02d}</span><span class="hn-t"><b>{E(n)}</b><small>{E(l)}</small></span><i></i></a>' for i,(k,n,l,u) in enumerate(HERO))
     arealist = "".join(f'<a class="arow" href="areas/{a["slug"]}.html" data-img="{wix(a.get("stage",a["hero"]),900,900,"fit")}"><span class="ar-n">{i+1:02d}</span><span class="ar-t">{E(a["short"])}</span><span class="ar-go" aria-hidden="true">→</span></a>' for i,a in enumerate(AREAS))
     arealist += f'<a class="arow uk" href="nationwide-signage.html" data-img="{wix("rolls",900,900,"fit")}"><span class="ar-n">UK</span><span class="ar-t">Nationwide</span><span class="ar-go" aria-hidden="true">→</span></a>'
-    guides = "".join(guide_card(g, r) for g in GUIDES)
+    guides = "".join(guide_card(g, r) for g in GUIDES[:6])
     sectors = "".join(link_card(f'sectors/{s["slug"]}.html', s["img"], s["name"], s["blurb"], s["slug"]) for s in SECTORS)
     body = f'''<section class="hero" id="top">
   <div class="hero-media" id="heroMedia">{slides}</div>
@@ -806,6 +806,7 @@ def home_page():
   <div class="wrap">
     <div class="sec-head"><div><span class="eyebrow">Guides</span><h2 class="h2 rv">straight answers<br>before you spend.</h2></div><p class="lede rv">What signs cost, when you need consent and how to choose between sign types, written by the people who make them.</p></div>
     <div class="gcards">{guides}</div>
+    <div class="g-all"><a class="pill pill-solid" href="guides/index.html">see all {len(GUIDES)} guides <span class="dot">→</span></a></div>
   </div>
 </section>
 {cta()}'''

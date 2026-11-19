@@ -224,7 +224,7 @@ def guides_index():
     r = "../"
     body = f'''{phero(r, [("Home","index.html"),("Guides",None)], "sign guides.", "Straight answers on cost, planning consent, illumination and accessibility, written by the people who make and fit the signs.", "ws_assembly", kicker="Guides", ctas=False)}
 <section class="sec"><div class="wrap">
-  <div class="gcards">{"".join(guide_card(g, r) for g in GUIDES)}</div>
+  <div class="gcards">{guide_card(GUIDES[-1], r).replace('class="gcard"', 'class="gcard feat"', 1) + "".join(guide_card(g, r) for g in GUIDES[:-1])}</div>
 </div></section>
 {cta()}'''
     return page("guides/index.html", title="Sign Guides: Cost, Planning Permission & Illumination | Onesign",

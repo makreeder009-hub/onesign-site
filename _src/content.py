@@ -2827,3 +2827,47 @@ CASES.insert(2, CASES.pop(_i))
 LOC["zen"] = ["Court Lane, Durham", "durham", 54.77380, -1.56850, "address"]
 for _c in CASES:
     if _c["slug"] == "zen": _c.update(where="Court Lane, Durham", sector="hospitality-leisure")
+
+# ---- 7th guide (Mak, 19 Nov): fills the empty slot in "more guides"
+GUIDES.append(dict(slug="what-to-send-for-a-sign-quote", title="What to Send for a Sign Quote: Photos, Sizes and Logo Files", h1="what to send for a sign quote.",
+      desc="The photos, measurements, logo files and details that get you an accurate sign quote and mockup first time, with no back and forth.",
+      hero="install2", card="st_design", updated="2026-11-19", kicker="Quote checklist",
+      lede="A good quote comes from good information. Send a straight-on photo, a few rough measurements and your logo, and we can usually come back with a price and a mockup of your building within a few days.",
+      sections=[
+       ("the short checklist", "<ol class=\"steps-list\"><li><b>A straight-on photo</b> of the wall or window, taken from across the road if you can.</li><li><b>Rough measurements</b> of the area the sign will go on: width and height are enough to start.</li><li><b>Your logo</b>, ideally as a vector file (AI, EPS, SVG or PDF).</li><li><b>Your brand colours</b>, if you have references.</li><li><b>The site address</b> and postcode.</li><li><b>Your opening date</b> or deadline, if there is one.</li><li><b>A rough budget</b>, so we can show you the best option for it.</li></ol>"),
+       ("how to take a useful photo", "{FIG p_kk_front|A straight-on view of the fascia, like this, lets us draw your sign onto the real building.}<p>Stand directly in front of the building and keep the phone level, so the fascia looks rectangular rather than tapered. Get the whole frontage in, with a little of the neighbours either side. One close photo of the fixing area helps too, so we can see whether it is brick, render, timber or an existing panel.</p><p>For a high-level sign, step back far enough to get the whole elevation. A photo taken in daylight is best, even if the sign will be illuminated.</p>"),
+       ("measuring without a ladder", "<p>We do not need exact sizes to quote. Measure what you can reach, such as the width of the shopfront at ground level, and estimate the height of the fascia. Counting bricks works well: a standard brick course is about 75mm. We take exact measurements at the site survey before anything is made.</p>"),
+       ("logo files that work", "{FIG st_design|Artwork being set up for production in our studio.}<p>Letters and logos are cut by machines that follow vector lines, so a vector file gives the cleanest result. Your designer or printer will usually have one. A JPEG or PNG is fine for a first quote and mockup, and if there is no vector version we can redraw the logo for you.</p>"),
+       ("details that change the price", "<ul><li><b>Illumination.</b> Lit signs need LEDs, power and often planning consent.</li><li><b>Height.</b> Work above first floor needs a platform and sometimes a permit.</li><li><b>Materials.</b> Stainless steel and built-up letters cost more than acrylic or printed panels.</li><li><b>Size.</b> Bigger letters use more material and take longer to make.</li><li><b>Removal.</b> Taking down and disposing of an old sign adds time on site.</li></ul><p>Our <a href=\"{R}guides/shop-sign-cost.html\">sign cost guide</a> gives typical price ranges.</p>"),
+       ("what happens next", "<p>We send a quote and a visual showing the sign on your building. Once you are happy, we book a site survey to confirm sizes and fixings, then the job goes into the workshop. Our <a href=\"{R}guides/how-long-does-a-shop-sign-take.html\">timescale guide</a> explains each stage.</p>")],
+      faq=[("Do I need a site visit before getting a price?", "No. A photo and rough sizes are enough for a first quote and mockup. We survey the site before anything is made."),
+           ("What if I don't have a logo yet?", "Tell us what you have in mind. Our design team can create sign artwork from your business name, or work alongside your designer."),
+           ("Is the mockup free?", "Yes. Every quote comes with a visual of the sign on your building."),
+           ("Can I send everything by email or WhatsApp?", "Yes. Use the enquiry form on this page, or call us and we will tell you where to send the photos.")]))
+
+# ---- Seaham (SR7) jobs sit with Sunderland, not Durham (Mak, 19 Nov)
+for _s in ("cork-and-coffee", "grace-kellys"):
+    if _s in LOC: LOC[_s][0] = "Seaham"; LOC[_s][1] = "sunderland"
+for _c in CASES:
+    if _c["slug"] in ("cork-and-coffee", "grace-kellys"): _c["where"] = "Seaham"
+    if _c["slug"] == "workwear-express":
+        _c["hero"] = "p_x_workwearex_3"
+        _c["photos"] = ["p_x_workwearex_3"] + [p for p in _c["photos"] if p != "p_x_workwearex_3"]
+for _a in AREAS:
+    if _a["slug"] == "durham":
+        _a["proof"] = [p for p in _a.get("proof", []) if p[0] not in ("cork-and-coffee", "grace-kellys")]
+        _a["photos"] = [p for p in _a.get("photos", []) if p not in ("cork_dusk", "p_cork_new", "gk_front", "p_gk_wide")]
+        if _a.get("hero") in ("cork_dusk", "p_cork_new"): _a["hero"] = "n_court"
+    if _a["slug"] == "sunderland":
+        _a.setdefault("proof", [])
+        if not any(p[0] == "cork-and-coffee" for p in _a["proof"]):
+            _a["proof"].append(("cork-and-coffee", "Komacel 3D letters and interior branding in Seaham."))
+        if not any(p[0] == "grace-kellys" for p in _a["proof"]):
+            _a["proof"].append(("grace-kellys", "3D letters on the fascia of a Seaham bar."))
+for _a in AREAS:
+    if _a["slug"] == "durham":
+        _a["intro"] = [t.replace("Durham City, Chester-le-Street, Seaham, Peterlee", "Durham City, Chester-le-Street, Peterlee") for t in _a["intro"]]
+        _a["places"] = [p for p in _a["places"] if p != "Seaham"]
+    if _a["slug"] == "sunderland":
+        _a["intro"][0] = _a["intro"][0].replace("to Washington and Houghton-le-Spring", "to Washington, Houghton-le-Spring and down the coast to Seaham")
+        if "Seaham" not in _a["places"]: _a["places"].insert(4, "Seaham")

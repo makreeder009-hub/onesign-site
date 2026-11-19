@@ -3363,3 +3363,27 @@ _rank2 = {s: i for i, s in enumerate(_TOP2)}
 _prev = {c["slug"]: i for i, c in enumerate(CASES)}
 CASES.sort(key=lambda c: (0, _rank2[c["slug"]]) if c["slug"] in _rank2 else (1, _prev[c["slug"]]))
 CASE = {c["slug"]: c for c in CASES}
+
+# ---- 19 Nov (3): better job photos, drop old/render jobs, Monkwearmouth Hospital ----
+CASES[:] = [c for c in CASES if c["slug"] not in ("scissor-guys", "glo-studios")]
+for _s in ("scissor-guys", "glo-studios"): LOC.pop(_s, None)
+_c = _fix("combat-96", hero="p_n6_cb_0", label="Illuminated logo")
+_c["photos"] = ["p_n6_cb_0", "p_n6_cb_1"] + [p for p in _c["photos"] if p not in ("p_n6_cb_0", "p_n6_cb_1")]
+_c = _fix("houghton-colliery", hero="p_n6_hc_0")
+_c["photos"] = ["p_n6_hc_0"]
+CASES.append(dict(slug="monkwearmouth-hospital", old=None, name="Monkwearmouth Hospital", where="Monkwearmouth, Sunderland",
+    sector="healthcare", types=[], hero="p_n6_mh_0", label="Bespoke hanging installation",
+    lede="A bespoke hanging installation of leaves and butterflies suspended through the glazed atrium at Monkwearmouth Hospital in Sunderland.",
+    brief="The hospital wanted to bring nature into a tall glazed atrium and make the space feel calm and welcoming for patients and visitors.",
+    made=[("Hanging leaves and butterflies", "Cut and printed leaf and butterfly shapes hung at different heights, so the piece changes as you move through the atrium."),
+          ("Installed at height", "Suspended from the skylight structure by our own installers.")],
+    result="A calm, natural feature that visitors notice the moment they look up.",
+    photos=[f"p_n6_mh_{i}" for i in range(13)], making=[]))
+LOC["monkwearmouth-hospital"] = ["Monkwearmouth, Sunderland", "sunderland", 54.924547, -1.386785, "postcode"]
+_TOP3 = list(_TOP2)
+_TOP3.insert(_TOP3.index("sunderland-eye-hospital") + 1, "monkwearmouth-hospital")
+_TOP3.insert(_TOP3.index("aqua-tcg"), "combat-96")
+_rank3 = {s: i for i, s in enumerate(_TOP3)}
+_prev = {c["slug"]: i for i, c in enumerate(CASES)}
+CASES.sort(key=lambda c: (0, _rank3[c["slug"]]) if c["slug"] in _rank3 else (1, _prev[c["slug"]]))
+CASE = {c["slug"]: c for c in CASES}

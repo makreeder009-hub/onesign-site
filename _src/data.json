@@ -4034,6 +4034,391 @@
    "new:p_n2_harbro_0",
    "Harbro: lettering on the store counter",
    "50% 75%"
+  ],
+  "p_n3_kg_0": [
+   "new:p_n3_kg_0",
+   "Kurt Geiger, Guildford: illuminated shopfront letters",
+   "50% 50%"
+  ],
+  "p_n3_kg_1": [
+   "new:p_n3_kg_1",
+   "Kurt Geiger: lit letters above the glazing",
+   "50% 50%"
+  ],
+  "p_n3_kg_2": [
+   "new:p_n3_kg_2",
+   "Kurt Geiger: shopfront at night",
+   "50% 50%"
+  ],
+  "p_n3_kg_3": [
+   "new:p_n3_kg_3",
+   "Kurt Geiger: letters from the mall",
+   "50% 50%"
+  ],
+  "p_n3_kg_4": [
+   "new:p_n3_kg_4",
+   "Fitting the Kurt Geiger letters",
+   "50% 50%"
+  ],
+  "p_n3_rf_0": [
+   "new:p_n3_rf_0",
+   "Reform Studio: Studio One wall logo",
+   "50% 25%"
+  ],
+  "p_n3_rf_1": [
+   "new:p_n3_rf_1",
+   "Reform Studio: window graphics and lit logo",
+   "50% 50%"
+  ],
+  "p_n3_rf_2": [
+   "new:p_n3_rf_2",
+   "Reform Studio: built-up letters and R mark",
+   "50% 50%"
+  ],
+  "p_n3_rf_3": [
+   "new:p_n3_rf_3",
+   "Reform Studio: Studio Two",
+   "50% 50%"
+  ],
+  "p_n3_rf_4": [
+   "new:p_n3_rf_4",
+   "Reform Studio: Studio One from the floor",
+   "50% 50%"
+  ],
+  "p_n3_rf_5": [
+   "new:p_n3_rf_5",
+   "Reform Studio: door vinyl",
+   "50% 50%"
+  ],
+  "p_n3_cell_0": [
+   "new:p_n3_cell_0",
+   "The Cell: halo-lit letters on a slatted wall",
+   "50% 25%"
+  ],
+  "p_n3_cell_1": [
+   "new:p_n3_cell_1",
+   "The Cell: training area",
+   "50% 50%"
+  ],
+  "p_n3_cell_2": [
+   "new:p_n3_cell_2",
+   "The Cell: letters lit at night",
+   "50% 50%"
+  ],
+  "p_n3_cell_3": [
+   "new:p_n3_cell_3",
+   "The Cell: halo glow",
+   "50% 50%"
+  ],
+  "p_n3_wq_0": [
+   "new:p_n3_wq_0",
+   "Ward Quarters: shopfront fascia",
+   "50% 0%"
+  ],
+  "p_n3_wq_1": [
+   "new:p_n3_wq_1",
+   "Ward Quarters: halo-lit WQ logo",
+   "50% 50%"
+  ],
+  "p_n3_mc_0": [
+   "new:p_n3_mc_0",
+   "Mount Croft Care Home: 3D letters on brick",
+   "50% 50%"
+  ],
+  "p_n3_mc_1": [
+   "new:p_n3_mc_1",
+   "Mount Croft Care Home: lettering on the gable",
+   "50% 50%"
+  ],
+  "p_n3_ms_0": [
+   "new:p_n3_ms_0",
+   "Mariana Stanchevici Academy: halo-lit logo on a slatted wall",
+   "50% 50%"
+  ],
+  "p_n3_ms_1": [
+   "new:p_n3_ms_1",
+   "Gold logo plaque being finished in our workshop",
+   "50% 50%"
+  ],
+  "p_n3_ms_2": [
+   "new:p_n3_ms_2",
+   "Projecting sign panels ready to fit",
+   "50% 50%"
+  ],
+  "p_n3_eh_0": [
+   "new:p_n3_eh_0",
+   "East Holborn street nameplates",
+   "50% 50%"
+  ],
+  "p_n3_eh_1": [
+   "new:p_n3_eh_1",
+   "Street nameplates with the council crest",
+   "50% 50%"
+  ],
+  "p_n3_eh_2": [
+   "new:p_n3_eh_2",
+   "Nameplate crest detail",
+   "50% 50%"
+  ],
+  "p_n3_eh_3": [
+   "new:p_n3_eh_3",
+   "Street nameplates ready for delivery",
+   "50% 50%"
+  ],
+  "p_n3_frate_0": [
+   "new:p_n3_frate_0",
+   "Frate: printed plywood A-board",
+   "50% 50%"
+  ],
+  "p_n3_frate_1": [
+   "new:p_n3_frate_1",
+   "Frate: A-board reverse",
+   "50% 50%"
+  ],
+  "p_n3_frate_2": [
+   "new:p_n3_frate_2",
+   "Printing the Frate A-boards in our workshop",
+   "50% 50%"
+  ],
+  "p_n3_costa_0": [
+   "new:p_n3_costa_0",
+   "We're Serving Costa: cafe barrier banners",
+   "50% 50%"
+  ],
+  "p_n3_costa_1": [
+   "new:p_n3_costa_1",
+   "Cafe barrier banner close up",
+   "50% 50%"
+  ],
+  "p_n3_costa_2": [
+   "new:p_n3_costa_2",
+   "Barrier banners on posts",
+   "50% 50%"
+  ],
+  "p_n3_costa_3": [
+   "new:p_n3_costa_3",
+   "Printed Costa roundels",
+   "50% 50%"
+  ],
+  "p_n3_costa_4": [
+   "new:p_n3_costa_4",
+   "Roundel print detail",
+   "50% 50%"
+  ],
+  "p_n3_nusa_0": [
+   "new:p_n3_nusa_0",
+   "Nusa: gold script wall letters",
+   "50% 50%"
+  ],
+  "p_n3_nusa_1": [
+   "new:p_n3_nusa_1",
+   "Nusa: letters detail",
+   "50% 50%"
+  ],
+  "p_n3_hs_0": [
+   "new:p_n3_hs_0",
+   "The Head Spa: built-up logo on the wall",
+   "50% 50%"
+  ],
+  "p_n3_hs_1": [
+   "new:p_n3_hs_1",
+   "The Head Spa: logo detail",
+   "50% 50%"
+  ],
+  "p_n3_wtd_0": [
+   "new:p_n3_wtd_0",
+   "Welcome to Durham scaffold banner, Ward Group",
+   "50% 12%"
+  ],
+  "p_n3_wtd_1": [
+   "new:p_n3_wtd_1",
+   "Welcome to Durham banners on two elevations",
+   "50% 50%"
+  ],
+  "p_n3_wtd_2": [
+   "new:p_n3_wtd_2",
+   "Welcome to Durham banner on scaffold",
+   "50% 50%"
+  ],
+  "p_n3_wtd_3": [
+   "new:p_n3_wtd_3",
+   "Welcome to Durham: banner from the street",
+   "50% 50%"
+  ],
+  "p_n3_wtd_4": [
+   "new:p_n3_wtd_4",
+   "Welcome to Durham banners on the corner building",
+   "50% 50%"
+  ],
+  "p_n3_pp_0": [
+   "new:p_n3_pp_0",
+   "Pickle & Peach: lettering on the corner fascia",
+   "50% 50%"
+  ],
+  "p_n3_pp_1": [
+   "new:p_n3_pp_1",
+   "Pickle & Peach: fascia letters",
+   "50% 50%"
+  ],
+  "p_n3_ss_0": [
+   "new:p_n3_ss_0",
+   "Skin & Soul: shopfront and projecting sign",
+   "50% 50%"
+  ],
+  "p_n3_nob_0": [
+   "new:p_n3_nob_0",
+   "Nobles Casino panels finished in our workshop",
+   "50% 50%"
+  ],
+  "p_n3_nob_1": [
+   "new:p_n3_nob_1",
+   "Nobles Casino: layered acrylic panel",
+   "50% 50%"
+  ],
+  "p_n3_nob_2": [
+   "new:p_n3_nob_2",
+   "Nobles Casino Gaming panel",
+   "50% 50%"
+  ],
+  "p_n3_nob_3": [
+   "new:p_n3_nob_3",
+   "Nobles: cut letters on a fascia panel",
+   "50% 50%"
+  ],
+  "p_n3_glowm_0": [
+   "new:p_n3_glowm_0",
+   "glow. letters being built",
+   "50% 50%"
+  ],
+  "p_n3_glowm_1": [
+   "new:p_n3_glowm_1",
+   "glow. letters on the panel in our workshop",
+   "50% 50%"
+  ],
+  "p_n3_glowm_2": [
+   "new:p_n3_glowm_2",
+   "Luxury Hybrid Tanning panel",
+   "50% 50%"
+  ],
+  "p_n3_glowm_3": [
+   "new:p_n3_glowm_3",
+   "glow. panel ready for fitting",
+   "50% 50%"
+  ],
+  "p_n3_tw_0": [
+   "new:p_n3_tw_0",
+   "The Works fascia in our workshop",
+   "50% 50%"
+  ],
+  "p_n3_tw_1": [
+   "new:p_n3_tw_1",
+   "The Works: letters on the fascia panel",
+   "50% 50%"
+  ],
+  "p_n3_tw_2": [
+   "new:p_n3_tw_2",
+   "Testing The Works illuminated fascia",
+   "50% 50%"
+  ],
+  "p_n3_jp_0": [
+   "new:p_n3_jp_0",
+   "Just Peachy: 3D script and fascia lettering",
+   "50% 55%"
+  ],
+  "p_n3_jp_1": [
+   "new:p_n3_jp_1",
+   "Just Peachy: letter detail",
+   "50% 50%"
+  ],
+  "p_n3_jp_2": [
+   "new:p_n3_jp_2",
+   "Just Peachy: shopfront",
+   "50% 50%"
+  ],
+  "p_n3_jp_3": [
+   "new:p_n3_jp_3",
+   "Just Peachy: fascia close up",
+   "50% 50%"
+  ],
+  "p_n3_rm_0": [
+   "new:p_n3_rm_0",
+   "Recite Me: illuminated logo on the curved red wall",
+   "50% 50%"
+  ],
+  "p_n3_filto_0": [
+   "new:p_n3_filto_0",
+   "Filto: hanging logo over the coffee kiosk",
+   "50% 50%"
+  ],
+  "p_n3_filto_1": [
+   "new:p_n3_filto_1",
+   "Filto: window graphics",
+   "50% 50%"
+  ],
+  "p_n3_filto_2": [
+   "new:p_n3_filto_2",
+   "Filto: takeaway window graphics",
+   "50% 50%"
+  ],
+  "p_n3_filto_3": [
+   "new:p_n3_filto_3",
+   "Filto: door vinyl",
+   "50% 50%"
+  ],
+  "p_n3_filto_4": [
+   "new:p_n3_filto_4",
+   "Filto: cup display sign",
+   "50% 50%"
+  ],
+  "p_n3_filto_5": [
+   "new:p_n3_filto_5",
+   "Filto: counter lettering",
+   "50% 50%"
+  ],
+  "p_n3_filto_6": [
+   "new:p_n3_filto_6",
+   "Filto kiosk from above",
+   "50% 50%"
+  ],
+  "p_n3_dd_0": [
+   "new:p_n3_dd_0",
+   "The Drunken Duck: LED neon",
+   "50% 30%"
+  ],
+  "p_n3_mcc_0": [
+   "new:p_n3_mcc_0",
+   "My Car Cleaning: illuminated fascia",
+   "50% 12%"
+  ],
+  "p_n3_mcc_1": [
+   "new:p_n3_mcc_1",
+   "My Car Cleaning: fascia on opening day",
+   "50% 50%"
+  ],
+  "p_n3_gm_0": [
+   "new:p_n3_gm_0",
+   "Grainger Market: Market Shaker LED neon",
+   "50% 50%"
+  ],
+  "p_n3_gm_1": [
+   "new:p_n3_gm_1",
+   "Grainger letters finished in our workshop",
+   "50% 50%"
+  ],
+  "p_n3_gm_2": [
+   "new:p_n3_gm_2",
+   "Grainger letter detail",
+   "50% 50%"
+  ],
+  "p_n3_bx_0": [
+   "new:p_n3_bx_0",
+   "Baxter's: script logo on the building",
+   "50% 50%"
+  ],
+  "p_n3_by_0": [
+   "new:p_n3_by_0",
+   "Better You: halo-lit logo and lettering",
+   "50% 40%"
   ]
  },
  "TYPES": [
@@ -4048,6 +4433,8 @@
    "photos": [
     "n_thatype",
     "p_z_glowtannin_0",
+    "p_n3_kg_0",
+    "p_n3_cell_0",
     "p_n2_thatype_0",
     "p_n2_tribeca_0",
     "p_n2_cotton_0",
@@ -4278,6 +4665,7 @@
    "photos": [
     "ig_durham",
     "p_arv_logo",
+    "p_n3_rf_0",
     "p_n2_elysia_0",
     "p_n2_du_0",
     "p_pa_rec",
@@ -4646,6 +5034,7 @@
    "photos": [
     "neonB",
     "p_r3_neon",
+    "p_n3_gm_0",
     "p_n2_aqua_0",
     "p_n2_byre_4",
     "p_n2_ml_3",
@@ -4815,6 +5204,8 @@
    "photos": [
     "hoarding",
     "p_cs_hoard",
+    "p_n3_wtd_0",
+    "p_n3_frate_0",
     "p_n2_fitt_0",
     "p_g_fab",
     "p_sm_front",
@@ -4875,7 +5266,8 @@
    "hero": "ig_kier",
    "photos": [
     "ig_kier",
-    "p_du_banner"
+    "p_du_banner",
+    "p_n3_costa_0"
    ],
    "desc": "Printed flags and banners for events, sites and shopfronts: feather and teardrop flags, mesh fence banners, PVC banners and pop-up banners, printed in-house and supplied with the hardware to put them up.",
    "ideal": [
@@ -4990,6 +5382,7 @@
    "photos": [
     "way_g",
     "p_cs_column",
+    "p_n3_eh_0",
     "p_n2_gc_6",
     "p_n2_gc_7",
     "p_ml_entry",

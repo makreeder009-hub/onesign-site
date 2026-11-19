@@ -3035,3 +3035,111 @@ for _c in CASES:
 for _c in CASES:
     if _c["slug"] == "elring-parts": _c["hero"] = "p_n2_el_1"
     if _c["slug"] == "fitt": _c["hero"] = "n_fitt"; _c["photos"] = ["n_fitt"] + _c["photos"]
+
+# ================= "Website revamp/New 2" (19 Nov) =================
+_N3 = lambda job, n: [f"p_n3_{job}_{i}" for i in range(n)]
+_BY = {c["slug"]: c for c in CASES}
+def _more(slug, job, n, hero=False, making=False):
+    c = _BY[slug]; ks = _N3(job, n)
+    if making: c["making"] = list(c.get("making") or []) + ks; return c
+    c["photos"] = ks + [p for p in c["photos"] if p not in ks]
+    if hero: c["hero"] = ks[0]
+    return c
+_more("welcome-to-durham", "wtd", 5, hero=True)
+_more("pickle-and-peach", "pp", 2, hero=True)
+_more("skin-and-soul", "ss", 1)
+_more("nobles-casino", "nob", 4, making=True)
+_more("glow-tanning", "glowm", 4, making=True)
+_more("the-works", "tw", 3, making=True)
+_more("just-peachy", "jp", 4, hero=True)
+_more("recite-me", "rm", 1, hero=True)
+_c = _more("filto", "filto", 7); _c["where"] = None
+_more("the-drunken-duck", "dd", 1, hero=True)
+_more("my-car-cleaning", "mcc", 2, hero=True)
+_c = _BY["grainger-market"]; _c["photos"] = ["p_n3_gm_0"] + _c["photos"]; _c["making"] = list(_c.get("making") or []) + ["p_n3_gm_1", "p_n3_gm_2"]
+if "neon-led-neon" not in _c["types"]: _c["types"].append("neon-led-neon")
+_more("baxters", "bx", 1)
+_more("better-you", "by", 1, hero=True)
+
+def _new3(slug, name, where, sector, types, job, n, label, lede, brief, made, result, loc=None, making=()):
+    ph = _N3(job, n); mk = [p for p in ph if p in making]
+    CASES.append(dict(slug=slug, old=None, name=name, where=where, sector=sector, types=types, hero=ph[0], label=label, lede=lede,
+                      brief=brief, made=made, result=result, photos=[p for p in ph if p not in mk], making=mk))
+    if loc: LOC[slug] = loc
+_new3("kurt-geiger", "Kurt Geiger", "Guildford", "retail", ["3d-letters"], "kg", 5,
+      "Illuminated shopfront letters",
+      "Illuminated letters above the glazed shopfront of Kurt Geiger in Guildford, made in Gateshead and fitted by our own team.",
+      "A national fashion brand needed its shopfront letters made to its brand standards and installed in a busy shopping centre.",
+      [("Illuminated letters", "White lit letters fixed above the full-height glazing."),
+       ("Installation", "Fitted by our own crew, working around the centre's opening hours.")],
+      "A crisp, evenly lit name that reads across the mall, more than 300 miles from our factory.",
+      ["Guildford", None, 51.23700, -0.57649, "gps"], making=["p_n3_kg_4"])
+_new3("reform-studio", "Reform Studio", None, "hospitality-leisure", ["flat-cut-letters", "vinyl-wall-graphics"], "rf", 6,
+      "Studio logos and window graphics",
+      "Built-up studio names and the R mark in each room, plus window and door graphics, for Reform Studio.",
+      "A pilates studio wanted its calm, premium brand to carry from the front door into every studio room.",
+      [("Studio logos", "'Studio One' and 'Studio Two' in built-up lettering with the R mark on each feature wall."),
+       ("Window and door graphics", "A large printed window panel with the lit R logo, and frosted vinyl on the glass doors.")],
+      "Each room has its own identity, and the brand is clear from the street.")
+_new3("the-cell", "The Cell", None, "hospitality-leisure", ["3d-letters"], "cell", 4,
+      "Halo-lit letters on a slatted wall",
+      "Large halo-lit letters on a slatted feature wall for The Cell training space.",
+      "The Cell wanted a statement logo that sets the tone of the gym as soon as you walk in.",
+      [("Halo-lit letters", "Built-up metallic letters with LEDs behind, mounted on a slatted wall.")],
+      "The logo lights the whole end wall and makes the space feel like a proper fight-camp gym.")
+_new3("ward-quarters", "Ward Quarters", None, "commercial", ["3d-letters", "printed-fascia-panels"], "wq", 2,
+      "Shopfront fascia and halo-lit logo",
+      "A black shopfront fascia and a halo-lit WQ logo for Ward Quarters student living.",
+      "Ward Quarters needed a frontage and reception logo that feel premium for student lets.",
+      [("Fascia", "WQ logo and lettering on a black fascia above the shopfront."),
+       ("Reception logo", "A halo-lit WQ logo on a slatted feature wall.")],
+      "A smart front door and reception for the brand.")
+_new3("mount-croft-care-home", "Mount Croft Care Home", None, "healthcare", ["3d-letters"], "mc", 2,
+      "3D letters on brick",
+      "Dark built-up letters fixed directly to the brick gable of Mount Croft Care Home.",
+      "The care home wanted its name on the building so visitors can find it easily.",
+      [("Building letters", "Built-up letters fixed to the brickwork on the gable end.")],
+      "A clear, permanent name on the building.")
+_new3("mariana-stanchevici-academy", "Mariana Stanchevici Lash & PMU Academy", None, "hair-beauty", ["3d-letters", "projecting-signs"], "ms", 3,
+      "Halo-lit logo and projecting sign",
+      "A halo-lit gold monogram on a slatted wall and projecting sign panels for a lash and permanent make-up academy.",
+      "The academy wanted a reception logo that looks as premium as its training, plus a sign to be seen from the street.",
+      [("Halo-lit logo", "A round black logo with gold monogram and lettering, lit from behind on a slatted wall."),
+       ("Projecting sign", "Black panels with gold 'Beauty Salon' lettering and the academy web address.")],
+      "The logo is now the backdrop to the academy's photos and training sessions.", making=["p_n3_ms_1", "p_n3_ms_2"])
+_new3("east-holborn-street-signs", "East Holborn Street Signs", "South Shields", "transport", ["wayfinding"], "eh", 4,
+      "Street nameplates",
+      "Street nameplates with the council crest for East Holborn in South Shields.",
+      "New street nameplates needed to match the council's standard design, crest and lettering.",
+      [("Nameplates", "White plates with black lettering, a border and the full-colour council crest.")],
+      "The plates were made, checked and packed in our workshop ready for installation.",
+      ["South Shields", "south-tyneside", 54.99800, -1.43500, "place"])
+_new3("frate", "Frate", "Newcastle", "hospitality-leisure", ["digital-large-format-print"], "frate", 3,
+      "Printed plywood A-boards",
+      "Full-colour A-boards printed straight onto natural plywood for Frate in Newcastle.",
+      "Frate wanted pavement boards that feel crafted and independent, not plastic.",
+      [("A-boards", "Artwork printed directly onto plywood panels on our flatbed printer, double-sided.")],
+      "Boards with a natural wood finish that match Frate's independent style.", making=["p_n3_frate_2"])
+_new3("cafe-barrier-banners", "We're Serving Costa", None, "hospitality-leisure", ["flags-banners", "digital-large-format-print"], "costa", 5,
+      "Cafe barrier banners and roundels",
+      "Printed cafe barrier banners and roundel signs for a venue serving Costa Coffee.",
+      "The venue needed outdoor seating barriers and signs that show it serves Costa.",
+      [("Barrier banners", "Printed banners on posts to section off the cafe seating."),
+       ("Roundels", "Printed circular panels in the Costa colours.")],
+      "A branded seating area that is quick to put out and take in.")
+_new3("nusa", "Nusa", None, "hair-beauty", ["flat-cut-letters"], "nusa", 2,
+      "Gold script wall letters",
+      "The Nusa logo in gold script letters on a white feature wall.",
+      "Nusa wanted a simple, elegant logo on the wall.",
+      [("Wall letters", "Gold-finish script letters fixed off the wall.")],
+      "A clean logo wall for the space.")
+_new3("the-head-spa", "The Head Spa", None, "hair-beauty", ["flat-cut-letters"], "hs", 2,
+      "Built-up logo on the wall",
+      "The Head Spa logo in tone-on-tone built-up letters for The Head Spa at Pure Bliss.",
+      "The Head Spa wanted a subtle logo that suits a relaxing treatment room.",
+      [("Wall logo", "The sunburst logo and lettering cut and fixed to the wall in a matching colour.")],
+      "A quiet, textured logo that suits the room.")
+for _i, _sl in enumerate(["kurt-geiger", "reform-studio"]):
+    _j = next(k for k, c in enumerate(CASES) if c["slug"] == _sl); CASES.insert(7 + _i, CASES.pop(_j))
+for _c in CASES:
+    if _c["slug"] == "cafe-barrier-banners": _c["hero"] = "p_n3_costa_1"

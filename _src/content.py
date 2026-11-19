@@ -2871,3 +2871,11 @@ for _a in AREAS:
     if _a["slug"] == "sunderland":
         _a["intro"][0] = _a["intro"][0].replace("to Washington and Houghton-le-Spring", "to Washington, Houghton-le-Spring and down the coast to Seaham")
         if "Seaham" not in _a["places"]: _a["places"].insert(4, "Seaham")
+
+# ---- hand-written meta descriptions where the generated one would be trimmed (SEO pass, 19 Nov)
+for _g in GUIDES:
+    if _g["slug"] == "sign-planning-permission":
+        _g["desc"] = "When a UK shop sign needs advertisement consent, what deemed consent covers, and how lighting and conservation areas change things."
+for _c in CASES:
+    if _c["slug"] == "sunderland-eye-hospital":
+        _c["meta"] = "A full wayfinding scheme for Sunderland Eye Hospital: lit entrance letters, totems, directories, door signs, Braille signs and glass manifestation."

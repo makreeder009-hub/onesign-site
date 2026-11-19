@@ -4,7 +4,7 @@ import re
 Run this file to build the whole site into ../site."""
 import hashlib, json, os, shutil
 import build as B
-from build import (E, pic, wix, og, cap, pos, page, phero, gallery, link_card, cta, crumbs_ld, case_card, guide_card,
+from build import (fit, fit_desc, E, pic, wix, og, cap, pos, page, phero, gallery, link_card, cta, crumbs_ld, case_card, guide_card,
                    area_chips, tcap, map_block, LOC, all_type_cards, TYPES, SECTORS, CASES, AREAS, GUIDES, REVIEWS, SITE_URL, MINI_STEPS, CASE)
 
 TS = {t["slug"]: t for t in TYPES}
@@ -34,8 +34,8 @@ def signs_index():
     ld = [crumbs_ld([("Home", "/"), ("Sign types", "/signs")]),
           {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
               {"@type": "ListItem", "position": i + 1, "name": t["name"], "url": f"{SITE_URL}/signs/{t['slug']}"} for i, t in enumerate(TYPES)]}]
-    return page("signs/index.html", title="Sign Types: 3D Letters, Illuminated Signs, Wayfinding & More | Onesign",
-                desc="All 14 types of sign we make in Gateshead: 3D letters, backlit panels, light boxes, flex faces, LED neon, wayfinding, totems, vinyl graphics, print and vehicle graphics.",
+    return page("signs/index.html", title="Sign Types: 3D Letters, Illuminated Signs & More | Onesign",
+                desc=f"All {len(TYPES)} types of sign we make in Gateshead: 3D letters, backlit panels, light boxes, LED neon, wayfinding, totems, vinyl, print and van graphics.",
                 canonical=SITE_URL + "/signs", body=body, ogimg=og("n_thatype"), r=r, ld=ld)
 
 def sectors_index():
@@ -51,8 +51,8 @@ def sectors_index():
   <div class="ccards">{"".join(case_card(c, r) for c in CASES[:3])}</div>
 </div></section>
 {cta()}'''
-    return page("sectors/index.html", title="Signage by Sector: Healthcare, Education, Retail & More | Onesign",
-                desc="Signage for healthcare, education, construction, commercial, retail, hospitality, hair and beauty, transport and health and safety, made and installed by Onesign.",
+    return page("sectors/index.html", title="Signage by Sector: Healthcare, Retail & More | Onesign",
+                desc="Signage for healthcare, education, construction, offices, retail, hospitality, salons and transport, made in Gateshead and installed by Onesign.",
                 canonical=SITE_URL + "/sectors", body=body, ogimg=og("hc_cdc"), r=r, ld=[crumbs_ld([("Home", "/"), ("Sectors", "/sectors")])])
 
 # ------------------------------------------------------------------ our work
@@ -120,8 +120,20 @@ def case_page(c):
           {"@context": "https://schema.org", "@type": "Article", "headline": f"{c['name']}: {c['label']}", "description": c["lede"], "image": og(c["hero"]),
            "author": {"@id": SITE_URL + "/#business"}, "publisher": {"@id": SITE_URL + "/#business"}, "mainEntityOfPage": url}]
     where = f" in {c['where']}" if c["where"] else ""
-    return page(f"work/{c['slug']}.html", title=f"{c['name']} Signage Case Study | {c['label']} | Onesign",
-                desc=f"{c['lede']} A signage case study{where} by Onesign & Digital.", canonical=url, body=body, ogimg=og(c["hero"]), r=r, ld=ld, ogtype="article")
+    town = (LOC.get(c["slug"]) or [None])[0] or (c["where"] or "").split(",")[0] or None
+    lab = c["label"][:1].upper() + c["label"][1:]
+    title = fit(f"{c['name']}, {town}: {lab} | Onesign" if town else None,
+                f"{c['name']}: {lab} | Onesign",
+                f"{c['name']} Signage, {town} | Onesign" if town else None,
+                f"{c['name']} Signage | Onesign", f"{c['name']} | Onesign")
+    led = c["lede"].strip(); led = led if led.endswith((".", "!", "?")) else led + "."
+    desc = c.get("meta") or fit_desc(f"{led} A signage case study{where} by Onesign & Digital.",
+                    f"{led} Designed, made and installed{where} by Onesign & Digital, Gateshead.",
+                    f"{led} Made and fitted by Onesign & Digital.",
+                    f"{led} {c['name']}{where}: designed, made and installed by Onesign & Digital, North East sign makers since 2008.",
+                    f"{led} Signage for {c['name']}{where}, designed, made in our Gateshead factory and installed by Onesign & Digital.", led)
+    return page(f"work/{c['slug']}.html", title=title,
+                desc=desc, canonical=url, body=body, ogimg=og(c["hero"]), r=r, ld=ld, ogtype="article")
 
 # ------------------------------------------------------------------ areas
 KEY_TYPES = ["3d-letters", "backlit-panels", "high-level-signs", "projecting-signs", "neon-led-neon", "vinyl-wall-graphics"]
@@ -172,8 +184,8 @@ def area_page(a):
     ld = [crumbs_ld([("Home", "/"), ("Areas", "/areas"), (a["short"], f"/areas/{a['slug']}")]),
           {"@context": "https://schema.org", "@type": "Service", "name": f"Sign makers in {a['name']}", "serviceType": "Sign manufacture and installation",
            "provider": {"@id": SITE_URL + "/#business"}, "areaServed": {"@type": "AdministrativeArea", "name": a["name"]}, "url": url}, faq_ld(a["faq"])]
-    return page(f"areas/{a['slug']}.html", title=f"Sign Makers {a['short']} | Shop Signs & Illuminated Signs | Onesign",
-                desc=f"{a['lede']} Free site survey and mockup. Call 0191 487 6767.", canonical=url, body=body, ogimg=og(a["hero"]), r=r, ld=ld)
+    return page(f"areas/{a['slug']}.html", title=fit(f"Sign Makers {a['short']} | Shop & Illuminated Signs | Onesign", f"Sign Makers {a['short']} | Shop & Building Signs", f"Sign Makers in {a['short']} | Onesign"),
+                desc=fit_desc(f"{a['lede']} Free site survey and mockup. Call 0191 487 6767.", f"{a['lede']} Free survey and mockup.", a['lede']), canonical=url, body=body, ogimg=og(a["hero"]), r=r, ld=ld)
 
 def areas_index():
     r = "../"
@@ -189,7 +201,7 @@ def areas_index():
   <div class="cards3">{cards}</div>
 </div></section>
 {cta()}'''
-    return page("areas/index.html", title="Areas We Cover: Sign Makers Across the North East & UK | Onesign",
+    return page("areas/index.html", title="Areas We Cover: Sign Makers in the North East | Onesign",
                 desc="Onesign makes signs in Gateshead and installs across Newcastle, Sunderland, Durham, South Tyneside, Northumberland and the whole UK.",
                 canonical=SITE_URL + "/areas", body=body, ogimg=og("hero"), r=r, ld=[crumbs_ld([("Home", "/"), ("Areas", "/areas")])])
 
@@ -218,7 +230,7 @@ def guide_page(g):
     ld = [crumbs_ld([("Home", "/"), ("Guides", "/guides"), (g["kicker"], f"/guides/{g['slug']}")]),
           {"@context": "https://schema.org", "@type": "Article", "headline": g["title"], "description": g["desc"], "image": og(g["hero"]), "dateModified": d, "datePublished": d,
            "author": {"@id": SITE_URL + "/#business"}, "publisher": {"@id": SITE_URL + "/#business"}, "mainEntityOfPage": url}, faq_ld(g["faq"])]
-    return page(f"guides/{g['slug']}.html", title=f"{g['title']} | Onesign", desc=g["desc"], canonical=url, body=body, ogimg=og(g["hero"]), r=r, ld=ld, ogtype="article")
+    return page(f"guides/{g['slug']}.html", title=fit(f"{g['title']} | Onesign", g['title'], f"{g['title'].split(':')[0].split('?')[0]}{'?' if '?' in g['title'] else ''} | Onesign"), desc=g["desc"], canonical=url, body=body, ogimg=og(g["hero"]), r=r, ld=ld, ogtype="article")
 
 def guides_index():
     r = "../"
@@ -227,8 +239,8 @@ def guides_index():
   <div class="gcards">{guide_card(GUIDES[-1], r).replace('class="gcard"', 'class="gcard feat"', 1) + "".join(guide_card(g, r) for g in GUIDES[:-1])}</div>
 </div></section>
 {cta()}'''
-    return page("guides/index.html", title="Sign Guides: Cost, Planning Permission & Illumination | Onesign",
-                desc="Plain-English guides from a UK sign manufacturer: what a shop sign costs, when you need advertisement consent, illuminated sign types and accessible wayfinding.",
+    return page("guides/index.html", title="Sign Guides: Cost, Planning & Illumination | Onesign",
+                desc="Plain-English sign guides from a UK manufacturer: what a shop sign costs, when you need consent, illuminated sign types and what to send for a quote.",
                 canonical=SITE_URL + "/guides", body=body, ogimg=og("ws_assembly"), r=r, ld=[crumbs_ld([("Home", "/"), ("Guides", "/guides")])])
 
 # ------------------------------------------------------------------ nationwide
@@ -275,7 +287,7 @@ def nationwide_page():
     ld = [crumbs_ld([("Home", "/"), ("Nationwide signage", "/nationwide-signage")]),
           {"@context": "https://schema.org", "@type": "Service", "name": "Nationwide signage rollouts", "serviceType": "Multi-site signage manufacture and installation",
            "provider": {"@id": SITE_URL + "/#business"}, "areaServed": "United Kingdom", "url": SITE_URL + "/nationwide-signage"}, faq_ld(faq)]
-    return page("nationwide-signage.html", title="Nationwide Signage Company | Multi-Site Signage Rollouts UK | Onesign",
+    return page("nationwide-signage.html", title="Nationwide Signage Company | UK Multi-Site Rollouts | Onesign",
                 desc="Multi-site signage rollouts across the UK. Every sign made in one Gateshead factory and installed by our own accredited teams, so every site matches.",
                 canonical=SITE_URL + "/nationwide-signage", body=body, ogimg=og("rolls"), r=r, ld=ld)
 

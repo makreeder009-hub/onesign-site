@@ -3893,7 +3893,7 @@
    "label": "high level signs",
    "code": "OS-HL",
    "seo_title": "High Level Signs: Large Building Signage",
-   "meta": "Large, high-level building signs surveyed, fabricated and installed by Onesign's own IPAF and PASMA trained crews: fabricated letters, panels, printed Dibond and vinyl-wrapped panels.",
+   "meta": "High-level building signs surveyed, made and installed by our own IPAF and PASMA trained crews: fabricated letters, panels and printed Dibond.",
    "hero": "rolls",
    "photos": [
     "rolls",
@@ -4076,7 +4076,7 @@
    "label": "printed fascia panels",
    "code": "OS-PF",
    "seo_title": "Printed Fascia Signs & Folded Panel Signs",
-   "meta": "Printed fascia signs made in Gateshead: digitally printed graphics on aluminium composite or folded aluminium tray panels, a sharp full-colour shopfront at a sensible price.",
+   "meta": "Printed fascia signs made in Gateshead: full-colour graphics on aluminium composite or folded tray panels. A sharp shopfront at a sensible price.",
    "hero": "p_ns_fascia",
    "photos": [
     "p_ns_fascia",
@@ -4132,7 +4132,7 @@
    "label": "flex faces",
    "code": "OS-FF",
    "seo_title": "Flex Face Signs | Large Illuminated Signs",
-   "meta": "Large-scale flex face signs made in Gateshead: a printed flex fabric skin tensioned across an illuminated frame, seamless at any size and re-skinnable for a rebrand.",
+   "meta": "Flex face signs made in Gateshead: a printed fabric skin stretched over a lit frame. Seamless at any size, and re-skinnable when you rebrand.",
    "hero": "n_kosmic",
    "photos": [
     "n_kosmic"
@@ -4466,7 +4466,7 @@
    "label": "totems & monoliths",
    "code": "OS-TM",
    "seo_title": "Totem Signs & Monolith Signs",
-   "meta": "Freestanding totem and monolith signs, lit or non-lit, single-brand or multi-tenant, made and installed by Onesign.",
+   "meta": "Freestanding totem and monolith signs, lit or non-lit, single-brand or multi-tenant. Designed, made in Gateshead and installed by Onesign.",
    "hero": "sun_totem",
    "photos": [
     "sun_totem",
@@ -4523,7 +4523,7 @@
    "label": "wayfinding",
    "code": "OS-WF",
    "seo_title": "Wayfinding Signage for Hospitals, Schools & Campuses",
-   "meta": "Wayfinding sign schemes planned, made and installed by Onesign: directional signs, level identification, totems and door signs for hospitals, schools and campuses.",
+   "meta": "Wayfinding sign schemes planned, made and installed by Onesign: directional signs, totems, level and door signs for hospitals, schools and campuses.",
    "hero": "way_g",
    "photos": [
     "way_g",
@@ -4603,7 +4603,7 @@
    "label": "vehicle graphics",
    "code": "OS-VH",
    "seo_title": "Van Signwriting & Vehicle Graphics",
-   "meta": "Van graphics, fleet livery and vehicle wraps designed, printed and fitted in Gateshead by Onesign.",
+   "meta": "Van signwriting, fleet livery and vehicle wraps, designed, printed and fitted in Gateshead by Onesign. From a single van to a full fleet.",
    "hero": "ig_park2",
    "photos": [
     "ig_park2",
@@ -4701,7 +4701,8 @@
      "Compliance",
      "Safety and accessibility built into every sign family."
     ]
-   ]
+   ],
+   "meta": "Signage for hospitals, clinics and NHS sites: wayfinding, tactile and Braille signs, totems and compliance signs, made and fitted by Onesign."
   },
   {
    "slug": "education",
@@ -4745,7 +4746,8 @@
      "Holiday installs",
      "We can schedule installs around term time."
     ]
-   ]
+   ],
+   "meta": "School, college and university signage: building letters, wayfinding, totems and wall graphics. Campus signage partner to Newcastle University."
   },
   {
    "slug": "construction",
@@ -4783,7 +4785,8 @@
      "Accredited",
      "CSCS, IPAF, PASMA and Constructionline accredited."
     ]
-   ]
+   ],
+   "meta": "Construction hoardings, site boards and safety signage, printed in-house in Gateshead and installed fast, so your site is branded and compliant."
   },
   {
    "slug": "commercial",
@@ -4834,7 +4837,8 @@
      "Multi-site",
      "Consistent signage across several sites."
     ]
-   ]
+   ],
+   "meta": "Office and commercial signage: building signs, reception logos, wall graphics, wayfinding and safety signs, made and fitted by Onesign."
   },
   {
    "slug": "retail",
@@ -4881,7 +4885,8 @@
      "Retail parks",
      "Totems and large-scale flex faces."
     ]
-   ]
+   ],
+   "meta": "Shop signs and retail signage: illuminated fascias, 3D letters, projecting signs and window graphics, made in Gateshead and fitted across the UK."
   },
   {
    "slug": "hospitality-leisure",
@@ -4940,7 +4945,8 @@
      "Venues of every size",
      "From one bar to an arena."
     ]
-   ]
+   ],
+   "meta": "Signs for bars, restaurants, cafes and gyms: halo-lit letters, LED neon, projecting signs and fascias that look as good at night as by day."
   },
   {
    "slug": "hair-beauty",
@@ -4989,7 +4995,8 @@
      "Small details",
      "Window vinyls and treatment-room signs."
     ]
-   ]
+   ],
+   "meta": "Salon signage for hair, beauty and aesthetics: 3D letter fascias, LED neon, interior logos and window graphics, designed and fitted by Onesign."
   },
   {
    "slug": "transport",
@@ -5024,7 +5031,8 @@
      "Durable",
      "Materials chosen for heavy use."
     ]
-   ]
+   ],
+   "meta": "Transport signage and fleet graphics: wayfinding for stations and hubs, van livery and vehicle wraps, made in Gateshead by Onesign."
   },
   {
    "slug": "health-safety",
@@ -5059,7 +5067,8 @@
      "Floor graphics",
      "Anti-slip floor markings and fire exit routes."
     ]
-   ]
+   ],
+   "meta": "Health and safety signs that meet the regulations: fire, safety and statutory signs, site boards and floor graphics, supplied and fitted by Onesign."
   }
  ],
  "PROJECTS": [

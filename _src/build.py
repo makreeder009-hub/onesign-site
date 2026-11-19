@@ -269,7 +269,7 @@ BUSINESS = {
   "telephone":"+44 191 487 6767","email":"sales@onesignanddigital.com","foundingDate":"2008",
   "address":{"@type":"PostalAddress","streetAddress":"D86 Princesway North, Team Valley","addressLocality":"Gateshead","postalCode":"NE11 0TU","addressCountry":"GB"},
   "areaServed":["Newcastle upon Tyne","Gateshead","Sunderland","Durham","South Tyneside","Northumberland","North East England","United Kingdom"],
-  "hasMap":REVIEWS["url"],
+  "geo": {"@type": "GeoCoordinates", "latitude": 54.9330, "longitude": -1.6237}, "hasMap":REVIEWS["url"],
   "openingHoursSpecification":[
     {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"07:00","closes":"16:00"},
     {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"07:00","closes":"12:00"}],
@@ -309,8 +309,25 @@ def flush_sections(html):
         prev = bg
     out.append(html[pos:]); return "".join(out)
 
-def page(path, *, title, desc, canonical, body, ogimg, r, ld=(), bodyattrs="", ogtype="website", preload=None):
+
+def fit(*cands, n=60):
+    """First candidate that fits Google's display width (about 60 chars for titles)."""
+    for c in cands:
+        if c and len(c) <= n: return c
+    return min((c for c in cands if c), key=len)
+def fit_desc(*cands, lo=110, hi=158):
+    """Best meta description: first candidate within lo..hi, else the longest under hi, else trimmed at a sentence."""
+    cands = [" ".join(c.split()) for c in cands if c]
+    for c in cands:
+        if lo <= len(c) <= hi: return c
+    ok = [c for c in cands if len(c) <= hi]
+    if ok: return max(ok, key=len)
+    c = cands[0]; cut = c[:hi].rfind(". ")
+    return c[:cut+1] if cut > 80 else c[:hi-1].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+def page(path, *, title, desc, canonical, body, ogimg, r, ld=(), bodyattrs="", ogtype="website", preload=None, noindex=False):
     PAGES.append(path)
+    desc = fit_desc(desc)
+    robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large, max-snippet:-1"
     body = flush_sections(body)
     lds = "\n".join(f'<script type="application/ld+json">{json.dumps(x,ensure_ascii=False)}</script>' for x in [BUSINESS,*ld])
     doc = f'''<!doctype html>
@@ -320,6 +337,7 @@ def page(path, *, title, desc, canonical, body, ogimg, r, ld=(), bodyattrs="", o
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc)}">
+<meta name="robots" content="{robots}">
 <link rel="canonical" href="{canonical}">
 <meta property="og:type" content="{ogtype}">
 <meta property="og:site_name" content="Onesign &amp; Digital">
@@ -328,6 +346,9 @@ def page(path, *, title, desc, canonical, body, ogimg, r, ld=(), bodyattrs="", o
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{ogimg}">
 <meta property="og:locale" content="en_GB">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{E(title)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#111415">
 <link rel="icon" href="{r}assets/favicon.svg" type="image/svg+xml">
@@ -504,7 +525,7 @@ def type_page(t):
           {"@context":"https://schema.org","@type":"Service","name":t["name"],"serviceType":t["name"],"description":t["meta"],
            "provider":{"@id":SITE_URL+"/#business"},"areaServed":"United Kingdom","url":url},
           {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in t["faq"]]}]
-    return page(f"signs/{t['slug']}.html", title=f"{t['seo_title']} | Onesign, Newcastle", desc=t["meta"], canonical=url,
+    return page(f"signs/{t['slug']}.html", title=fit(f"{t['seo_title']} | Onesign, Newcastle", f"{t['seo_title']} | Onesign", f"{t['seo_title'].split(':')[0]} | Onesign, Newcastle"), desc=t["meta"], canonical=url,
                 body=body, ogimg=og(t["hero"]), r=r, ld=ld, bodyattrs=f' data-signtype="{E(t["name"])}"')
 
 # --------------------------------------------------------------- sector pages
@@ -538,7 +559,7 @@ def sector_page(s):
 </div></section>
 {cta()}'''
     ld = [crumbs_ld([("Home","/"),("Sectors","/sectors"),(tcap(s["name"]),f"/sectors/{s['slug']}")])]
-    return page(f"sectors/{s['slug']}.html", title=f"{s['title']} | Onesign, North East & UK", desc=s["intro"][:155].rsplit(" ",1)[0]+".",
+    return page(f"sectors/{s['slug']}.html", title=fit(f"{s['title']} | Onesign, North East & UK", f"{s['title']} | Onesign North East", f"{s['title']} | Onesign"), desc=s["meta"],
                 canonical=url, body=body, ogimg=og(s["img"]), r=r, ld=ld)
 
 # --------------------------------------------------------------- about
@@ -595,8 +616,8 @@ def about_page():
   </div>
 </div></section>
 {cta()}'''
-    return page("about.html", title="About Onesign & Digital | Sign Makers & Factory, Gateshead",
-                desc="Family-run since 2008, Onesign & Digital designs, manufactures and installs signage from a 10,000 sq ft factory in Team Valley, Gateshead, for clients across the UK.",
+    return page("about.html", title="About Onesign & Digital | Sign Makers in Gateshead",
+                desc="Family-run since 2008, Onesign & Digital designs, makes and installs signs from our 10,000 sq ft factory in Team Valley, Gateshead.",
                 canonical=SITE_URL+"/about", body=body, ogimg=og("ws_assembly"), r=r,
                 ld=[crumbs_ld([("Home","/"),("About us","/about")])])
 
@@ -810,8 +831,8 @@ def home_page():
   </div>
 </section>
 {cta()}'''
-    return page("index.html", title="Sign Makers in Newcastle & the North East | Onesign & Digital", preload=None,
-                desc="Family-run North East sign makers since 2008. 3D letters, backlit panels, building signs, wayfinding, LED neon and large format print, designed, made and installed in-house in Gateshead.",
+    return page("index.html", title="Sign Makers Newcastle & North East | Onesign & Digital", preload=None,
+                desc="North East sign makers since 2008: 3D letters, illuminated signs, wayfinding and print, designed, made and fitted from our Gateshead factory.",
                 canonical=SITE_URL+"/", body=body, ogimg=og("hero"), r=r)
 
 # --------------------------------------------------------------- extras
@@ -858,7 +879,7 @@ def extras(pages):
 def not_found():
     body = f'''{phero("", [("Home","index.html"),("Page not found",None)], "we can't find that page.", "We've rebuilt our website. Try one of these instead, or call us on 0191 487 6767.", None, ctas=False, plain=True)}
 <section class="sec"><div class="wrap"><div class="chips-row">{"".join(f'<a href="/signs/{t["slug"]}">{E(t["label"])}</a>' for t in TYPES)}</div></div></section>'''
-    return page("404.html", title="Page not found | Onesign & Digital", desc="We can't find that page.", canonical=SITE_URL+"/404", body=body, ogimg=og("hero"), r="/")
+    return page("404.html", title="Page not found | Onesign & Digital", desc="We can't find that page. Browse our sign types, case studies and guides, or call Onesign & Digital in Gateshead on 0191 487 6767.", canonical=SITE_URL+"/404", body=body, ogimg=og("hero"), r="/", noindex=True)
 
 # --------------------------------------------------------------- css
 def build_css():

@@ -3346,3 +3346,20 @@ _tail = {s: i for i, s in enumerate(_TAIL)}
 _mid = {c["slug"]: i for i, c in enumerate(CASES)}
 CASES.sort(key=lambda c: (0, _rank[c["slug"]]) if c["slug"] in _rank else (2, _tail[c["slug"]]) if c["slug"] in _tail else (1, _mid[c["slug"]]))
 CASE = {c["slug"]: c for c in CASES}
+
+# ---- Re-rank 19 Nov (2): brand authority first, then how good the sign looks ----
+_fix("the-cell", hero="p_n3_cell_3")
+_fix("sunderland-eye-hospital", hero="p_seh_09758")
+_fix("woodham-academy", hero="p_wd_rec")
+_TOP2 = ["nike-courtiez", "nhs-community-diagnostic-centre", "rolls-royce", "jet2-dawson-sanderson", "kurt-geiger",
+         "newcastle-university", "sunderland-eye-hospital", "durham-university-ai-skills-centre", "vertu-motors-arena",
+         "aldi-jaymac-warehouse", "cafe-barrier-banners", "bar-seventy-three", "superpower-metrocentre",
+         "northgate-hospital", "company-shop-group", "sir-bobby-robson-foundation", "avery-dennison", "harbro",
+         "glow-tanning", "thatype", "cork-and-coffee", "woodham-academy", "the-works", "grainger-market",
+         "blacks-corner-fenwick", "houghton-colliery", "qe-facilities", "savoy", "byre", "reform-studio",
+         "kosmic-kingdom", "the-cell", "recover3", "trident-fire", "tms-grid", "griffin-court", "aqua-tcg",
+         "bags-jamz", "lean-cuisine", "arv-studio", "cotton-travel"]
+_rank2 = {s: i for i, s in enumerate(_TOP2)}
+_prev = {c["slug"]: i for i, c in enumerate(CASES)}
+CASES.sort(key=lambda c: (0, _rank2[c["slug"]]) if c["slug"] in _rank2 else (1, _prev[c["slug"]]))
+CASE = {c["slug"]: c for c in CASES}

@@ -480,7 +480,7 @@ def type_page(t):
     related = "".join(link_card(f'{x["slug"]}.html', x["hero"], x["label"], x["desc"][:96].rsplit(" ",1)[0]+"…") for x in rel)
     sectors = [s for s in SECTORS if t["slug"] in s["types"]]
     sec_chips = "".join(f'<a href="../sectors/{s["slug"]}.html">{E(s["name"])}</a>' for s in sectors)
-    cs = cases_for(type_slug=t["slug"])
+    cs = cases_for(type_slug=t["slug"], n=6)
     cases_html = f'''<section class="sec alt"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Case studies</span><h2 class="h2 rv">seen on real projects.</h2></div><a class="pill pill-ghost" href="../work/index.html">all our work <span class="dot">→</span></a></div>
   <div class="ccards">{"".join(case_card(c, r) for c in cs)}</div></div></section>''' if cs else ""
@@ -529,13 +529,17 @@ def type_page(t):
                 body=body, ogimg=og(t["hero"]), r=r, ld=ld, bodyattrs=f' data-signtype="{E(t["name"])}"')
 
 # --------------------------------------------------------------- sector pages
+def sector_gallery(s):
+    """Curated lead photos, then one finished photo from every job in the sector (newest jobs first), then the rest of the curated set."""
+    cur = list(s["gallery"]); heroes = [c["hero"] for c in CASES if c.get("sector") == s["slug"]]
+    return list(dict.fromkeys(cur[:4] + heroes + cur[4:]))
 def sector_page(s):
     r = "../"; TS = types_by_slug()
     url = f"{SITE_URL}/sectors/{s['slug']}"
     tcards = all_type_cards(r, [c for c in CASES if c.get("sector") == s["slug"]])
     points = "".join(f'<div class="point"><h3>{E(a)}</h3><p>{E(b)}</p></div>' for a,b in s["points"])
     others = "".join(f'<a href="{o["slug"]}.html">{E(o["name"])}</a>' for o in SECTORS if o["slug"]!=s["slug"])
-    cs = cases_for(sector=s["slug"])
+    cs = cases_for(sector=s["slug"], n=6)
     cases_html = f'''<section class="sec alt"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Case studies</span><h2 class="h2 rv">{E(s["name"])} projects.</h2></div><a class="pill pill-ghost" href="../work/index.html">all our work <span class="dot">→</span></a></div>
   <div class="ccards">{"".join(case_card(c, r) for c in cs)}</div></div></section>''' if cs else ""
@@ -545,7 +549,7 @@ def sector_page(s):
 </div></section>
 <section class="sec"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Fitted by us</span><h2 class="h2 rv">recent {E(s["name"])} work.</h2></div><p class="lede rv">Tap any photo to see it full size.</p></div>
-  {gallery(s["gallery"], r)}
+  {gallery(sector_gallery(s), r)}
 </div></section>
 {cases_html}
 <section class="sec"><div class="wrap">

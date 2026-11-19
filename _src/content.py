@@ -3212,3 +3212,29 @@ for _c in CASES:
 for _c in CASES:
     if _c["slug"] == "grainger-market" and "p_gm_2" not in _c["photos"]: _c["photos"].append("p_gm_2")
     if _c["slug"] == "nhs-community-diagnostic-centre" and "p_cdc_ent" not in _c["photos"]: _c["photos"].append("p_cdc_ent")
+
+# ================= map pass (19 Nov): fixes + researched locations =================
+# BYRE / Tribeca / Cotton Travel locations were shifted by one when matching photo groups; corrected from photo GPS + Tribeca's listed address
+LOC["byre"] = ["Sheepfolds, Sunderland", "sunderland", 54.91179, -1.38782, "gps"]
+LOC["tribeca"] = ["East Boldon", "south-tyneside", 54.94538, -1.43433, "gps"]
+LOC["cotton-travel"] = ["Sunderland", "sunderland", 54.90516, -1.38288, "gps"]
+LOC["reform-studio"] = ["The Side, Newcastle Quayside", "newcastle", 54.96880, -1.60800, "address"]
+LOC["frate"] = ["High Bridge, Newcastle", "newcastle", 54.97158, -1.61277, "address"]
+LOC["the-chair"] = ["High Street East, Sunderland", "sunderland", 54.90879, -1.37469, "address"]
+LOC["the-head-spa"] = ["Seaburn, Sunderland", "sunderland", 54.92965, -1.37986, "address"]
+LOC["the-lumen"] = ["Newcastle Helix", "newcastle", 54.97238, -1.62341, "address"]
+LOC["camden-clinic"] = ["North Shields", None, 55.01114, -1.44646, "address"]
+LOC["ward-quarters"] = ["North Road, Durham", "durham", 54.77900, -1.57950, "place"]
+LOC["mount-croft-care-home"] = ["Bromsgrove", None, 52.34759, -2.04994, "address"]
+for _c in CASES:
+    s = _c["slug"]
+    if s in LOC and s in ("byre","tribeca","cotton-travel","reform-studio","frate","the-chair","the-head-spa","the-lumen","camden-clinic","ward-quarters","mount-croft-care-home"):
+        _c["where"] = LOC[s][0]
+    if s == "byre":
+        _c["lede"] = "Painted-look wall logos, LED neon and window vinyl for BYRE at Sheepfolds, a burger restaurant in Sunderland."
+    if s == "tribeca":
+        _c["lede"] = "Gold 3D letters with a script overlay on the fascia, plus an interior logo and window lettering for Tribeca hair salon in East Boldon."
+    if s == "reform-studio":
+        _c["lede"] = "Built-up studio names and the R mark in each room, plus window and door graphics, for Reform Studio in the former Side Gallery on Newcastle's Quayside."
+    if s == "the-head-spa":
+        _c["lede"] = "Tone-on-tone built-up letters for The Head Spa at Pure Bliss in Seaburn, Sunderland."

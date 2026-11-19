@@ -139,9 +139,11 @@ def case_page(c):
 KEY_TYPES = ["3d-letters", "backlit-panels", "high-level-signs", "projecting-signs", "neon-led-neon", "vinyl-wall-graphics"]
 def area_page(a):
     r = "../"; url = f"{SITE_URL}/areas/{a['slug']}"
-    picked = [s for s, _ in a["proof"]] + [s for s, v in LOC.items() if v[1] == a["slug"] and s in CASE and s not in [x for x, _ in a["proof"]]]
-    proof = "".join(case_card(CASE[s], r) for s in picked[:9])
-    a = dict(a, proof=[(s, "") for s in picked], photos=list(dict.fromkeys(list(a["photos"]) + [CASE[s]["hero"] for s in picked]))[:12])
+    _order = {c["slug"]: i for i, c in enumerate(CASES)}
+    local = sorted([s for s, v in LOC.items() if v[1] == a["slug"] and s in CASE and s not in [x for x, _ in a["proof"]]], key=lambda s: _order.get(s, 999))
+    picked = [s for s, _ in a["proof"]] + local
+    proof = "".join(case_card(CASE[s], r) for s in picked[:12])
+    a = dict(a, proof=[(s, "") for s in picked], photos=list(dict.fromkeys(list(a["photos"])[:3] + [CASE[s]["hero"] for s in picked] + list(a["photos"])[3:]))[:30])
     proof_html = f'''<section class="sec alt"><div class="wrap">
   {head("Local work", f"our work in {E(a['short'])}.")}
   <div class="ccards">{proof}</div>

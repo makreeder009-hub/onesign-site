@@ -3143,3 +3143,38 @@ for _i, _sl in enumerate(["kurt-geiger", "reform-studio"]):
     _j = next(k for k, c in enumerate(CASES) if c["slug"] == _sl); CASES.insert(7 + _i, CASES.pop(_j))
 for _c in CASES:
     if _c["slug"] == "cafe-barrier-banners": _c["hero"] = "p_n3_costa_1"
+
+# ================= deeper pass: photos previously left out (19 Nov) =================
+import json as _json
+_C4 = _json.load(open("/home/claude/new3/pick4_counts.json"))
+_N4 = lambda job: [f"p_n4_{job}_{i}" for i in range(_C4[job])]
+_BY = {c["slug"]: c for c in CASES}
+for _slug, _job in [("sunderland-eye-hospital","x_seh"),("thatype","x_thatype"),("black-rabbit","x_br"),("griffin-court","x_gc"),("glow-tanning","x_glow"),
+                    ("aqua-tcg","x_aqua"),("elring-parts","x_el"),("tribeca","x_tribeca"),("byre","x_byre"),("fitt","x_fitt"),("filto","x_filto"),
+                    ("welcome-to-durham","x_wtd"),("just-peachy","x_jp"),("my-car-cleaning","x_mcc"),("cafe-barrier-banners","x_costa"),
+                    ("east-holborn-street-signs","x_eh"),("reform-studio","x_rf")]:
+    _c = _BY[_slug]; _c["photos"] = _c["photos"] + [p for p in _N4(_job) if p not in _c["photos"]]
+for _slug, _job in [("elring-parts","m_el"),("the-works","m_tw"),("nobles-casino","m_nob"),("grainger-market","m_gm"),("glow-tanning","m_glow")]:
+    _c = _BY[_slug]; _c["making"] = list(_c.get("making") or []) + _N4(_job)
+CASES.append(dict(slug="sir-bobby-robson-foundation", old=None, name="Sir Bobby Robson Foundation", where="Newcastle", sector="healthcare",
+    types=["digital-large-format-print"], hero="p_n4_sbr_0", label="Framed ceremonial spade",
+    lede="A deep box frame holding the ceremonial spade from the groundbreaking of the Sir Bobby Robson Institute, for the Sir Bobby Robson Foundation and Newcastle Hospitals Charity.",
+    brief="The spade used to break ground on the new institute in April 2026 needed to be kept and presented as a keepsake worthy of the occasion.",
+    made=[("Box frame", "A deep white frame built to hold the full-size spade securely."),
+          ("Printed backing", "A full-colour printed panel with Sir Bobby's portrait, the foundation and charity logos and the event details.")],
+    result="A presentation piece that records the day and the people behind the institute.",
+    photos=_N4("sbr"), making=[]))
+LOC["sir-bobby-robson-foundation"] = ["Newcastle", "newcastle", 54.98000, -1.61900, "place"]
+CASES.append(dict(slug="bags-jamz", old=None, name="Bägs Jamz", where=None, sector="retail",
+    types=["light-boxes"], hero="p_n4_bj_0", label="Illuminated light boxes",
+    lede="Two blue illuminated light boxes with the Bägs Jamz graffiti logo in hot pink.",
+    brief="Bägs Jamz wanted its hand-drawn logo kept exactly as drawn and lit up so it pops at night.",
+    made=[("Light boxes", "A long box and a square box, each with a printed face and even LED lighting inside.")],
+    result="The bright pink logo glows exactly as drawn.",
+    photos=_N4("bj"), making=[]))
+_OA = _json.load(open("/home/claude/new3/old_added.json"))
+for _c in CASES:
+    if _c["slug"] == "sunderland-eye-hospital":
+        _c["photos"] = _c["photos"][:3] + _OA["seh"][:4] + _c["photos"][3:] + _OA["seh"][4:]
+    if _c["slug"] == "fawcett-street-community-shop":
+        _c["photos"] = _c["photos"][:2] + _OA["fw"][:5] + _c["photos"][2:] + _OA["fw"][5:]

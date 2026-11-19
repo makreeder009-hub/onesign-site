@@ -388,3 +388,15 @@ html,body{overflow-x:clip}
   .gcard.feat h3{font-size:clamp(21px,1.9vw,26px)}
 }
 .gal-sub{font-size:clamp(20px,2.2vw,26px);margin:36px 0 16px}.gal-sub:first-child{margin-top:0}
+
+.gallery figure.gal-hide{display:none}
+.gal-more{display:flex;justify-content:center;margin-top:20px}
+.gal-more .pill{cursor:pointer}
+/* a lone last sector card on the three-column desktop grid becomes one wide card instead of an orphan */
+@media (min-width:1101px){
+  .sector-grid>.sector:last-child:nth-child(3n+1){grid-column:1/-1;flex-direction:row}
+  .sector-grid>.sector:last-child:nth-child(3n+1) .ph{flex:0 0 calc((100% - 32px)/3);aspect-ratio:16/10}
+  .sector-grid>.sector:last-child:nth-child(3n+1) .body{flex:1;align-content:center;padding:28px 34px}
+  .sector-grid>.sector:last-child:nth-child(3n+1) h3{font-size:30px}
+  .sector-grid>.sector:last-child:nth-child(3n+1) p{font-size:15px}
+}

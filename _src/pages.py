@@ -5,7 +5,7 @@ Run this file to build the whole site into ../site."""
 import hashlib, json, os, shutil
 import build as B
 from build import (fit, fit_desc, E, pic, wix, og, cap, pos, page, phero, gallery, link_card, cta, crumbs_ld, case_card, guide_card,
-                   area_chips, tcap, map_block, LOC, all_type_cards, TYPES, SECTORS, CASES, AREAS, GUIDES, REVIEWS, SITE_URL, MINI_STEPS, CASE)
+                   area_chips, tcap, map_block, LOC, SITES, all_type_cards, TYPES, SECTORS, CASES, AREAS, GUIDES, REVIEWS, SITE_URL, MINI_STEPS, CASE)
 
 TS = {t["slug"]: t for t in TYPES}
 SS = {s["slug"]: s for s in SECTORS}
@@ -43,7 +43,7 @@ def sectors_index():
     cards = "".join(link_card(f'{s["slug"]}.html', s["img"], s["name"], s["blurb"], s["slug"]) for s in SECTORS)
     body = f'''{phero(r, [("Home","index.html"),("Sectors",None)], "signs for your sector.", "From live hospital wards to construction hoardings, we know the rules and realities of each sector we work in.", "hc_cdc", kicker="Sectors")}
 <section class="sec"><div class="wrap">
-  {head("Who we work for", "nine sectors, one team.")}
+  {head("Who we work for", "ten sectors, one team.")}
   <div class="sector-grid">{cards}</div>
 </div></section>
 <section class="sec alt"><div class="wrap">
@@ -107,7 +107,7 @@ def case_page(c):
 </div></section>
 <section class="sec"><div class="wrap">
   {head("Photos", "the finished job.", "Tap any photo to see it full size.")}
-  {gallery(c["photos"], r)}
+  {"".join(f'<h3 class="gal-sub">{E(g)}</h3>{gallery(ps, r)}' for g, ps in c["groups"]) if c.get("groups") else gallery(c["photos"], r)}
   <blockquote class="result"><span class="eyebrow">The result</span><p>{E(c["result"])}</p></blockquote>
 </div></section>
 {making}
@@ -140,7 +140,8 @@ KEY_TYPES = ["3d-letters", "backlit-panels", "high-level-signs", "projecting-sig
 def area_page(a):
     r = "../"; url = f"{SITE_URL}/areas/{a['slug']}"
     _order = {c["slug"]: i for i, c in enumerate(CASES)}
-    local = sorted([s for s, v in LOC.items() if v[1] == a["slug"] and s in CASE and s not in [x for x, _ in a["proof"]]], key=lambda s: _order.get(s, 999))
+    here = {s for s, v in LOC.items() if v[1] == a["slug"]} | {s for s, sites in SITES.items() if any(st["area"] == a["slug"] for st in sites)}
+    local = sorted([s for s in here if s in CASE and s not in [x for x, _ in a["proof"]]], key=lambda s: _order.get(s, 999))
     picked = [s for s, _ in a["proof"]] + local
     proof = "".join(case_card(CASE[s], r) for s in picked[:12])
     a = dict(a, proof=[(s, "") for s in picked], photos=list(dict.fromkeys(list(a["photos"])[:3] + [CASE[s]["hero"] for s in picked] + list(a["photos"])[3:]))[:30])

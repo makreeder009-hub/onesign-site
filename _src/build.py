@@ -17,7 +17,9 @@ for _s in SECTORS: _s["points"] = [tuple(p) for p in _s["points"]]
 # the same photo saved twice under two names: always show one of them
 ALIAS = {"ncl":"hero", "ig_totem_dir":"ng_totem", "ig_queenshead":"n_queens", "n_whiteswan":"p_ws_side",
          "ws_weld2":"weld", "ig_smartvape":"p_sm_proj", "p_cork_new":"cork", "p_sun_totem2":"sun_totem",
-         "p_vv_ext":"n_vivana", "ig_wrgroup":"p_wr_brick", "p_gm_2":"p_gm_main", "p_cdc_ent":"hc_cdc2"}
+         "p_vv_ext":"n_vivana", "ig_wrgroup":"p_wr_brick", "p_gm_2":"p_gm_main", "p_cdc_ent":"hc_cdc2",
+         # same photo saved twice: keep the job's own copy everywhere (19 Nov)
+         "fence_banner":"fence2", "n_tribeca":"p_n2_tribeca_1", "n_betteryou":"p_n3_by_0", "tesco":"p_n6_hc_0"}
 def canon(o):
     if isinstance(o, str): return ALIAS.get(o, o)
     if isinstance(o, dict): return {k: canon(v) for k, v in o.items()}
@@ -55,7 +57,7 @@ for _t in TYPES:
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "13"
+ASSET_V = "14"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)
@@ -111,7 +113,7 @@ def og(key):
         fx, fy = [float(x.strip("%")) / 100 for x in IMG[key][2].split()]
         ImageOps.fit(_open(key), (1200, 630), Image.LANCZOS, centering=(fx, fy)).save(full, "JPEG", quality=82, optimize=True, progressive=True)
     return SITE_URL + "/" + rel
-from content import CASES, AREAS, GUIDES, REVIEWS, PHONE, LOC
+from content import CASES, AREAS, GUIDES, REVIEWS, PHONE, LOC, SITES
 CASES[:] = canon(CASES); AREAS[:] = canon(AREAS); GUIDES[:] = canon(GUIDES)
 def cap(k): return IMG[k][1]
 def pos(k): return IMG[k][2]
@@ -437,6 +439,11 @@ def map_block(r, area=None, cls="", hq=True, title=None):
         if s not in CASE: continue   # every map shows every job; an area page just opens on its own area
         c = CASE[s]
         jobs.append({"n": c["name"], "p": place, "t": c["label"], "lat": lat, "lng": lng, "a": ar, "u": f"{r}work/{s}.html", "i": wix(c["hero"], 480, 360)})
+    for s, sites in SITES.items():   # one client, several shops: a pin per shop, each with that shop's own photo
+        if s not in CASE: continue
+        c = CASE[s]
+        for st in sites:
+            jobs.append({"n": c["name"], "p": st["place"], "t": st["label"], "lat": st["lat"], "lng": st["lng"], "a": st["area"], "u": f"{r}work/{s}.html", "i": wix(st["img"], 480, 360)})
     data = {"hq": list(HQ) if hq else None, "jobs": jobs, "area": area}
     return (f'<div class="jobmap {cls}" data-map=\'{json.dumps(data, ensure_ascii=False).replace(chr(39), "&#39;")}\' role="region" aria-label="{E(title or "Map of signs we have fitted")}">'
             f'<div class="jm-fallback"><b>{len(jobs)} jobs on the map</b><span>Loading map…</span></div></div>')

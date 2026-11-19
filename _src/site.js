@@ -164,6 +164,14 @@ $$(".gallery").forEach(g=>{
     f.addEventListener("click",()=>openLb(items,i));
     f.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openLb(items,i)}});
   });
+  /* long galleries open with 24 photos and a "show all" button; the viewer still steps through every photo */
+  const N=24;
+  if(!g.classList.contains("grid")&&figs.length>N+6){
+    figs.slice(N).forEach(f=>f.classList.add("gal-hide"));
+    const b=el("div",{class:"gal-more"},`<button class="pill pill-ghost" type="button">show all ${figs.length} photos <span class="dot" aria-hidden="true">↓</span></button>`);
+    g.after(b);
+    $("button",b).addEventListener("click",()=>{figs.forEach(f=>f.classList.remove("gal-hide"));b.remove();figs[N].focus({preventScroll:true})});
+  }
 });
 
 /* ---------- FORM ---------- */

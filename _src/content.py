@@ -3411,3 +3411,42 @@ for _c in CASES:
 # ---- 19 Nov (6): window graphics and frosting are sub-headings of wall graphics & vinyl, not their own types ----
 for _c in CASES:
     _c["types"] = list(dict.fromkeys("vinyl-wall-graphics" if t in ("window-graphics", "window-frosting") else t for t in _c["types"]))
+
+# ---- 19 Nov (7): glow. has several shops. One case study, one map pin per site we signed, photos grouped by site.
+# Sites matched from tanwithglow.com location pages: Durham (Front St, Framwellgate Moor DH1 5AU),
+# Spennymoor (Cheapside DL16 6QE), Team Valley (Enterprise House NE11 0SR; photo GPS 7 m away). Newcastle (Plummer St) not ours on record.
+SITES = {"glow-tanning": [
+    dict(place="Framwellgate Moor, Durham", area="durham", lat=54.792959, lng=-1.590041, img="p_gl_shop", label="3D letters, fascia lettering and interior branding"),
+    dict(place="Cheapside, Spennymoor", area="durham", lat=54.699983, lng=-1.600475, img="p_n3_glowm_3", label="GLOW. letters and lettering panel, made in our workshop"),
+    dict(place="Team Valley, Gateshead", area="gateshead", lat=54.932998, lng=-1.618755, img="p_n2_glow_3", label="Opening-day window graphics and reception lettering"),
+]}
+_g = _fix("glow-tanning", where="Durham, Spennymoor and Team Valley", label="Signage for a growing tanning brand",
+          lede="Signage for glow.'s luxury tanning shops in Durham, Spennymoor and Team Valley: 3D letters, fascia lettering, window graphics and interior branding.",
+          brief="glow. started with one luxury tanning shop in Durham and has grown across the North East. Every new shop needed to look unmistakably glow. from the street to the tanning rooms.",
+          made=[("Durham, Framwellgate Moor", "Big 3D GLOW. letters with BEAUTY ROOMS and LUXURY HYBRID TANNING lettering on the black fascia, plus the interior logo wall, branded reception counter and illuminated room numbers."),
+                ("Spennymoor, Cheapside", "GLOW. letters and a stacked LUXURY HYBRID TANNING panel for the fascia, made in our Team Valley workshop."),
+                ("Team Valley, Enterprise House", "Full-height black window graphics for opening day and GLOW. lettering on the reception counter.")],
+          result="Three shops, one look. Customers know a glow. the moment they see it.")
+_g["groups"] = [
+    ("Durham, Framwellgate Moor", ["p_z_glowtannin_0", "glow_night", "glow", "glow_ext", "p_gl_shop", "glow_int", "glow_int2", "p_gl_rec", "p_gl_wall", "n_glow_wall", "p_gl_corr", "p_gl_door", "p_gl_num", "p_gl_wide"]),
+    ("Team Valley, Gateshead", ["p_n2_glow_3", "p_n2_glow_0", "p_n2_glow_2", "p_n4_x_glow_1", "p_n2_glow_1", "p_n4_x_glow_0"]),
+    ("More from glow.", ["p_z_glowtannin_1"]),
+]
+_g["photos"] = [p for _, ps in _g["groups"] for p in ps if p in _g["photos"] or True]
+LOC.pop("glow-tanning", None)
+CASE = {c["slug"]: c for c in CASES}
+
+# ---- 19 Nov (8): a job lists every sign type whose gallery shows one of its photos
+_D8 = _json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json")))
+_where8 = {}
+for _t8 in _D8["TYPES"]:
+    for _p8 in _t8["photos"]: _where8.setdefault(_p8, []).append(_t8["slug"])
+for _c8 in CASES:
+    for _p8 in [_c8["hero"]] + list(_c8["photos"]):
+        for _s8 in _where8.get(_p8, []):
+            if _s8 not in _c8["types"]: _c8["types"] = list(_c8["types"]) + [_s8]
+CASE = {c["slug"]: c for c in CASES}
+
+# ---- 19 Nov (9): events & celebrations is its own sector; the Nike x Courtiez pitch banners were an event job
+_fix("nike-courtiez", sector="events")
+CASE = {c["slug"]: c for c in CASES}

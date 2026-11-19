@@ -3178,3 +3178,37 @@ for _c in CASES:
         _c["photos"] = _c["photos"][:3] + _OA["seh"][:4] + _c["photos"][3:] + _OA["seh"][4:]
     if _c["slug"] == "fawcett-street-community-shop":
         _c["photos"] = _c["photos"][:2] + _OA["fw"][:5] + _c["photos"][2:] + _OA["fw"][5:]
+
+# ================= audit: every catalogued photo not yet live (19 Nov) =================
+_ADD5 = {
+ "the-cell": ["cell"], "company-shop-group": ["fence2"], "aldi-jaymac-warehouse": ["jaymac_close","n_jaymac_close","n_jaymac_office","n_quality_close","p_z_aldijaymac_0"],
+ "atom": ["n_atom","p_at_wall2"], "camden-clinic": ["n_camden_close","p_g_camden"], "savoy": ["n_savoy_ent","p_z_savoy_1"],
+ "skin-and-soul": ["n_skinsoul_feel","p_x_skinandsou_2"], "nhs-community-diagnostic-centre": ["p_z_nhscommuni_0","p_z_woodhamaca_0","nhs_skyline2"],
+ "copeland-residential": ["p_g_copeland"], "grace-kellys": ["p_gk_wide"], "pantera-advisory": ["p_pa_view"], "rustic-cup": ["p_rc_2"],
+ "bar-marquee": ["p_x_barmarquee_1"], "baxters": ["p_x_baxters_1"], "bratz-salon": ["p_x_bratzsalon_0"], "combat-96": ["p_x_combat96_1"],
+ "fora": ["p_x_fora_0"], "wink": ["p_x_goodlashga_0"], "kiss-me-irish": ["p_x_kissmeiris_1"], "level": ["p_x_level_1"], "lomond": ["p_x_lomond_0"],
+ "maker": ["p_x_maker_0","p_x_maker_2"], "menu": ["p_x_menu_2","p_x_menu_3"], "originals-glow": ["p_x_originalsg_1"], "parm-o-rama": ["p_x_parmorama_0"],
+ "the-cove": ["p_x_thecove_1"], "act-group": ["p_y_actgroup_1"], "better-you": ["p_y_betteryou_1"], "cowgirl-and-country": ["p_y_country_2"],
+ "jam-jar": ["p_y_jamjar_1"], "lean-cuisine": ["p_y_leancuisin_0"], "little-her-hair": ["p_y_littleherh_1"], "vivana-lounge": ["p_z_vivanaloun_0"],
+ "bar-seventy-three": ["seventy3","p_n4_s73_0"], "workwear-express": ["totW","totem_ww"], "fabios": ["vanFabio"], "park-electrical": ["vanPark"],
+ "woodham-academy": ["w_logo","way_1","way_2"],
+}
+_MAKE5 = {"blacks-corner-tram-shelter": ["p_bc_m1"], "renewable-energy": ["p_x_renewablee_m0"], "bar-seventy-three": ["st_bench","st_cnc","st_weld","ws_cnc2"]}
+for _c in CASES:
+    _have = set([_c["hero"]] + list(_c["photos"]) + list(_c.get("making") or []))
+    _c["photos"] = list(_c["photos"]) + [p for p in _ADD5.get(_c["slug"], []) if p not in _have]
+    _c["making"] = list(_c.get("making") or []) + [p for p in _MAKE5.get(_c["slug"], []) if p not in _have]
+    if _c["slug"] == "sir-bobby-robson-foundation":
+        _c.update(hero="p_z_companysho_4", photos=["p_z_companysho_4"] + [p for p in _c["photos"] if p != "p_z_companysho_4"],
+                  label="Institute hoarding and framed spade", types=["digital-large-format-print"],
+                  lede="A printed site hoarding for the new Sir Bobby Robson Institute, and a box frame holding the ceremonial spade from its groundbreaking, for the Sir Bobby Robson Foundation and Newcastle Hospitals Charity.",
+                  brief="The foundation's appeal for the new institute needed a hoarding that tells the story on site, and the spade from the April 2026 groundbreaking needed keeping as a presentation piece.",
+                  made=[("Site hoarding", "A long run of printed hoarding panels with the 'Last & Greatest Team' appeal, staff photography and the plans for the institute."),
+                        ("Box frame", "A deep white frame built to hold the full-size spade securely."),
+                        ("Printed backing", "A full-colour panel with Sir Bobby's portrait, the foundation and charity logos and the event details.")],
+                  result="The appeal is visible to everyone passing the site, and the groundbreaking is recorded in a piece worth keeping.")
+    if _c["slug"] == "my-car-cleaning":
+        _c["hero"] = "p_n3_mcc_1"; _c["photos"] = ["p_n3_mcc_1"] + [p for p in _c["photos"] if p != "p_n3_mcc_1"]
+for _c in CASES:
+    if _c["slug"] == "grainger-market" and "p_gm_2" not in _c["photos"]: _c["photos"].append("p_gm_2")
+    if _c["slug"] == "nhs-community-diagnostic-centre" and "p_cdc_ent" not in _c["photos"]: _c["photos"].append("p_cdc_ent")

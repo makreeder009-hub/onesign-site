@@ -297,7 +297,7 @@
   ],
   "totW": [
    "0554f863bdb245778f1f5b6c64b41e0e~mv2.jpg",
-   "Retail park totem",
+   "Workwear Express: entrance totem",
    "50% 40%"
   ],
   "sun_totem": [
@@ -3267,7 +3267,7 @@
   ],
   "p_z_companysho_4": [
    "new:p_z_companysho_4",
-   "Company Shop Group: printed hoarding",
+   "Sir Bobby Robson Institute: printed hoarding outside the hospital",
    "50% 50%"
   ],
   "p_z_nhscommuni_0": [
@@ -3342,7 +3342,7 @@
   ],
   "p_z_woodhamaca_0": [
    "new:p_z_woodhamaca_0",
-   "Woodham Academy: hall logo",
+   "NHS Community Diagnostic Centre: building letters",
    "50% 50%"
   ],
   "p_z_aldijaymac_0": [
@@ -4393,7 +4393,7 @@
   "p_n3_mcc_1": [
    "new:p_n3_mcc_1",
    "My Car Cleaning: fascia on opening day",
-   "50% 50%"
+   "50% 35%"
   ],
   "p_n3_gm_0": [
    "new:p_n3_gm_0",
@@ -4843,6 +4843,11 @@
   "p_fw_08190": [
    "new:p_fw_08190",
    "Fawcett Street Community Shop: 'What a price' shelf signs",
+   "50% 50%"
+  ],
+  "p_n4_s73_0": [
+   "new:p_n4_s73_0",
+   "Bar Seventy Three: fitting the sign on the roof",
    "50% 50%"
   ]
  },
@@ -5405,7 +5410,8 @@
    "meta": "Flex face signs made in Gateshead: a printed fabric skin stretched over a lit frame. Seamless at any size, and re-skinnable when you rebrand.",
    "hero": "n_kosmic",
    "photos": [
-    "n_kosmic"
+    "n_kosmic",
+    "n_kosmic_close"
    ],
    "desc": "A flex face is built for scale. A printed flex fabric skin is tensioned across a large illuminated frame, so even very big signs go up in one seamless face. When you rebrand, the skin can be replaced without changing the frame.",
    "ideal": [
@@ -5479,7 +5485,8 @@
     "neonC",
     "neonD",
     "p_y_templetaco_0",
-    "p_y_thedrunken_0"
+    "p_y_thedrunken_0",
+    "p_g_raw"
    ],
    "desc": "The glow of classic neon made with modern LED flex: low voltage, cool to the touch and far tougher than glass. Ideal for statement walls, bars and photo moments.",
    "ideal": [
@@ -5644,7 +5651,10 @@
     "print_fruit",
     "fence_banner",
     "bowmer",
-    "p_y_filto_3"
+    "p_y_filto_3",
+    "lfBm",
+    "lfPrint",
+    "lfPosters"
    ],
    "desc": "Big, bold, colour-matched print from our own wide-format printers: hoardings, printed LED ceiling panels, posters, window graphics and display boards, printed and finished in-house so turnaround stays fast.",
    "ideal": [

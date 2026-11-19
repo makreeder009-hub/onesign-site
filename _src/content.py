@@ -3238,3 +3238,84 @@ for _c in CASES:
         _c["lede"] = "Built-up studio names and the R mark in each room, plus window and door graphics, for Reform Studio in the former Side Gallery on Newcastle's Quayside."
     if s == "the-head-spa":
         _c["lede"] = "Tone-on-tone built-up letters for The Head Spa at Pure Bliss in Seaburn, Sunderland."
+
+# ---- Mak's corrections 19 Nov: sign types per job, Scissor Guys, Kosmic Kingdom, Courtiez, folder sweep ----
+def _fix(slug, **kw):
+    for _c in CASES:
+        if _c["slug"] == slug: _c.update(kw); return _c
+_fix("cotton-travel", types=["flat-cut-letters", "window-graphics", "neon-led-neon"],
+     made=[("Flat-cut logo wall", "The gold globe logo and lettering cut flat and fixed to a painted feature wall."),
+           ("World map", "A cut world map with 'Explore a Bigger World' lettering above the coffee station."),
+           ("LED neon", "A warm white 'Little Explorers' neon for the kids' corner."),
+           ("Shopfront", "A fascia sign and full-colour window graphics.")])
+_fix("recover3", types=["neon-led-neon", "flat-cut-letters"])
+_fix("atom", types=["flat-cut-letters", "window-frosting", "vinyl-wall-graphics"],
+     made=[("Moss wall logo", "A flat-cut logo fixed to a living-moss wall in the meeting room."),
+           ("Illuminated logo", "A lit logo by the entrance doors."),
+           ("Wall graphics", "Large typographic wall graphics in the open-plan office."),
+           ("Glass manifestations", "Frosted and printed vinyl on meeting room and kitchen glass.")])
+_fix("amethyst", types=["flat-cut-letters"], label="Flat-cut logo", made=[("Flat-cut logo", "The purple flower logo and lettering cut flat and fixed to a panel.")])
+_fix("craft-and-crumb", types=["flat-cut-letters", "window-graphics"])
+_fix("the-lumen", types=["flat-cut-letters"], label="Flat-cut letters", made=[("Flat-cut letters", "Letters cut flat and fixed to the wall.")])
+_fix("little-her-hair", types=["flat-cut-letters", "window-frosting"], made=[("Flat-cut lettering", "Black flat-cut letters on a white fascia."), ("Window graphics", "Logo on the frosted glazing.")])
+_fix("newstreet", types=["backlit-panels"], label="Push-through backlit panel",
+     lede="A backlit panel with push-through acrylic letters for Newstreet Groundworks.",
+     made=[("Push-through panel", "The logo and lettering cut from the panel, with acrylic letters pushed through so they glow when lit.")],
+     making=["p_n5_ns_0", "p_n5_ns_1"])
+_fix("the-works", types=["backlit-panels", "projecting-signs"], made=[("Push-through backlit panel", "Acrylic letters and logo pushed through yellow panels and lit from inside."), ("Projecting sign", "A lit projecting sign for passers-by.")])
+_fix("bags-jamz", types=["backlit-panels"], label="Backlit panels",
+     lede="Two blue backlit panels with the Bägs Jamz graffiti logo in hot pink.",
+     made=[("Backlit panels", "A long panel and a square panel, each lit evenly from behind so the logo glows.")])
+_fix("nhs-community-diagnostic-centre", types=["3d-letters", "vinyl-wall-graphics", "wayfinding"], hero="p_z_nhscommuni_0",
+     made=[("Illuminated 3D letters", "Fabricated, illuminated letters in NHS colours, readable from a distance day and night."),
+           ("North East wall graphics", "Printed vinyls run along the interior walls with silhouettes of regional landmarks, which makes a clinical space feel local and welcoming."),
+           ("Directional signs", "Projecting and wall-mounted signs guide patients and staff through the centre.")])
+_fix("aldi-jaymac-warehouse", types=["high-level-signs", "printed-fascia-panels", "flat-cut-letters"])
+_fix("kids-kloset", types=["3d-letters"], made=[("3D letters", "Script and capital letters built up on a panel above the shopfront."), ("Interior feature walls", "3D lettering on the feature walls and counter inside the shop.")])
+_fix("byre", types=["3d-letters", "vinyl-wall-graphics", "neon-led-neon", "window-graphics"],
+     made=[("Face-lit 3D letters", "BYRE letters with illuminated faces on the shopfront."),
+           ("Wall graphics", "Large BYRE logos and the Little Grazers kids' graphic applied to painted brick so they look hand-painted."),
+           ("LED neon", "A red BYRE cow neon in the window and a 'Join the Herd' neon behind the bar."),
+           ("Window vinyl", "Cut vinyl logos on the glazing, plus takeaway menu lettering on the wall.")])
+_fix("durham-university-ai-skills-centre", types=["flat-cut-letters"],
+     made=[("Logo walls", "Flat-cut lettering and crests for Durham University and Microsoft in a metallic finish on the centre's feature walls."),
+           ("Entrance panel", "A printed glass-effect panel with both logos, fixed on stand-offs.")])
+_sg = _fix("scissor-guys", types=["window-graphics"], hero="p_n2_sg_2", label="Window graphics",
+           made=[("Window graphics", "Printed privacy panels with the logo, parking notice and opening hours."), ("Door vinyl", "Logo and details on the door.")])
+_sg["photos"] = [p for p in _sg["photos"] if p != "p_n2_sg_0"]
+for _s in ("glow-tanning", "maker", "reform-studio", "brow-game", "filto", "tribeca", "zen", "sun-tanning", "station-espresso", "smart-vape", "nobles-casino"):
+    _c = _fix(_s)
+    if _c and "window-graphics" not in _c["types"]: _c["types"].append("window-graphics")
+for _s in ("sunderland-eye-hospital", "sienna", "griffin-court"):
+    _c = _fix(_s)
+    if _c and "window-frosting" not in _c["types"]: _c["types"].append("window-frosting")
+
+CASES.append(dict(slug="kosmic-kingdom", old=None, name="Kosmic Kingdom", where=None, sector="hospitality-leisure",
+    types=["flex-faces"], hero="p_n5_km_0", label="Flex face sign",
+    lede="A large flex face sign for Kosmic Kingdom, an interactive and soft play centre, in the space-themed purple and orange brand.",
+    brief="Kosmic Kingdom needed a big, bright sign that would stand out on the building and be read from the car park.",
+    made=[("Flex face", "One seamless printed face stretched tight across a large frame, with no joins through the logo."),
+          ("Installed at height", "Fitted to the building by our own team.")],
+    result="The playful logo reads clearly from across the car park.",
+    photos=["p_n5_km_0", "p_n5_km_1", "p_n5_km_2", "p_n5_km_3", "p_n5_km_4", "n_kosmic", "n_kosmic_close"], making=[]))
+CASES.append(dict(slug="nike-courtiez", old=None, name="Nike x Courtiez", where=None, sector="hospitality-leisure",
+    types=["flags-banners", "digital-large-format-print"], hero="p_n5_cz_0", label="Pitch-side banners",
+    lede="Printed fence banners around a football pitch for a Nike x Courtiez academy session.",
+    brief="Courtiez needed branded banners to dress a whole pitch for a Nike session, printed and finished quickly.",
+    made=[("Fence banners", "Large printed PVC banners with hems and eyelets, tied along the perimeter fence and stand."),
+          ("Printed in-house", "Printed and finished in our Team Valley workshop.")],
+    result="The pitch looked fully branded for the session and the photos.",
+    photos=["p_n5_cz_0", "p_n5_cz_1", "p_n5_cz_2", "p_n5_cz_3", "p_n5_cz_4"], making=["p_n5_cz_5", "p_n5_cz_6"]))
+CASES.append(dict(slug="strongher", old=None, name="Strongher", where=None, sector="hospitality-leisure",
+    types=["flat-cut-letters"], hero="p_n5_str_0", label="Fascia lettering",
+    lede="White lettering on a pink fascia panel for Strongher.",
+    brief="Strongher wanted a clean, bright fascia to match its brand.",
+    made=[("Fascia", "Lettering fixed to a pink fascia panel above the glazing.")],
+    result="A clean shopfront that matches the brand.", photos=["p_n5_str_0"], making=[]))
+CASES.append(dict(slug="dm-beauty", old=None, name="DM Beauty & Skincare", where=None, sector="hair-beauty",
+    types=["flat-cut-letters"], hero="p_n5_dm_0", label="Logo plaque",
+    lede="A round logo plaque with gold lettering for DM Beauty & Skincare.",
+    brief="DM Beauty wanted a premium logo for the treatment room wall.",
+    made=[("Logo plaque", "A round white plaque with the DM monogram and lettering in gold, fixed on stand-offs.")],
+    result="A small sign that makes the room feel premium.", photos=["p_n5_dm_0"], making=[]))
+CASE = {c["slug"]: c for c in CASES}

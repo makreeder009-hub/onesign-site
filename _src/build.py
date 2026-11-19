@@ -33,6 +33,8 @@ TYPES = canon(TYPES); SECTORS = canon(SECTORS); PROJECTS = canon(PROJECTS); REEL
 for _s in SECTORS: _s["points"] = [tuple(p) for p in _s["points"]]
 # Sign-type hero photos chosen by Mak. LOCKED: do not change these when adding photos or rebuilding.
 LOCKED_HEROES = {
+ "window-graphics": "p_n3_rf_1",
+ "window-frosting": "p_seh_00132",
  "printed-fascia-panels": "p_ns_fascia",
  "3d-letters": "n_thatype",
  "backlit-panels": "st_sign",
@@ -55,7 +57,7 @@ for _t in TYPES:
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "10"
+ASSET_V = "11"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)
@@ -410,9 +412,22 @@ CASE = {c["slug"]: c for c in CASES}
 def cases_for(type_slug=None, sector=None, n=3):
     out = [c for c in CASES if (type_slug and type_slug in c["types"]) or (sector and c["sector"] == sector)]
     return out[:n]
-def case_card(c, r, sizes="(max-width:620px) 92vw, (max-width:980px) 46vw, 31vw"):
+def type_cases(t, n=6):
+    """Cases for a sign-type page, each paired with its own photo from that type's gallery."""
+    if t["slug"] == "totems-monoliths":   # Mak likes the hero-led cards here: keep them
+        return [(c, c["hero"]) for c in cases_for(type_slug=t["slug"], n=n)]
+    gal = [t["hero"]] + list(t["photos"]); out = []
+    for c in CASES:
+        mine = [p for p in gal if p == c["hero"] or p in c["photos"]]
+        if mine: out.append((gal.index(mine[0]), c, mine[0]))
+    out.sort(key=lambda x: x[0]); seen = {c["slug"] for _, c, _ in out}
+    picks = [(c, img) for _, c, img in out]
+    picks += [(c, c["hero"]) for c in CASES if t["slug"] in c["types"] and c["slug"] not in seen]
+    return picks[:n]
+def case_card(c, r, sizes="(max-width:620px) 92vw, (max-width:980px) 46vw, 31vw", img=None):
+    img = img or c["hero"]
     where = f'<span class="cc-where">{E(c["where"])}</span>' if c["where"] else ""
-    return (f'<a class="ccard" href="{r}work/{c["slug"]}.html"><div class="cc-img">{pic(c["hero"], sizes, alt=c["name"]+" signage by Onesign", style="object-position:"+pos(c["hero"]), widths=(480,960))}</div>'
+    return (f'<a class="ccard" href="{r}work/{c["slug"]}.html"><div class="cc-img">{pic(img, sizes, alt=c["name"]+" signage by Onesign", style="object-position:"+pos(img), widths=(480,960))}</div>'
             f'<div class="cc-body"><small>{E(c["label"])}</small><h3>{E(c["name"])}</h3>{where}<span class="cc-go" aria-hidden="true">→</span></div></a>')
 def guide_card(g, r):
     return (f'<a class="gcard" href="{r}guides/{g["slug"]}.html"><img class="gc-img" loading="lazy" alt="" src="{wix(g.get("card", g["hero"]),720,480)}" style="object-position:{pos(g.get("card", g["hero"]))}"><small>{E(g["kicker"])}</small><h3>{E(g["h1"])}</h3><p>{E(g["desc"])}</p><span class="gc-go">read the guide <span aria-hidden="true">→</span></span></a>')
@@ -464,7 +479,7 @@ def type_page(t):
     if t["variants"]:
         cards = ""
         for v in t["variants"]:
-            fr = (f'<div class="frame"><img class="b" alt="" loading="lazy" src="{wix(v["img"],80,60)}"><img class="f" loading="lazy" alt="{E(cap(v["img"]))}" src="{wix(v["img"],800,600,"fit")}"></div>' if v["img"]
+            fr = (f'<div class="frame"><img class="b" alt="" loading="lazy" src="{wix(v["img"],80,60)}"><img class="f" loading="lazy" alt="{E(cap(v["img"]))}" src="{wix(v["img"],800,600,"fit")}" style="object-fit:cover;object-position:{pos(v["img"])}"></div>' if v["img"]
                   else '<div class="frame"><div class="soon" style="position:absolute"><div><span>photos coming soon</span></div></div></div>')
             tags = "".join(f"<span>{E(x)}</span>" for x in v["tags"])
             cards += f'<article class="variant">{fr}<div class="txt"><h3>{E(v["t"])}</h3><p>{E(v["p"])}</p><div class="tags">{tags}</div></div></article>'
@@ -480,10 +495,10 @@ def type_page(t):
     related = "".join(link_card(f'{x["slug"]}.html', x["hero"], x["label"], x["desc"][:96].rsplit(" ",1)[0]+"…") for x in rel)
     sectors = [s for s in SECTORS if t["slug"] in s["types"]]
     sec_chips = "".join(f'<a href="../sectors/{s["slug"]}.html">{E(s["name"])}</a>' for s in sectors)
-    cs = cases_for(type_slug=t["slug"], n=6)
+    cs = type_cases(t, n=6)
     cases_html = f'''<section class="sec alt"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Case studies</span><h2 class="h2 rv">seen on real projects.</h2></div><a class="pill pill-ghost" href="../work/index.html">all our work <span class="dot">→</span></a></div>
-  <div class="ccards">{"".join(case_card(c, r) for c in cs)}</div></div></section>''' if cs else ""
+  <div class="ccards">{"".join(case_card(c, r, img=i) for c, i in cs)}</div></div></section>''' if cs else ""
     body = f'''{phero(r, [("Home","index.html"),("Sign types","signs/index.html"),(t["name"],None)], E(t["label"])+".", E(t["desc"]), t["hero"])}
 <section class="sec"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Fitted by us</span><h2 class="h2 rv">real jobs, real photos.</h2></div><p class="lede rv">Tap any photo to see it full size.</p></div>
@@ -553,7 +568,7 @@ def sector_page(s):
 </div></section>
 {cases_html}
 <section class="sec"><div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">What we make</span><h2 class="h2 rv">every sign type, for {E(s["name"])}.</h2></div><p class="lede rv">We make all fifteen in-house. Where we have fitted one for a {E(s["name"])} client, that is the photo you see.</p></div>
+  <div class="sec-head"><div><span class="eyebrow">What we make</span><h2 class="h2 rv">every sign type, for {E(s["name"])}.</h2></div><p class="lede rv">We make every one in-house. Where we have fitted one for a {E(s["name"])} client, that is the photo you see.</p></div>
   {tcards}
 </div></section>
 <section class="sec alt tight"><div class="wrap">

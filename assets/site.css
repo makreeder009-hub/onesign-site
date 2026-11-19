@@ -650,11 +650,11 @@ form.mock.live .form-note{text-align:center;font-size:12px}
 @media (max-width:640px){.chip-row{grid-template-columns:1fr 1fr}}
 @media (prefers-reduced-motion:reduce){.live-dot,.glow-btn,.glow-btn::after{animation:none}}
 /* 18 Nov: mega menu two even rows of 8 (15 types + "all") */
-.mega-grid{grid-template-columns:repeat(9,minmax(0,1fr));gap:10px}
+.mega-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:10px}
 .mega-card > span{padding:8px 9px 10px;font-size:12.5px}
 .mega-card.all{background:var(--fg);color:var(--bg);padding:12px}
 .mega-card.all b{font-size:16px}
-@media (max-width:1180px){.mega-grid{grid-template-columns:repeat(9,minmax(0,1fr));gap:6px}.mega-card > span{font-size:11.5px;padding:7px}.mega-card.all small{display:none}}
+@media (max-width:1180px){.mega-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:7px}.mega-card > span{font-size:11.5px;padding:7px}.mega-card.all small{display:none}}
 /* guide cards and article photos */
 .gcard{overflow:hidden}
 .gcard .gc-img{display:block;width:calc(100% + 48px);max-width:none;margin:-26px -24px 4px;aspect-ratio:3/2;height:auto;object-fit:cover;background:var(--surface-2);transition:transform .6s var(--ease)}
@@ -745,6 +745,7 @@ html,body{overflow-x:clip}
   .gcard.feat .gc-img{width:calc(100% + 48px);max-width:none;margin:-26px -24px 4px;aspect-ratio:3/2;height:auto;min-height:0}
   .gcard.feat h3{font-size:clamp(21px,1.9vw,26px)}
 }
+.gal-sub{font-size:clamp(20px,2.2vw,26px);margin:36px 0 16px}.gal-sub:first-child{margin-top:0}
 
 /* ===================== v2 (Nov 2026): self-hosted fonts, new page families ===================== */
 @font-face{font-family:"Outfit";src:url(fonts/outfit-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-display:swap}

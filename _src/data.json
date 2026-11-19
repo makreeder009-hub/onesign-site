@@ -5769,8 +5769,8 @@
    "name": "Wall graphics & vinyl",
    "label": "wall graphics & vinyl",
    "code": "OS-VG",
-   "seo_title": "Wall Graphics & Vinyl: Murals, Wall Wraps & Lettering",
-   "meta": "Printed wall graphics, murals and cut vinyl lettering for offices, schools, salons and venues, designed, printed and fitted by Onesign.",
+   "seo_title": "Wall Graphics, Window Vinyl & Window Frosting",
+   "meta": "Printed wall graphics, murals, window vinyl, window frosting and glass manifestation, designed, printed and fitted by Onesign across the North East.",
    "hero": "ig_lineart",
    "photos": [
     "ig_lineart",
@@ -5794,31 +5794,59 @@
     "p_y_averydenni_0",
     "p_fw_08160",
     "p_fw_08224",
-    "p_fw_08147"
+    "p_fw_08147",
+    "p_n3_rf_1",
+    "p_n2_glow_0",
+    "p_n2_cotton_1",
+    "p_st_door",
+    "p_g_fab",
+    "p_sm_front",
+    "p_z_noblescasi_0",
+    "p_n2_byre_6",
+    "p_n2_tribeca_4",
+    "p_x_zen_0",
+    "p_n3_filto_2",
+    "p_n3_filto_1",
+    "p_n2_bg_2",
+    "p_x_maker_1",
+    "p_n2_glow_2",
+    "p_seh_00132",
+    "p_si_win",
+    "p_at_manif",
+    "p_at_glass",
+    "p_at_kitchen",
+    "p_seh_09830",
+    "p_seh_00126",
+    "p_n3_rf_5",
+    "p_n2_bg_3",
+    "p_n3_filto_3",
+    "n_jaymac_door",
+    "p_n2_gc_12",
+    "p_sun_win"
    ],
-   "desc": "Two related jobs under one roof. Vinyl graphics are cut from coloured or frosted film for lettering, windows and glass. Wall graphics are digitally printed wraps and murals that cover whole walls.",
+   "desc": "Three related jobs under one roof. Wall graphics are digitally printed wraps and murals, plus cut vinyl lettering for walls. Window vinyl turns shop windows and doors into signage. Window frosting and manifestation give glass privacy, branding and the safety markings building regulations need.",
    "ideal": [
-    "schools",
     "offices",
+    "shopfronts",
     "clinics",
     "windows & glass"
    ],
    "spec": [
     [
-     "Vinyl graphics",
-     "Cut lettering, frosted and etched-effect films, glass manifestation"
-    ],
-    [
      "Wall graphics",
-     "Digitally printed wall wraps and murals"
+     "Digitally printed wall wraps, murals and cut vinyl lettering"
     ],
     [
-     "Surfaces",
-     "Glass, painted walls, doors"
+     "Window vinyl",
+     "Cut and printed window graphics, opening hours and window wraps"
     ],
     [
-     "Print",
-     "Large-format, in-house"
+     "Frosting",
+     "Frosted and etched-effect film, logos cut through"
+    ],
+    [
+     "Manifestation",
+     "Glass safety bands and patterns at the right heights"
     ],
     [
      "Fitting",
@@ -5827,7 +5855,7 @@
    ],
    "variants": [
     {
-     "t": "Vinyl graphics",
+     "t": "Vinyl lettering",
      "img": "p_n2_byre_2",
      "p": "Cut from coloured film: lettering, values walls and logos fixed straight to the wall.",
      "tags": [
@@ -5845,93 +5873,38 @@
       "full wall",
       "murals"
      ]
-    }
-   ],
-   "notes": [
-    "Glass manifestation helps doors and screens meet safety requirements."
-   ],
-   "faq": [
-    [
-     "Can wall graphics go on any wall?",
-     "Most smooth, painted walls are fine. We'll check the surface at survey."
-    ]
-   ]
-  },
-  {
-   "slug": "window-graphics",
-   "name": "Window vinyl graphics",
-   "label": "window vinyl graphics",
-   "code": "OS-WG",
-   "seo_title": "Window Graphics & Window Vinyl: Shop Window Signs",
-   "meta": "Printed and cut window vinyl for shopfronts, offices and vacant units: opening hours, logos, promotions and full window wraps, fitted by Onesign.",
-   "hero": "p_n3_rf_1",
-   "photos": [
-    "p_n2_glow_0",
-    "p_n2_cotton_1",
-    "p_st_door",
-    "p_g_fab",
-    "p_sm_front",
-    "p_z_noblescasi_0",
-    "p_n2_byre_6",
-    "p_n2_tribeca_4",
-    "p_x_zen_0",
-    "p_n3_filto_2",
-    "p_n3_filto_1",
-    "p_n2_bg_2",
-    "p_x_maker_1",
-    "p_n2_glow_2"
-   ],
-   "desc": "Your windows are the biggest sign you have. We print and cut vinyl for shop windows, doors and glazed frontages: logos, opening hours, offers and full-colour window wraps that sell the business to everyone walking past.",
-   "ideal": [
-    "shopfronts",
-    "salons",
-    "cafes and bars",
-    "vacant units"
-   ],
-   "spec": [
-    [
-     "Cut vinyl",
-     "Logos, lettering and opening hours in solid colours"
-    ],
-    [
-     "Printed vinyl",
-     "Full-colour graphics and window wraps"
-    ],
-    [
-     "One-way vision",
-     "Graphics outside, a clear view from inside"
-    ],
-    [
-     "Fitting",
-     "Applied by our own team, inside or outside the glass"
-    ]
-   ],
-   "variants": [
-    {
-     "t": "Cut vinyl lettering",
-     "img": "p_st_door",
-     "p": "Logos, names and opening hours cut from coloured vinyl for a crisp, painted-on look.",
-     "tags": [
-      "cut vinyl",
-      "doors",
-      "opening hours"
-     ]
     },
     {
-     "t": "Printed window graphics",
+     "t": "Window vinyl graphics",
      "img": "p_g_fab",
-     "p": "Full-colour printed vinyl for promotions, privacy panels and complete window wraps.",
+     "p": "Cut and printed vinyl for shop windows and doors: logos, opening hours, offers and full window wraps.",
      "tags": [
       "printed",
       "wraps",
       "promotions"
      ]
+    },
+    {
+     "t": "Window frosting & manifestation",
+     "img": "p_si_win",
+     "p": "Frosted film for privacy and branding, plus manifestation bands that make large panes of glass visible.",
+     "tags": [
+      "privacy",
+      "logos",
+      "doors"
+     ]
     }
    ],
    "notes": [
-    "Window graphics are often allowed without advertisement consent, but rules differ for listed buildings and conservation areas."
+    "Glass manifestation helps doors and screens meet safety requirements.",
+    "Window graphics are often allowed without advertisement consent, but rules differ for listed buildings and conservation areas.",
+    "Large areas of glass in offices and public buildings usually need manifestation so people can see the glass."
    ],
    "faq": [
+    [
+     "Can wall graphics go on any wall?",
+     "Most smooth, painted walls are fine. We'll check the surface at survey."
+    ],
     [
      "Can you fit graphics to the inside of the glass?",
      "Yes. Inside fitting protects the graphic from weather and is common for opening hours and logos."
@@ -5941,95 +5914,79 @@
      "Cut vinyl and one-way vision film keep most of the light. Solid printed panels are best used where you want privacy."
     ],
     [
-     "How long does window vinyl last?",
-     "Quality cast vinyl lasts many years. Short-term promotions can use a cheaper film that peels off cleanly."
-    ]
-   ]
-  },
-  {
-   "slug": "window-frosting",
-   "name": "Window frosting & manifestation",
-   "label": "window frosting",
-   "code": "OS-WF",
-   "seo_title": "Window Frosting & Glass Manifestation Signs",
-   "meta": "Frosted and etched-effect window film for privacy, branding and glass manifestation that meets safety requirements, fitted across the North East.",
-   "hero": "p_seh_00132",
-   "photos": [
-    "p_si_win",
-    "p_at_manif",
-    "p_at_glass",
-    "p_at_kitchen",
-    "p_seh_09830",
-    "p_seh_00126",
-    "p_n3_rf_5",
-    "p_n2_bg_3",
-    "p_n3_filto_3",
-    "n_jaymac_door",
-    "p_n2_gc_12",
-    "p_sun_win"
-   ],
-   "desc": "Frosted, etched-effect film gives glass doors, partitions and windows privacy without losing light, and it carries your logo in a subtle, premium way. Manifestation bands also make large panes of glass visible, which building regulations require.",
-   "ideal": [
-    "offices",
-    "clinics",
-    "hospitals",
-    "meeting rooms"
-   ],
-   "spec": [
-    [
-     "Film",
-     "Frosted and etched-effect vinyl, plain or cut to a design"
-    ],
-    [
-     "Manifestation",
-     "Bands and patterns at the heights regulations require"
-    ],
-    [
-     "Branding",
-     "Logos cut out of the frost or applied on top"
-    ],
-    [
-     "Fitting",
-     "Bubble-free install on site by our own team"
-    ]
-   ],
-   "variants": [
-    {
-     "t": "Privacy frosting",
-     "img": "p_si_win",
-     "p": "Full or banded frosting for windows and doors, with your logo cut through.",
-     "tags": [
-      "privacy",
-      "logos",
-      "doors"
-     ]
-    },
-    {
-     "t": "Glass manifestation",
-     "img": "p_seh_09830",
-     "p": "Patterned bands that make glazing visible and add a designed finish.",
-     "tags": [
-      "safety",
-      "patterns",
-      "partitions"
-     ]
-    }
-   ],
-   "notes": [
-    "Large areas of glass in offices and public buildings usually need manifestation so people can see the glass."
-   ],
-   "faq": [
-    [
      "Does frosting make a room dark?",
      "No. Frosted film lets light through while blurring the view."
     ],
     [
      "Can you add our logo to the frosting?",
      "Yes. We cut the logo out of the frost or apply it on top in a contrasting film."
+    ]
+   ],
+   "groups": [
+    [
+     "Wall graphics & vinyl lettering",
+     [
+      "ig_lineart",
+      "p_ae_road",
+      "p_n2_byre_2",
+      "p_fw_08157",
+      "p_fw_08216",
+      "p_cs_canteen",
+      "p_at_office",
+      "n_workwear_wall",
+      "vg_birds",
+      "vg_workhard",
+      "nhs_skyline",
+      "arv",
+      "univinyl",
+      "w_truetest",
+      "ig_jaymac_wall",
+      "ig_lineart_install",
+      "p_y_fawcettstr_0",
+      "p_y_jamjar_0",
+      "p_y_averydenni_0",
+      "p_fw_08160",
+      "p_fw_08224",
+      "p_fw_08147"
+     ]
     ],
     [
-     "Is manifestation a legal requirement?",
-     "Building regulations expect large glazed areas in critical locations to be marked. We set the heights and pattern to suit."
+     "Window vinyl graphics",
+     [
+      "p_n3_rf_1",
+      "p_n2_glow_0",
+      "p_n2_cotton_1",
+      "p_st_door",
+      "p_g_fab",
+      "p_sm_front",
+      "p_z_noblescasi_0",
+      "p_n2_byre_6",
+      "p_n2_tribeca_4",
+      "p_x_zen_0",
+      "p_n3_filto_2",
+      "p_n3_filto_1",
+      "p_n2_bg_2",
+      "p_x_maker_1",
+      "p_n2_glow_2"
+     ]
+    ],
+    [
+     "Window frosting & manifestation",
+     [
+      "p_seh_00132",
+      "p_si_win",
+      "p_at_manif",
+      "p_at_glass",
+      "p_at_kitchen",
+      "p_seh_09830",
+      "p_seh_00126",
+      "p_n3_rf_5",
+      "p_n2_bg_3",
+      "p_n3_filto_3",
+      "n_jaymac_door",
+      "p_n2_gc_12",
+      "p_sun_win"
+     ]
     ]
    ]
   },
@@ -6393,8 +6350,7 @@
     "wayfinding",
     "high-level-signs",
     "vinyl-wall-graphics",
-    "totems-monoliths",
-    "window-frosting"
+    "totems-monoliths"
    ],
    "points": [
     [
@@ -6531,7 +6487,7 @@
     "high-level-signs",
     "flat-cut-letters",
     "wayfinding",
-    "window-frosting"
+    "vinyl-wall-graphics"
    ],
    "points": [
     [
@@ -6580,7 +6536,7 @@
     "light-boxes",
     "flex-faces",
     "totems-monoliths",
-    "window-graphics"
+    "vinyl-wall-graphics"
    ],
    "points": [
     [
@@ -6641,7 +6597,7 @@
     "3d-letters",
     "neon-led-neon",
     "projecting-signs",
-    "window-graphics"
+    "vinyl-wall-graphics"
    ],
    "points": [
     [
@@ -6691,8 +6647,7 @@
     "3d-letters",
     "neon-led-neon",
     "backlit-panels",
-    "vinyl-wall-graphics",
-    "window-graphics"
+    "vinyl-wall-graphics"
    ],
    "points": [
     [

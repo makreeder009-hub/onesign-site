@@ -33,8 +33,6 @@ TYPES = canon(TYPES); SECTORS = canon(SECTORS); PROJECTS = canon(PROJECTS); REEL
 for _s in SECTORS: _s["points"] = [tuple(p) for p in _s["points"]]
 # Sign-type hero photos chosen by Mak. LOCKED: do not change these when adding photos or rebuilding.
 LOCKED_HEROES = {
- "window-graphics": "p_n3_rf_1",
- "window-frosting": "p_seh_00132",
  "printed-fascia-panels": "p_ns_fascia",
  "3d-letters": "n_thatype",
  "backlit-panels": "st_sign",
@@ -57,7 +55,7 @@ for _t in TYPES:
 E = H.escape
 LOGO = "{{R}}img/brand/onesign-logo-white.png"
 ACCRED = "{{R}}img/brand/accreditations.png"
-ASSET_V = "11"
+ASSET_V = "12"
 
 # ------------------------------------------------------------------ images
 VARS = (96, 480, 960, 1600)
@@ -502,7 +500,7 @@ def type_page(t):
     body = f'''{phero(r, [("Home","index.html"),("Sign types","signs/index.html"),(t["name"],None)], E(t["label"])+".", E(t["desc"]), t["hero"])}
 <section class="sec"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow">Fitted by us</span><h2 class="h2 rv">real jobs, real photos.</h2></div><p class="lede rv">Tap any photo to see it full size.</p></div>
-  {gallery(t["photos"], r)}
+  {"".join(f'<h3 class="gal-sub">{E(g)}</h3>{gallery(ps, r)}' for g, ps in t["groups"]) if t.get("groups") else gallery(t["photos"], r)}
 </div></section>
 {variants}
 {cases_html}

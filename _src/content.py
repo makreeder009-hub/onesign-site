@@ -3407,3 +3407,7 @@ _DROP = _json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
 for _c in CASES:
     _c["photos"] = list(dict.fromkeys(p for p in _c["photos"] if p not in _DROP))
     _c["making"] = list(dict.fromkeys(p for p in _c["making"] if p not in _DROP and p not in _c["photos"]))
+
+# ---- 19 Nov (6): window graphics and frosting are sub-headings of wall graphics & vinyl, not their own types ----
+for _c in CASES:
+    _c["types"] = list(dict.fromkeys("vinyl-wall-graphics" if t in ("window-graphics", "window-frosting") else t for t in _c["types"]))

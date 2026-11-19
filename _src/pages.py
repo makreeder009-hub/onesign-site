@@ -21,7 +21,7 @@ def head(eyebrow, h2, lede="", extra=""):
 def signs_index():
     r = "../"
     cards = "".join(type_card(t["slug"], r) for t in TYPES)
-    body = f'''{phero(r, [("Home","index.html"),("Sign types",None)], "every kind of sign.", "Seventeen sign types, all designed, made and installed by our own team in Team Valley, Gateshead. Pick one to see real jobs, materials and specifications.", "n_thatype", kicker="Sign types")}
+    body = f'''{phero(r, [("Home","index.html"),("Sign types",None)], "every kind of sign.", "Fifteen sign types, all designed, made and installed by our own team in Team Valley, Gateshead. Pick one to see real jobs, materials and specifications.", "n_thatype", kicker="Sign types")}
 <section class="sec"><div class="wrap">
   {head("Made in-house", "choose a sign type.", "Not sure which you need? Send us a photo of your building and we will mock up the options for free.")}
   <div class="cards3">{cards}</div>
@@ -167,7 +167,7 @@ def area_page(a):
 </div></section>
 {proof_html}
 <section class="sec"><div class="wrap">
-  {head("What we make", f"every sign type, for {E(a['short'])}.", "All seventeen are designed, made and fitted by our own team. Photos are from jobs near you where we have them.")}
+  {head("What we make", f"every sign type, for {E(a['short'])}.", "All fifteen are designed, made and fitted by our own team. Photos are from jobs near you where we have them.")}
   {all_type_cards(r, [CASE[s] for s in picked if s in CASE])}
 </div></section>
 <section class="sec alt"><div class="wrap">

@@ -5059,6 +5059,11 @@
    "new:p_n3_cell_3c",
    "The Cell: halo glow",
    "50% 28%"
+  ],
+  "p_n3_cell_c2": [
+   "new:p_n3_cell_c2",
+   "The Cell: halo glow",
+   "50% 28%"
   ]
  },
  "TYPES": [

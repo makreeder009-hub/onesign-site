@@ -3399,3 +3399,4 @@ _rank4 = {s: i for i, s in enumerate(_TOP4)}
 _prev = {c["slug"]: i for i, c in enumerate(CASES)}
 CASES.sort(key=lambda c: (0, _rank4[c["slug"]]) if c["slug"] in _rank4 else (1, _prev[c["slug"]]))
 CASE = {c["slug"]: c for c in CASES}
+_c = _fix("the-cell", hero="p_n3_cell_c2"); _c["photos"] = [p if p != "p_n3_cell_3c" else "p_n3_cell_c2" for p in _c["photos"]]

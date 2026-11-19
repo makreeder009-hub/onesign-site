@@ -3387,3 +3387,15 @@ _rank3 = {s: i for i, s in enumerate(_TOP3)}
 _prev = {c["slug"]: i for i, c in enumerate(CASES)}
 CASES.sort(key=lambda c: (0, _rank3[c["slug"]]) if c["slug"] in _rank3 else (1, _prev[c["slug"]]))
 CASE = {c["slug"]: c for c in CASES}
+
+# ---- 19 Nov (4): hero swaps and three jobs moved up ----
+_fix("grainger-market", hero="p_gm_3")
+_fix("kosmic-kingdom", hero="p_n5_km_2")
+_c = _fix("the-cell", hero="p_n3_cell_3c"); _c["photos"] = [p if p != "p_n3_cell_3" else "p_n3_cell_3c" for p in _c["photos"]]
+_TOP4 = [s for s in _TOP3 if s not in ("my-car-cleaning", "filto", "renewable-energy")]
+_i = _TOP4.index("glow-tanning") + 1
+_TOP4[_i:_i] = ["my-car-cleaning", "filto", "renewable-energy"]
+_rank4 = {s: i for i, s in enumerate(_TOP4)}
+_prev = {c["slug"]: i for i, c in enumerate(CASES)}
+CASES.sort(key=lambda c: (0, _rank4[c["slug"]]) if c["slug"] in _rank4 else (1, _prev[c["slug"]]))
+CASE = {c["slug"]: c for c in CASES}

@@ -2258,7 +2258,7 @@
   "p_gm_3": [
    "new:p_gm_3",
    "Grainger Market: entrance",
-   "50% 50%"
+   "45% 45%"
   ],
   "p_gm_4": [
    "new:p_gm_4",
@@ -4863,7 +4863,7 @@
   "p_n5_km_2": [
    "new:p_n5_km_2",
    "Kosmic Kingdom: sign beside Nando's",
-   "50% 50%"
+   "60% 45%"
   ],
   "p_n5_km_3": [
    "new:p_n5_km_3",
@@ -5054,6 +5054,11 @@
    "new:p_n6_mh_12",
    "Monkwearmouth Hospital: butterflies against the glazing",
    "50% 50%"
+  ],
+  "p_n3_cell_3c": [
+   "new:p_n3_cell_3c",
+   "The Cell: halo glow",
+   "50% 28%"
   ]
  },
  "TYPES": [

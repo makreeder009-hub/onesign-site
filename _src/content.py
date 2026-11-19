@@ -3145,7 +3145,7 @@ for _c in CASES:
     if _c["slug"] == "cafe-barrier-banners": _c["hero"] = "p_n3_costa_1"
 
 # ================= deeper pass: photos previously left out (19 Nov) =================
-import json as _json
+import json as _json, os
 _C4 = _json.load(open("/home/claude/new3/pick4_counts.json"))
 _N4 = lambda job: [f"p_n4_{job}_{i}" for i in range(_C4[job])]
 _BY = {c["slug"]: c for c in CASES}
@@ -3400,3 +3400,10 @@ _prev = {c["slug"]: i for i, c in enumerate(CASES)}
 CASES.sort(key=lambda c: (0, _rank4[c["slug"]]) if c["slug"] in _rank4 else (1, _prev[c["slug"]]))
 CASE = {c["slug"]: c for c in CASES}
 _c = _fix("the-cell", hero="p_n3_cell_c2"); _c["photos"] = [p if p != "p_n3_cell_3c" else "p_n3_cell_c2" for p in _c["photos"]]
+
+# ---- 19 Nov (5): no photo twice on a case study (duplicate and burst shots removed) ----
+import json as _json, os
+_DROP = _json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "dupes.json")))
+for _c in CASES:
+    _c["photos"] = list(dict.fromkeys(p for p in _c["photos"] if p not in _DROP))
+    _c["making"] = list(dict.fromkeys(p for p in _c["making"] if p not in _DROP and p not in _c["photos"]))

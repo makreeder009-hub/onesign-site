@@ -5644,7 +5644,7 @@
     "p_n5_km_1",
     "p_n5_km_2",
     "n_kosmic",
-    "n_kosmic_close"
+    "p_n5_km_3"
    ],
    "desc": "A flex face is built for scale. A printed flex fabric skin is tensioned across a large illuminated frame, so even very big signs go up in one seamless face. When you rebrand, the skin can be replaced without changing the frame.",
    "ideal": [
@@ -5867,7 +5867,6 @@
    "hero": "p_n3_rf_1",
    "photos": [
     "p_n2_glow_0",
-    "p_x_maker_0",
     "p_n2_cotton_1",
     "p_st_door",
     "p_g_fab",
@@ -6112,7 +6111,7 @@
    "photos": [
     "ig_kier",
     "p_n5_cz_0",
-    "p_du_banner",
+    "p_n3_wtd_1",
     "p_n5_cz_2",
     "p_n4_gal_1",
     "p_n2_fitt_1",
@@ -6472,7 +6471,7 @@
     "hoarding2",
     "fence_banner",
     "catalyst",
-    "p_du_banner",
+    "p_n3_wtd_1",
     "p_du_banner3"
    ],
    "types": [

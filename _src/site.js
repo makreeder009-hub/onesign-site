@@ -329,18 +329,29 @@ addEventListener("load",()=>ScrollTrigger.refresh());
     m.addControl(new maplibregl.NavigationControl({showCompass:false}),"top-right");
     m.on("styledata",()=>paint(m));
     const bounds=new maplibregl.LngLatBounds();
+    /* job cards always open ABOVE their pin, and the map slides so the whole card and pin sit inside the map box.
+       Short or narrow maps get a compact side-by-side card so it always has room. */
+    const popCls="jm-popup"+(box.clientHeight<440||box.clientWidth<480?" compact":"");
+    const keepIn=(pop,pin)=>pop.on("open",()=>{
+      pop.setOffset(pin.offsetHeight+8);
+      requestAnimationFrame(()=>{const p=pop.getElement();if(!p)return;
+        const c=box.getBoundingClientRect(),r=p.getBoundingClientRect(),pt=m.project(pop.getLngLat()),pad=14;
+        const top=r.top-c.top,left=r.left-c.left,right=r.right-c.left;let dx=0,dy=0;
+        if(top<pad)dy=top-pad;else if(pt.y>c.height-pad)dy=pt.y-(c.height-pad);
+        if(left<pad)dx=left-pad;else if(right>c.width-pad)dx=right-(c.width-pad);
+        if(dx||dy)m.panBy([dx,dy],{duration:matchMedia("(prefers-reduced-motion:reduce)").matches?0:380})})});
     d.jobs.forEach(j=>{
       const el=document.createElement("button");el.type="button";el.className="jm-photo";el.setAttribute("aria-label",j.n+", "+j.p);
       el.innerHTML=`<img src="${esc2(j.i)}" alt="" loading="lazy"><i></i>`;
-      const pop=new maplibregl.Popup({offset:28,closeButton:true,maxWidth:"260px",className:"jm-popup"})
+      const pop=new maplibregl.Popup({anchor:"bottom",offset:62,closeButton:true,maxWidth:"320px",className:popCls})
         .setHTML(`<a class="jm-pop" href="${esc2(j.u)}"><img src="${esc2(j.i)}" alt=""><span><small>${esc2(j.t)}</small><b>${esc2(j.n)}</b><em>${esc2(j.p)}</em><u>see the job →</u></span></a>`);
-      new maplibregl.Marker({element:el,anchor:"bottom"}).setLngLat([j.lng,j.lat]).setPopup(pop).addTo(m);
+      new maplibregl.Marker({element:el,anchor:"bottom"}).setLngLat([j.lng,j.lat]).setPopup(pop).addTo(m);keepIn(pop,el);
       if(d.area?j.a===d.area:(j.lat>54.3&&j.lat<55.8&&j.lng>-2.6&&j.lng<-1))bounds.extend([j.lng,j.lat]);
     });
     if(d.hq){const el=document.createElement("button");el.type="button";el.className="jm-hq2";el.setAttribute("aria-label","Onesign & Digital HQ, Team Valley");
       el.innerHTML=`<span class="jm-hq2-badge">${MARK}<span><b>Onesign HQ</b><small>Team Valley, Gateshead</small></span></span><span class="jm-hq2-dot"></span>`;
-      const pop=new maplibregl.Popup({offset:34,maxWidth:"280px",className:"jm-popup"}).setHTML('<div class="jm-pop hq"><span><small>Our workshop &amp; showroom</small><b>Onesign &amp; Digital</b><em>D86 Princesway North, Team Valley, Gateshead NE11 0TU</em><em>Mon–Thu 7:00–16:00 · Fri 7:00–12:00</em><a href="https://www.google.com/maps/dir/?api=1&destination=54.9330,-1.6237" target="_blank" rel="noopener">get directions →</a></span></div>');
-      new maplibregl.Marker({element:el,anchor:"bottom"}).setLngLat([d.hq[1],d.hq[0]]).setPopup(pop).addTo(m);
+      const pop=new maplibregl.Popup({anchor:"bottom",offset:70,maxWidth:"320px",className:popCls}).setHTML('<div class="jm-pop hq"><span><small>Our workshop &amp; showroom</small><b>Onesign &amp; Digital</b><em>D86 Princesway North, Team Valley, Gateshead NE11 0TU</em><em>Mon–Thu 7:00–16:00 · Fri 7:00–12:00</em><a href="https://www.google.com/maps/dir/?api=1&destination=54.9330,-1.6237" target="_blank" rel="noopener">get directions →</a></span></div>');
+      new maplibregl.Marker({element:el,anchor:"bottom"}).setLngLat([d.hq[1],d.hq[0]]).setPopup(pop).addTo(m);keepIn(pop,el);
       if(!d.area)bounds.extend([d.hq[1],d.hq[0]])}
     m.on("load",()=>{paint(m);if(!isHQ&&!bounds.isEmpty())m.fitBounds(bounds,{padding:{top:60,bottom:30,left:40,right:40},maxZoom:13.5,duration:0})});
     if(!isHQ){const tag=document.createElement("div");tag.className="jm-count";const here=d.area?d.jobs.filter(x=>x.a===d.area).length:0;tag.innerHTML=d.area?`<b>${here}</b> here · <b>${d.jobs.length}</b> across the map · tap a photo`:`<b>${d.jobs.length}</b> jobs on the map · tap a photo`;box.appendChild(tag)}

@@ -729,7 +729,13 @@ html,body{overflow-x:clip}
 .jm-count b{color:#9cc6d6;font-weight:700}
 .jm-popup .maplibregl-popup-content{padding:0;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(17,20,21,.3)}
 .jm-popup .maplibregl-popup-close-button{width:26px;height:26px;top:8px;right:8px;border-radius:50%;background:rgba(17,20,21,.7);color:#fff;font-size:16px;line-height:1;z-index:2}
+.jm-popup{z-index:3}
 .jm-popup .jm-pop{width:250px}
+.jm-popup.compact .jm-pop{flex-direction:row;width:min(300px,calc(100vw - 72px))}
+.jm-popup.compact .jm-pop img{width:104px;height:auto;min-height:108px;aspect-ratio:auto;flex:none}
+.jm-popup.compact .jm-pop span{padding:11px 38px 11px 13px;align-content:center;min-width:0}
+.jm-popup.compact .jm-pop b{font-size:15px}
+.jm-popup.compact .jm-pop.hq span{padding:14px 40px 14px 16px}
 .jm-pop.hq span{padding:16px 18px 16px}
 /* home: see all guides */
 .g-all{display:flex;justify-content:center;margin-top:32px}

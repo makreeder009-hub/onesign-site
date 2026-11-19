@@ -772,7 +772,7 @@
   ],
   "n_fitt_int": [
    "new:fitt-interior",
-   "Filto and Thatype, Fenwick Newcastle: interior lettering",
+   "Filto and Thatype, Metrocentre: interior lettering",
    "50% 50%"
   ],
   "n_jet2_ceiling": [
@@ -3589,6 +3589,451 @@
    "new:p_seh_09981",
    "Sunderland Eye Hospital: Treatment Investigation Unit lettering",
    "50% 50%"
+  ],
+  "p_n2_fitt_0": [
+   "new:p_n2_fitt_0",
+   "Fitt: printed A-board for Coffee & Matcha",
+   "50% 50%"
+  ],
+  "p_n2_fitt_1": [
+   "new:p_n2_fitt_1",
+   "Fitt: A-board and printed cafe barrier banner",
+   "50% 50%"
+  ],
+  "p_n2_fitt_2": [
+   "new:p_n2_fitt_2",
+   "Fitt: A-board on the terrace",
+   "50% 50%"
+  ],
+  "p_n2_fitt_3": [
+   "new:p_n2_fitt_3",
+   "Fitt: A-board by the outdoor seating",
+   "50% 50%"
+  ],
+  "p_n2_seh_0": [
+   "new:p_n2_seh_0",
+   "Sunderland Eye Hospital: high-level letters going up",
+   "40% 55%"
+  ],
+  "p_n2_seh_1": [
+   "new:p_n2_seh_1",
+   "Sunderland Eye Hospital: letters on two elevations",
+   "50% 50%"
+  ],
+  "p_n2_seh_2": [
+   "new:p_n2_seh_2",
+   "Fitting the high-level letters from a cherry picker",
+   "50% 50%"
+  ],
+  "p_n2_seh_3": [
+   "new:p_n2_seh_3",
+   "Sunderland Eye Hospital: installation from a boom lift",
+   "50% 50%"
+  ],
+  "p_n2_seh_4": [
+   "new:p_n2_seh_4",
+   "Sunderland Eye Hospital: high-level building letters",
+   "50% 50%"
+  ],
+  "p_n2_thatype_0": [
+   "new:p_n2_thatype_0",
+   "Thatype, Metrocentre: halo-lit letters",
+   "50% 50%"
+  ],
+  "p_n2_thatype_1": [
+   "new:p_n2_thatype_1",
+   "Thatype, Metrocentre: shopfront",
+   "50% 50%"
+  ],
+  "p_n2_thatype_2": [
+   "new:p_n2_thatype_2",
+   "Thatype: halo-lit script letters",
+   "50% 50%"
+  ],
+  "p_n2_thatype_3": [
+   "new:p_n2_thatype_3",
+   "Thatype, Metrocentre: shopfront letters",
+   "50% 50%"
+  ],
+  "p_n2_thatype_4": [
+   "new:p_n2_thatype_4",
+   "Thatype: letters lit against the fascia",
+   "50% 50%"
+  ],
+  "p_n2_aqua_0": [
+   "new:p_n2_aqua_0",
+   "Aqua TCG: LED neon logo",
+   "50% 35%"
+  ],
+  "p_n2_aqua_1": [
+   "new:p_n2_aqua_1",
+   "Aqua TCG: LED neon in the shop",
+   "50% 50%"
+  ],
+  "p_n2_aqua_2": [
+   "new:p_n2_aqua_2",
+   "Aqua TCG: LED neon seen through the window",
+   "50% 50%"
+  ],
+  "p_n2_glow_0": [
+   "new:p_n2_glow_0",
+   "glow.: shopfront window graphics",
+   "50% 50%"
+  ],
+  "p_n2_glow_1": [
+   "new:p_n2_glow_1",
+   "glow.: lettering on the reception counter",
+   "50% 50%"
+  ],
+  "p_n2_glow_2": [
+   "new:p_n2_glow_2",
+   "glow.: window graphic detail",
+   "50% 50%"
+  ],
+  "p_n2_glow_3": [
+   "new:p_n2_glow_3",
+   "glow.: shopfront on opening day",
+   "50% 50%"
+  ],
+  "p_n2_br_0": [
+   "new:p_n2_br_0",
+   "Black Rabbit: fascia and gold lettering",
+   "50% 50%"
+  ],
+  "p_n2_br_1": [
+   "new:p_n2_br_1",
+   "Black Rabbit: bar and restaurant fascia",
+   "50% 50%"
+  ],
+  "p_n2_br_2": [
+   "new:p_n2_br_2",
+   "Black Rabbit: gold logo on the fascia",
+   "50% 50%"
+  ],
+  "p_n2_br_3": [
+   "new:p_n2_br_3",
+   "The Warren: fascia lettering",
+   "50% 50%"
+  ],
+  "p_n2_br_4": [
+   "new:p_n2_br_4",
+   "The Warren: gold lettering detail",
+   "50% 50%"
+  ],
+  "p_n2_br_5": [
+   "new:p_n2_br_5",
+   "The Warren: fascia from the street",
+   "50% 50%"
+  ],
+  "p_n2_sg_0": [
+   "new:p_n2_sg_0",
+   "Scissor Guys: fascia and window graphics",
+   "50% 8%"
+  ],
+  "p_n2_sg_1": [
+   "new:p_n2_sg_1",
+   "Scissor Guys: barber shop front",
+   "50% 50%"
+  ],
+  "p_n2_sg_2": [
+   "new:p_n2_sg_2",
+   "Scissor Guys: printed window graphics",
+   "50% 50%"
+  ],
+  "p_n2_sg_3": [
+   "new:p_n2_sg_3",
+   "Scissor Guys: door and window vinyl",
+   "50% 50%"
+  ],
+  "p_n2_el_0": [
+   "new:p_n2_el_0",
+   "Elring Parts: 3D letters on a shaped panel",
+   "50% 50%"
+  ],
+  "p_n2_el_1": [
+   "new:p_n2_el_1",
+   "Elring Parts: installing the sign",
+   "50% 35%"
+  ],
+  "p_n2_el_2": [
+   "new:p_n2_el_2",
+   "Elring Parts: fitting the shaped panel",
+   "50% 50%"
+  ],
+  "p_n2_el_3": [
+   "new:p_n2_el_3",
+   "Elring Parts signs finished in our workshop",
+   "50% 50%"
+  ],
+  "p_n2_el_4": [
+   "new:p_n2_el_4",
+   "Elring Parts: letter detail before fitting",
+   "50% 50%"
+  ],
+  "p_n2_byre_0": [
+   "new:p_n2_byre_0",
+   "BYRE: illuminated logo in the restaurant",
+   "50% 50%"
+  ],
+  "p_n2_byre_1": [
+   "new:p_n2_byre_1",
+   "BYRE: wall logo",
+   "50% 50%"
+  ],
+  "p_n2_byre_2": [
+   "new:p_n2_byre_2",
+   "BYRE: Little Grazers wall graphic",
+   "50% 50%"
+  ],
+  "p_n2_byre_3": [
+   "new:p_n2_byre_3",
+   "BYRE: Join the Herd LED neon",
+   "50% 50%"
+  ],
+  "p_n2_byre_4": [
+   "new:p_n2_byre_4",
+   "BYRE: LED neon in the window",
+   "50% 50%"
+  ],
+  "p_n2_byre_5": [
+   "new:p_n2_byre_5",
+   "BYRE: takeaway wall graphics",
+   "50% 50%"
+  ],
+  "p_n2_byre_6": [
+   "new:p_n2_byre_6",
+   "BYRE: window vinyl",
+   "50% 50%"
+  ],
+  "p_n2_tribeca_0": [
+   "new:p_n2_tribeca_0",
+   "Tribeca: gold 3D letters on the fascia",
+   "50% 12%"
+  ],
+  "p_n2_tribeca_1": [
+   "new:p_n2_tribeca_1",
+   "Tribeca: fascia letters",
+   "50% 50%"
+  ],
+  "p_n2_tribeca_2": [
+   "new:p_n2_tribeca_2",
+   "Tribeca: fascia from the street",
+   "50% 50%"
+  ],
+  "p_n2_tribeca_3": [
+   "new:p_n2_tribeca_3",
+   "Tribeca: interior logo",
+   "50% 50%"
+  ],
+  "p_n2_tribeca_4": [
+   "new:p_n2_tribeca_4",
+   "Tribeca: window lettering",
+   "50% 50%"
+  ],
+  "p_n2_cotton_0": [
+   "new:p_n2_cotton_0",
+   "Cotton Travel: 3D logo wall",
+   "50% 50%"
+  ],
+  "p_n2_cotton_1": [
+   "new:p_n2_cotton_1",
+   "Cotton Travel: fascia and window graphics",
+   "50% 50%"
+  ],
+  "p_n2_cotton_2": [
+   "new:p_n2_cotton_2",
+   "Cotton Travel: world map wall feature",
+   "50% 50%"
+  ],
+  "p_n2_cotton_3": [
+   "new:p_n2_cotton_3",
+   "Cotton Travel: wall lettering",
+   "50% 50%"
+  ],
+  "p_n2_cotton_4": [
+   "new:p_n2_cotton_4",
+   "Cotton Travel: Little Explorers LED neon",
+   "50% 50%"
+  ],
+  "p_n2_cotton_5": [
+   "new:p_n2_cotton_5",
+   "Cotton Travel: logo in the office",
+   "50% 50%"
+  ],
+  "p_n2_du_0": [
+   "new:p_n2_du_0",
+   "Durham University AI Skills Centre: logo wall",
+   "50% 25%"
+  ],
+  "p_n2_du_1": [
+   "new:p_n2_du_1",
+   "Durham University and Microsoft: logo wall",
+   "50% 50%"
+  ],
+  "p_n2_du_2": [
+   "new:p_n2_du_2",
+   "AI Skills Centre: wall lettering",
+   "50% 50%"
+  ],
+  "p_n2_du_3": [
+   "new:p_n2_du_3",
+   "AI Skills Centre: glass entrance panel",
+   "50% 50%"
+  ],
+  "p_n2_du_4": [
+   "new:p_n2_du_4",
+   "AI Skills Centre lettering cut in our workshop",
+   "50% 50%"
+  ],
+  "p_n2_cabana_0": [
+   "new:p_n2_cabana_0",
+   "Cabana: fascia lettering",
+   "50% 0%"
+  ],
+  "p_n2_cabana_1": [
+   "new:p_n2_cabana_1",
+   "Cabana: entrance fascia",
+   "50% 50%"
+  ],
+  "p_n2_cabana_2": [
+   "new:p_n2_cabana_2",
+   "Elvet Residences: canopy letters",
+   "50% 50%"
+  ],
+  "p_n2_cabana_3": [
+   "new:p_n2_cabana_3",
+   "Elvet Residences: letter detail",
+   "50% 50%"
+  ],
+  "p_n2_gc_0": [
+   "new:p_n2_gc_0",
+   "Griffin Court: canopy letters",
+   "50% 50%"
+  ],
+  "p_n2_gc_1": [
+   "new:p_n2_gc_1",
+   "Griffin Court: entrance totem",
+   "50% 50%"
+  ],
+  "p_n2_gc_2": [
+   "new:p_n2_gc_2",
+   "Griffin Court: fabricated canopy letters",
+   "50% 50%"
+  ],
+  "p_n2_gc_3": [
+   "new:p_n2_gc_3",
+   "Griffin Court: letters on the timber canopy",
+   "50% 50%"
+  ],
+  "p_n2_gc_4": [
+   "new:p_n2_gc_4",
+   "Griffin Court: totem by the road",
+   "50% 50%"
+  ],
+  "p_n2_gc_5": [
+   "new:p_n2_gc_5",
+   "Griffin Court: welcome sign",
+   "50% 50%"
+  ],
+  "p_n2_gc_6": [
+   "new:p_n2_gc_6",
+   "Griffin Court: floor directory",
+   "50% 50%"
+  ],
+  "p_n2_gc_7": [
+   "new:p_n2_gc_7",
+   "Griffin Court: directional sign",
+   "50% 50%"
+  ],
+  "p_n2_gc_8": [
+   "new:p_n2_gc_8",
+   "Griffin Court: level sign",
+   "50% 50%"
+  ],
+  "p_n2_gc_9": [
+   "new:p_n2_gc_9",
+   "Griffin Court: accessible toilet sign",
+   "50% 50%"
+  ],
+  "p_n2_gc_10": [
+   "new:p_n2_gc_10",
+   "Griffin Court: directory and level sign",
+   "50% 50%"
+  ],
+  "p_n2_gc_11": [
+   "new:p_n2_gc_11",
+   "Griffin Court: 3D lettering on a directory",
+   "50% 50%"
+  ],
+  "p_n2_gc_12": [
+   "new:p_n2_gc_12",
+   "Griffin Court: entrance glazing",
+   "50% 50%"
+  ],
+  "p_n2_ml_0": [
+   "new:p_n2_ml_0",
+   "Mapleleaf Express: illuminated fascia",
+   "50% 50%"
+  ],
+  "p_n2_ml_1": [
+   "new:p_n2_ml_1",
+   "Mapleleaf Express: forecourt at night",
+   "50% 50%"
+  ],
+  "p_n2_ml_2": [
+   "new:p_n2_ml_2",
+   "Mapleleaf Express: lit logo detail",
+   "50% 50%"
+  ],
+  "p_n2_ml_3": [
+   "new:p_n2_ml_3",
+   "Mapleleaf Express: Chilled LED neon",
+   "50% 50%"
+  ],
+  "p_n2_ml_4": [
+   "new:p_n2_ml_4",
+   "Mapleleaf Express: Beer Cave LED neon",
+   "50% 50%"
+  ],
+  "p_n2_elysia_0": [
+   "new:p_n2_elysia_0",
+   "Elysia & Co: 3D wall letters",
+   "50% 50%"
+  ],
+  "p_n2_elysia_1": [
+   "new:p_n2_elysia_1",
+   "Elysia & Co: letter detail",
+   "50% 50%"
+  ],
+  "p_n2_elysia_2": [
+   "new:p_n2_elysia_2",
+   "Elysia & Co: logo wall",
+   "50% 50%"
+  ],
+  "p_n2_bg_0": [
+   "new:p_n2_bg_0",
+   "Brow Game: fascia",
+   "50% 50%"
+  ],
+  "p_n2_bg_1": [
+   "new:p_n2_bg_1",
+   "Brow Game: interior logo",
+   "50% 50%"
+  ],
+  "p_n2_bg_2": [
+   "new:p_n2_bg_2",
+   "Brow Game: window graphics",
+   "50% 50%"
+  ],
+  "p_n2_bg_3": [
+   "new:p_n2_bg_3",
+   "Brow Game: door vinyl",
+   "50% 50%"
+  ],
+  "p_n2_harbro_0": [
+   "new:p_n2_harbro_0",
+   "Harbro: lettering on the store counter",
+   "50% 75%"
   ]
  },
  "TYPES": [
@@ -3603,6 +4048,9 @@
    "photos": [
     "n_thatype",
     "p_z_glowtannin_0",
+    "p_n2_thatype_0",
+    "p_n2_tribeca_0",
+    "p_n2_cotton_0",
     "p_tr_halo",
     "p_rm_main",
     "p_ws_front",
@@ -3830,6 +4278,8 @@
    "photos": [
     "ig_durham",
     "p_arv_logo",
+    "p_n2_elysia_0",
+    "p_n2_du_0",
     "p_pa_rec",
     "p_kk_int",
     "n_jaymac_logo",
@@ -3898,6 +4348,8 @@
    "photos": [
     "rolls",
     "p_tms_main",
+    "p_n2_seh_0",
+    "p_n2_el_1",
     "p_cs_store",
     "p_ae_bld",
     "vertu_night",
@@ -4080,7 +4532,9 @@
    "hero": "p_ns_fascia",
    "photos": [
     "p_ns_fascia",
-    "p_si_front"
+    "p_si_front",
+    "p_n2_br_0",
+    "p_n2_sg_0"
    ],
    "desc": "The quickest way to a sharp, full-colour shopfront. Your artwork is digitally printed and laminated, then applied to a flat aluminium composite fascia or to a folded aluminium tray panel that wraps the edges for a clean, solid finish.",
    "ideal": [
@@ -4192,6 +4646,10 @@
    "photos": [
     "neonB",
     "p_r3_neon",
+    "p_n2_aqua_0",
+    "p_n2_byre_4",
+    "p_n2_ml_3",
+    "p_n2_cotton_4",
     "p_sun_neon",
     "ig_dubliner",
     "n_skinsoul_neon",
@@ -4261,6 +4719,8 @@
    "photos": [
     "ig_lineart",
     "p_ae_road",
+    "p_n2_byre_2",
+    "p_n2_sg_2",
     "p_cs_canteen",
     "p_at_office",
     "p_si_win",
@@ -4355,6 +4815,7 @@
    "photos": [
     "hoarding",
     "p_cs_hoard",
+    "p_n2_fitt_0",
     "p_g_fab",
     "p_sm_front",
     "p_arv_prints",
@@ -4471,6 +4932,7 @@
    "photos": [
     "sun_totem",
     "p_sun_totem2",
+    "p_n2_gc_1",
     "tesco",
     "ig_totem_dir",
     "dealer_totem",
@@ -4528,6 +4990,8 @@
    "photos": [
     "way_g",
     "p_cs_column",
+    "p_n2_gc_6",
+    "p_n2_gc_7",
     "p_ml_entry",
     "way_dir",
     "w_red_g",

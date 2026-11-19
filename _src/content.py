@@ -2879,3 +2879,159 @@ for _g in GUIDES:
 for _c in CASES:
     if _c["slug"] == "sunderland-eye-hospital":
         _c["meta"] = "A full wayfinding scheme for Sunderland Eye Hospital: lit entrance letters, totems, directories, door signs, Braille signs and glass manifestation."
+
+# ================= new work from "Website revamp/New" (19 Nov) =================
+_N2 = lambda job, n: [f"p_n2_{job}_{i}" for i in range(n)]
+_BY = {c["slug"]: c for c in CASES}
+# --- existing jobs: more photos, corrected places
+_s = _BY["sunderland-eye-hospital"]
+_s["hero"] = "p_n2_seh_0"
+_s["photos"] = _N2("seh", 5) + [p for p in _s["photos"] if p not in _N2("seh", 5)]
+LOC["sunderland-eye-hospital"] = ["Sunderland", "sunderland", 54.90725, -1.39077, "gps"]
+_t = _BY["thatype"]
+_t.update(where="Metrocentre, Gateshead", sector="retail", hero="p_n2_thatype_0", label="Halo-lit shopfront letters",
+          lede="Halo-lit 3D script letters across the Thatype shopfront at the Metrocentre.",
+          photos=_N2("thatype", 5) + ["n_thatype", "n_fitt_int"])
+LOC["thatype"] = ["Metrocentre, Gateshead", "gateshead", 54.95640, -1.66727, "gps"]
+LOC["filto"] = ["Metrocentre, Gateshead", "gateshead", 54.95640, -1.66727, "photo"]
+_BY["filto"]["where"] = "Metrocentre, Gateshead"
+IMG_CAPS["n_fitt_int"] = "Filto and Thatype, Metrocentre: interior lettering"
+_g = _BY["glow-tanning"]; _g["photos"] = _N2("glow", 4) + _g["photos"]
+LOC["glow-tanning"] = ["Team Valley, Gateshead", "gateshead", 54.93294, -1.61877, "gps"]
+_b = _BY["black-rabbit"]
+_b.update(name="Black Rabbit & The Warren", where="Chester-le-Street", types=["printed-fascia-panels"], hero="p_n2_br_0",
+          label="Gold-lettered bar fascias",
+          lede="Black fascias with gold logos and lettering for Black Rabbit and The Warren, side by side in Chester-le-Street.",
+          brief="Two neighbouring venues, one look: Black Rabbit bar and restaurant and The Warren next door both wanted black fascias with gold artwork that feels classic and premium from the street.",
+          made=[("Black Rabbit fascia", "A long black fascia with the gold rabbit crest, name and 'Bar & Restaurant' lettering."),
+                ("The Warren fascia", "A matching black fascia with gold lettering and corner flourishes on the shopfront next door.")],
+          result="The two frontages now read as a pair along the street, with the gold artwork picking up the light through the day.",
+          photos=_N2("br", 6) + _b["photos"])
+LOC["black-rabbit"] = ["Chester-le-Street", "durham", 54.85170, -1.57309, "gps"]
+_gc = _BY["griffin-court"]
+_gc.update(types=["3d-letters", "totems-monoliths", "wayfinding", "high-level-signs"], hero="p_n2_gc_0",
+           label="Letters, totems and wayfinding",
+           lede="Fabricated canopy letters, an entrance totem and a full internal wayfinding scheme for Griffin Court in Hebburn.",
+           photos=_N2("gc", 13) + _gc["photos"])
+_gc["made"] = list(_gc.get("made") or []) + [("Entrance totem", "A freestanding totem by the road directing visitors to the main entrance and car park."),
+               ("Internal wayfinding", "Floor directories, directional signs, level signs and door signs in clear acrylic with stand-off fixings, with raised lettering on the directories.")]
+LOC["griffin-court"] = ["Hebburn", "south-tyneside", 54.97257, -1.52125, "gps"]
+_m = _BY["mapleleaf-express"]; _m["hero"] = "p_n2_ml_0"; _m["photos"] = _N2("ml", 5) + _m["photos"]
+if "neon-led-neon" not in _m["types"]: _m["types"].append("neon-led-neon")
+
+# --- new jobs
+def _new(slug, name, where, sector, types, job, n, label, lede, brief, made, result, loc=None, making=()):
+    ph = _N2(job, n); mk = [p for p in ph if p in making]
+    CASES.append(dict(slug=slug, old=None, name=name, where=where, sector=sector, types=types, hero=ph[0], label=label, lede=lede,
+                      brief=brief, made=made, result=result, photos=[p for p in ph if p not in mk], making=mk))
+    if loc: LOC[slug] = loc
+_new("byre", "BYRE", "East Boldon", "hospitality-leisure", ["vinyl-wall-graphics", "neon-led-neon"], "byre", 7,
+     "Wall graphics, LED neon and window vinyl",
+     "Painted-look wall logos, LED neon and window vinyl for BYRE, a burger restaurant in East Boldon.",
+     "BYRE wanted its bold, hand-made brand all over the restaurant: big logos on the brickwork, neon to glow through the windows and graphics that carry the cow mascot from the street to the tables.",
+     [("Wall graphics", "Large BYRE logos and the Little Grazers kids' graphic applied to painted brick so they look hand-painted."),
+      ("LED neon", "A red BYRE cow neon in the window and a 'Join the Herd' neon behind the bar."),
+      ("Window vinyl", "Cut vinyl logos on the glazing, plus takeaway menu lettering on the wall.")],
+     "The brand now runs through the whole restaurant, and the neon makes it easy to spot from outside after dark.",
+     ["East Boldon", "south-tyneside", 54.94529, -1.43461, "gps"])
+_new("cotton-travel", "Cotton Travel", "Sunderland", "retail", ["3d-letters", "vinyl-wall-graphics", "neon-led-neon"], "cotton", 6,
+     "Logo wall, world map and LED neon",
+     "A 3D logo wall, a timber world map, LED neon and a new shopfront for Cotton Travel in Sunderland.",
+     "Cotton Travel wanted the shop to feel like the start of a holiday: a strong brand wall, a feature to talk about and a corner for families.",
+     [("3D logo wall", "The gold globe logo and lettering built up off a painted feature wall."),
+      ("World map", "A cut world map with 'Explore a Bigger World' lettering above the coffee station."),
+      ("LED neon", "A warm white 'Little Explorers' neon for the kids' corner."),
+      ("Shopfront", "A fascia panel and full-colour window graphics.")],
+     "The shop now looks the part from the street to the brochure wall.",
+     ["Sunderland", "sunderland", 54.91211, -1.38802, "gps"])
+_new("tribeca", "Tribeca", "Sunderland", "hair-beauty", ["3d-letters", "vinyl-wall-graphics"], "tribeca", 5,
+     "Gold 3D fascia letters",
+     "Gold 3D letters with a script overlay on the fascia, plus an interior logo and window lettering for Tribeca hair salon in Sunderland.",
+     "Tribeca wanted a smart, high-street frontage that matched the interior of the salon.",
+     [("Fascia letters", "Gold 3D capitals with the salon's script logo layered across them on a dark fascia."),
+      ("Interior logo", "The same logo built up on the feature wall inside."),
+      ("Window lettering", "Cut vinyl branding on the glazing.")],
+     "A frontage that stands out on the street and a logo wall that customers photograph.",
+     ["Sunderland", "sunderland", 54.90509, -1.38260, "gps"])
+_new("durham-university-ai-skills-centre", "Durham University AI Skills Centre", "Durham", "education", ["flat-cut-letters", "vinyl-wall-graphics"], "du", 5,
+     "Logo walls for a new centre",
+     "Brushed-finish logo walls and a glass entrance panel for the Durham University and Microsoft AI Skills Centre of Excellence.",
+     "A new centre run with Microsoft needed both brands presented clearly and consistently on arrival.",
+     [("Logo walls", "Cut lettering and crests in a metallic finish on the centre's feature walls."),
+      ("Entrance panel", "A printed glass-effect panel with both logos, fixed on stand-offs.")],
+     "The centre opened with its branding in place from the entrance to the teaching spaces.",
+     ["Durham", "durham", 54.76425, -1.57106, "gps"], making=["p_n2_du_4"])
+_new("cabana-elvet-residences", "Cabana Student Living", "Durham", "commercial", ["3d-letters"], "cabana", 4,
+     "Fascia and canopy letters",
+     "Fascia lettering for Cabana and built-up canopy letters for Elvet Residences, student accommodation in Durham City.",
+     "Two student buildings in the historic centre needed clear, understated signs that suit their streets.",
+     [("Cabana fascia", "Metallic letters on the painted shopfront fascia."),
+      ("Elvet Residences canopy", "Serif letters along the canopy above the entrance.")],
+     "Both buildings are easy to find for students and visitors without shouting in a conservation area.",
+     ["Durham City", "durham", 54.77519, -1.57222, "gps"])
+_new("elring-parts", "Elring Parts", "Team Valley, Gateshead", "commercial", ["3d-letters", "high-level-signs"], "el", 5,
+     "3D letters on shaped panels",
+     "Shaped building signs with 3D letters for Elring Parts, made in our workshop and fitted from a scaffold tower.",
+     "Elring needed its red and white logo on the building, matched to the brand shape rather than a plain rectangle.",
+     [("Shaped panels", "Panels cut to the Elring logo outline and finished in brand red and white."),
+      ("3D letters", "Built-up letters fixed to the panels for depth."),
+      ("Installation", "Fitted by our own team from a scaffold tower.")],
+     "A building sign that reads as the brand from across the estate.",
+     ["Team Valley, Gateshead", "gateshead", 54.93555, -1.61892, "gps"], making=["p_n2_el_3", "p_n2_el_4"])
+_new("aqua-tcg", "Aqua TCG", "Metrocentre, Gateshead", "retail", ["neon-led-neon"], "aqua", 3,
+     "LED neon logo",
+     "A round LED neon logo for Aqua TCG, a trading card shop in the Metrocentre.",
+     "Aqua TCG wanted its logo as a neon feature that shows through the shop window.",
+     [("LED neon", "The logo in blue, orange and white LED neon on a clear backing.")],
+     "The neon pulls shoppers' eyes in from the mall.",
+     ["Metrocentre, Gateshead", "gateshead", 54.95640, -1.66727, "gps"])
+_new("fitt", "Fitt", "Newcastle", "hospitality-leisure", ["3d-letters", "digital-large-format-print", "flags-banners"], "fitt", 4,
+     "3D letters, A-boards and barrier banners",
+     "3D letters, printed A-boards and cafe barrier banners for Fitt and its Coffee & Matcha bar.",
+     "Fitt needed its brand inside and out, including signs to bring passers-by to the new coffee bar.",
+     [("3D letters", "Dark green built-up letters on a white panel."),
+      ("A-boards", "Printed panels on timber A-frames for the terrace."),
+      ("Barrier banners", "Printed banners on the cafe's outdoor barriers.")],
+     "The coffee bar is signposted from the car park to the counter.",
+     ["Newcastle", "newcastle", 54.96493, -1.62543, "gps"])
+_new("scissor-guys", "Scissor Guys", "North Shields", "hair-beauty", ["printed-fascia-panels", "vinyl-wall-graphics"], "sg", 4,
+     "Fascia and window graphics",
+     "A new fascia and printed window graphics for Scissor Guys barber shop in North Shields.",
+     "Scissor Guys wanted a sharp frontage and windows that give privacy while selling the shop.",
+     [("Fascia", "A dark fascia panel with the Scissor Guys logo."),
+      ("Window graphics", "Printed privacy panels with the logo, parking notice and opening hours.")],
+     "A tidy, branded frontage that works on a busy road.",
+     ["North Shields", None, 55.00861, -1.45558, "gps"])
+_new("elysia-and-co", "Elysia & Co", None, "hair-beauty", ["flat-cut-letters"], "elysia", 3,
+     "Black wall letters",
+     "Large black letters across the salon wall for Elysia & Co.",
+     "Elysia & Co wanted a bold logo wall that sets the tone as soon as clients walk in.",
+     [("Wall letters", "Black serif letters fixed directly to the wall.")],
+     "The logo wall is now the backdrop to the salon.")
+_new("brow-game", "Brow Game", None, "hair-beauty", ["printed-fascia-panels", "vinyl-wall-graphics", "flat-cut-letters"], "bg", 4,
+     "Fascia, window vinyl and interior logo",
+     "A new fascia, window and door vinyl and an interior logo for Brow Game, a brow specialist and academy.",
+     "Brow Game needed a frontage and treatment room that match its clean, premium brand.",
+     [("Fascia", "A dark fascia with white lettering."),
+      ("Window and door vinyl", "The BG monogram on the glazing."),
+      ("Interior logo", "The monogram as cut letters on the treatment room wall.")],
+     "The brand runs from the street to the treatment chair.")
+_new("harbro", "Harbro", None, "retail", ["flat-cut-letters"], "harbro", 1,
+     "Counter lettering",
+     "The Harbro logo in cut lettering on a store counter.",
+     "Harbro wanted its logo on the counter of a country store.",
+     [("Counter logo", "White lettering and a red swoosh on the dark counter front.")],
+     "The counter now carries the brand.")
+# lead the Our Work list with strong new jobs
+for _i, _sl in enumerate(["byre", "cotton-travel", "tribeca", "durham-university-ai-skills-centre"]):
+    _j = next(k for k, c in enumerate(CASES) if c["slug"] == _sl); CASES.insert(3 + _i, CASES.pop(_j))
+for _c in CASES:
+    if _c["slug"] == "filto":
+        _c["made"] = [[a, b.replace("inside the Fenwick Food Hall unit", "inside the Metrocentre unit")] for a, b in _c["made"]]
+    if _c["slug"] == "thatype":
+        for _f in ("brief", "result"):
+            _c[_f] = _c[_f].replace("Fenwick Newcastle", "the Metrocentre").replace("Fenwick", "the Metrocentre")
+        _c["made"] = [[a, b.replace("Fenwick", "the Metrocentre")] for a, b in _c["made"]]
+for _c in CASES:
+    if _c["slug"] == "elring-parts": _c["hero"] = "p_n2_el_1"
+    if _c["slug"] == "fitt": _c["hero"] = "n_fitt"; _c["photos"] = ["n_fitt"] + _c["photos"]

@@ -3319,3 +3319,30 @@ CASES.append(dict(slug="dm-beauty", old=None, name="DM Beauty & Skincare", where
     made=[("Logo plaque", "A round white plaque with the DM monogram and lettering in gold, fixed on stand-offs.")],
     result="A small sign that makes the room feel premium.", photos=["p_n5_dm_0"], making=[]))
 CASE = {c["slug"]: c for c in CASES}
+
+# ---- Our work order (19 Nov): strongest photos and best-known brands first, weakest last ----
+_c = _fix("nike-courtiez", hero="p_n5_cz_7")
+_c["photos"] = ["p_n5_cz_7", "p_n5_cz_8", "p_n5_cz_9"] + [p for p in _c["photos"] if p not in ("p_n5_cz_7",)]
+_TOP = ["nike-courtiez", "jet2-dawson-sanderson", "kurt-geiger", "nhs-community-diagnostic-centre", "rolls-royce",
+        "bar-seventy-three", "glow-tanning", "newcastle-university", "vertu-motors-arena", "cork-and-coffee",
+        "durham-university-ai-skills-centre", "aldi-jaymac-warehouse", "thatype", "savoy", "harbro", "byre",
+        "reform-studio", "cafe-barrier-banners", "kosmic-kingdom", "superpower-metrocentre", "recover3", "the-cell",
+        "avery-dennison", "sunderland-eye-hospital", "aqua-tcg", "bags-jamz", "lean-cuisine", "trident-fire",
+        "arv-studio", "cotton-travel", "tms-grid", "pantera-advisory", "elysia-and-co", "the-drunken-duck", "fitt",
+        "mariana-stanchevici-academy", "tribeca", "temple-tacos", "bratz-salon", "parm-o-rama", "kids-kloset",
+        "atom", "cod-and-crust", "mapleleaf-express", "the-lumen", "newstreet", "better-you", "amethyst",
+        "company-shop-group", "sir-bobby-robson-foundation", "cowgirl-and-country", "dream-dolls", "the-vault",
+        "le-gavroche", "bar-marquee", "woodham-academy", "northgate-hospital", "griffin-court",
+        "blacks-corner-fenwick", "my-car-cleaning", "fawcett-street-community-shop", "sun-tanning"]
+_TAIL = ["street-eats", "elring-parts", "aykley-group", "renewable-energy", "wr-group", "recite-me", "alba",
+         "the-head-spa", "houghton-colliery", "the-library", "vivana-lounge", "just-peachy", "workwear-express",
+         "salto", "park-electrical", "lomond", "fabios", "frate", "nusa", "dm-beauty", "strongher", "scissor-guys",
+         "welcome-to-durham", "baxters", "the-cove", "menu", "tipsy", "sienna", "smart-vape", "the-chair",
+         "rustic-cup", "dolled-up-luxe", "glo-studios", "merz-court", "copeland-residential", "black-rabbit",
+         "the-avenue", "act-group", "east-holborn-street-signs", "originals-glow", "kiss-me-irish", "olivias",
+         "level", "aspire-health-group", "unstoppable-hq"]
+_rank = {s: i for i, s in enumerate(_TOP)}
+_tail = {s: i for i, s in enumerate(_TAIL)}
+_mid = {c["slug"]: i for i, c in enumerate(CASES)}
+CASES.sort(key=lambda c: (0, _rank[c["slug"]]) if c["slug"] in _rank else (2, _tail[c["slug"]]) if c["slug"] in _tail else (1, _mid[c["slug"]]))
+CASE = {c["slug"]: c for c in CASES}

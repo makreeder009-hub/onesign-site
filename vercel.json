@@ -153,28 +153,8 @@
       "permanent": true
     },
     {
-      "source": "/projects/seventy-three",
-      "destination": "/work/bar-seventy-three",
-      "permanent": true
-    },
-    {
-      "source": "/projects/newcastle-university",
-      "destination": "/work/newcastle-university",
-      "permanent": true
-    },
-    {
       "source": "/projects/nhs-community-diagnostics-centre",
       "destination": "/work/nhs-community-diagnostic-centre",
-      "permanent": true
-    },
-    {
-      "source": "/projects/woodham-academy",
-      "destination": "/work/woodham-academy",
-      "permanent": true
-    },
-    {
-      "source": "/projects/vertu-motors",
-      "destination": "/work/vertu-motors-arena",
       "permanent": true
     },
     {
@@ -183,13 +163,23 @@
       "permanent": true
     },
     {
-      "source": "/projects/aldi-warehouse",
-      "destination": "/work/aldi-jaymac-warehouse",
+      "source": "/projects/seventy-three",
+      "destination": "/work/bar-seventy-three",
       "permanent": true
     },
     {
-      "source": "/projects/northgate-hospital",
-      "destination": "/work/northgate-hospital",
+      "source": "/projects/glow.",
+      "destination": "/work/glow-tanning",
+      "permanent": true
+    },
+    {
+      "source": "/projects/newcastle-university",
+      "destination": "/work/newcastle-university",
+      "permanent": true
+    },
+    {
+      "source": "/projects/vertu-motors",
+      "destination": "/work/vertu-motors-arena",
       "permanent": true
     },
     {
@@ -203,8 +193,18 @@
       "permanent": true
     },
     {
-      "source": "/projects/glow.",
-      "destination": "/work/glow-tanning",
+      "source": "/projects/aldi-warehouse",
+      "destination": "/work/aldi-jaymac-warehouse",
+      "permanent": true
+    },
+    {
+      "source": "/projects/woodham-academy",
+      "destination": "/work/woodham-academy",
+      "permanent": true
+    },
+    {
+      "source": "/projects/northgate-hospital",
+      "destination": "/work/northgate-hospital",
       "permanent": true
     },
     {

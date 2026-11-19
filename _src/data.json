@@ -4959,6 +4959,21 @@
    "new:p_n5_ns_1",
    "Cut panel and push-through letters in the workshop",
    "50% 50%"
+  ],
+  "p_n5_cz_7": [
+   "new:p_n5_cz_7",
+   "Nike x Courtiez: academy session with pitch-side banners",
+   "50% 55%"
+  ],
+  "p_n5_cz_8": [
+   "new:p_n5_cz_8",
+   "Nike x Courtiez: pitch and stand dressed for the session",
+   "50% 55%"
+  ],
+  "p_n5_cz_9": [
+   "new:p_n5_cz_9",
+   "Nike x Courtiez: players in front of the fence banners",
+   "50% 55%"
   ]
  },
  "TYPES": [
@@ -6732,6 +6747,7 @@
   }
  ],
  "REEL_A": [
+  "p_n5_cz_7",
   "st_welcome",
   "n_court",
   "works",
@@ -6749,6 +6765,7 @@
   "ncl"
  ],
  "REEL_B": [
+  "p_n3_kg_0",
   "n_jet2",
   "glow",
   "harbro",

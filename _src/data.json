@@ -3,7 +3,7 @@
   "hero": [
    "3d36cad1fad04584b632515b872d7218~mv2.jpg",
    "Newcastle University: fabricated building sign",
-   "60% 40%"
+   "65% 42%"
   ],
   "seventy3": [
    "b572d89e997348428f8007021a490b3e~mv2.jpg",
@@ -103,7 +103,7 @@
   "aldi_bld": [
    "b8aa4bed97c942a2a0259cb8d1059937~mv2.jpg",
    "Aldi: printed vinyl on a large fabricated panel",
-   "50% 40%"
+   "65% 50%"
   ],
   "aldi": [
    "80d78348a3694f408400a2670712b46f~mv2.jpg",
@@ -118,7 +118,7 @@
   "vertu": [
    "8ddf26d4afd54ccb912a126fba8ecb65~mv2.jpg",
    "Vertu Motors Arena",
-   "50% 50%"
+   "60% 45%"
   ],
   "vertu_night": [
    "a1207170ace94eb59afa435026268c0e~mv2.jpg",
@@ -128,7 +128,7 @@
   "rolls": [
    "a70093b969744e8bade977704edb7883~mv2.png",
    "Rolls-Royce building signage",
-   "50% 50%"
+   "35% 50%"
   ],
   "rolls_close": [
    "c46b9f362cf5459e8d543edaadf790d7~mv2.jpg",
@@ -348,7 +348,7 @@
   "ng_totem": [
    "7acb313d063d450192050bbfc2f9dd8f~mv2.jpg",
    "Northgate Hospital directional totem",
-   "50% 50%"
+   "60% 40%"
   ],
   "wardDir": [
    "4aa7e0aee9244a7393f517e5a23549db~mv2.jpg",
@@ -583,7 +583,7 @@
   "ig_leancuisine": [
    "local:neon-lean-cuisine",
    "Lean Cuisine LED neon",
-   "50% 50%"
+   "50% 45%"
   ],
   "ig_neon_yellow": [
    "local:neon-yellow",
@@ -683,7 +683,7 @@
   "n_jet2": [
    "new:jet2-halo",
    "Jet2: halo-lit fabricated 3D letters",
-   "50% 50%"
+   "50% 55%"
   ],
   "n_jet2glow": [
    "new:jet2-halo-glow",
@@ -713,7 +713,7 @@
   "n_fitt": [
    "new:fitt",
    "Fitt: 3D letters",
-   "50% 50%"
+   "50% 30%"
   ],
   "n_superpower": [
    "new:superpower",
@@ -723,12 +723,12 @@
   "n_superpower_wide": [
    "new:superpower-wide",
    "Superpower shopfront",
-   "50% 50%"
+   "50% 45%"
   ],
   "n_renew_close": [
    "new:renewable-close",
    "Renewable Energy: 3D letters on timber cladding",
-   "50% 50%"
+   "40% 50%"
   ],
   "n_renew_bld": [
    "new:renewable-building",
@@ -788,7 +788,7 @@
   "st_sign": [
    "8c2d2ed5093546149f53cd0ae455987c~mv2.jpg",
    "Bar Seventy Three: backlit panel",
-   "50% 50%"
+   "45% 40%"
   ],
   "st_design": [
    "aa5adf7f99b5420d9f484161b5cfe58d~mv2.jpg",
@@ -893,7 +893,7 @@
   "cork_dusk": [
    "f6186d4a72b54968b137c4fb3a170500~mv2.jpg",
    "Cork & Coffee: lit fascia at dusk",
-   "50% 50%"
+   "50% 35%"
   ],
   "hc_cdc": [
    "318f8b3f9c7d4e2f8fd1d659d9d12888~mv2.jpg",
@@ -1013,7 +1013,7 @@
   "n_fora": [
    "new:fora",
    "Fora Beauty & Skin Clinic: flat-cut letters",
-   "50% 50%"
+   "50% 40%"
   ],
   "n_codcrust_build": [
    "new:cod-crust-build",
@@ -1023,7 +1023,7 @@
   "n_vivana": [
    "new:vivana-lounge",
    "Vivana Lounge: 3D letters and logo",
-   "50% 50%"
+   "60% 40%"
   ],
   "n_pureglow_build": [
    "new:pure-glow-build",
@@ -1183,7 +1183,7 @@
   "p_wd_rec": [
    "new:p_wd_rec",
    "Woodham Academy: reception logo",
-   "50% 50%"
+   "40% 45%"
   ],
   "p_wd_hall": [
    "new:p_wd_hall",
@@ -1263,7 +1263,7 @@
   "p_cs_store": [
    "new:p_cs_store",
    "Company Shop: store fascia",
-   "50% 50%"
+   "55% 35%"
   ],
   "p_cs_front": [
    "new:p_cs_front",
@@ -1338,7 +1338,7 @@
   "p_sun_fascia": [
    "new:p_sun_fascia",
    "Sun Tanning: 3D letters on a timber fascia",
-   "50% 15%"
+   "45% 20%"
   ],
   "p_sun_site": [
    "new:p_sun_site",
@@ -1398,7 +1398,7 @@
   "p_bc_bar": [
    "new:p_bc_bar",
    "Blacks Corner: bar at Fenwick Food Hall",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_bc_bar2": [
    "new:p_bc_bar2",
@@ -1433,7 +1433,7 @@
   "p_ws_front": [
    "new:p_ws_front",
    "The White Swan: 3D letters on a rendered gable",
-   "50% 50%"
+   "45% 55%"
   ],
   "p_ws_close": [
    "new:p_ws_close",
@@ -1473,7 +1473,7 @@
   "p_cc_main": [
    "new:p_cc_main",
    "Cod & Crust: backlit fascia panel",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_cc_wide": [
    "new:p_cc_wide",
@@ -1543,7 +1543,7 @@
   "p_at_moss": [
    "new:p_at_moss",
    "atom: logo on a moss wall",
-   "50% 50%"
+   "55% 40%"
   ],
   "p_at_lit": [
    "new:p_at_lit",
@@ -1638,7 +1638,7 @@
   "p_arv_logo": [
    "new:p_arv_logo",
    "ARV Studio: flat-cut logo",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_arv_gym": [
    "new:p_arv_gym",
@@ -1683,7 +1683,7 @@
   "p_tr_halo": [
    "new:p_tr_halo",
    "Trident: halo-lit 3D letters",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_tr_logo": [
    "new:p_tr_logo",
@@ -1758,7 +1758,7 @@
   "p_qh_front": [
    "new:p_qh_front",
    "Queens Head: fascia lettering",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_qh_side": [
    "new:p_qh_side",
@@ -1803,7 +1803,7 @@
   "p_gk_front": [
    "new:p_gk_front",
    "Grace Kelly's: gold 3D letters",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_gk_wide": [
    "new:p_gk_wide",
@@ -1828,7 +1828,7 @@
   "p_st_main": [
    "new:p_st_main",
    "Station Espresso Bar: 3D letters",
-   "50% 50%"
+   "40% 45%"
   ],
   "p_st_front2": [
    "new:p_st_front2",
@@ -1853,7 +1853,7 @@
   "p_sm_front": [
    "new:p_sm_front",
    "Smart Vape: printed fascia and window graphics",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_sm_fascia": [
    "new:p_sm_fascia",
@@ -1898,7 +1898,7 @@
   "p_ch_2": [
    "new:p_ch_2",
    "The Chair: hanging sign on the frontage",
-   "50% 50%"
+   "45% 40%"
   ],
   "p_ch_3": [
    "new:p_ch_3",
@@ -1943,7 +1943,7 @@
   "p_pa_main": [
    "new:p_pa_main",
    "Pantera Advisory Group: flat-cut logo",
-   "50% 60%"
+   "50% 45%"
   ],
   "p_pa_rec": [
    "new:p_pa_rec",
@@ -1993,7 +1993,7 @@
   "p_lb_front": [
    "new:p_lb_front",
    "The Library: 3D letters on the fascia",
-   "50% 50%"
+   "50% 35%"
   ],
   "p_lb_2": [
    "new:p_lb_2",
@@ -2058,7 +2058,7 @@
   "p_ns_fascia": [
    "new:p_ns_fascia",
    "North Shore: fascia",
-   "50% 50%"
+   "50% 35%"
   ],
   "p_ns_2": [
    "new:p_ns_2",
@@ -2083,7 +2083,7 @@
   "p_rc_front": [
    "new:p_rc_front",
    "Rustic Cup: 3D letters on the fascia",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_rc_2": [
    "new:p_rc_2",
@@ -2123,7 +2123,7 @@
   "p_si_front": [
    "new:p_si_front",
    "Sienna House of Beauty: fascia",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_si_2": [
    "new:p_si_2",
@@ -2148,7 +2148,7 @@
   "p_du_front": [
    "new:p_du_front",
    "Dolled Up Luxe: fascia",
-   "50% 50%"
+   "50% 35%"
   ],
   "p_du_2": [
    "new:p_du_2",
@@ -2163,7 +2163,7 @@
   "p_tms_main": [
    "new:p_tms_main",
    "TMS Grid: building sign",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_tms_2": [
    "new:p_tms_2",
@@ -2183,7 +2183,7 @@
   "p_wr_brick": [
    "new:p_wr_brick",
    "WR Group: 3D logo on brick",
-   "50% 50%"
+   "45% 50%"
   ],
   "p_wr_2": [
    "new:p_wr_2",
@@ -2228,7 +2228,7 @@
   "p_qe_main": [
    "new:p_qe_main",
    "QE Facilities: 3D letters on the glazing",
-   "50% 50%"
+   "50% 55%"
   ],
   "p_qe_close": [
    "new:p_qe_close",
@@ -2248,7 +2248,7 @@
   "p_gm_main": [
    "new:p_gm_main",
    "Grainger Market: 3D letters over the entrance",
-   "50% 50%"
+   "45% 45%"
   ],
   "p_gm_2": [
    "new:p_gm_2",
@@ -2268,7 +2268,7 @@
   "p_tw_shop": [
    "new:p_tw_shop",
    "The Works: illuminated shopfront",
-   "50% 50%"
+   "35% 42%"
   ],
   "p_tw_dusk": [
    "new:p_tw_dusk",
@@ -2313,12 +2313,12 @@
   "p_g_parmo": [
    "new:p_g_parmo",
    "Parm-O-Rama: 3D letters",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_g_bratz": [
    "new:p_g_bratz",
    "Bratz Salon: 3D letters",
-   "50% 50%"
+   "40% 40%"
   ],
   "p_g_marquee": [
    "new:p_g_marquee",
@@ -2338,7 +2338,7 @@
   "p_g_lomond": [
    "new:p_g_lomond",
    "Lomond: van graphics",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_g_fab": [
    "new:p_g_fab",
@@ -2363,7 +2363,7 @@
   "p_x_kink_1": [
    "new:p_x_kink_1",
    "Wink: 3D letters on the fascia",
-   "50% 0%"
+   "30% 15%"
   ],
   "p_x_kink_2": [
    "new:p_x_kink_2",
@@ -2378,7 +2378,7 @@
   "p_x_skinandsou_0": [
    "new:p_x_skinandsou_0",
    "Skin & Soul Medical",
-   "50% 70%"
+   "65% 35%"
   ],
   "p_x_skinandsou_1": [
    "new:p_x_skinandsou_1",
@@ -2408,7 +2408,7 @@
   "p_x_fikaaesthe_0": [
    "new:p_x_fikaaesthe_0",
    "FIKA Aesthetics: flat-cut lettering",
-   "50% 50%"
+   "45% 50%"
   ],
   "p_x_fikaaesthe_1": [
    "new:p_x_fikaaesthe_1",
@@ -2438,7 +2438,7 @@
   "p_x_camdenclin_0": [
    "new:p_x_camdenclin_0",
    "The Camden Clinic: 3D letters",
-   "50% 50%"
+   "45% 45%"
   ],
   "p_x_camdenclin_1": [
    "new:p_x_camdenclin_1",
@@ -2453,7 +2453,7 @@
   "p_x_zen_0": [
    "new:p_x_zen_0",
    "Zen: window graphics",
-   "50% 50%"
+   "65% 55%"
   ],
   "p_x_zen_2": [
    "new:p_x_zen_2",
@@ -2483,7 +2483,7 @@
   "p_x_baxters_0": [
    "new:p_x_baxters_0",
    "Baxter's: 3D script letters",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_x_baxters_1": [
    "new:p_x_baxters_1",
@@ -2553,12 +2553,12 @@
   "p_x_parkelectr_0": [
    "new:p_x_parkelectr_0",
    "Park Electrical: van graphics",
-   "50% 50%"
+   "60% 35%"
   ],
   "p_x_aykleygrou_0": [
    "new:p_x_aykleygrou_0",
    "Aykley Group: lettering",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_x_aykleygrou_1": [
    "new:p_x_aykleygrou_1",
@@ -2568,7 +2568,7 @@
   "p_x_dunelmfood_0": [
    "new:p_x_dunelmfood_0",
    "Dunelm Food Store: fascia and windows",
-   "50% 50%"
+   "50% 25%"
   ],
   "p_x_dunelmfood_1": [
    "new:p_x_dunelmfood_1",
@@ -2608,7 +2608,7 @@
   "p_x_barmarquee_2": [
    "new:p_x_barmarquee_2",
    "BAR: marquee letters",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_x_barmarquee_3": [
    "new:p_x_barmarquee_3",
@@ -2618,12 +2618,12 @@
   "p_x_legavroche_0": [
    "new:p_x_legavroche_0",
    "Le Gavroche: light box",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_x_menu_0": [
    "new:p_x_menu_0",
    "Menu: illuminated lettering",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_x_menu_1": [
    "new:p_x_menu_1",
@@ -2663,7 +2663,7 @@
   "p_x_thevault_0": [
    "new:p_x_thevault_0",
    "The Vault: halo-lit letters",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_x_thevault_1": [
    "new:p_x_thevault_1",
@@ -2673,7 +2673,7 @@
   "p_x_thecove_0": [
    "new:p_x_thecove_0",
    "The Cove: 3D letters",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_x_thecove_1": [
    "new:p_x_thecove_1",
@@ -2713,12 +2713,12 @@
   "p_x_tipsy_0": [
    "new:p_x_tipsy_0",
    "Tipsy: lettering",
-   "50% 50%"
+   "50% 35%"
   ],
   "p_x_copelandre_0": [
    "new:p_x_copelandre_0",
    "Copeland Residential: 3D letters",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_x_copelandre_1": [
    "new:p_x_copelandre_1",
@@ -2738,7 +2738,7 @@
   "p_x_dreamdolls_0": [
    "new:p_x_dreamdolls_0",
    "Dream Dolls: illuminated arch",
-   "50% 12%"
+   "50% 18%"
   ],
   "p_x_dreamdolls_1": [
    "new:p_x_dreamdolls_1",
@@ -2753,7 +2753,7 @@
   "p_x_merzcourt_0": [
    "new:p_x_merzcourt_0",
    "Merz Court: building sign",
-   "50% 50%"
+   "50% 55%"
   ],
   "p_x_originalsg_0": [
    "new:p_x_originalsg_0",
@@ -2818,7 +2818,7 @@
   "p_x_unstoppabl_0": [
    "new:p_x_unstoppabl_0",
    "Unstoppable HQ: 3D letters",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_x_unstoppabl_1": [
    "new:p_x_unstoppabl_1",
@@ -2903,7 +2903,7 @@
   "p_y_littleherh_0": [
    "new:p_y_littleherh_0",
    "Little Her Hair: fascia",
-   "50% 0%"
+   "50% 15%"
   ],
   "p_y_littleherh_1": [
    "new:p_y_littleherh_1",
@@ -2913,7 +2913,7 @@
   "p_y_fawcettstr_0": [
    "new:p_y_fawcettstr_0",
    "Fawcett Street Community Shop: wall graphics",
-   "50% 10%"
+   "50% 25%"
   ],
   "p_y_fawcettstr_1": [
    "new:p_y_fawcettstr_1",
@@ -2943,7 +2943,7 @@
   "p_y_amethyst_0": [
    "new:p_y_amethyst_0",
    "Amethyst: 3D logo fascia",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_y_amethyst_1": [
    "new:p_y_amethyst_1",
@@ -2973,7 +2973,7 @@
   "p_y_country_1": [
    "new:p_y_country_1",
    "Country: illuminated letters",
-   "50% 20%"
+   "45% 15%"
   ],
   "p_y_country_2": [
    "new:p_y_country_2",
@@ -2998,7 +2998,7 @@
   "p_y_craftandcr_0": [
    "new:p_y_craftandcr_0",
    "Craft & Crumb",
-   "50% 50%"
+   "55% 35%"
   ],
   "p_y_craftandcr_1": [
    "new:p_y_craftandcr_1",
@@ -3043,12 +3043,12 @@
   "p_y_templetaco_0": [
    "new:p_y_templetaco_0",
    "Temple Tacos: LED neon",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_y_filto_0": [
    "new:p_y_filto_0",
    "Filto",
-   "50% 0%"
+   "50% 22%"
   ],
   "p_y_filto_1": [
    "new:p_y_filto_1",
@@ -3073,7 +3073,7 @@
   "p_y_salto_0": [
    "new:p_y_salto_0",
    "Salto: van graphics",
-   "50% 50%"
+   "40% 40%"
   ],
   "p_y_salto_1": [
    "new:p_y_salto_1",
@@ -3093,7 +3093,7 @@
   "p_y_thelumen_0": [
    "new:p_y_thelumen_0",
    "The Lumen: 3D letters",
-   "50% 50%"
+   "45% 50%"
   ],
   "p_y_alba_0": [
    "new:p_y_alba_0",
@@ -3113,7 +3113,7 @@
   "p_y_newstreet_0": [
    "new:p_y_newstreet_0",
    "Newstreet: 3D logo",
-   "50% 50%"
+   "50% 55%"
   ],
   "p_y_newstreet_1": [
    "new:p_y_newstreet_1",
@@ -3133,7 +3133,7 @@
   "p_y_fabios_0": [
    "new:p_y_fabios_0",
    "Fabio's: van graphics",
-   "50% 50%"
+   "45% 35%"
   ],
   "p_y_fabios_1": [
    "new:p_y_fabios_1",
@@ -3153,7 +3153,7 @@
   "p_y_averydenni_0": [
    "new:p_y_averydenni_0",
    "Avery Dennison: wall mural",
-   "50% 50%"
+   "40% 68%"
   ],
   "p_y_averydenni_1": [
    "new:p_y_averydenni_1",
@@ -3168,7 +3168,7 @@
   "p_y_dogandparr_0": [
    "new:p_y_dogandparr_0",
    "The Dog & Parrot",
-   "50% 50%"
+   "50% 35%"
   ],
   "p_y_dogandparr_1": [
    "new:p_y_dogandparr_1",
@@ -3188,7 +3188,7 @@
   "p_y_theavenue_0": [
    "new:p_y_theavenue_0",
    "The Avenue: 3D letters",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_y_theavenue_1": [
    "new:p_y_theavenue_1",
@@ -3208,7 +3208,7 @@
   "p_y_streeteats_0": [
    "new:p_y_streeteats_0",
    "Street Eats",
-   "50% 0%"
+   "50% 25%"
   ],
   "p_y_streeteats_1": [
    "new:p_y_streeteats_1",
@@ -3238,7 +3238,7 @@
   "p_y_actgroup_3": [
    "new:p_y_actgroup_3",
    "ACT Group",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_y_houghtonco_0": [
    "new:p_y_houghtonco_0",
@@ -3268,12 +3268,12 @@
   "p_z_companysho_4": [
    "new:p_z_companysho_4",
    "Sir Bobby Robson Institute: printed hoarding outside the hospital",
-   "50% 50%"
+   "55% 55%"
   ],
   "p_z_nhscommuni_0": [
    "new:p_z_nhscommuni_0",
    "NHS CDC: illuminated letters at night",
-   "50% 50%"
+   "55% 42%"
   ],
   "p_z_nhscommuni_1": [
    "new:p_z_nhscommuni_1",
@@ -3283,7 +3283,7 @@
   "p_z_savoy_0": [
    "new:p_z_savoy_0",
    "Savoy: illuminated lettering in the bar",
-   "50% 50%"
+   "50% 32%"
   ],
   "p_z_savoy_1": [
    "new:p_z_savoy_1",
@@ -3318,7 +3318,7 @@
   "p_z_glowtannin_0": [
    "new:p_z_glowtannin_0",
    "glow.: 3D letters at sunset",
-   "50% 8%"
+   "35% 22%"
   ],
   "p_z_glowtannin_1": [
    "new:p_z_glowtannin_1",
@@ -3638,7 +3638,7 @@
   "p_n2_thatype_0": [
    "new:p_n2_thatype_0",
    "Thatype, Metrocentre: halo-lit letters",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_n2_thatype_1": [
    "new:p_n2_thatype_1",
@@ -3663,7 +3663,7 @@
   "p_n2_aqua_0": [
    "new:p_n2_aqua_0",
    "Aqua TCG: LED neon logo",
-   "50% 35%"
+   "45% 40%"
   ],
   "p_n2_aqua_1": [
    "new:p_n2_aqua_1",
@@ -3698,7 +3698,7 @@
   "p_n2_br_0": [
    "new:p_n2_br_0",
    "Black Rabbit: fascia and gold lettering",
-   "50% 50%"
+   "50% 30%"
   ],
   "p_n2_br_1": [
    "new:p_n2_br_1",
@@ -3753,7 +3753,7 @@
   "p_n2_el_1": [
    "new:p_n2_el_1",
    "Elring Parts: installing the sign",
-   "50% 35%"
+   "40% 45%"
   ],
   "p_n2_el_2": [
    "new:p_n2_el_2",
@@ -3773,7 +3773,7 @@
   "p_n2_byre_0": [
    "new:p_n2_byre_0",
    "BYRE: illuminated logo in the restaurant",
-   "50% 50%"
+   "25% 38%"
   ],
   "p_n2_byre_1": [
    "new:p_n2_byre_1",
@@ -3808,7 +3808,7 @@
   "p_n2_tribeca_0": [
    "new:p_n2_tribeca_0",
    "Tribeca: gold 3D letters on the fascia",
-   "50% 12%"
+   "45% 15%"
   ],
   "p_n2_tribeca_1": [
    "new:p_n2_tribeca_1",
@@ -3863,7 +3863,7 @@
   "p_n2_du_0": [
    "new:p_n2_du_0",
    "Durham University AI Skills Centre: logo wall",
-   "50% 25%"
+   "50% 35%"
   ],
   "p_n2_du_1": [
    "new:p_n2_du_1",
@@ -3888,7 +3888,7 @@
   "p_n2_cabana_0": [
    "new:p_n2_cabana_0",
    "Cabana: fascia lettering",
-   "50% 0%"
+   "60% 20%"
   ],
   "p_n2_cabana_1": [
    "new:p_n2_cabana_1",
@@ -3908,7 +3908,7 @@
   "p_n2_gc_0": [
    "new:p_n2_gc_0",
    "Griffin Court: canopy letters",
-   "50% 50%"
+   "50% 52%"
   ],
   "p_n2_gc_1": [
    "new:p_n2_gc_1",
@@ -3973,7 +3973,7 @@
   "p_n2_ml_0": [
    "new:p_n2_ml_0",
    "Mapleleaf Express: illuminated fascia",
-   "50% 50%"
+   "45% 48%"
   ],
   "p_n2_ml_1": [
    "new:p_n2_ml_1",
@@ -3998,7 +3998,7 @@
   "p_n2_elysia_0": [
    "new:p_n2_elysia_0",
    "Elysia & Co: 3D wall letters",
-   "50% 50%"
+   "45% 50%"
   ],
   "p_n2_elysia_1": [
    "new:p_n2_elysia_1",
@@ -4013,7 +4013,7 @@
   "p_n2_bg_0": [
    "new:p_n2_bg_0",
    "Brow Game: fascia",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_n2_bg_1": [
    "new:p_n2_bg_1",
@@ -4033,12 +4033,12 @@
   "p_n2_harbro_0": [
    "new:p_n2_harbro_0",
    "Harbro: lettering on the store counter",
-   "50% 75%"
+   "40% 80%"
   ],
   "p_n3_kg_0": [
    "new:p_n3_kg_0",
    "Kurt Geiger, Guildford: illuminated shopfront letters",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_n3_kg_1": [
    "new:p_n3_kg_1",
@@ -4063,7 +4063,7 @@
   "p_n3_rf_0": [
    "new:p_n3_rf_0",
    "Reform Studio: Studio One wall logo",
-   "50% 25%"
+   "45% 40%"
   ],
   "p_n3_rf_1": [
    "new:p_n3_rf_1",
@@ -4108,12 +4108,12 @@
   "p_n3_cell_3": [
    "new:p_n3_cell_3",
    "The Cell: halo glow",
-   "50% 50%"
+   "50% 35%"
   ],
   "p_n3_wq_0": [
    "new:p_n3_wq_0",
    "Ward Quarters: shopfront fascia",
-   "50% 0%"
+   "40% 15%"
   ],
   "p_n3_wq_1": [
    "new:p_n3_wq_1",
@@ -4123,7 +4123,7 @@
   "p_n3_mc_0": [
    "new:p_n3_mc_0",
    "Mount Croft Care Home: 3D letters on brick",
-   "50% 50%"
+   "45% 35%"
   ],
   "p_n3_mc_1": [
    "new:p_n3_mc_1",
@@ -4133,7 +4133,7 @@
   "p_n3_ms_0": [
    "new:p_n3_ms_0",
    "Mariana Stanchevici Academy: halo-lit logo on a slatted wall",
-   "50% 50%"
+   "45% 45%"
   ],
   "p_n3_ms_1": [
    "new:p_n3_ms_1",
@@ -4168,7 +4168,7 @@
   "p_n3_frate_0": [
    "new:p_n3_frate_0",
    "Frate: printed plywood A-board",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_n3_frate_1": [
    "new:p_n3_frate_1",
@@ -4188,7 +4188,7 @@
   "p_n3_costa_1": [
    "new:p_n3_costa_1",
    "Cafe barrier banner close up",
-   "50% 50%"
+   "45% 50%"
   ],
   "p_n3_costa_2": [
    "new:p_n3_costa_2",
@@ -4208,7 +4208,7 @@
   "p_n3_nusa_0": [
    "new:p_n3_nusa_0",
    "Nusa: gold script wall letters",
-   "50% 50%"
+   "45% 35%"
   ],
   "p_n3_nusa_1": [
    "new:p_n3_nusa_1",
@@ -4218,7 +4218,7 @@
   "p_n3_hs_0": [
    "new:p_n3_hs_0",
    "The Head Spa: built-up logo on the wall",
-   "50% 50%"
+   "50% 53%"
   ],
   "p_n3_hs_1": [
    "new:p_n3_hs_1",
@@ -4228,7 +4228,7 @@
   "p_n3_wtd_0": [
    "new:p_n3_wtd_0",
    "Welcome to Durham scaffold banner, Ward Group",
-   "50% 12%"
+   "50% 30%"
   ],
   "p_n3_wtd_1": [
    "new:p_n3_wtd_1",
@@ -4253,7 +4253,7 @@
   "p_n3_pp_0": [
    "new:p_n3_pp_0",
    "Pickle & Peach: lettering on the corner fascia",
-   "50% 50%"
+   "55% 55%"
   ],
   "p_n3_pp_1": [
    "new:p_n3_pp_1",
@@ -4323,7 +4323,7 @@
   "p_n3_jp_0": [
    "new:p_n3_jp_0",
    "Just Peachy: 3D script and fascia lettering",
-   "50% 55%"
+   "50% 40%"
   ],
   "p_n3_jp_1": [
    "new:p_n3_jp_1",
@@ -4343,7 +4343,7 @@
   "p_n3_rm_0": [
    "new:p_n3_rm_0",
    "Recite Me: illuminated logo on the curved red wall",
-   "50% 50%"
+   "40% 45%"
   ],
   "p_n3_filto_0": [
    "new:p_n3_filto_0",
@@ -4383,7 +4383,7 @@
   "p_n3_dd_0": [
    "new:p_n3_dd_0",
    "The Drunken Duck: LED neon",
-   "50% 30%"
+   "50% 35%"
   ],
   "p_n3_mcc_0": [
    "new:p_n3_mcc_0",
@@ -4393,7 +4393,7 @@
   "p_n3_mcc_1": [
    "new:p_n3_mcc_1",
    "My Car Cleaning: fascia on opening day",
-   "50% 35%"
+   "55% 40%"
   ],
   "p_n3_gm_0": [
    "new:p_n3_gm_0",
@@ -4418,7 +4418,7 @@
   "p_n3_by_0": [
    "new:p_n3_by_0",
    "Better You: halo-lit logo and lettering",
-   "50% 40%"
+   "50% 50%"
   ],
   "p_n4_ws_0": [
    "new:p_n4_ws_0",
@@ -4508,7 +4508,7 @@
   "p_n4_bj_0": [
    "new:p_n4_bj_0",
    "Bägs Jamz: illuminated light boxes",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_n4_bj_1": [
    "new:p_n4_bj_1",
@@ -4703,7 +4703,7 @@
   "p_seh_09758": [
    "new:p_seh_09758",
    "Sunderland Eye Hospital: Main Entrance: built-up letters on dark cladding",
-   "50% 50%"
+   "45% 55%"
   ],
   "p_seh_00186": [
    "new:p_seh_00186",
@@ -4853,7 +4853,7 @@
   "p_n5_km_0": [
    "new:p_n5_km_0",
    "Kosmic Kingdom: flex face sign",
-   "50% 50%"
+   "50% 30%"
   ],
   "p_n5_km_1": [
    "new:p_n5_km_1",
@@ -4913,7 +4913,7 @@
   "p_n5_str_0": [
    "new:p_n5_str_0",
    "Strongher: fascia lettering",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_n5_sor_0": [
    "new:p_n5_sor_0",
@@ -4948,7 +4948,7 @@
   "p_n5_dm_0": [
    "new:p_n5_dm_0",
    "DM Beauty & Skincare: round logo plaque",
-   "50% 50%"
+   "50% 45%"
   ],
   "p_n5_ns_0": [
    "new:p_n5_ns_0",
@@ -4963,7 +4963,7 @@
   "p_n5_cz_7": [
    "new:p_n5_cz_7",
    "Nike x Courtiez: academy session with pitch-side banners",
-   "50% 55%"
+   "50% 28%"
   ],
   "p_n5_cz_8": [
    "new:p_n5_cz_8",
@@ -4978,7 +4978,7 @@
   "p_n6_cb_0": [
    "new:p_n6_cb_0",
    "Combat 96: illuminated logo above the mats",
-   "50% 50%"
+   "35% 32%"
   ],
   "p_n6_cb_1": [
    "new:p_n6_cb_1",
@@ -4988,12 +4988,12 @@
   "p_n6_hc_0": [
    "new:p_n6_hc_0",
    "Houghton Colliery Retail Park: totem with Tesco, Home Bargains and Fastned",
-   "50% 50%"
+   "35% 45%"
   ],
   "p_n6_mh_0": [
    "new:p_n6_mh_0",
    "Monkwearmouth Hospital: leaf and butterfly installation under the atrium skylight",
-   "50% 50%"
+   "50% 40%"
   ],
   "p_n6_mh_1": [
    "new:p_n6_mh_1",

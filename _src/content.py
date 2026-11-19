@@ -2822,3 +2822,8 @@ for _c in CASES:
         _c["photos"] = list(dict.fromkeys(_c["photos"] + ['p_seh_00003', 'p_seh_00012', 'p_seh_00015', 'p_seh_00033', 'p_seh_00045', 'p_seh_00051', 'p_seh_00066', 'p_seh_00078b', 'p_seh_00095b', 'p_seh_00109b', 'p_seh_00120', 'p_seh_00122', 'p_seh_00142', 'p_seh_00153', 'p_seh_09767', 'p_seh_09787', 'p_seh_09793', 'p_seh_09822', 'p_seh_09839', 'p_seh_09893', 'p_seh_09899', 'p_seh_09971', 'p_seh_09981']))
 _i = next(i for i, c in enumerate(CASES) if c["slug"] == "sunderland-eye-hospital")
 CASES.insert(2, CASES.pop(_i))
+
+# Zen is a Thai and pan-Asian restaurant on Court Lane, Durham DH1 3JS (Mak, 19 Nov)
+LOC["zen"] = ["Court Lane, Durham", "durham", 54.77380, -1.56850, "address"]
+for _c in CASES:
+    if _c["slug"] == "zen": _c.update(where="Court Lane, Durham", sector="hospitality-leisure")

@@ -4917,7 +4917,9 @@
     "p_gk_front",
     "p_lb_night",
     "p_arv_logo",
-    "p_r3_neon"
+    "p_r3_neon",
+    "ig_zen",
+    "n_thatype"
    ],
    "types": [
     "backlit-panels",
@@ -4949,7 +4951,6 @@
    "title": "Salon Signs for Hair & Beauty",
    "intro": "Create a stylish, welcoming space with signage that reflects your brand's personality, from exterior signs to in-salon displays that win your clients over.",
    "gallery": [
-    "n_thatype",
     "n_skinsoul",
     "n_identity",
     "n_fora",
@@ -4959,7 +4960,6 @@
     "glow",
     "glow_int",
     "glow_int2",
-    "ig_zen",
     "ig_pudes",
     "kloset",
     "welcome_neon",
